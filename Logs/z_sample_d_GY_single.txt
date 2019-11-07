@@ -1,0 +1,34 @@
+{
+'my_id': 'D00-00K',
+'aName': {'lat': 'Godfrey', 'cyr': 'Богумирски'},
+'geo_code': 'GY',
+'aType': {'lat': 'District', 'cyr': 'Повят', 'lvl': '3'},
+'sub_type': 'General',
+'parent': 'D00-003',
+'aChildren': [
+    'D00-00L', 'D00-00M', 'D00-00N', 'D00-00O', 'D00-00P', 'D00-00Q',
+    'D00-00R', 'D00-00S', 'D00-00T', 'D00-00U', 'D00-00V', 'D00-00W',
+    'D00-00X', 'D00-00Y', 'D00-00Z'],
+'aMap': {
+    'sRegion': 'Dzþevogurski', 'iYear': 2018, 'fScale': 4000000.0,
+    'x': 281.781, 'y': 149.239, 'a': 4690.508},
+'aArea': {'qty': 75048.0, 'uom': 'sq.km'},
+'aDemand_workforce': {
+    'total': {
+        'rm': 0, 'rf': 0,
+        'hm': 0, 'hf': 0,
+        'mm': 0, 'mf': 0,
+        'lm': 0, 'lf': 0,
+        'pm': 0, 'pf': 0},
+    'aItemised': []},
+'aSupply_workforce': {'status': 'RFU'},
+'aDemand_hholds': {
+    'total': {'r': 0, 'h': 0, 'm': 0, 'l': 0, 'p': 0},
+    'aItemised': []},
+'aSupply_hholds': {
+    'total': {'r': 0, 'h': 0, 'm': 0, 'l': 0, 'p': 0},
+    'aItemised': []},
+'aDemographics': {},
+'aVehicles': {},
+'aFootprint': {},
+'aWarehouse': {}}

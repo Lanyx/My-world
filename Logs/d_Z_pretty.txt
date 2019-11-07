@@ -1,0 +1,143 @@
+    Krybïe Province / Провинцъя Крыбе
+----------
+Pretty print information was generated on 2019-11-07 12:44:20.428015
+----------
+my_id: D00-003
+geo_code: Z
+----------
+Total population: 7,629 (Incomplete data)
+
+Total vehicles*: 819 (Incomplete data)
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced (Incomplete data):
+>   wheat: 9,103.17t/yr by Product 0
+>   hay: 1,250.8t/yr by Product 1
+>   maize: 4,047.68t/yr by Product 2
+>   straw (maize): 830.27t/yr by Product 3
+----------
+Hierarchial Parent: 
+>  The country Country / Паньстфо The country 
+>   my_id: D00-002
+>   geo_code: 0Q1
+----------
+Hierarchial Children: 
+>   count: 3
+>      Bitse County / Воевуцтво Бицэ
+>          my_id: D00-004
+>          geo_code: Z0
+>          population: N/A
+>
+>      Susçrè District / Повят Сусреь
+>          my_id: D00-005
+>          geo_code: ZJ
+>          population: N/A
+>
+>      Adewy District / Повят Адэлы
+>          my_id: D00-006
+>          geo_code: ZI
+>          population: 7,629 (Incomplete data)
+>
+----------
+Map and area: 
+>   No map declared
+----------
+Workforce Demand: 
+>   Grand Total: (3,806)
+>       rm: 0; hm: 14; mm: 49; lm: 164; pm: 1,668;
+>       rf: 0; hf: 4; mf: 39; lf: 243; pf: 1,625;
+>
+>   Z0: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   ZJ: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   ZI: (4,009)
+>       rm: 0; hm: 14; mm: 49; lm: 164; pm: 1,668;
+>       rf: 0; hf: 4; mf: 39; lf: 243; pf: 1,625;
+>       tot road veh: 203
+>
+----------
+Demand households: 
+>   Grand Total: (2,878)
+>       r: 0; h: 17; m: 70; l: 342; p: 2,449;
+>   Z0: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   ZJ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   ZI: (2,878) | r: 0; h: 17; m: 70; l: 342; p: 2,449;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>   Z0: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   ZJ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   ZI: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 7,629
+>
+>   Married working people (aHHM-PAX):
+>       r: 0; h: 20; m: 82; l: 460; p: 3,232;
+>
+>   Married retired people (aHHR-PAX):
+>       r: 0; h: 8; m: 26; l: 130; p: 950;
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 0; h: 4; m: 19; l: 52; p: 440;
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 0; h: 0; m: 7; l: 33; p: 237;
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 0; m: 0; l: 2; p: 5;
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 0; m: 0; l: 7; p: 16;
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 0; h: 8; m: 8; l: 11; p: 79;
+>
+>   Preschoolers, all groups                 (ED0-PAX): 349
+>   Primary schoolers, all groups            (ED1-PAX): 605
+>   Middle schoolers, all groups             (ED2-PAX): 433
+>   High schoolers, all groups               (ED3-PAX): 443
+>   Religious or Private schoolers, all grps (ED4-PAX): 14
+>   College students, all groups             (ED5-PAX): 7
+>   Polytechnic students, all groups         (ED6-PAX): 1
+>   University students, all groups          (ED7-PAX): 0
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 16
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 0
+>   Old Age Home, all groups                 (OAH-PAX): 54
+>   Private nurse, all groups                (OAN-PAX): 0
+>   Youth prison, all groups                 (YXJ-PAX): 5
+>   Adult prison, all groups                 (YXA-PAX): 41
+>   Religion:
+>      Renásàsers (3R): 891
+>      Anglican Christians (AN): 145
+>      Roman Catholics (RC): 285
+>      Deltæðømmysts (DD): 4318
+>      Jews (JW): 18
+>      Muslims (IS): 49
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 3,941
+>   Vehicle, motorbike*                      (VEH-MBK): 561
+>   Vehicle, car*                            (VEH-CAR): 108
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 819
+>   Itemised county-registered vehicles:
+>      ZI: 819
+----------
+Footprint on the land:
+>   Z0: 400.0ha
+>   ZJ: 480.0ha
+>   ZI: 360.0ha
+

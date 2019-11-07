@@ -1,0 +1,399 @@
+{
+"timeSim":"1900-01-04T08:10:55+01:00",
+"fSec_inc":1.0,
+"fSec_delay":0.05,
+"aId_last":{"A":"00000","B":"00000","C":"00000","D":"00078","E":"00000","F":"00001","G":"00000","H":"00000","I":"00000","J":"00007","K":"00000","L":"00000","M":"00000","N":"00007","O":"00000","P":"00000","Q":"00000","R":"00000","S":"00000","T":"00000","U":"00000","V":"00000","W":"00000","X":"00000","Y":"00000","Z":"00000","0":"00006","1":"00000","2":"00000","3":"00000","4":"00000","5":"00000","6":"00000","7":"00000","8":"00000","9":"00000","*":"00000"},
+"gravity":9.81,
+"track_friction":0.35,
+"aaMaps":[
+    {"sRegion":"Trèmbovitse","iYear":2012,"fScale":20000000.0},
+    {"sRegion":"Dzþevogurski","iYear":2018,"fScale":4000000.0}],
+"biscriptic":true,
+"aDemographics":{
+    "infant":2,
+    "toddler":5,
+    "primary":10,
+    "middle":14,
+    "high":18,
+    "tertiary":25,
+    "min_work_age":19,
+    "max_work_age":65,
+    "prison_rate":0.0052,
+    "nursing_home_rate":0.0074,
+    "compulsory_preschool":true,
+    "life_expect":80,
+    "fraternal_rate":1.9,
+    "aPartners":{"r":0.95,"h":0.8,"m":0.8,"l":0.8,"p":0.8},
+    "aChildren":{"r":2,"h":3,"m":2,"l":3,"p":3},
+    "aSpeciality_school":{"r":0.9,"h":0.4,"m":0.01,"l":0.005,"p":0.005},
+    "aDisabled_school":{"r":0.004,"h":0.004,"m":0.004,"l":0.004,"p":0.004},
+    "aCollege":{"r":0.0001,"h":0.0001,"m":0.01,"l":0.0073,"p":0.005},
+    "aPolytech":{"r":0.01,"h":0.05,"m":0.01,"l":0.0006,"p":0.0002},
+    "aUniversity":{"r":0.05,"h":0.01,"m":0.001,"l":0.0006,"p":0.0001},
+    "aHousewife":{"r":0.1,"h":0.4,"m":0.2,"l":0.05,"p":0.05},
+    "aaReligion":[
+        {"name":"Dreide Renaissance Kirch","code":"3R","r":0.0,"h":0.4,"m":0.4,"l":0.5,"p":0.1},
+        {"name":"Anglican Church","code":"AN","r":0.0,"h":0.1,"m":0.25,"l":0.16,"p":0.0},
+        {"name":"Roman Catholic Church","code":"RC","r":0.24,"h":0.05,"m":0.1,"l":0.04,"p":0.05},
+        {"name":"Deltæðømm Religion","code":"DD","r":0.01,"h":0.05,"m":0.1,"l":0.25,"p":0.85},
+        {"name":"Jewish Synagogue","code":"JW","r":0.5,"h":0.15,"m":0.1,"l":0.0,"p":0.0},
+        {"name":"Islamic Mosque","code":"IS","r":0.25,"h":0.25,"m":0.05,"l":0.05,"p":0.0}],
+"aaService_demands":[
+    {"name":"Old Age Home (weathly)","code":"OAH-R","rate":4,"shifts":3,"min":8,"max":24},
+    {"name":"Old Age Home (normal)","code":"OAH-N","rate":5,"shifts":3,"min":10,"max":30},
+    {"name":"Preschool (weathly)","code":"ED0-R","rate":4,"shifts":1,"min":8,"max":24},
+    {"name":"Preschool (normal)","code":"ED0","rate":5,"shifts":1,"min":10,"max":30},
+    {"name":"Primary school","code":"ED1","rate":20,"shifts":1,"min":40,"max":500},
+    {"name":"Middle school","code":"ED2","rate":28,"shifts":1,"min":84,"max":840},
+    {"name":"High school","code":"ED3","rate":32,"shifts":1,"min":96,"max":960},
+    {"name":"Religious / special school","code":"ED4","rate":15,"shifts":1,"min":10,"max":450},
+    {"name":"College","code":"ED5","rate":50,"shifts":1,"min":500,"max":2000},
+    {"name":"Polytechnic","code":"ED6","rate":80,"shifts":1,"min":800,"max":8000},
+    {"name":"University","code":"ED7","rate":120,"shifts":1,"min":1200,"max":15000},
+    {"name":"Disabled school","code":"ED9","rate":5,"shifts":1,"min":10,"max":30},
+    {"name":"Community Police Station","code":"5PQ","rate":200,"shifts":3,"min":600,"max":8000},
+    {"name":"Community Fire Station","code":"5F","rate":200,"shifts":3,"min":600,"max":8000},
+    {"name":"Community Clinic","code":"5[+]","rate":500,"shifts":1,"min":500,"max":7000},
+    {"name":"Paramedic","code":"6[+]","rate":1000,"shifts":3,"min":1000,"max":6000},
+    {"name":"Community Vetenarian","code":"6VET","rate":500,"shifts":1,"min":1000,"max":6000},
+    {"name":"Municipal Governance","code":"5YG","rate":400,"shifts":1,"min":400,"max":400},
+    {"name":"Municipal Post Office","code":"5PO","rate":1000,"shifts":1,"min":400,"max":20000},
+    {"name":"Municipal Court","code":"5YJ","rate":2000,"shifts":1,"min":400,"max":20000},
+    {"name":"County Jail","code":"4YX","rate":10,"shifts":3,"min":40,"max":400},
+    {"name":"Community library","code":"6LIB","rate":1000,"shifts":1,"min":1000,"max":4000},
+    {"name":"Municipal library","code":"5LIB","rate":3300,"shifts":1,"min":4000,"max":12000},
+    {"name":"Community theatre","code":"6THR","rate":300,"shifts":1,"min":300,"max":2100},
+    {"name":"Municipal theatre","code":"5THR","rate":1000,"shifts":1,"min":1000,"max":7000},
+    {"name":"Community sports stadium","code":"6QS","rate":500,"shifts":1,"min":500,"max":5000},
+    {"name":"Municipal sports stadium","code":"5QS","rate":300,"shifts":1,"min":1000,"max":20000},
+    {"name":"Conveniance store","code":"SŠ1","rate":800,"shifts":1,"min":800,"max":2400},
+    {"name":"Commercial Bank","code":"FI2","rate":833,"shifts":1,"min":2500,"max":7000},
+    {"name":"Domestic Servant Male (to rich)","code":"DSM-R","rate":0.25,"shifts":1,"min":1,"max":1},
+    {"name":"Domestic Servant Male (to high)","code":"DSM-H","rate":0.25,"shifts":1,"min":1,"max":1},
+    {"name":"Domestic Servant Male (to mid)","code":"DSM-M","rate":0.05,"shifts":1,"min":1,"max":1},
+    {"name":"Domestic Servant female (to rich)","code":"DSF-R","rate":1.0,"shifts":1,"min":1,"max":1},
+    {"name":"Domestic Servant female (to high)","code":"DSF-H","rate":0.5,"shifts":1,"min":1,"max":1},
+    {"name":"Domestic Servant female (to mid)","code":"DSF-M","rate":0.2,"shifts":1,"min":1,"max":1}
+]},
+
+    "aNames":
+    {"male":[
+        "Aaron","Abraham","Adam","Adrÿan","Albert",
+        "Alexander","Allan","Andzþeï","Anton","Arkadúsþ",
+        "Arnold","åArður","Artur",
+
+        "Barney","Barry","Benïamin",
+        "Bernard","åBjörn","Bogoswav","Bogdan","Boris",
+        "Brandon","åBruce",
+
+        "Cyril","åCraig","åCharles",
+        "åCyrus","Tþeswav",
+
+        "Dañel","Darús","David","Derik",
+        "Dominik","Donald",
+
+        "Edward","Erik","Ernest",
+        "Øþnest","Eðan","åEugene",
+
+        "Fabïan","Felix","Frank"
+        ,
+        "Gabriel","Gary","åGeorge","Graham","Gustav",
+        "Hans",
+        "Harold","Henryk","Helmut","Herman","Hubert",
+
+        "Igor",
+        "Izak","Ivan","Ivor","Ïan","Ïatsek","Ïakub","Ïürgen",
+        "Ïohan","Úzef","Ïanusþ",
+
+        "åJack","åJames","åJan",
+        "åJason","åJeffery","åJoel","åJohan","åJustin",
+        "Ken",
+        "Kazçmir","Kevin","Ksþysþtof",
+
+        "Lars","Lavrents",
+        "Leonard","Lehþ","Llwellyn","åLouis","Lukas","Wukasþ",
+        "Ludwig","Lubomir","Luboswav",
+
+        "Marius","Markus",
+        "Mattias","åMatthew","Mæðú","åMaurice","Maximilian",
+        "åMichael","Mihþaw","Miroswav","åMurray","Mikowí",
+
+        "Náðen","åNathan","Nelson","åNigel","Nídzþel",
+        "åNoël","Norbert","Norman",
+
+        "Olaf","Oscar","Oliver",
+        "Olek","Otto",
+
+        "Patrik","Paul","Pavew","Peter",
+        "Pïotr","åPhillip",
+
+        "Quinton","Quncy","Radzçiswav",
+        "Ralf","Rámund","Richard","Robert","Robin","Roman",
+        "Ronald","Rupert",
+
+        "Samuel","åScott","Sebastian",
+        "Sigmund","Swavomir","Søren","Staniswav","Steven",
+        "Stþepan","Sven","Sylvester",
+
+        "Tadeusþ","Teodor",
+        "Tobias","Tomas",
+
+        "Ulrich","Údzþîn",
+
+        "Victor",
+        "Vitold","Vintsent","Vwadiswav","Voïtek",
+        "Walter",
+        "Worren","Willïam",
+
+        "Xavir","Xylonder",
+
+        "åZachiria",
+        "åZoël","Zygmund","Zdzçiswav"],
+
+    "female":[
+        "Abigál","Adell","Agñesþka","Ægnes",
+        "Allison","Ællis","Amanda","Anna",
+        "Angelique",
+        "Æsþley",
+
+        "Barbara","Belinda","Bernardett",
+        "Betrix","Betty","Bianca","Brigit",
+        "Britney",
+
+        "åCandice","åCaroline","åCecilia",
+        "åCeleste","åChloë","åChristene",
+        "åCindy","åClaire","åClaudia",
+
+        "Dañiell","Danuta","Debra",
+        "Deniese","Díana",
+        "Dominique","Dorði",
+
+        "Edið","Emilli","Emma",
+        "Erika","Ester","Eva",
+
+        "Fabïa",
+        "Felicity","åFiona","Fÿóna",
+        "Florence","Frantçisþka",
+
+        "Gabriella","åGeorgina",
+        "Gladis","Grazþyna",
+
+        "Hanna","Házel","åHeather",
+        "Hæðer","Hídi","Hellen","Hendrietta",
+
+        "Ida","Iga","Ilana",
+        "Irena","Isabella",
+        "Isabelle","Ïadviga",
+
+        "åJacquie","åJennifer",
+        "åJessica","åJill","åJoan",
+        "åJo-Anne","åJoice","åJudith",
+        "åJuliet",
+
+        "Karen",
+        "Karolina","åKate","Kæðrøn",
+        "Katazþyna","Kim","Kørsten",
+
+        "Lôren","Lî-Ann",
+        "Leona","Linda","Lisa",
+        "åLouise","åLucy",
+
+        "Wutsïa",
+
+        "Madelán","Mallory","Margret",
+        "Magdalena","Marieke","Marilyn",
+        "Marina","Marða","Mary",
+        "Marÿa","Margret",
+        "Malgozþata","Matilda","Megan",
+        "Melinda","åMichelle","Misþel",
+        "Mirrïam","Molly",
+        "åMonique",
+
+        "åNancy","åNicole","Nadïa",
+        "Natalïa",
+
+        "Octavia","Olivia","Ørsula",
+
+
+        "Pamela","åPatricia","åPhoebie",
+        "åPaulina","Priscilla",
+
+        "Queenie","Quintina",
+
+        "åRachel","Rebecka","Regina",
+        "Rose","Ruð","Regina",
+
+        "Sally","Sandra","Sþaron",
+        "Sþeril","Simón","Steffi",
+        "åStephanie","Suzan",
+        "Staniswava","Sþarlota",
+
+
+        "Tabiða","Tanïa","åTanya",
+        "åTéa","Ðelma","Teresa",
+
+        "Ulla","Ulritsa","åUrsula",
+
+        "Vanessa","Vænessa","Victoria",
+        "Violet","Veronica",
+
+        "Wanda","Wilma",
+
+        "Xenobia",
+        "Xylophia",
+
+        "åYolanda","åYvonne",
+        "Ïolanda","Ivona",
+
+        "Zofia","åZoë"],
+
+    "static_surname":[
+        "Aitkin","Àtkin","Ææz","Appleman",
+        "åArcher","Ïabkovski","Wutþñik",
+        "Augustine",
+
+        "Báley","Baker","Pïekerski",
+        "Bauer","Budovlak","Baumgartner",
+        "Dzþevoåogrodski",
+        "Berger","Gural",
+
+        "Borg",
+        "Bosåhoff","Bowdler","Brewer",
+        "Pivñak","Brown",
+        "Bràz","Baxter","Barstþovïak",
+        "Bigosçak","Barañski",
+        "åCartwright","Kowak",
+        "åChapman","åCook",
+        "Kuhþñak",
+
+
+        "åCooper",
+        "Mïedzçak","åCox",
+        "åCarpenter",
+        "Tçesçlak","åCheeseman",
+        "Serovy","åClark",
+
+
+        "Búzþak","Tþehþman",
+        "de Boêr",
+        "De Jong","Dahþïevitþ",
+        "Dàbovski","Dwugosþevski",
+        "Drozþdzþ",
+
+        "åYeastman",
+        "Dzvoñak","Bellman",
+        "åEisenman","Elzimus",
+        "åElephant","Swoñski",
+        "Fisþer",
+        "Fuller","Graaff",
+        "Grüber","Glass","Sþklazþ",
+        "Grosþak","Gaïosç","Gàsçor",
+
+
+        "Gooser","Gliñski","Gþrobler",
+        "Gþrobelâr","de Clay","Gowàb",
+        "Dove","Grusþka",
+        "Gzþehotñik","Rattler","Haas",
+        "Hall","åHawkins","Hoffer",
+        "Hoffman","Hetman",
+        "Hawas","Hsþàstþ","åBeetle",
+        "Ivanov","Irons","Ignisç",
+        "åJones","Ïäger",
+        "Ïagiellïak","Ïastþurak",
+        "Lizard","Ïèzçor","Koler",
+        "Kozwovski","Kovalski",
+        "Kramer","Kravtþyk","Kruger",
+        "Kovaltþyk","Katþmar","Kamïeñski",
+        "Stone",
+        "Kitç","åWarden","Kostçovski",
+        "åChurch","åLehner","Latatþ",
+        "åLynch","Lysçak",
+        "Las","Forester","Wabèdzç",
+        "Swan","Marsþall","åMcCarthy",
+        "åMeyer","Mulder",
+        "Müller","åMurphy","Mostñak",
+        "Mazurak","Mawy","Smal","Mehþ",
+        "Moss","Mïelets",
+        "Miller","Mwyñazþ","Motþyågèba",
+        "åWetmouth","Mozþyts","Seaman",
+        "Mroz","Frost",
+
+
+        "Novak","Newman","Ñedzçvïedzç",
+        "åBear","Ñebodaï","Norveg",
+        "åO'Connel",
+        "Østerreicher","åO'Sullivan",
+        "Ogoñski","Ørsþulak",
+        "Ogurkïevitþ","Oláñik",
+        "Ølman","Owovïak","Leadboy",
+        "Ozþewski","åEagler","Pawlak",
+        "Papiñak","åPlowright",
+        "Porter","Pïerogovski","Pàczak",
+        "Palihþleb","Pazçdzçohþ",
+        "Octobrus","Pïaskovski",
+        "Sandman","Pozçñak",
+        "Psþeswavski","Ptak",
+        "Psþenitçazþ","åWheatman",
+        "Quilter",
+        "Kowdzþak","Quinman",
+        "Rosenberg","Rossi",
+        "Rybak","åFisher","Rak",
+        "Ruzþetski",
+        "Roseman","Rytzezþ",
+        "åKnight","åSchiffner",
+        "åSchmidt","Smið","Sþepard",
+        "Steiner","åStewards",
+        "Stolarski","Sþevtþyk",
+        "Stþetçiñak","Sàdzçak","åJudges",
+        "Sçlivïak","Plumer","Sksþyptþak",
+        "Swovak","Stèpïak","Strusçak",
+        "Ostrich",
+        "Stþèpski","Sçviñoåsuhþy",
+        "Sþahþoågratþ","åChessman",
+        "Stþehþovïak","Stþepiñski",
+        "Stþot","Stçibïor","Stçañak",
+        "Sçledzç","Herring","Tálor",
+        "Sþevts","åThatcher",
+        "åThompson","Tanner","Skuzþak",
+        "Tiler","Tyler","Turner","Tègosç",
+        "Trèbitski",
+
+
+        "Tràbatþ","Horn","Tþesçara",
+        "Usher","åUhrmaker","Ubysþ",
+        "Urbañak","Ustçiñski",
+        "van den Berg",
+        "van der Trèbovitsþenhavn",
+        "Vogel","Valusçevski",
+        "Vàsçak","Vèswavski",
+        "Vègzþyn","Vïeswav",
+        "Vwosçak","Vodñik","åWaterman",
+        "Watatþ","Wilkins","Wolf",
+        "Weber","Walker","Weiver",
+        "Willïams","Wilson",
+        "Vozçñak","Voïtçik","Visçñevski",
+        "åWright","Ïelland","Ïoman",
+        "åZimmerman",
+        "Zajàc","Hare","Zþezçñik",
+        "åButcher","Zþàdzçak","Zþymïeñ",
+        "Roman","Zþotkïevski",
+        "Zañ","Zçàbek","Zçeliñski",
+        "Zïadevski","Zwotek","Zþowèdzç"],
+
+    "base_surname":[
+        "Bær","Bell","Bÿer","åBlack",
+        "åBlue","åBrown","Ðor","Swan",
+        "Bird","åCrab",
+        "Sàd","åShard","Glaß",
+        "Gold","Grá","Grün",
+        "Green","Grüb","Holz",
+        "Ïæger",
+        "Kauf","åOrange","Red","Sand",
+        "Silver","Süß","åWhite","Wolf",
+        "åYellow"],
+
+    "suffix_surname":[
+        "mann","son","issen","berg",
+        "baum","meer","ski","sþtín",
+        "s","inger","wälder",
+        "høvn","ovski","itþ","ïak"]}}

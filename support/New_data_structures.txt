@@ -1,0 +1,72 @@
+{
+    "my_id":"D00-011",
+    "aType":{"lat":"Municipality", "cyr": "Гмина", "lvl":5},
+    "sub_type":"Agricultural",
+    "geo_code":"GYN-G",
+    "aName":{"lat": "Vïeúh", "cyr": "Веюх"},
+    "parent":"D00-00Z",
+    "aChildren":[],
+    "aMap":{"sRegion":"Dzþevogurski","iYear":2018,"fScale":4000000.0,"x":257.94,"y":184.2,"a":1.15},
+    "aArea":{"qty":1840, "uom":"ha"},
+    "aDemand_workforce":{
+        "total":{"rm":0,"rf":0,"hm":0,"hf":0,"mm":6,"mf":2,"lm":113,"lf":53,"pm":1035,"pf":1037},
+        "aItemised":{
+            "Wheat Farms":{"rm":0,"rf":0,"hm":0,"hf":0,"mm":6,"mf":2,"lm":113,"lf":53,"pm":1035,"pf":1037}
+        }
+    },
+    "aSupply_workforce":{
+        "total":{"rm":0,"rf":0,"hm":0,"hf":0,"mm":0,"mf":0,"lm":0,"lf":0,"pm":0,"pf":0},
+        "aItemised":[]
+    },
+    "aDemand_hholds":{
+        "total":{"r":0,"h":0,"m":0,"l":0,"p":0},
+        "aItemised:[]
+    },
+    "aSupply_hholds":{
+        "total":{"r":0,"h":0,"m":7,"l":153,"p":1402}
+        "aItemised[]"
+    },
+
+    "aDemographics":{
+        "TOT":4014,
+        "aMale":{"r":0,"h":0,"m":11,"l":210,"p":1791},
+        "aFemale":{"r":0,"h":0,"m":7,"l":188,"p":1790},
+        "aPrisoners":{"r":0,"h":0,"m":0,"l":1,"p":10},
+        "aNursing_home":{"r":0,"h":0,"m":0,"l":1,"p":16},
+        "aInfants":{"r":0,"h":0,"m":0,"l":11,"p":88},
+        "aToddlers":{"r":0,"h":0,"m":0,"l":14,"p":133},
+        "aPrimary_school":{"r":0,"h":0,"m":2,"l":24,"p":222},
+        "aMiddle_school":{"r":0,"h":0,"m":1,"l":26,"p":179},
+        "aHigh_school":{"r":0,"h":0,"m":1,"l":19,"p":178},
+        "aRelig_Pvt_school":{"r":0,"h":0,"m":0,"l":0,"p":2},
+        "aCollege":{"r":0,"h":0,"m":0,"l":0,"p":2},
+        "aPolytech":{"r":0,"h":0,"m":0,"l":0,"p":0},
+        "aUniversity":{"r":0,"h":0,"m":0,"l":0,"p":0},
+        "aDisabled_children":{"r":0,"h":0,"m":0,"l":0,"p":2},
+        "aHhold_married":{"r":0,"h":0,"m":6,"l":130,"p":1110},
+        "aHhold_singles":{"r":0,"h":0,"m":1,"l":23,"p":292},
+        "aReligion":{"3R":567,"AN":69,"RC":198,"DD":3159,"JW":2,"IS":21}
+    },
+    "aVehicles":{
+        "total":{"bicycle":0,"road":196,"rail":0,"air":0,"water":0},
+        "aItemised":[
+            "Citizens":{...}
+            "Wheat Farms":{"Agri Tractor":63,"Agri Trailer":132,"Car":1}
+        ]
+    },
+    "aFootprints":[],
+    "aaTransport":{
+        "export":{
+            "total":{
+                "wheat":{"qty":8280000.0, "uom":"kg"},
+                "hay":{"qty":331200.0, "uom":"kg"}
+            },
+            "aItemised":[
+                "Wheat Farms":{
+                    "wheat":{"qty":8280000.0, "uom":"kg"},
+                    "hay":{"qty":331200.0, "uom":"kg"}
+                    }
+                ]
+        }
+    }
+}

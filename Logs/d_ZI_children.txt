@@ -1,0 +1,4 @@
+List of all hierarchial children for ZI (Adewy / Адэлы)
+D00-007 [Matthew's Church, 1:2e+06] (x:12.0; y:12.0; a:25.0) ZIG Igimi / Игими
+D00-008 [Matthew's Church, 1:2e+06] (x:0.0; y:0.0; a:25.0) ZIN Bærmann / Баърманн
+D00-009 [Matthew's Church, 1:2e+06] (x:0.0; y:0.0; a:26.0) ZIT Øhieva / Ыхиэва

@@ -1,0 +1,127 @@
+    Godfrey District / Повят Богумирски
+----------
+Pretty print information was generated on 2019-11-06 15:44:46.887786
+----------
+my_id: D00-00K
+geo_code: GY
+----------
+Total population: N/A
+
+Total vehicles*: N/A
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced (Incomplete data):
+>   N/A
+----------
+Hierarchial Parent: 
+>  Dzþevogurski Province / Провинцъя Джэвогурскъего
+>   my_id: D00-003
+>   geo_code: V
+----------
+Hierarchial Children: 
+>   count: 15
+>      Godfrey County / Воевуцтво Богумирскъе
+>          my_id: D00-00L
+>          geo_code: GY0
+>          population: N/A
+>
+>      Hràmisþatç County / Воевуцтво Храьмишацкъе
+>          my_id: D00-00M
+>          geo_code: GY1
+>          population: N/A
+>
+>      Psçovutþe County / Воевуцтво Псёвучэскъе
+>          my_id: D00-00N
+>          geo_code: GY2
+>          population: N/A
+>
+>      Waðu County / Воевуцтво Ладюскъе
+>          my_id: D00-00O
+>          geo_code: GY3
+>          population: N/A
+>
+>      Ksþèmru County / Воевуцтво Кшэьмрускъе
+>          my_id: D00-00P
+>          geo_code: GY4
+>          population: N/A
+>
+>      Arèzwa County / Воевуцтво Арэьзлскъе
+>          my_id: D00-00Q
+>          geo_code: GY5
+>          population: N/A
+>
+>      Ïevofisþno County / Воевуцтво Евофишнёскъе
+>          my_id: D00-00R
+>          geo_code: GY6
+>          population: N/A
+>
+>      Triangle North County / Воевуцтво Пулноцно Труйкаьтнэ
+>          my_id: D00-00S
+>          geo_code: GY7
+>          population: N/A
+>
+>      Sþlagi County / Воевуцтво Шлягицке
+>          my_id: D00-00T
+>          geo_code: GYL
+>          population: N/A
+>
+>      Rugeqþu County / Воевуцтво Ругэъъускъе
+>          my_id: D00-00U
+>          geo_code: GYQ
+>          population: N/A
+>
+>      Upatþyïef County / Воевуцтво Упачыевскъе
+>          my_id: D00-00V
+>          geo_code: GYU
+>          population: N/A
+>
+>      Sçruza County / Воевуцтво Срюзкъе
+>          my_id: D00-00W
+>          geo_code: GYC
+>          population: N/A
+>
+>      Rotçi County / Воевуцтво Ротьискъе
+>          my_id: D00-00X
+>          geo_code: GYT
+>          population: N/A
+>
+>      Gruzçitse County / Воевуцтво Грузьицке
+>          my_id: D00-00Y
+>          geo_code: GYG
+>          population: 23,813 (Incomplete data)
+>
+>      New Script County / Воевуцтво Ново Запискъе
+>          my_id: D00-00Z
+>          geo_code: GYN
+>          population: N/A
+>
+----------
+Map and area: 
+>   Region: Dzþevogurski 1:4,000,000 (drawn in 2018)
+>   Position (mm) x: 281.781, y: 149.239
+>   Area on paper (sq.mm) a: 4,690.508
+>   Area represented: 75,048.0sq.km
+----------
+Workforce Demand: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Demand households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   N/A
+----------
+Vehicles (requiring county-level registration and number plates):
+>   N/A
+----------
+Footprint on the land:
+>   N/A
+

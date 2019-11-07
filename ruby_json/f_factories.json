@@ -1,0 +1,42 @@
+[{
+    "id":"F00-001",
+    "type":"Farm",
+    "sub_type":"Wheat (1.25emp/ha)",
+    "status":"active",
+    "name":"Wheat Farm 1.25",
+    "aaResources":{
+        "input":["N00-001"],
+        "output":[
+            {"res":"N00-002","aConv":[0.0002]},
+            {"res":"N00-003","aConv":[0.005]}
+        ],
+        "hinge":"N00-001"
+    },
+    "aaLabour":{
+        "main":{
+            "job":"J00-002",
+            "units":"empl/ha",
+            "rate":1.25},
+        "supv":{
+            "job":"J00-003",
+            "rate":20},
+        "mgmt":{
+            "job":"J00-004",
+            "rate":400},
+        "supt":{
+            "job":"J00-006",
+            "rate":33},
+        "stat":[
+            {"job":"J00-001","thld":1},
+            {"job":"J00-007","thld":5},
+            {"job":"J00-005","thld":10},
+            {"job":"J00-005","thld":250},
+            {"job":"J00-007","thld":180}
+        ]
+    },
+    "aaVehicles":[
+        {"id":"000-001","static_cnt":1,"dynamic_cnt":33},
+        {"id":"000-006","static_cnt":3,"dynamic_cnt":16},
+        {"id":"000-004","static_cnt":1,"dynamic_cnt":0}
+    ],
+    "aFinancials":null}]

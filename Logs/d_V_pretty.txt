@@ -1,0 +1,112 @@
+    Dzþevogurski Province / Провинцъя Джэвогурскъего
+----------
+Pretty print information was generated on 2019-11-06 15:43:13.038316
+----------
+my_id: D00-003
+geo_code: V
+----------
+Total population: N/A
+
+Total vehicles*: N/A
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced (Incomplete data):
+>   N/A
+----------
+Hierarchial Parent: 
+>  Trèmbovitse Country / Паньстфо Трэьбовицэ
+>   my_id: D00-002
+>   geo_code: 0V9
+----------
+Hierarchial Children: 
+>   count: 12
+>      Godfrey District / Повят Богумирски
+>          my_id: D00-00K
+>          geo_code: GY
+>          population: N/A
+>
+>      Åmurrayville District / Повят Марривыль
+>          my_id: D00-03B
+>          geo_code: MV
+>          population: N/A
+>
+>      Kimberley District / Повят Кимбэрльи
+>          my_id: D00-04W
+>          geo_code: KI
+>          population: N/A
+>
+>      Åcosþdyn District / Повят Цошдын
+>          my_id: D00-059
+>          geo_code: CO
+>          population: N/A
+>
+>      Lorainesburg District / Повят Ущлёрэйн
+>          my_id: D00-05I
+>          geo_code: LV
+>          population: N/A
+>
+>      Fusþton District / Повят Фуштон
+>          my_id: D00-05Q
+>          geo_code: FS
+>          population: N/A
+>
+>      Trinidad District / Повят Тринидад
+>          my_id: D00-079
+>          geo_code: TJ
+>          population: N/A
+>
+>      Vænesston District / Повят Вэнэсовицэ
+>          my_id: D00-09K
+>          geo_code: VA
+>          population: N/A
+>
+>      St. åPhœnix District / Повят Сьв. Финикс
+>          my_id: D00-09L
+>          geo_code: VX
+>          population: N/A
+>
+>      Lake Ceres District / Повят Езёро Цэрэс
+>          my_id: D00-09M
+>          geo_code: VC
+>          population: N/A
+>
+>      Kratosçum District / Повят Кратосюм
+>          my_id: D00-09N
+>          geo_code: VB
+>          population: N/A
+>
+>      Ïàdzþor District / Повят Яьджор
+>          my_id: D00-0DH
+>          geo_code: ID
+>          population: N/A
+>
+----------
+Map and area: 
+>   Region: Trèmbovitse 1:20,000,000 (drawn in 2012)
+>   Position (mm) x: 139.56, y: 138.51
+>   Area on paper (sq.mm) a: 1,345.74
+>   Area represented: 538,296.0sq.km
+----------
+Workforce Demand: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Demand households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   N/A
+----------
+Vehicles (requiring county-level registration and number plates):
+>   N/A
+----------
+Footprint on the land:
+>   N/A
+
