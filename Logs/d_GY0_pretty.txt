@@ -1,0 +1,243 @@
+    Godfrey County / Воевуцтво Богумирскъе
+----------
+Pretty print information was generated on 2019-11-23 12:38:45.033555
+----------
+my_id: D00-00L
+geo_code: GY0
+----------
+Total population: 49,151
+
+Total vehicles*: 12,046
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced:
+>   misc industrial: 26,476.6t/yr by Warehouse 0
+>   granite: 206.56kt/yr by Warehouse 1
+>   crushed stone: 1,070.61kt/yr by Warehouse 2
+----------
+Hierarchial Parent: 
+>  Godfrey District / Повят Богумирски
+>   my_id: D00-00K
+>   geo_code: GY
+----------
+Hierarchial Children: 
+>   count: 9
+>      Godfrey Municipality / Гмина Богумир
+>          my_id: D00-02P
+>          geo_code: GY0-0
+>          population: 24,576
+>          warehouse: Misc Industrial, granite, granite, Misc Industrial
+>
+>      Lasoðo Municipality / Гмина Лясодьо
+>          my_id: D00-02Q
+>          geo_code: GY0-L
+>          population: 8,036
+>          warehouse: Misc Industrial
+>
+>      Ånoëlburg Municipality / Гмина Ущнощэля
+>          my_id: D00-02R
+>          geo_code: GY0-N
+>          population: 847
+>          warehouse: 
+>
+>      Zþurkin Municipality / Гмина Журкин
+>          my_id: D00-02S
+>          geo_code: GY0-Z
+>          population: 7,628
+>          warehouse: crushed stone
+>
+>      Eastern Parks Municipality / Гмина Всходъня Пшырода
+>          my_id: D00-02T
+>          geo_code: GY0-2
+>          population: 2,975
+>          warehouse: 
+>
+>      Katieburg Municipality / Гмина Ущкасьи
+>          my_id: D00-02U
+>          geo_code: GY0-K
+>          population: 1,055
+>          warehouse: 
+>
+>      Wysçak Municipality / Гмина Лысяк
+>          my_id: D00-02V
+>          geo_code: GY0-W
+>          population: 2,244
+>          warehouse: granite
+>
+>      Western Parks Municipality / Гмина Заодъня Пшырода
+>          my_id: D00-02W
+>          geo_code: GY0-1
+>          population: 1,723
+>          warehouse: 
+>
+>      Sutu Bridge Municipality / Гмина Мост Над Суту
+>          my_id: D00-02X
+>          geo_code: GY0-S
+>          population: 67
+>          warehouse: 
+>
+----------
+Map and area: 
+>   Region: Dzþevogurski 1:4,000,000 (drawn in 2018)
+>   Position (mm) x: 284.782, y: 146.189
+>   Area on paper (sq.mm) a: 375.049
+>   Area represented: 6,001.0sq.km
+----------
+Workforce Demand: 
+>   Grand Total: (20,629)
+>       rm: 4; hm: 377; mm: 1,538; lm: 3,778; pm: 8,835;
+>       rf: 2; hf: 60; mf: 1,164; lf: 3,249; pf: 1,622;
+>
+>   GY0-0: (10,724)
+>       rm: 4; hm: 213; mm: 862; lm: 1,872; pm: 4,056;
+>       rf: 1; hf: 36; mf: 805; lf: 1,890; pf: 985;
+>       tot road veh: 506
+>
+>   GY0-L: (2,928)
+>       rm: 0; hm: 39; mm: 87; lm: 252; pm: 2,106;
+>       rf: 1; hf: 4; mf: 43; lf: 223; pf: 173;
+>       tot road veh: 144
+>
+>   GY0-N: (392)
+>       rm: 0; hm: 24; mm: 196; lm: 40; pm: 11;
+>       rf: 0; hf: 6; mf: 65; lf: 33; pf: 17;
+>       tot road veh: 40
+>
+>   GY0-Z: (2,816)
+>       rm: 0; hm: 16; mm: 57; lm: 236; pm: 2,011;
+>       rf: 0; hf: 4; mf: 48; lf: 212; pf: 232;
+>       tot road veh: 212
+>
+>   GY0-2: (1,474)
+>       rm: 0; hm: 32; mm: 67; lm: 737; pm: 59;
+>       rf: 0; hf: 2; mf: 68; lf: 433; pf: 76;
+>       tot road veh: 691
+>
+>   GY0-K: (507)
+>       rm: 0; hm: 26; mm: 203; lm: 81; pm: 16;
+>       rf: 0; hf: 6; mf: 72; lf: 81; pf: 22;
+>       tot road veh: 43
+>
+>   GY0-W: (893)
+>       rm: 0; hm: 7; mm: 25; lm: 119; pm: 532;
+>       rf: 0; hf: 1; mf: 21; lf: 116; pf: 72;
+>       tot road veh: 73
+>
+>   GY0-1: (865)
+>       rm: 0; hm: 20; mm: 40; lm: 431; pm: 33;
+>       rf: 0; hf: 1; mf: 42; lf: 253; pf: 45;
+>       tot road veh: 404
+>
+>   GY0-S: (30)
+>       rm: 0; hm: 0; mm: 1; lm: 10; pm: 11;
+>       rf: 0; hf: 0; mf: 0; lf: 8; pf: 0;
+>       tot road veh: 10
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Grand Total: (18,664)
+>       r: 8; h: 458; m: 2,233; l: 5,236; p: 10,729;
+>   GY0-0: (9,295) | r: 6; h: 256; m: 1,342; l: 2,809; p: 4,882;
+>   GY0-L: (3,041) | r: 2; h: 48; m: 103; l: 347; p: 2,541;
+>   GY0-N: (340) | r: 0; h: 27; m: 237; l: 52; p: 24;
+>   GY0-Z: (2,857) | r: 0; h: 22; m: 86; l: 323; p: 2,426;
+>   GY0-2: (1,141) | r: 0; h: 36; m: 114; l: 881; p: 110;
+>   GY0-K: (432) | r: 0; h: 34; m: 244; l: 122; p: 32;
+>   GY0-W: (854) | r: 0; h: 9; m: 38; l: 170; p: 637;
+>   GY0-1: (673) | r: 0; h: 26; m: 67; l: 517; p: 63;
+>   GY0-S: (31) | r: 0; h: 0; m: 2; l: 15; p: 14;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>   GY0-0: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   GY0-L: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   GY0-N: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   GY0-Z: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   GY0-2: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   GY0-K: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   GY0-W: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   GY0-1: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   GY0-S: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 49,151
+>
+>   Married working people (aHHM-PAX):
+>       r: 10; h: 588; m: 2,974; l: 6,984; p: 14,400;
+>
+>   Married retired people (aHHR-PAX):
+>       r: 2; h: 174; m: 860; l: 2,020; p: 4,154;
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 0; h: 83; m: 364; l: 869; p: 1,703;
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 2; h: 44; m: 217; l: 505; p: 1,039;
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 1; m: 1; l: 19; p: 21;
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 6; m: 3; l: 49; p: 81;
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 5; h: 235; m: 436; l: 339; p: 5,534;
+>
+>   Preschoolers, all groups                 (ED0-PAX): 2,244
+>   Primary schoolers, all groups            (ED1-PAX): 3,528
+>   Middle schoolers, all groups             (ED2-PAX): 2,884
+>   High schoolers, all groups               (ED3-PAX): 2,778
+>   Religious or Private schoolers, all grps (ED4-PAX): 185
+>   College students, all groups             (ED5-PAX): 22
+>   Polytechnic students, all groups         (ED6-PAX): 13
+>   University students, all groups          (ED7-PAX): 6
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 97
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 0
+>   Old Age Home, all groups                 (OAH-PAX): 360
+>   Private nurse, all groups                (OAN-PAX): 0
+>   Youth prison, all groups                 (YXJ-PAX): 27
+>   Adult prison, all groups                 (YXA-PAX): 253
+>   Religion:
+>      Renásàsers (3R): 9451
+>      Anglican Christians (AN): 2855
+>      Roman Catholics (RC): 1970
+>      Deltæðømmysts (DD): 21202
+>      Jews (JW): 583
+>      Muslims (IS): 963
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 18,038
+>   Vehicle, motorbike*                      (VEH-MBK): 8,105
+>   Vehicle, car*                            (VEH-CAR): 2,125
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 12,046
+>   Itemised county-registered vehicles:
+>      GY0-0: 6,077
+>      GY0-L: 874
+>      GY0-N: 575
+>      GY0-Z: 850
+>      GY0-2: 1,668
+>      GY0-K: 653
+>      GY0-W: 343
+>      GY0-1: 982
+>      GY0-S: 24
+----------
+Footprint on the land:
+>   GY0-0: 22,048.0ha
+>   GY0-L: 59,552.0ha
+>   GY0-N: 35,456.0ha
+>   GY0-Z: 49,440.0ha
+>   GY0-2: 2,284.0sq.km
+>   GY0-K: 37,600.0ha
+>   GY0-W: 20,768.0ha
+>   GY0-1: 1,359.0sq.km
+>   GY0-S: 10,896.0ha
+

@@ -25,16 +25,16 @@ def destinations(ccTremb):
     """ Selects the 'destinations' database which has the geographic areas
         stored in it. This is the main element of the system. These 'geographic
         areas' also hold a detailed break-down of the population"""
-#    return ccTremb["destinations"]
-    return ccTremb["dest_test"]
-
+    return ccTremb["destinations"]
+#    return ccTremb["dest_test"]
 
 #-------------------------------------------------------------------------------
-def factories(ccTremb):
-    """ Selectes the 'factories' database which stores information about the
-        field or factory. It holds information like what is grown or produced
-        there; what are the labour demands; what are the vehicular demands."""
-    return ccTremb["factories"]
+def stations(ccTremb):
+    """ Selects the 'stations' database which holds information for train
+    stations. (Does it have to be trainstations?) I will define a 'station' as
+    a place where goods and passangers are loaded and off-loaded.
+    """
+    return ccTremb["stations"]
 
 #-------------------------------------------------------------------------------
 def rnd_syl(ccTremb):

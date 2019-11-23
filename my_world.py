@@ -79,6 +79,7 @@ x: Miscellaneous
 y:
 z: complex number
 
+---------------------------------
 Y-plates: (Various government institutions)
 YA: Airforce
 YB:
@@ -187,14 +188,13 @@ def mm_star():
     # Update a bad complex value
     if False:
         dNew_data = {
-            "tot_road":50,
-            "aItemised":{
-                "maize farm":50,
-            }
+            'resource': 'chicken',
+            'annual_output': 15356,
+            'units': 't/yr'
         }
 
-        xParam = {"my_id":"D00-01T"}
-        xNew_data = {"$set": {"aVehicles" : dNew_data}}
+        xParam = {"my_id":"D00-017"}
+        xNew_data = {"$set": {"aWarehouse.chicken farm 0" : dNew_data}}
 
         ccTremb = db.connect()
         cDb = db.destinations(ccTremb)
@@ -247,14 +247,17 @@ def mm_ampersand():
     # Read all the geographic data
     if False:
         # Do the query
-        xParam = {"geo_code":None}         # All queries
-        xRestr = {"_id":0, "aName":1, "parent":1}
+        xParam = {"aDemand_workforce.aItemised.sName":"wheat farm"}         # All queries
+        xRestr = {"_id":0,
+                "geo_code":1,
+                "aDemand_workforce.aItemised":1}
+
         ccTremb = db.connect()
         cDb_of_choice = db.destinations(ccTremb)
         dQuery = cDb_of_choice.find(xParam, xRestr)
 
     # Read all the factory data
-    if True:
+    if False:
         # Do the query
         xParam = {}         # All queries
         xRestr = {"_id":0}
@@ -281,6 +284,13 @@ def mm_d():
     d_py.sub_menu()
 
 #-------------------------------------------------------------------------------
+def mm_s():
+    """ Stations & Ports menu which deals with intermodal transportation
+     systems"""
+    import modules.s_stations as s_py
+    s_py.sub_menu()
+
+#-------------------------------------------------------------------------------
 def main_menu():
     """ Reroutes the program according to functionality """
     sMain_menu = """
@@ -298,6 +308,7 @@ def main_menu():
 `: Generate random names
 
 D: Destinations (geographic areas on the map)
+S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
 
 """
     bExit = False
@@ -337,6 +348,10 @@ D: Destinations (geographic areas on the map)
         # Geographic destinations menu
         elif sInput == "D":
             mm_d()
+
+        # Stations and ports menu
+        elif sInput == "S":
+            mm_s()
 
         else:
             pass

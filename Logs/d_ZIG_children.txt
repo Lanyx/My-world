@@ -1,3 +1,0 @@
-List of all hierarchial children for ZIG (Igimi / Игими)
-D00-00A [Matthew's Church, 1:2e+06] (x:12.0; y:12.0; a:4.0) ZIG-P Zbèða / Збэьдя
-D00-00B [Matthew's Church, 1:2e+06] (x:12.0; y:12.0; a:5.0) ZIG-S Rupert / Рупэрт

@@ -183,3 +183,52 @@ def find_highest_id(dId_query):
         print(sTxt.format(iHighest))
 
     return iHighest, aEvery_id
+
+#-------------------------------------------------------------------------------
+def verify_geo_code(sGeo_code, cDest):
+    """ Method makes sure that the geo-code entered exists in the database.
+    Returns the names of the entity"""
+
+    # Verify the geo-code
+    xParam = {"geo_code":sGeo_code}
+    xRestr = {"_id":0, "aName":1}
+    dGeo_query = cDest.find(xParam, xRestr)
+
+    # Look at the results of the query
+    iNo_of_hits = 0
+    aName = {}
+
+    for query in dGeo_query:
+        iNo_of_hits += 1
+        aName = query["aName"]
+
+    if iNo_of_hits != 1:
+        sTxt = "\n\aGeocode ({0}) verification failed. Exiting"
+        print(sTxt.format(sGeo_code))
+        return None
+    return aName
+
+#-------------------------------------------------------------------------------
+def get_geo_element(sGeo_code, cDest):
+    """ Method makes sure that the geo-code entered exists in the database.
+    Returns the whole geographic database entry"""
+
+    # Verify the geo-code
+    xParam = {"geo_code":sGeo_code}
+    xRestr = {"_id":0}
+    dGeo_query = cDest.find(xParam, xRestr)
+
+    # Look at the results of the query
+    iNo_of_hits = 0
+    dGeo_element = {}
+
+    for query in dGeo_query:
+        iNo_of_hits += 1
+        dGeo_element = query
+
+    if iNo_of_hits != 1:
+        sTxt = "\n\aGeocode verification failed [{0}].".format(sGeo_code)
+        sTxt += " EXITING"
+        print(sTxt)
+        return None
+    return dGeo_element

@@ -56,7 +56,7 @@ def add_area_to_db(ccTremb):
     # we can incerement the sequence and use it.
     iNext_id = iHighest + 1
     if iNext_id > 36**5:
-        print("Maximum count has been exceeded")
+        print("\n\aMaximum count has been exceeded")
         return None
 
     # Convert to base36
@@ -70,7 +70,7 @@ def add_area_to_db(ccTremb):
     # order.
     dNew_area = {
         "my_id":sNew_id,
-        "aName": {"lat":None, "cyr":None},
+        "aName":{"lat":None, "cyr":None},
         "geo_code":None,
         "aType":{"lat":None, "cyr":None, "lvl":None},
         "sub_type":None,
@@ -312,6 +312,7 @@ What is the purpose of this region:
     while bExit == False:
         sMenu = "\nDo you want a random name?"
         sRand_name_yn = misc.get_binary(sMenu)
+        if sRand_name_yn == None: return None
 
         # User written name.
         if sRand_name_yn == "N":
@@ -374,7 +375,6 @@ What is the purpose of this region:
             iNo_of_names = len(aLat)
             sChoices = "0: Choose again\n"              # Don't like the options
             iCnt = 1
-            print("Number of names is {0}".format(iNo_of_names))
             for idx in range(0, iNo_of_names):
                 sTxt = "{0}: {1} / {2}\n"
                 sChoices += sTxt.format(iCnt, aLat[idx], aCyr[idx])
@@ -550,6 +550,20 @@ def view_single(ccTremb):
     xRestr = {"_id":0}
     dQuery = cDest.find(xParam, xRestr)
 
+    # Pull data and veryify existance
+    iNo_of_hits = 0
+    dData = ""
+
+    for query in dQuery:
+        dData = query
+        iNo_of_hits += 1
+
+    # Make sure that only one entry exists
+    if iNo_of_hits != 1:
+        sTxt = ("\n\aThere were {0} 'hits' while expecting 1 for [{1}]")
+        print(sTxt.format(iNo_of_hits, sGeo_code))
+        return None
+
     # Open a text file where a copy of the information will be written to.
     if sGeo_code == "*":
         sFile_name = "world"                    # Exception in naming convention
@@ -559,425 +573,14 @@ def view_single(ccTremb):
     # Work out a name of the file
     sFile_path = "Logs/d_{0}_single.txt".format(sFile_name)
     eSingle_data = open(sFile_path, "w", encoding="utf-8")
-    sHeading = ("Database extract\n")
-
-    sFull_data = ""
-    dData = ""
-    for query in dQuery:
-        print("Please see: {0}".format(sFile_path))
-        dData = query
 
     eSingle_data.write("{0}\n".format(dData))
     eSingle_data.close()
 
+    print("Please see: {0}".format(sFile_path))
+
 #-------------------------------------------------------------------------------
 # 4: PRETTY-PRINT MANUALLY DATABASE ENTRY TO FILE FOR A SINGLE GEOCODE
-#-------------------------------------------------------------------------------
-def pretty_print_single_orig(ccTremb):
-    import math
-
-    """ Writes all the elements of the database to a text file"""
-    sMenu = "\nEnter the geo-code for the element sought (ex: V, GY, GYN...)"
-    print(sMenu)
-    sGeo_code = input().upper()              # Force to upper case (consistency)
-
-    # Access the database.
-    cDest = db.destinations(ccTremb)
-
-    xParam = {"geo_code" : sGeo_code}
-    xRestr = {"_id":0}
-    dQuery = cDest.find(xParam, xRestr)
-
-    # Open a text file where a copy of the information will be written to.
-    if sGeo_code == "*":
-        sFile_name = "world"                    # Exception in naming convention
-    else:
-        sFile_name = sGeo_code
-
-    # Work out a name of the file
-    sFile_path = "Logs/d_{0}_pretty.txt".format(sFile_name)
-    eSingle_data = open(sFile_path, "w", encoding="utf-8")
-    sHeading = ("Database extract\n")
-
-    sAll = "Information on requested geographic area of interest.\n"
-    dData = ""
-    for query in dQuery:
-        print("Please see: {0}".format(sFile_path))
-        dData = query
-
-    # Write out each of the elements
-    sTxt = "my id: {0}\n"
-    sAll += sTxt.format(dData["my_id"])
-
-    sTxt = "geo_code: {0}\n"
-    sAll += sTxt.format(dData["geo_code"])
-
-# THE NAME
-    sAll += "--- --- ---\n"
-    sTxt = "Names: {0} / {1}\n"
-    sAll += sTxt.format(dData["aName"]["lat"], dData["aName"]["cyr"])
-
-    sTxt = "type: ({3}) {0} / {1}, level: {2}\n"
-    dX = dData["aType"]
-    sAll += sTxt.format(dX["lat"], dX["cyr"], dX["lvl"], dData["sub_type"])
-
-# HIERARCHY
-    sAll += "--- --- ---\n"
-    sTxt = "Parent: {0}\n"
-    sAll += sTxt.format(dData["parent"])
-
-    iNo_of_items = len(dData["aChildren"])
-    sTxt = "Children ({0}):\n"
-    sAll += sTxt.format(iNo_of_items)
-
-    iItem_no = 0
-    sTxt = ""
-    while iItem_no < iNo_of_items:
-        sTxt += "    "
-        for iCnt in range(6):
-            sTxt += "{0}, ".format(dData["aChildren"][iItem_no])
-            iItem_no += 1
-            if iItem_no == iNo_of_items: break
-        sTxt += "\n"
-    sAll += sTxt
-
-# MAP REFERENCE
-    sAll += "--- --- ---\n"
-    sTxt = "Map, region: {0}, drawn in: {1}\n"
-    sAll += sTxt.format(dData["aMap"]["sRegion"], dData["aMap"]["iYear"])
-    fScale = dData["aMap"]["fScale"]
-
-    if fScale == None or fScale <= 0:
-        sAll += "Map, scale: N/A, x: N/A, y: N/A, a:N/A\n"
-    else:
-        fLog = math.log10(fScale)     # Determine the number of zeros
-        iLog = int(math.floor(fLog))
-        for iLog in [0, 1, 2]:
-            iPretty_scale = int(fScale / 1e0)
-            sPretty_scale = "1:{0}".format(iPretty_scale)
-        for iLog in [3, 4, 5]:
-            iPretty_scale = int(fScale / 1e3)
-            sPretty_scale = "1:{0}k".format(iPretty_scale)
-        for iLog in [6, 7, 8]:
-            iPretty_scale = int(fScale / 1e6)
-            sPretty_scale = "1:{0}M".format(iPretty_scale)
-
-        sTxt = "Map, scale: {0}, x: {1}mm, y: {2}mm, a: {3}mm²\n"
-        sAll += sTxt.format(sPretty_scale,
-                            dData["aMap"]["x"],
-                            dData["aMap"]["y"],
-                            dData["aMap"]["a"],)
-
-    if dData["aArea"]["qty"] == None:
-        sAll += "Area: N/A"
-    else:
-        sTxt = "Area: {0}{1}\n"
-        sAll += sTxt.format(dData["aArea"]["qty"], dData["aArea"]["uom"])
-
-# DEMAND WORKFORCE
-    sAll += "--- --- ---\n"
-    sAll += "Demand workforce:\n"
-    dDmd_wkf = dData["aDemand_workforce"]       # Short-cut
-    sTxt = ">   TOTAL:\n       "
-    # Do the men on the top line
-    for sGroup in ["rm", "hm", "mm", "lm", "pm"]:
-        sTxt += " {0}: {1},".format(sGroup, dDmd_wkf["total"][sGroup])
-    sTxt += "\n       "
-    # Do the women on the bottom line
-    for sGroup in ["rf",  "hf", "mf", "lf", "pf"]:
-        sTxt += " {0}: {1},".format(sGroup, dDmd_wkf["total"][sGroup])
-    sTxt += "\n"
-    sAll += sTxt
-
-    iNo_of_items = len(dDmd_wkf["aItemised"])
-    # if the number of items is zero, then the for loop will be bypassed.
-    for iCnt in range(iNo_of_items):
-        dItem = dDmd_wkf["aItemised"][iCnt]     # Short-cut
-
-        sTxt = ">   {0}:\n       ".format(dItem['sName'])
-        # Do the men on the top line
-        for sGroup in ["rm", "hm", "mm", "lm", "pm"]:
-            sTxt += " {0}: {1},".format(sGroup, dItem[sGroup])
-        sTxt += "\n       "
-        # Do the women on the bottom line
-        for sGroup in ["rf",  "hf", "mf", "lf", "pf"]:
-            sTxt += " {0}: {1},".format(sGroup, dItem[sGroup])
-        sTxt += "\n       "
-        # Sometimes company vehicles (both Y and county registrations) are
-        # recorded
-        if "iVeh_cnt" in dItem.keys():
-            sTxt += " tot road veh: {0}\n".format(dItem["iVeh_cnt"])
-            sAll += sTxt
-
-# SUPPLY WORKFORCE
-    sAll += "--- --- ---\n"
-    sAll += "Supply workforce:\n"
-    sAll += ">   Status: RFU\n"
-    if False:       # Functionality is not going to be used.
-        dSup_wkf = dData["aSupply_workforce"]       # Short-cut
-        sTxt = ">   TOTAL:\n       "
-        # Do the men on the top line
-        for sGroup in ["rm", "hm", "mm", "lm", "pm"]:
-            sTxt += " {0}: {1},".format(sGroup, dSup_wkf["total"][sGroup])
-        sTxt += "\n       "
-        # Do the women on the bottom line
-        for sGroup in ["rf",  "hf", "mf", "lf", "pf"]:
-            sTxt += " {0}: {1},".format(sGroup, dSup_wkf["total"][sGroup])
-        sTxt += "\n"
-        sAll += sTxt
-
-        iNo_of_items = len(dSup_wkf["aItemised"])
-        # if the number of items is zero, then the for loop will be bypassed.
-        for iCnt in range(iNo_of_items):
-            dItem = dSup_wkf["aItemised"][iCnt]     # Short-cut
-
-            sTxt = ">   {0}:\n       ".format(dItem['sName'])
-            # Do the men on the top line
-            for sGroup in ["rm", "hm", "mm", "lm", "pm"]:
-                sTxt += " {0}: {1},".format(sGroup, dItem[sGroup])
-            sTxt += "\n       "
-            # Do the women on the bottom line
-            for sGroup in ["rf",  "hf", "mf", "lf", "pf"]:
-                sTxt += " {0}: {1},".format(sGroup, dItem[sGroup])
-            sTxt += "\n       "
-            # Sometimes company vehicles (both Y and county registrations) are
-            # recorded
-            if "iVeh_cnt" in dItem.keys():
-                sTxt += " tot road veh: {0}\n".format(dItem["iVeh_cnt"])
-                sAll += sTxt
-
-# DEMAND HOUSEHOLDS
-    sAll += "--- --- ---\n"
-    sAll += "Demand households (total):\n"
-    dDmd_hhd = dData["aDemand_hholds"]       # Short-cut
-    sTxt = ">   "
-    # Do the uninitialised, where there is the 'total' subgroup
-    if "total" in dDmd_hhd.keys():
-        dDmd_hhd = dDmd_hhd["total"]
-
-    for sGroup in ["r", "h", "m", "l", "p"]:
-        sTxt += " {0}: {1},".format(sGroup, dDmd_hhd[sGroup])
-    sTxt += "\n"
-    sAll += sTxt
-
-# SUPPLY HOUSEHOLDS
-    sAll += "--- --- ---\n"
-    sAll += "Supply households:\n"
-    dSup_hhd = dData["aSupply_hholds"]       # Short-cut
-    sTxt = ">   TOTAL:\n       "
-    # Do the men on the top line
-    for sGroup in ["r", "h", "m", "l", "p"]:
-        sTxt += " {0}: {1},".format(sGroup, dSup_hhd["total"][sGroup])
-    sTxt += "\n"
-
-    iNo_of_items = len(dSup_hhd["aItemised"])
-    # if the number of items is zero, then the for loop will be bypassed.
-    for iCnt in range(iNo_of_items):
-        dItem = dSup_hhd["aItemised"][iCnt]     # Short-cut
-
-        sTxt = ">   {0}:\n       ".format(dItem['sName'])
-        # Do the men on the top line
-        for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1},".format(sGroup, dItem[sGroup])
-        sTxt += "\n       "
-
-        # Sometimes company vehicles (both Y and county registrations) are
-        # recorded
-        if "iVeh_cnt" in dItem.keys():
-            sTxt += "        tot road veh: {0}\n".format(dItem["iVeh_cnt"])
-    sAll += sTxt
-
-# DEMOGRAPHICS
-    sAll += "--- --- ---\n"
-    sAll += "Demographics:\n"
-    dDfx = dData["aDemographics"]       # Short-cut
-    if dDfx != {}:
-        sTxt = ">   TOTAL PEOPLE: {0}\n"
-        sAll += sTxt.format(dDfx["iTOT-PAX"])
-
-        sTxt = ">   Married working people (aHHM-PAX):\n       "
-        for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1},".format(sGroup, dDfx["aHHM-PAX"][sGroup])
-        sTxt += "\n"
-        sAll += sTxt
-
-        sTxt = ">   Married retired people (aHHR-PAX):\n       "
-        for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1},".format(sGroup, dDfx["aHHR-PAX"][sGroup])
-        sTxt += "\n"
-        sAll += sTxt
-
-        sTxt = ">   Unmarried working people ('bachelors') (aHHB-PAX):\n       "
-        for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1},".format(sGroup, dDfx["aHHB-PAX"][sGroup])
-        sTxt += "\n"
-        sAll += sTxt
-
-        sTxt = ">   Unmarried retired people ('golden oldies') (aHHO-PAX):"
-        sTxt += "\n       "                 # We exceeded the 80 column limit
-        for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1},".format(sGroup, dDfx["aHHO-PAX"][sGroup])
-        sTxt += "\n"
-        sAll += sTxt
-
-        sTxt = ">   Disabled people, not in a nursing home (aHHD-PAX):\n       "
-        for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1},".format(sGroup, dDfx["aHHD-PAX"][sGroup])
-        sTxt += "\n"
-        sAll += sTxt
-
-        sTxt = ">   Not working: housewife/-husband OR disabled caregiving "
-        sTxt += "(aHHX-PAX):\n       "
-        for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1},".format(sGroup, dDfx["aHHX-PAX"][sGroup])
-        sTxt += "\n"
-        sAll += sTxt
-
-        sTxt = ">   Unemployed: wanting to work but no work available "
-        sTxt += "(aUNE-PAX):\n       "
-        for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1},".format(sGroup, dDfx["aUNE-PAX"][sGroup])
-        sTxt += "\n"
-        sAll += sTxt
-
-        sTxt = ">   Preschoolers, all groups                   (ED0-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED0-PAX"])
-
-        sTxt = ">   Primary schoolers, all groups              (ED1-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED1-PAX"])
-
-        sTxt = ">   Middle schoolers, all groups               (ED2-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED2-PAX"])
-
-        sTxt = ">   High schoolers, all groups                 (ED3-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED3-PAX"])
-
-        sTxt = ">   Religious or Private schoolers, all groups (ED4-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED4-PAX"])
-
-        sTxt = ">   College students, all groups               (ED5-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED5-PAX"])
-
-        sTxt = ">   Polytechnic students, all groups           (ED6-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED6-PAX"])
-
-        sTxt = ">   University students, all groups            (ED7-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED7-PAX"])
-
-        sTxt = ">   --- (empty slot), all groups               (ED8-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED8-PAX"])
-
-        sTxt = ">   Disabled students, all groups              (ED9-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["ED9-PAX"])
-
-        sTxt = ">   Nursing home for the rich, group 'r'       (OAR-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["OAR-PAX"])
-
-        sTxt = ">   Old Age Home, all groups                   (OAH-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["OAH-PAX"])
-
-        sTxt = ">   Private nurse, all groups                  (OAN-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["OAN-PAX"])
-
-        sTxt = ">   Youth prison, all groups                   (YXJ-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["YXJ-PAX"])
-
-        sTxt = ">   Adult prison, all groups                   (YXA-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["YXA-PAX"])
-
-        # RELIGION:
-        cDemogfx_const = db.demogfx_const(ccTremb)
-        xParam = {}
-        xRestr = {"_id":0}
-        dDb = cDemogfx_const.find(xParam, xRestr)
-
-        # Get the names and the codes from the database
-        dFull_db = {}
-        for dQuery in dDb:
-            for xKey, xVal in dQuery.items():
-                dFull_db[xKey] = xVal    # Copy out the data
-
-        # Extract the religions
-        adReligion = dFull_db["aaReligion"]
-        sAll += ">   Religion:\n"
-        for dRel in adReligion:
-            sCode = dRel["code"]
-            sTxt = "       {0} ({1}): {2}\n"
-            sAll += sTxt.format(dRel["adj"], sCode, dDfx["aREL-PAX"][sCode])
-
-        sTxt = ">   Pedestrian, likely person to use public transport"
-        sTxt += " (BUS-PAX): {0}\n"
-        sAll += sTxt.format(dDfx["BUS-PAX"])
-
-        sTxt = ">   Vehicle, bicycle                           (VEH-BIC): {0}\n"
-        sAll += sTxt.format(dDfx["VEH-BIC"])
-
-        sTxt = ">   Vehicle, motorbike*                        (VEH-MBK): {0}\n"
-        sAll += sTxt.format(dDfx["VEH-MBK"])
-
-        sTxt = ">   Vehicle, car*                              (VEH-CAR): {0}\n"
-        sAll += sTxt.format(dDfx["VEH-CAR"])
-
-        sTxt = ">   Vehicle, aircraft**                        (VEH-AIR): {0}\n"
-        sAll += sTxt.format(dDfx["VEH-AIR"])
-
-        sAll += "     * = Requires county-level 'number plates' "
-        sAll += "(ex: GYN-00342)\n"
-        sAll += "    ** = Requires federal-level 'call sign' (ex: 'V9-AGB')\n"
-    else:
-        sAll += ">   N/A\n"
-
-# VEHICLES REQUIRING COUNTY-LEVEL REGISTRATION AND NUMBER-PLATE RENTAL
-    sAll += "--- --- ---\n"
-    sAll += "Vehicles (requiring county-level registration and number plates):\n"
-    dVeh = dData["aVehicles"]       # Short-cut
-    if dVeh != {}:
-        sTxt = ">   TOTAL ROAD: {0}\n"
-        sAll += sTxt.format(dVeh["tot_road"])   # Leave room for aircraft
-
-        # Itemise the road vehicles
-        aItemised = dVeh["aItemised"]
-        sAll += ">   Itemised county-registered vehicles:\n"
-        for sItem in aItemised:
-            sTxt = "       {0}: {1}\n"
-            sAll += sTxt.format(sItem, aItemised[sItem])
-    # TODO: AIRCRAFT
-    else:
-        sAll += ">   N/A\n"
-
-# FOOTPRINT
-    sAll += "--- --- ---\n"
-    sAll += "Footprint on the land:\n"
-    dFp = dData["aFootprint"]       # Short-cut
-    if dFp != {}:
-
-        for sItem in dFp:
-            fVal  = dFp[sItem]["val"]
-            units = dFp[sItem]["uom"]
-            sTxt = "   {0}: {1}{2}\n"
-            sAll += sTxt.format(sItem, fVal, units)
-
-    else:
-        sAll += ">   N/A\n"
-
-# WAREHOUSE
-    sAll += "--- --- ---\n"
-    sAll += "Warehouse: measure of annual production\n"
-    dWhs = dData["aWarehouse"]       # Short-cut
-    if dWhs != {}:
-        for sItem in dWhs:
-            sRes  = dWhs[sItem]["resource"]
-            fVal  = dWhs[sItem]["annual_output"]
-            units = dWhs[sItem]["units"]
-            sTxt = "   {0} ({3}): {1}{2}\n"
-            sAll += sTxt.format(sItem, fVal, units, sRes)
-
-    else:
-        sAll += ">   N/A\n"
-
-    eSingle_data.write("{0}\n".format(sAll))
-    eSingle_data.close()
-
 #-------------------------------------------------------------------------------
 def pretty_print_single(ccTremb):
     """ Writes most of the elements from the database in a human-readable format
@@ -1014,7 +617,6 @@ def pretty_print_single(ccTremb):
 # Work out a name of the file
     sFile_path = "Logs/d_{0}_pretty.txt".format(sFile_name)
     eSingle_data = open(sFile_path, "w", encoding="utf-8")
-    sHeading = ("Database extract\n")
 
 # Write the title
     xNow = datetime.datetime.now()
@@ -1117,9 +719,10 @@ def pretty_print_single(ccTremb):
         aChd_names = {}
         aChd_type = {}
         aChd_dgfx = {}
+        aChd_whs = {}
         xParam = {"my_id" : sChd_id}
-        xRestr = {"_id":0,
-            "geo_code":1, "aName":1, "aType":1, "aDemographics":1}
+        xRestr = {"_id":0, "geo_code":1, "aName":1,
+                  "aType":1, "aDemographics":1, "aWarehouse":1}
         dQuery = cDest.find(xParam, xRestr)
 
     # Pull data from the query
@@ -1128,6 +731,7 @@ def pretty_print_single(ccTremb):
             aChd_names = dItems["aName"]
             aChd_type = dItems["aType"]
             aChd_dgfx = dItems["aDemographics"]
+            aChd_whs = dItems["aWarehouse"]
 
     # Do the population count
         if aChd_dgfx != {}:
@@ -1137,6 +741,12 @@ def pretty_print_single(ccTremb):
         else:
             sDgfx = "N/A"
 
+    # Get the child's warehouse in order.
+        sWhs = ""   # Build up child's warehouse list
+        for sStore in aChd_whs:
+            sWhs += "{0}, ".format(aChd_whs[sStore]['resource'])
+        sWhs = sWhs[:-2]        # Drop the final space and comma
+
     # Present the information
         sTxt =  ">      {0} {1} / {2} {3}\n".format(
             aChd_names["lat"], aChd_type["lat"],
@@ -1144,6 +754,7 @@ def pretty_print_single(ccTremb):
         sTxt += ">          my_id: {0}\n".format(sChd_id)
         sTxt += ">          geo_code: {0}\n".format(sChd_geo)
         sTxt += ">          population: {0}\n".format(sDgfx)
+        sTxt += ">          warehouse: {0}\n".format(sWhs)
         sTxt += ">\n"        # For readibility
         sAll += sTxt
 
@@ -1199,11 +810,17 @@ def pretty_print_single(ccTremb):
         # Get the total for the itemised item.
         iItem_tot = 0                                 # Add up for conveniance
         for sGroup in dItem:
-            if sGroup in ["sName", "sVeh_cnt"]:       # Cheap way of doing "or"
+            if sGroup in ["sCode", "sName", "iVeh_cnt"]:   # "or" the cheap way
                 continue
             iItem_tot += dItem[sGroup]
-        # Publis the data
-        sTxt = ">   {0}: ({1:,})\n>      ".format(dItem['sName'], iItem_tot)
+
+        # Hew setup vs old.
+        if "sCode" in dItem.keys():
+            sTxt = ">   [{2}] {0}: ({1:,})\n>      "
+            sTxt = sTxt.format(dItem['sName'], iItem_tot, dItem['sCode'])
+        else:
+            sTxt = ">   {0}: ({1:,})\n>      "
+            sTxt = sTxt.format(dItem['sName'], iItem_tot)
 
         # Do the men on the top line
         for sGroup in ["rm", "hm", "mm", "lm", "pm"]:
@@ -1221,6 +838,36 @@ def pretty_print_single(ccTremb):
             sTxt += " tot road veh: {0:,}\n".format(dItem["iVeh_cnt"])
         sTxt += ">\n"
         sAll += sTxt
+
+# WORKPLACE SUPPLIES:
+    sAll += "----------\n"
+    sAll += "Supply workplaces: \n"
+    if "aSupply_workplace" in dData.keys():
+        dSup_wkp = dData["aSupply_workplace"]
+        for dItem in dSup_wkp:
+            iCnt = dItem["iCnt"]
+            sName = dItem["sName"]
+            sCode = dItem["sCode"]
+            sTxt = ">   [{2}] {0}x '{1}' used by:\n"
+            sTxt = sTxt.format(iCnt, sName, sCode)
+            sAll += sTxt
+
+            # Who does this facility service?
+            lServices = dItem["lServices"]
+            iSvc_cnt = len(lServices)
+            iSvc_idx = 0                        # Pointer
+            while iSvc_idx < iSvc_cnt:          # For multiple rows
+                sTxt = ">      "
+                for x in range(5):
+                    if iSvc_idx >= iSvc_cnt: break
+                    sTxt += " {0},".format(lServices[iSvc_idx])
+                    iSvc_idx += 1
+                sAll += sTxt + "\n"
+
+            # Capacity
+            sAll += ">       Capacity used: {0}\n".format(dItem["fCapacity"])
+    else:
+        sAll += ">   N/A\n"
 
 # DEMAND FOR HOUSEHOLDS:
     sAll += "----------\n"
@@ -1472,7 +1119,10 @@ def pretty_print_single(ccTremb):
     if dFp != {}:
         # Publish if it exists
         for sItem in dFp:
-            fVal  = dFp[sItem]["val"]
+            if "val" in dFp[sItem].keys():
+                fVal = dFp[sItem]["val"]
+            else:
+                fVal = dFp[sItem]["qty"]
             units = dFp[sItem]["uom"]
             sTxt = ">   {0}: {1:,}{2}\n"
             sAll += sTxt.format(sItem, fVal, units)
@@ -1527,6 +1177,8 @@ def balance_town(ccTremb):
         sOut = qHhold_demands(ccTremb, sGeo_code)
         if sOut == None:
             return None
+    print("\nBalancing complete")
+    return True
 
 
 #-------------------------------------------------------------------------------
@@ -2129,25 +1781,11 @@ def qHhold_demands(ccTremb, sGeo_code):
     import math             # For the ceil-ing function
 
 # WORKFORCE DEMAND EXTRACTION AND GEOCODE VERIFICATION:
-    # Look-up the geocode
+
     cDest = db.destinations(ccTremb)
-    xParam = {"geo_code":sGeo_code}
-    xRestr = {"_id":0}
-    dGeo_verify = cDest.find(xParam, xRestr)
-
-    # Verify that just a single geo-code exists
-    iGeo_verify = 0
-    dGeo_element = {}
-    for query in dGeo_verify:
-        iGeo_verify += 1
-        dGeo_element = query
-
-    if iGeo_verify != 1:
-        sTxt = ("\n\aInvalid or duplicated geo-code '{0}'." +
-                " {1} instances found. EXITING")
-        sTxt = sTxt.format(sGeo_code, iGeo_verify)
-        print(sTxt)
-        return None
+    # Look-up the geocode
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None: return None
 
     # Obtain the workforce required
     dDemand_workforce = dGeo_element["aDemand_workforce"]["total"]
@@ -2500,25 +2138,9 @@ def qServices_demands(ccTremb, sGeo_code):
     could be shared with a neighbouring area"""
 
 # EXTRACT THE FULL ENTRY CONTAINING THE GEO-CODE
-    # Look-up the geocode
     cDest = db.destinations(ccTremb)
-    xParam = {"geo_code":sGeo_code}
-    xRestr = {"_id":0}
-    dGeo_verify = cDest.find(xParam, xRestr)
-
-    # Verify that just a single geo-code exists
-    iGeo_verify = 0
-    dGeo_element = {}
-    for query in dGeo_verify:
-        iGeo_verify += 1
-        dGeo_element = query
-
-    if iGeo_verify != 1:
-        sTxt = ("\n\aInvalid or duplicated geo-code '{0}'." +
-                " {1} instances found. EXITING")
-        sTxt = sTxt.format(sGeo_code, iGeo_verify)
-        print(sTxt)
-        return None
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None: return None
 
 # ACCESS THE SERVICES DATABASE:
     cDb = db.city_services_const(ccTremb)
@@ -2526,10 +2148,9 @@ def qServices_demands(ccTremb, sGeo_code):
     xRestr = {"_id":0}
     dDatabase = cDb.find(xParam, xRestr)
 
-    dSvc = {}
+    aSvc = []
     for dQuery in dDatabase:
-        for xKey, xVal in dQuery.items():
-            dSvc[xKey] = xVal       # Copy the data out
+        aSvc.append(dQuery)
 
 # MANIPULATE DATA
     # Get a list of services already itemised:
@@ -2538,9 +2159,34 @@ def qServices_demands(ccTremb, sGeo_code):
     aItemised = dGeo_element["aDemand_workforce"]["aItemised"]
     aVeh_Item = dGeo_element["aVehicles"]["aItemised"]
 
+    # ENSURE THAT STATIC WORKPLACES (LIKE A WHEAT FARM) HAVE A CODE ASSIGNED.
+    cWkp = db.workplaces_const(ccTremb)
+    xParam = {}
+    xRestr = {"_id":0}
+    dDatabase = cWkp.find(xParam, xRestr)
+
+    # Go through the database and make sure that the code does exist.
+    for dWkp in dDatabase:
+        for dItem in aItemised:
+            if "sCode" in dItem.keys():
+                continue            # Already sorted out
+
+            # Exact match on the name
+            if dItem["sName"] == dWkp["default"]:
+                dItem["sCode"] = dWkp["code"]    # Add the code to the structure
+                continue
+
+            # Name has different case
+            if dItem["sName"].lower() == dWkp["default"].lower():
+                dItem["sCode"] = dWkp["code"]    # Add the code to the structure
+                dItem["sName"] = dItem["sName"].lower()
+                continue
+        # End of going through each itemised workplace
+    # end of going through all the registered workplaces
+
     # ITERATE THROUGH ALL THE STANDARD SERVICES
-    for xCode in dSvc:
-        sItem_name = dSvc[xCode]["name"]        # "Police"
+    for dSvc in aSvc:
+        sItem_name = dSvc["name"]               # "Police"
         aVeh_Item[sItem_name] = 0               # Public regisered vehicles
 
         # REMOVE THE PREVIOUS ITEM FROM THE STACK.
@@ -2576,6 +2222,7 @@ def qServices_demands(ccTremb, sGeo_code):
 
         # Build up the new item.
         dThe_item = {
+            "sCode": dSvc["code"],
             "sName": sItem_name,
             "rm":0, "rf":0, "hm":0, "hf":0, "mm":0, "mf":0,
             "lm":0, "lf":0, "pm":0, "pf":0, "iVeh_cnt":0
@@ -2585,7 +2232,7 @@ def qServices_demands(ccTremb, sGeo_code):
         # service person. In the example of the police, it is the total
         # population which determines the number of police officers on the
         # ground.
-        sServes = dSvc[xCode]["serves"]
+        sServes = dSvc["serves"]
         if sServes not in dGeo_element["aDemographics"]:
             print("\n'{0}' service item '{1}' not found in '{2}'\a".format(
                 sItem_name, sServes, sGeo_code))
@@ -2593,15 +2240,15 @@ def qServices_demands(ccTremb, sGeo_code):
 
         # Calculate the number of 'main' service providers
         xService_value = dGeo_element["aDemographics"][sServes]
-        fBase_ratio = dSvc[xCode]["ratio"]      # 200 citizens : 1 policeman
+        fBase_ratio = dSvc["ratio"]      # 200 citizens : 1 policeman
         fBase_number = xService_value / fBase_ratio
         iMain_cnt = int(round(fBase_number, 0))
 
         # Do the gender split
-        xType1 = dSvc[xCode]["aMain"]["xType1"].lower()
-        xType2 = dSvc[xCode]["aMain"]["xType2"].lower()
-        iRate1 = dSvc[xCode]["aMain"]["iRate1"]
-        iRate2 = dSvc[xCode]["aMain"]["iRate2"]
+        xType1 = dSvc["aMain"]["xType1"].lower()
+        xType2 = dSvc["aMain"]["xType2"].lower()
+        iRate1 = dSvc["aMain"]["iRate1"]
+        iRate2 = dSvc["aMain"]["iRate2"]
 
         # Calculate the first demographic
         fCount1 = iMain_cnt * iRate1 / 100.0
@@ -2614,7 +2261,7 @@ def qServices_demands(ccTremb, sGeo_code):
         dThe_item[xType2] += iCount2
 
         # Number of "squad" cars:
-        fEmpl_per_veh = dSvc[xCode]["aMain"]["fEmpl_per_veh"]
+        fEmpl_per_veh = dSvc["aMain"]["fEmpl_per_veh"]
         if fEmpl_per_veh == 0:
             iNo_of_veh = 0
         else:
@@ -2623,23 +2270,23 @@ def qServices_demands(ccTremb, sGeo_code):
         dThe_item["iVeh_cnt"] += iNo_of_veh
 
         # A 'cheap' way of doing OR
-        if dSvc[xCode]["sOwn_number_plates"] in ["none", "static"]:
+        if dSvc["sOwn_number_plates"] in ["none", "static"]:
             # Public numberplates (not police plates like 'YG')
             aVeh_Item[sItem_name] += iNo_of_veh
 
     # DO SUPERVISORS, MANAGERS AND SUPPORT STAFF
         for sTitle in ["aSupv", "aMgmt", "aSupt"]:
-            fBase_ratio = dSvc[xCode][sTitle]["fMain_per_empl"]  # 10 cops / 1..
+            fBase_ratio = dSvc[sTitle]["fMain_per_empl"]  # 10 cops / 1..
             if fBase_ratio == 0:
                 continue        # This level is not used
             fBase_number = iMain_cnt / fBase_ratio
             iEmpl_cnt = int(round(fBase_number, 0))
 
             # Do the gender split
-            xType1 = dSvc[xCode][sTitle]["xType1"].lower()
-            xType2 = dSvc[xCode][sTitle]["xType2"].lower()
-            iRate1 = dSvc[xCode][sTitle]["iRate1"]
-            iRate2 = dSvc[xCode][sTitle]["iRate2"]
+            xType1 = dSvc[sTitle]["xType1"].lower()
+            xType2 = dSvc[sTitle]["xType2"].lower()
+            iRate1 = dSvc[sTitle]["iRate1"]
+            iRate2 = dSvc[sTitle]["iRate2"]
 
             # Calculate the first demographic
             fCount1 = iEmpl_cnt * iRate1 / 100.0
@@ -2652,7 +2299,7 @@ def qServices_demands(ccTremb, sGeo_code):
             dThe_item[xType2] += iCount2
 
             # Number of "squad" cars:
-            fEmpl_per_veh = dSvc[xCode][sTitle]["fEmpl_per_veh"]
+            fEmpl_per_veh = dSvc[sTitle]["fEmpl_per_veh"]
             if fEmpl_per_veh == 0:
                 iNo_of_veh = 0
             else:
@@ -2661,17 +2308,17 @@ def qServices_demands(ccTremb, sGeo_code):
             dThe_item["iVeh_cnt"] += iNo_of_veh
 
             # Public (County registered) or Government (Y-plates) registered?
-            if dSvc[xCode]["sOwn_number_plates"] in ["none", "static"]:
+            if dSvc["sOwn_number_plates"] in ["none", "static"]:
                 # Public numberplates (not police plates like 'YG')
                 aVeh_Item[sItem_name] += iNo_of_veh
         # END OF DYNAMIC STAFF ASSIGNMENT
 
         # Public (County registered) or Government (Y-plates) registered?
-        if dSvc[xCode]["sOwn_number_plates"] in ["none", "dynamic"]:
+        if dSvc["sOwn_number_plates"] in ["none", "dynamic"]:
             # Public numberplates (not police plates like 'YG')
             # The police can have some civilian registerd vehicles.
-            aVeh_Item[sItem_name] += dSvc[xCode]["iStatic_veh"]
-        dThe_item["iVeh_cnt"] += dSvc[xCode]["iStatic_veh"]
+            aVeh_Item[sItem_name] += dSvc["iStatic_veh"]
+        dThe_item["iVeh_cnt"] += dSvc["iStatic_veh"]
 
         # Add the new item to the list
         aItemised.append(dThe_item)             # NOTE reference link.
@@ -2798,35 +2445,31 @@ def qqParent_update(ccTremb, dParent):
 
 # GO THROUGH EACH CHILD
     for sChild_id in aChildren:
-    # Pickup the child in the database
-        xParam = {"my_id": sChild_id}
+        # Verify the identifier. Children are itentified by their ids
+        xParam = {"my_id":sChild_id}
         xRestr = {"_id":0}
-        dChild_query = cDest.find(xParam, xRestr)
+        dGeo_query = cDest.find(xParam, xRestr)
 
+        # Look at the results of the query
         iNo_of_hits = 0
-        dChild = {}
-        for dQuery in dChild_query:
+        aName = {}
+
+        for query in dGeo_query:
             iNo_of_hits += 1
-            dChild = dQuery
+            dChild = query
 
-    # Verify that there is only one child under this ID
         if iNo_of_hits != 1:
-            sTxt = ("\n\aThe identifier '{0}' has multiple entries! EXITING!")
+            sTxt = "\n\a'My_id' ({0}) verification failed. Exiting"
             print(sTxt.format(sChild_id))
-            return None
-
-    # Verify that the child has a geo-code
-        sChild_geo = dChild["geo_code"]
-        if sChild_geo == None:
-            sTxt = ("\n\a[{0}] '{1}' has no geo-code. Unable to proceed" +
-            " further")
-            print(sTxt.format(sChild_id, dChild["aName"]["lat"]))
             return None
 
     # Check if we are a grand-parent:
         # /!\ RECURSION /!\
         iNo_of_grandchildren = qqParent_update(ccTremb, dChild)
         if iNo_of_grandchildren == None: return None    # Propagate error
+
+# CHILD GEO-CODE:
+        sChild_geo = dChild["geo_code"]
 
 # DEMAND WORKFORCE:
         dChd_dmd_wkf = dChild["aDemand_workforce"]
@@ -3004,16 +2647,16 @@ def qqParent_update(ccTremb, dParent):
 
             # Create a new entry
             if dPrt_whs == {}:
-                dPrt_whs["Product 0"] = {}
-                dPrt_whs["Product 0"]["resource"] = resource
-                dPrt_whs["Product 0"]["annual_output"] = amount
-                dPrt_whs["Product 0"]["units"] = units
+                dPrt_whs["Warehouse 0"] = {}
+                dPrt_whs["Warehouse 0"]["resource"] = resource
+                dPrt_whs["Warehouse 0"]["annual_output"] = amount
+                dPrt_whs["Warehouse 0"]["units"] = units
             # We need to update the existing data
             else:
                 bNot_found = True               # We don't store this yet.
                 iIdx = 0
                 for dProduct in dPrt_whs:
-                    dProd_data = dPrt_whs[dProduct] # 'Product 0' is ...
+                    dProd_data = dPrt_whs[dProduct] # 'Warehouse 0' is ...
                     sWhat_is_it = dProd_data["resource"].lower()
                     if sWhat_is_it != resource:
                         iIdx += 1               # If we have to build warehouse
@@ -3028,7 +2671,7 @@ def qqParent_update(ccTremb, dParent):
 
                 # We need a new warehouse:
                 if bNot_found == True:
-                    sWhs_name = "Product {0}".format(iIdx)
+                    sWhs_name = "Warehouse {0}".format(iIdx)
                     dPrt_whs[sWhs_name] = {}
                     dPrt_whs[sWhs_name]["resource"] = resource
                     dPrt_whs[sWhs_name]["annual_output"] = amount
@@ -3132,7 +2775,6 @@ def qCalc_non_main_staff(aData):
 
     return aDemogfx
 #-------------------------------------------------------------------------------
-
 def add_workplace(ccTremb):
     """ Adds the 'industries' which operate in this area. These could be farms,
     offices, factories. Effectively, this creates demand for a workforce.
@@ -3144,24 +2786,11 @@ def add_workplace(ccTremb):
     print(sTxt)
     sGeo_code = input().upper()
 
-    # Look-up the geocode
+    # Get the element. Also verify that the geocode is registered in the data
+    # base
     cDest = db.destinations(ccTremb)
-    xParam = {"geo_code":sGeo_code}
-    xRestr = {"_id":0}
-    dGeo_verify = cDest.find(xParam, xRestr)
-
-    # Verify that just a single geo-code exists
-    iGeo_verify = 0
-    dGeo_element = {}
-    for dQuery in dGeo_verify:
-        iGeo_verify += 1
-        dGeo_element = dQuery
-
-    if iGeo_verify != 1:
-        sTxt = ("\n\aInvalid or duplicated geo-code '{0}'." +
-                " {1} instances found. EXITING")
-        sTxt = sTxt.format(sGeo_code, iGeo_verify)
-        print(sTxt)
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None:
         return None
 
     # Confirmation message
@@ -3536,7 +3165,10 @@ def add_workplace(ccTremb):
     # WORKFORCE DEMAND << << << << << << << << << << << << << << << << <<
     dTot_dmd_wkf = dGeo_element["aDemand_workforce"]["total"]
     aFor_iteration = dTot_dmd_wkf.copy()
-    dThe_item = {"sName":sFarm_name_combo}
+    dThe_item = {
+        "sCode":dWkp["code"],           # So that we can identify industry type
+        "sName":sFarm_name_combo
+    }
 
     for sGroup in aFor_iteration:
         dTot_dmd_wkf[sGroup] += aDemogfx[sGroup]            # Total for town
@@ -3573,6 +3205,370 @@ def add_workplace(ccTremb):
     cDest.update_one(xParam, xNew_data)
     print("\n DATABASE ENTRY UPDATED")
 
+#-------------------------------------------------------------------------------
+def add_wkp_auto(dBriefcase):
+    """ Adds a workplace to the selected city. However, this addition is done
+    semi-automatically. For example, a train station would need some labour.
+    This version adds an 'aSupply_workplace' element to the geographic entry.
+    NOTE that the warehouses are NOT updated: This feature is intended for
+    Train stations, Police stations, Fire Departments, Schools, ...
+
+    dBriefase elements:
+        ccTremb             # Data base reference
+        sGeo_code           # Host's code
+        sInd_code           # Industry code (What are we building?)
+        sName_lat           # Name of the building
+        sYour_id            # The 'S00-001' of the train station
+        aArea               # Footprint of the entity built
+        iNo_of_builds       # Summarise 23 pre-schools into one entry.
+        lServices           # Geocodes which this facility is used by
+        fCapacity           # How much is used
+    """
+    # Unpack the briefcase
+    ccTremb = dBriefcase["ccTremb"]
+    sGeo_code = dBriefcase["sGeo_code"]
+    sInd_code = dBriefcase["sInd_code"]
+    sName_lat = dBriefcase["sName_lat"]
+    sYour_id  = dBriefcase["sYour_id"]
+    aArea     = dBriefcase["aArea"]                     # Footprint
+    iNo_of_builds = dBriefcase["iNo_of_builds"]         # Avoids 23 preschools
+    lServices = dBriefcase["lServices"]
+    fCapacity = dBriefcase["fCapacity"]               # 22.48 for 23 preschools
+
+    if sGeo_code == None:
+        sTxt = ("\nPlease enter the geo-code ('GYG-H' for example) for the" +
+                " area you are adding\nworkplaces to.")
+        print(sTxt)
+        sGeo_code = input().upper()
+
+    # Verify the geo-code and obtain the full element
+    cDest = db.destinations(ccTremb)
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None:
+        return None
+
+# IMPORT THE INDUSTRY CODE.
+    # Find the code in the database
+    cWorkplace = db.workplaces_const(ccTremb)
+    xParam = {"code":sInd_code}
+    xRestr = {"_id":0}
+    dWorkplace = cWorkplace.find(xParam, xRestr)
+
+    # Copy out the data from the database.
+    dWkp = {}
+    iNo_of_hits = 0
+    for dQuery in dWorkplace:
+        iNo_of_hits += 1
+        dWkp = dQuery    # Allow us the option for additional queries
+
+    if iNo_of_hits != 1:
+        sTxt = "\n\aInvalid number of workplace codes. Expected 1 got {0}"
+        print(sTxt.format(iNo_of_hits))
+        return None
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+# NOTE: Cut and paste from "def add_workplace(ccTremb):"
+# LABOUR:
+    # Wkf = Workforce or labour
+    fWkf_val = dWkp["aaLabour"]["aMain"]["fRate"]
+    sWkf_uom = dWkp["aaLabour"]["aMain"]["units"]   # units of measure
+    # Workplace or farm
+    fFarm_val = aArea["val"]
+    sFarm_uom = aArea["uom"]
+
+    # Let's get the units onto the same page:
+    fTot_main = 0.0            # Result of the final calculation of main workers
+    sError = ("\n\aUnits of area are grossly mismatched, and will not be" +
+        "converted.\nLabour units are {0}; Workplace is in {1}")
+    #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+    if sWkf_uom == "empl/ha":
+        # FARMS, AGRICULTURE
+        if sFarm_uom == "sq.m":
+            print(sError.format(sWfk_uom, sFarm_uom))
+            return None                         # Gross mismatch
+        elif sFarm_uom == "ha":
+            pass                                # No modification needed
+        elif sFarm_uom == "sq.km":
+            fFarm_val = fFarm_val * 100         # convert to ha
+        else:
+            print("\n\aInvalid unit of measure for 'farm'. EXITING")
+        fTot_main = fFarm_val * fWkf_val
+
+    #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+    elif sWkf_uom == "empl/sq.km":
+        # CATTLE RANCH.
+        if sFarm_uom == "sq.m":
+            print(sError.format(sWfk_uom, sFarm_uom))
+            return None                         # Gross mismatch
+        elif sFarm_uom == "ha":
+            fFarm_val = fFarm_val / 100         # Convert to sq.km
+        elif sFarm_uom == "sq.km":
+            pass                                # No modification needed
+        else:
+            print("\n\aInvalid unit of measure for 'farm'. EXITING")
+        fTot_main = fFarm_val * fWkf_val
+
+    #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+    elif sWkf_uom == "empl":
+        # QUARRY, MINE, and other "static" establishments
+        sTxt = ("Enter the number of MAIN employees working at {0}")
+        sTxt = sTxt.format(sName_lat)
+        fTot_main = misc.get_float(sTxt)
+        if fTot_main == None: return
+
+    #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+    elif sWkf_uom == "sq.m/empl":
+        # 1-STOREY OFFICE, FACTORY
+        if sFarm_uom == "sq.m":
+            fTot_main =  fFarm_val / fWkf_val
+        else:
+            print(sError.format(sWkf_uom, sFarm_uom))
+            return None                             # Gross mismatch
+
+    #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+    elif sWkf_uom == "sq.m/floor/empl":
+        # MULTISTOREY OFFICE BUILDINGS
+        if sFarm_uom == "sq.m":
+            fTot_main = fWkf_val / fFarm_val
+            sTxt = "Enter the number of floors that this building has."
+            iStorey_cnt = misc.get_int(sTxt)
+            if iStorey_cnt == None: return
+            fTot_main = fFarm_val * iStorey_cnt / fWkf_val
+        else:
+            print(sError.format(sWfk_uom, sFarm_uom))
+            return None                          # Gross mismatch
+
+    else:
+        print("\n\aInvalid labour unit of measure (uom) detected. EXITING")
+        return None
+
+    # These demographics will add-up for this particular factory. They are
+    # divided by income level (poor, low, medium, high, rich) and by gender,
+    # allowing for combination like 'middle-income female' ('mf'). The number
+    # of vehicle number-plates required is also recorded. These are issued to
+    # cars, trucks, trailers, motorbikes and trailers.
+    aDemogfx = {
+        "pm":0, "lm":0, "mm":0, "hm":0, "rm":0,
+        "pf":0, "lf":0, "mf":0, "hf":0, "rf":0,
+        # Vehicle registration counts are included in here to make it easier
+        # to pass it in and out of the routines.
+        "veh_reg":0,
+    }
+
+    # MAIN DEMOGRAPHIC CALCULATION
+    xMain_type = dWkp["aaLabour"]["aMain"]["xType1"].lower()
+    iMain_rate = dWkp["aaLabour"]["aMain"]["iRate1"]
+    fType = (fTot_main * iMain_rate / 100.0)
+    iType = int(round(fType, 0))     # Mind your language! (Don't google 'Ruby')
+    aDemogfx[xMain_type] += iType           # Add to the demographics table
+
+    # Calculate the Second demographic
+    xMain_type = dWkp["aaLabour"]["aMain"]["xType2"].lower()
+    iMain_rate = dWkp["aaLabour"]["aMain"]["iRate2"]
+    fType = (fTot_main * iMain_rate / 100.0)
+    iType = int(round(fType, 0))     # Mind your language! (Don't google 'Ruby')
+    aDemogfx[xMain_type] += iType           # Add to the demographics table
+
+    # Vehicle registration
+    fEmpl_per_veh = dWkp["aaLabour"]["aMain"]["fEmpl_per_veh"]
+    if fEmpl_per_veh > 0:
+        fVeh_cnt = fTot_main / fEmpl_per_veh        # Rough number of vehicles
+        iVeh_cnt = int(round(fVeh_cnt, 0))          # Round and integerise
+        aDemogfx["veh_reg"] += iVeh_cnt
+
+    # SUPERVISOR
+    aBriefcase = {                              # Initiate the briefcase object
+        "dLabour_element": dWkp["aaLabour"],
+        "fTot_main": fTot_main,
+        "aDemogfx": aDemogfx,
+        "sWho": "aSupv"
+    }
+    aDemogfx = qCalc_non_main_staff(aBriefcase)
+
+    # MANAGEMENT
+    aBriefcase["aDemogfx"] = aDemogfx           # Update the dynamic element
+    aBriefcase["sWho"] = "aMgmt"
+    aDemogfx = qCalc_non_main_staff(aBriefcase)
+
+    # SUPPORT STAFF
+    aBriefcase["aDemogfx"] = aDemogfx           # Update the dynamic element
+    aBriefcase["sWho"] = "aSupt"
+    aDemogfx = qCalc_non_main_staff(aBriefcase)
+
+    # STATIC VEHICLES
+    aDemogfx["veh_reg"] += dWkp["iStatic_veh"]
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+# NEW TO THE DATABASE ENTRY:
+    # If it doesn't exist, create it!
+    if "aSupply_workplace" not in dGeo_element.keys():
+        dGeo_element["aSupply_workplace"] = []
+
+    # Create the item which will be stored as a workplace
+    dItem = {}
+        # Avoids individually naming 23 preschools
+    dItem["iCnt"] = iNo_of_builds               # How much are we building
+    dItem["sCode"] = sInd_code                  # What are we building
+
+    # Name the facility
+    if iNo_of_builds != 1:
+        dItem["sName"] = sName_lat
+    # This is for the 23 prescools bundled together
+    else:
+        dItem["sName"] = dWkp["default"]
+
+    # Footprint
+    if "qty" in aArea.keys():
+        fQty = aArea["qty"]
+    elif "val" in aArea.keys():
+        fQty = aArea["val"]
+
+    fQty *= iNo_of_builds                       # Get the total build
+    if aArea["uom"] == "sq.m":
+        fQty = fQty / 10000                     # Convert to hectares
+    elif aArea["uom"] == "sq.km":
+        print("\n\aNothing should be in square kilometers in the city! EXITING")
+        return None
+
+    fQty = round(fQty, 3)               # 10 sq.m resoution
+    dFarm_footprint = {"qty": fQty, "uom": "ha"}    # Saved externally
+    dItem["lServices"]  = lServices
+    dItem["fCapacity"]  = fCapacity
+
+# Save in the array
+    dGeo_element["aSupply_workplace"].append(dItem)
+
+#-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+# ADD DATA TO THE CITY
+    # WORKFORCE DEMAND << << << << << << << << << << << << << << << << <<
+    dTot_dmd_wkf = dGeo_element["aDemand_workforce"]["total"]
+    aFor_iteration = dTot_dmd_wkf.copy()
+    dThe_item = {
+        "sCode":dWkp["code"],           # So that we can identify industry type
+        "sName":sName_lat
+    }
+
+    for sGroup in aFor_iteration:
+        dTot_dmd_wkf[sGroup] += aDemogfx[sGroup]            # Total for town
+        dThe_item[sGroup] = aDemogfx[sGroup]                # Itemised for farm
+
+    dThe_item["iVeh_cnt"] = aDemogfx["veh_reg"]       # road-legal farm vehicles
+    dGeo_element["aDemand_workforce"]["aItemised"].append(dThe_item)
+
+    # VEHICLES << << << << << << << << << << << << << << << << << << << <<
+    aVehicles = dGeo_element["aVehicles"]
+    if aVehicles == {}:
+        # Which factory uses how many vehilces is available in
+        # aDemand_workforce.aItemised.iVeh_cnt
+        dGeo_element["aVehicles"]["tot_road"] = aDemogfx["veh_reg"]
+        dGeo_element["aVehicles"]["aItemised"] = {}
+        aItemised = dGeo_element["aVehicles"]["aItemised"]
+        aItemised[sName_lat] = aDemogfx["veh_reg"]
+    else:
+        aItemised = dGeo_element["aVehicles"]["aItemised"]
+        aItemised[sName_lat] = aDemogfx["veh_reg"]
+
+    # FARM FOOTPRINT << << << << << << << << << << << << << << << << << << << <<
+    dGeo_element["aFootprint"][sName_lat] = dFarm_footprint
+
+# DATABASE UPDATE.
+    xParam = {"geo_code":sGeo_code}
+    xNew_data = {"$set": {
+        "aDemand_workforce": dGeo_element["aDemand_workforce"],
+        "aVehicles": dGeo_element["aVehicles"],
+        "aFootprint": dGeo_element["aFootprint"],
+        "aSupply_workplace": dGeo_element["aSupply_workplace"],
+    }}
+
+    cDest.update_one(xParam, xNew_data)
+    print("\n DATABASE ENTRY UPDATED")
+    return True
+
+#-------------------------------------------------------------------------------
+# X: REMOVES WORKPLACE FROM TOWN'S REGISTER.
+#-------------------------------------------------------------------------------
+def remove_workplace(ccTremb):
+    """ Gives the option of removing an assigned workplace. If the town has lost
+    its iron smelter, use this faciltiy to adjust the database.
+    """
+
+    # Get the geocode of the town in question
+    sTxt = ("\nPlease enter the geo code ('GYN-G') of the area you want to" +
+            " work on")
+    print(sTxt)
+    sGeo_code = input().upper()
+
+    # Look-up the geocode
+    cDest = db.destinations(ccTremb)
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None: return None
+
+    # Ask for the item to be removed.
+    sTxt = ("\nEnter the code ('FHI') of the entity you want to remove")
+    print(sTxt)
+    sItem_code = input().upper()
+
+    # Ask for the name of the item to be removed
+    sTxt = ("\nEnter the name ('iron smelter'), in the correct case, of the" +
+            " item you want to\nremove")
+    print(sTxt)
+    sItem_name = input()
+
+    # Verify that the object exists.
+    aItemised = dGeo_element["aDemand_workforce"]["aItemised"]
+    if len(aItemised) == 0:
+        print("\n\aZero items found. Exiting")
+        return None
+
+    # Count the number of instances
+    iNo_of_hits = 0
+    for dItem in aItemised:
+        if dItem["sCode"] == sItem_code and dItem["sName"] == sItem_name:
+            iNo_of_hits += 1
+
+    # Error out
+    if iNo_of_hits != 1:
+        print("\n\aMultiple items with same description found. Unwilling to " +
+            "remove data.")
+        return None
+
+    # Delete the item in the list
+    iIdx = 0
+    iNo_of_items = len(aItemised)
+
+    # Iterate through the indexes. I don't want to iterate through the list
+    # itself, as it is getting modified inside the loop.
+    for iIdx in range(iNo_of_items):
+        dItem = aItemised[iIdx]
+        if dItem["sCode"] == sItem_code and dItem["sName"] == sItem_name:
+            del aItemised[iIdx]     # Remove the requested item
+            break
+
+    # ----------------
+    # Sort out the vehicles
+    dGeo_element["aVehicles"]["aItemised"].pop(sItem_name)
+
+    # Sort out the footprint
+    dGeo_element["aFootprint"].pop(sItem_name)
+
+    # Sort out the warehouse
+    dWarehouse = dGeo_element["aWarehouse"]
+    for iCnt in range(4):      # Lets assume that there could be 4 products made
+        sKey = "{0} {1}".format(sItem_name, iCnt)
+        if sKey in dWarehouse.keys():
+            dWarehouse.pop(sKey)
+
+    # All done.
+# DATABASE UPDATE.
+    xParam = {"geo_code":sGeo_code}
+    xNew_data = {"$set": {
+        "aDemand_workforce": dGeo_element["aDemand_workforce"],
+        "aVehicles": dGeo_element["aVehicles"],
+        "aFootprint": dGeo_element["aFootprint"],
+    }}
+
+    cDest.update_one(xParam, xNew_data)
+    print("\n DATABASE ENTRY UPDATED")
+    return True
+
 
 #-------------------------------------------------------------------------------
 # SUB-MENU
@@ -3594,11 +3590,10 @@ DESTINATIONS SUB-MENU (D):
 B:  Balance town: add demographic for policemen, firefighters, teachers...
 E:  Edit an entry
 G:  Assign geo-codes to 'children'. (Use once a parent has all its children)
-H:  Add household demands & builds demographics manually. AUTO PROCESS IS 'B'
 M:  Add a map
-S:  Add city service demands manually. AUTO PROCESS IS 'B'
 U:  Update parent with children's data (demographics, vehilces, resources)
 W:  Add workplace: generates population demand in town.
+X:  Remove workplace: Can be used to fix 'mistakes'
 """ # Closes the multi=line txt
 
     bExit = False
@@ -3623,13 +3618,11 @@ W:  Add workplace: generates population demand in town.
             edit_entry(ccTremb)
         elif sInput == "G":         # Assign geocodes to all children
             assign_geocodes(ccTremb)
-        elif sInput == "H":         # Build families
-            household_demands(ccTremb)
         elif sInput == "M":         # Add a map for referencing
             add_map_to_db(ccTremb)
-        elif sInput == "S":         # Add demand for policemen, teachers, ...
-            add_services_demand(ccTremb)
         elif sInput == "U":         # Update parent with children's data
             update_parent(ccTremb)
         elif sInput == "W":         # Add workplaces (farms, offices)
             add_workplace(ccTremb)
+        elif sInput == "X":         # Remove worplace
+            remove_workplace(ccTremb)

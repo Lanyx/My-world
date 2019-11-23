@@ -597,61 +597,61 @@ def import_male_names():
         {"lat":"Aaron",    "cyr":"Аъщрэн",     "aAlt":["Æærn"]},
         {"lat":"Abraham",  "cyr":"Абрахам",    "aAlt":[]},
         {"lat":"Adam",     "cyr":"Адам",       "aAlt":[]},
-        {"lat":"åAdrian",  "cyr":"Адръян",     "aAlt":["Adrÿan"]},
+        {"lat":"Adrian",   "cyr":"Адръян",     "aAlt":["Adrÿan"]},
         {"lat":"Albert",   "cyr":"Альбэрт",    "aAlt":[]},
         {"lat":"Alexander","cyr":"Александэр", "aAlt":["Aleksander"]},
         {"lat":"Allan",    "cyr":"Щэллен",     "aAlt":["Ællen"]},
-        {"lat":"åAndrew",  "cyr":"Анджэй",     "aAlt":["Ændru"]},
+        {"lat":"Andrew",   "cyr":"Анджэй",     "aAlt":["Ændru"]},
         {"lat":"Anton",    "cyr":"Антон",      "aAlt":[]},
-        {"lat":"åArkadian","cyr":"Аркадъюш",   "aAlt":["Arkádïen", "Arkadúsþ"]},
+        {"lat":"Arkadian", "cyr":"Аркадъюш",   "aAlt":["Arkádïen", "Arkadúsþ"]},
         {"lat":"Arnold",   "cyr":"Арнольд",    "aAlt":[]},
-        {"lat":"åArthur",  "cyr":"Артур",      "aAlt":["Ôða", "Artur"]},
+        {"lat":"Arthur",   "cyr":"Артур",      "aAlt":["Ôða", "Artur"]},
 
     # B
-        {"lat":"åBarney",   "cyr":"Барни",      "aAlt":["Bâni"]},
-        {"lat":"åBarry",    "cyr":"Баъри",      "aAlt":["Bærri"]},
-        {"lat":"åBenjamin", "cyr":"Бэнъямин",   "aAlt":["Bendþamin"]},
-        {"lat":"åBernard",  "cyr":"Бэрнард",    "aAlt":["Boênad"]},
+        {"lat":"Barney",    "cyr":"Барни",      "aAlt":["Bâni"]},
+        {"lat":"Barry",     "cyr":"Баъри",      "aAlt":["Bærri"]},
+        {"lat":"Benjamin",  "cyr":"Бэнъямин",   "aAlt":["Bendþamin"]},
+        {"lat":"Bernard",   "cyr":"Бэрнард",    "aAlt":["Boênad"]},
         {"lat":"åBjörn",    "cyr":"Бёщн",       "aAlt":["Bïôn"]},
-        {"lat":"åBogosław", "cyr":"Богослав",   "aAlt":["Bogoswav"]},
+        {"lat":"Bogosław",  "cyr":"Богослав",   "aAlt":["Bogoswav"]},
         {"lat":"Bogdan",    "cyr":"Богдан",     "aAlt":[]},
         {"lat":"Boris",     "cyr":"Борис",      "aAlt":[]},
-        {"lat":"åBrandon",  "cyr":"Брэндэн",    "aAlt":["Brænden"]},
-        {"lat":"åBruce",    "cyr":"Брусс",      "aAlt":["Bruß"]},
+        {"lat":"Brandon",   "cyr":"Брэндэн",    "aAlt":["Brænden"]},
+        {"lat":"Bruce",     "cyr":"Брусс",      "aAlt":["Bruß"]},
 
     # C
-        {"lat":"åCyril",    "cyr":"Цырыль",     "aAlt":["Syryl"]},
-        {"lat":"åCraig",    "cyr":"Крэйг",      "aAlt":["Krág"]},
-        {"lat":"åCharles",  "cyr":"Чащльс",     "aAlt":["Tþarls"]},
-        {"lat":"åCyrus",    "cyr":"Цырус",      "aAlt":["Síres"]},
-        {"lat":"åChester",  "cyr":"Чеслав",     "aAlt":["Tþeswav"]},
-        {"lat":"åChristopher","cyr":"Кшыштоф",  "aAlt":["Krystofer"]},
+        {"lat":"Cyril",     "cyr":"Цырыль",     "aAlt":["Syryl"]},
+        {"lat":"Craig",     "cyr":"Крэйг",      "aAlt":["Krág"]},
+        {"lat":"Charles",   "cyr":"Чащльс",     "aAlt":["Tþarls"]},
+        {"lat":"Cyrus",     "cyr":"Цырус",      "aAlt":["Síres"]},
+        {"lat":"Chester",   "cyr":"Чеслав",     "aAlt":["Tþeswav"]},
+        {"lat":"Christopher","cyr":"Кшыштоф",   "aAlt":["Krystofer"]},
 
     # D
-        {"lat":"åDaniel",   "cyr":"Данель",     "aAlt":["Dæñel"]},
-        {"lat":"åDarius",   "cyr":"Дарюш",      "aAlt":["Darús"]},
+        {"lat":"Daniel",    "cyr":"Данель",     "aAlt":["Dæñel"]},
+        {"lat":"Darius",    "cyr":"Дарюш",      "aAlt":["Darús"]},
         {"lat":"David",     "cyr":"Давид",      "aAlt":["Dávid"]},
-        {"lat":"åDerrick",  "cyr":"Дэрик",      "aAlt":["Derik"]},
+        {"lat":"Derrick",   "cyr":"Дэрик",      "aAlt":["Derik"]},
         {"lat":"Dominik",   "cyr":"Доминик",    "aAlt":[]},
         {"lat":"Donald",    "cyr":"Дональд",    "aAlt":[]},
 
     # E
         {"lat":"Edward",    "cyr":"Эдвард",     "aAlt":["Edwoêd"]},
         {"lat":"Erik",      "cyr":"Эрик",       "aAlt":[]},
-        {"lat":"åErnest",   "cyr":"Ыърнэст",    "aAlt":["Øþnest"]},
-        {"lat":"åEthan",    "cyr":"Иден",       "aAlt":["Iðen"]},
-        {"lat":"åEugene",   "cyr":"Юджищн",     "aAlt":["Údþîn"]},
+        {"lat":"Ernest",    "cyr":"Ыърнэст",    "aAlt":["Øþnest"]},
+        {"lat":"Ethan",     "cyr":"Иден",       "aAlt":["Iðen"]},
+        {"lat":"Eugene",    "cyr":"Юджищн",     "aAlt":["Údþîn"]},
 
     # F
-        {"lat":"åFabian",   "cyr":"Фабян",      "aAlt":["Fabïan"]},
+        {"lat":"Fabian",    "cyr":"Фабян",      "aAlt":["Fabïan"]},
         {"lat":"Felix",     "cyr":"Фэльикс",    "aAlt":["Filiks"]},
         {"lat":"Frank",     "cyr":"Франк",      "aAlt":[]},
 
     # G
-        {"lat":"åGabriel",  "cyr":"Габриель",   "aAlt":["Gábrÿel"]},
-        {"lat":"åGary",     "cyr":"Гэри",       "aAlt":["Gæri"]},
-        {"lat":"åGeorge",   "cyr":"Ежы",        "aAlt":["Dzþôdzþ"]},
-        {"lat":"åGraham",   "cyr":"Грахам",     "aAlt":["Gráåem"]},
+        {"lat":"Gabriel",   "cyr":"Габриель",   "aAlt":["Gábrÿel"]},
+        {"lat":"Gary",      "cyr":"Гэри",       "aAlt":["Gæri"]},
+        {"lat":"George",    "cyr":"Ежы",        "aAlt":["Dzþôdzþ"]},
+        {"lat":"Graham",    "cyr":"Грахам",     "aAlt":["Gráåem"]},
         {"lat":"Gustav",    "cyr":"Густав",     "aAlt":[]},
 
     # H
@@ -672,17 +672,17 @@ def import_male_names():
         {"lat":"Ïurek",     "cyr":"Юрэк",       "aAlt":[]},
 
     # J
-        {"lat":"åJack",     "cyr":"Яцэк",       "aAlt":["Ïatsek"]},
-        {"lat":"åJames",    "cyr":"Джэймс",     "aAlt":["Dzþáms"]},
-        {"lat":"åJacob",    "cyr":"Якуб",       "aAlt":["Ïakub"]},
-        {"lat":"åJan",      "cyr":"Ян",         "aAlt":["Ïan"]},
-        {"lat":"åJason",    "cyr":"Джэйсон",    "aAlt":["Dzþáson"]},
-        {"lat":"åJeffery",  "cyr":"Джэффри",    "aAlt":["Dzþeffri"]},
-        {"lat":"åJoel",     "cyr":"Жоль",       "aAlt":["Zþol"]},
-        {"lat":"åJohan",    "cyr":"Ёхан",       "aAlt":["Ïohan"]},
-        {"lat":"åJustin",   "cyr":"Джастин",    "aAlt":["Dzþastin"]},
-        {"lat":"åJürgen",   "cyr":"Юъргэн",     "aAlt":["Ïürgen"]},
-        {"lat":"åJoseph",   "cyr":"Юзэф",       "aAlt":["Úzef"]},
+        {"lat":"Jack",      "cyr":"Яцэк",       "aAlt":["Ïatsek"]},
+        {"lat":"James",     "cyr":"Джэймс",     "aAlt":["Dzþáms"]},
+        {"lat":"Jacob",     "cyr":"Якуб",       "aAlt":["Ïakub"]},
+        {"lat":"Jan",       "cyr":"Ян",         "aAlt":["Ïan"]},
+        {"lat":"Jason",     "cyr":"Джэйсон",    "aAlt":["Dzþáson"]},
+        {"lat":"Jeffery",   "cyr":"Джэффри",    "aAlt":["Dzþeffri"]},
+        {"lat":"Joel",      "cyr":"Жоль",       "aAlt":["Zþol"]},
+        {"lat":"Johan",     "cyr":"Ёхан",       "aAlt":["Ïohan"]},
+        {"lat":"Justin",    "cyr":"Джастин",    "aAlt":["Dzþastin"]},
+        {"lat":"Jürgen",    "cyr":"Юъргэн",     "aAlt":["Ïürgen"]},
+        {"lat":"Joseph",    "cyr":"Юзэф",       "aAlt":["Úzef"]},
 
     # K
         {"lat":"Ken",       "cyr":"Кэн",        "aAlt":[]},
@@ -690,11 +690,11 @@ def import_male_names():
 
     # L
         {"lat":"Lars",      "cyr":"Лярс",       "aAlt":[]},
-        {"lat":"åLawrence", "cyr":"Лёрэнц",     "aAlt":["Lôrents"]},
-        {"lat":"åLeonard",  "cyr":"Леонард",    "aAlt":["Lenerd"]},
+        {"lat":"Lawrence",  "cyr":"Лёрэнц",     "aAlt":["Lôrents"]},
+        {"lat":"Leonard",   "cyr":"Леонард",    "aAlt":["Lenerd"]},
         {"lat":"Lehþ",      "cyr":"Лех",        "aAlt":[]},
         {"lat":"Llwellyn",  "cyr":"Льлэльын",   "aAlt":[]},
-        {"lat":"åLouis",    "cyr":"Люлыс",      "aAlt":["Luwi"]},
+        {"lat":"Louis",     "cyr":"Люлыс",      "aAlt":["Luwi"]},
         {"lat":"Lukas",     "cyr":"Лукаш",      "aAlt":[]},
         {"lat":"Ludwig",    "cyr":"Людвиг",     "aAlt":[]},
         {"lat":"Lubomir",   "cyr":"Любомир",    "aAlt":[]},
@@ -703,18 +703,18 @@ def import_male_names():
     # M
         {"lat":"Marius",    "cyr":"Марюш",      "aAlt":[]},
         {"lat":"Markus",    "cyr":"Марэк",      "aAlt":[]},
-        {"lat":"åMatthew",  "cyr":"Матэуш",     "aAlt":["Mæðú"]},
-        {"lat":"åMaurcice", "cyr":"Малърис",    "aAlt":["Môriß"]},
+        {"lat":"Matthew",   "cyr":"Матэуш",     "aAlt":["Mæðú"]},
+        {"lat":"Maurcice",  "cyr":"Малърис",    "aAlt":["Môriß"]},
         {"lat":"Maximilian","cyr":"Максимильян","aAlt":[]},
-        {"lat":"åMichael",  "cyr":"Михал",      "aAlt":["Míkel"]},
+        {"lat":"Michael",   "cyr":"Михал",      "aAlt":["Míkel"]},
         {"lat":"Miroswav",  "cyr":"Мирослав",   "aAlt":[]},
         {"lat":"Marïan",    "cyr":"Марян",      "aAlt":[]},
 
     # N
-        {"lat":"åNicholas", "cyr":"Миколай",    "aAlt":["Nikolas"]},
-        {"lat":"åNathan",   "cyr":"Натщхан",    "aAlt":["Náðen"]},
+        {"lat":"Nicholas",  "cyr":"Миколай",    "aAlt":["Nikolas"]},
+        {"lat":"Nathan",    "cyr":"Натщхан",    "aAlt":["Náðen"]},
         {"lat":"Nelson",    "cyr":"Нэльсон",    "aAlt":[]},
-        {"lat":"åNigel",    "cyr":"Иьигель",    "aAlt":["Nídzþel"]},
+        {"lat":"Nigel",     "cyr":"Иьигель",    "aAlt":["Nídzþel"]},
         {"lat":"åNoël",     "cyr":"Нощэль",     "aAlt":["Nol"]},
         {"lat":"Norbert",   "cyr":"Норбэрт",    "aAlt":[]},
         {"lat":"Norman",    "cyr":"Норман",     "aAlt":[]},
@@ -728,19 +728,19 @@ def import_male_names():
 
     # P
         {"lat":"Patrik",    "cyr":"Патрик",     "aAlt":[]},
-        {"lat":"åPaul",     "cyr":"Павэл",      "aAlt":[]},
-        {"lat":"åPeter",    "cyr":"Пётр",       "aAlt":["Pïotr"]},
-        {"lat":"åPhillip",  "cyr":"Фильип",     "aAlt":[]},
+        {"lat":"Paul",      "cyr":"Павэл",      "aAlt":[]},
+        {"lat":"Peter",     "cyr":"Пётр",       "aAlt":["Pïotr"]},
+        {"lat":"Phillip",   "cyr":"Фильип",     "aAlt":[]},
 
     # Q
-        {"lat":"åQuinton",  "cyr":"Пеьтяк",     "aAlt":[]},
-        {"lat":"åQuincy",   "cyr":"Клынци",     "aAlt":[]},
+        {"lat":"Quinton",   "cyr":"Пеьтяк",     "aAlt":[]},
+        {"lat":"Quincy",    "cyr":"Клынци",     "aAlt":[]},
 
     # R
         {"lat":"Rafael",    "cyr":"Рафал",      "aAlt":[]},
         {"lat":"Ralf",      "cyr":"Ральф",      "aAlt":[]},
-        {"lat":"åRaymond",  "cyr":"Раймунд",    "aAlt":["Rámund"]},
-        {"lat":"åRichard",  "cyr":"Рышард",     "aAlt":["Ritþard"]},
+        {"lat":"Raymond",   "cyr":"Раймунд",    "aAlt":["Rámund"]},
+        {"lat":"Richard",   "cyr":"Рышард",     "aAlt":["Ritþard"]},
         {"lat":"Robert",    "cyr":"Робэрт",     "aAlt":[]},
         {"lat":"Rudolf",    "cyr":"Рудольф",    "aAlt":[]},
         {"lat":"Ronald",    "cyr":"Рональд",    "aAlt":[]},
@@ -749,10 +749,10 @@ def import_male_names():
     # S
         {"lat":"Søren",     "cyr":"Сыърэн",     "aAlt":[]},
         {"lat":"Samuel",    "cyr":"Сэмюль",     "aAlt":[]},
-        {"lat":"åScott",    "cyr":"Скот",       "aAlt":[]},
+        {"lat":"Scott",     "cyr":"Скот",       "aAlt":[]},
         {"lat":"Sebastian", "cyr":"Сэастъян",   "aAlt":[]},
         {"lat":"Sigmund",   "cyr":"Сигмунд",    "aAlt":[]},
-        {"lat":"åSteven",   "cyr":"Шчэпан",     "aAlt":[]},
+        {"lat":"Steven",    "cyr":"Шчэпан",     "aAlt":[]},
         {"lat":"Sven",      "cyr":"Свэн",       "aAlt":[]},
         {"lat":"Stefan",    "cyr":"Стэфан",     "aAlt":[]},
         {"lat":"Sylvester", "cyr":"Сыльвэстэр", "aAlt":[]},
@@ -761,7 +761,7 @@ def import_male_names():
         {"lat":"Stanley",   "cyr":"Станислав",  "aAlt":[]},
 
     # T
-        {"lat":"åTheodore", "cyr":"Тадэуш",     "aAlt":["Ðîodô"]},
+        {"lat":"Theodore",  "cyr":"Тадэуш",     "aAlt":["Ðîodô"]},
         {"lat":"Tomas",     "cyr":"Томаш",      "aAlt":[]},
         {"lat":"Tobias",    "cyr":"Тобияс",     "aAlt":[]},
         {"lat":"Titus",     "cyr":"Тытус",      "aAlt":[]},
@@ -774,19 +774,19 @@ def import_male_names():
     # V
         {"lat":"Victor",    "cyr":"Виктор",     "aAlt":[]},
         {"lat":"Vitold",    "cyr":"Витольд",    "aAlt":[]},
-        {"lat":"åVincent",  "cyr":"Винцэнт",    "aAlt":[]},
+        {"lat":"Vincent",   "cyr":"Винцэнт",    "aAlt":[]},
         {"lat":"Vladimir",  "cyr":"Владимир",   "aAlt":[]},
         {"lat":"Vladoslav", "cyr":"Владослав",  "aAlt":[]},
 
     # W
-        {"lat":"åWalter",   "cyr":"Вальтэр",    "aAlt":[]},
-        {"lat":"åWarren",   "cyr":"Лоррэн",     "aAlt":[]},
-        {"lat":"åWilliam", "cyr":"Болеслав",    "aAlt":["Wylïam"]},
-        {"lat":"åWojtek",   "cyr":"Войтэк",     "aAlt":[]},
-        {"lat":"åWieslaw",  "cyr":"Веслав",     "aAlt":[]},
+        {"lat":"Walter",    "cyr":"Вальтэр",    "aAlt":[]},
+        {"lat":"Warren",    "cyr":"Лоррэн",     "aAlt":[]},
+        {"lat":"William",   "cyr":"Болеслав",   "aAlt":["Wylïam"]},
+        {"lat":"Wojtek",    "cyr":"Войтэк",     "aAlt":[]},
+        {"lat":"Wieslaw",   "cyr":"Веслав",     "aAlt":[]},
 
     # X
-        {"lat":"åXavir",    "cyr":"Ксавир",     "aAlt":[]},
+        {"lat":"Xavir",     "cyr":"Ксавир",     "aAlt":[]},
         {"lat":"Xylonder",  "cyr":"Ксылёндэр",  "aAlt":[]},
 
     # Y
@@ -829,79 +829,79 @@ def import_female_names():
     aFemale = [
 #       {"lat":"", "cyr":"", "aAlt":[]},
     # A
-        {"lat":"åAbigail",  "cyr":"Эбигэйль",   "aAlt":["Æbigál"]},
+        {"lat":"Abigail",   "cyr":"Эбигэйль",   "aAlt":["Æbigál"]},
         {"lat":"Adell",     "cyr":"Аъдэлль",    "aAlt":[]},
-        {"lat":"Ægnes",     "cyr":"Агнешка",    "aAlt":["åAgnes"]},
-        {"lat":"åAllison",  "cyr":"Альисон",    "aAlt":[]},
+        {"lat":"Ægnes",     "cyr":"Агнешка",    "aAlt":["Agnes"]},
+        {"lat":"Allison",   "cyr":"Альисон",    "aAlt":[]},
         {"lat":"Amanda",    "cyr":"Аманда",     "aAlt":[]},
         {"lat":"Anna",      "cyr":"Анна",       "aAlt":[]},
         {"lat":"åAngelique","cyr":"Аънджэльищк","aAlt":["Ændzþelîk"]},
-        {"lat":"åAshley",   "cyr":"Эшльищ",     "aAlt":["Æsþlî"]},
+        {"lat":"Ashley",    "cyr":"Эшльищ",     "aAlt":["Æsþlî"]},
         {"lat":"Angela",    "cyr":"Аъиджэля",   "aAlt":[]},
         {"lat":"Alexandra", "cyr":"Александра", "aAlt":[]},
-        {"lat":"åAgatha",   "cyr":"Агата",      "aAlt":["Agaða"]},
+        {"lat":"Agatha",    "cyr":"Агата",      "aAlt":["Agaða"]},
 
     # B
         {"lat":"Barbara",   "cyr":"Барбара",    "aAlt":[]},
         {"lat":"Belinda",   "cyr":"Бэльинда",   "aAlt":[]},
         {"lat":"Bernadet",  "cyr":"Быщнадэт",   "aAlt":[]},
-        {"lat":"åBetrix",   "cyr":"Бэтрикс",    "aAlt":[]},
+        {"lat":"Betrix",    "cyr":"Бэтрикс",    "aAlt":[]},
         {"lat":"Betti",     "cyr":"Бэата",      "aAlt":[]},
-        {"lat":"åBianca",   "cyr":"Бянка",      "aAlt":[]},
+        {"lat":"Bianca",    "cyr":"Бянка",      "aAlt":[]},
         {"lat":"Brigit",    "cyr":"Брыджыта",   "aAlt":[]},
-        {"lat":"åBritney",  "cyr":"Бритоня",    "aAlt":[]},
+        {"lat":"Britney",   "cyr":"Бритоня",    "aAlt":[]},
 
     # C
-        {"lat":"åCandice",  "cyr":"Кэндис",     "aAlt":["Kændis"]},
-        {"lat":"åCaroline", "cyr":"Карольина",  "aAlt":["Kærolín"]},
-        {"lat":"åCecilia",  "cyr":"Сэсилья",    "aAlt":["Sesilïa"]},
-        {"lat":"åCeleste",  "cyr":"Сэлест",     "aAlt":["Selest"]},
-        {"lat":"åChloë",    "cyr":"Чэслава",    "aAlt":["Klowi"]},
-        {"lat":"åChristene", "cyr":"Крыстына",  "aAlt":["Kristîn"]},
-        {"lat":"åCindy",    "cyr":"Цынди",      "aAlt":["Syndi"]},
-        {"lat":"åClaire",   "cyr":"Кляра",      "aAlt":["Klê"]},
-        {"lat":"åClaudia",  "cyr":"Клялъдя",    "aAlt":["Klawdïa"]},
-        {"lat":"åCharlotte","cyr":"Шарлет",     "aAlt":["Sþâlet"]},
+        {"lat":"Candice",   "cyr":"Кэндис",     "aAlt":["Kændis"]},
+        {"lat":"Caroline",  "cyr":"Карольина",  "aAlt":["Kærolín"]},
+        {"lat":"Cecilia",   "cyr":"Сэсилья",    "aAlt":["Sesilïa"]},
+        {"lat":"Celeste",   "cyr":"Сэлест",     "aAlt":["Selest"]},
+        {"lat":"Chloë",     "cyr":"Чэслава",    "aAlt":["Klowi"]},
+        {"lat":"Christene", "cyr":"Крыстына",   "aAlt":["Kristîn"]},
+        {"lat":"Cindy",     "cyr":"Цынди",      "aAlt":["Syndi"]},
+        {"lat":"Claire",    "cyr":"Кляра",      "aAlt":["Klê"]},
+        {"lat":"Claudia",   "cyr":"Клялъдя",    "aAlt":["Klawdïa"]},
+        {"lat":"Charlotte", "cyr":"Шарлет",     "aAlt":["Sþâlet"]},
 
     # D
-        {"lat":"åDanielle", "cyr":"Данелля",    "aAlt":[]},
+        {"lat":"Danielle",  "cyr":"Данелля",    "aAlt":[]},
         {"lat":"Donna",     "cyr":"Данута",     "aAlt":[]},
         {"lat":"Debra",     "cyr":"Дэбра",      "aAlt":[]},
-        {"lat":"åDenise",   "cyr":"Дэнищс",     "aAlt":[]},
+        {"lat":"Denise",    "cyr":"Дэнищс",     "aAlt":[]},
         {"lat":"Diana",     "cyr":"Дъияна",     "aAlt":[]},
-        {"lat":"åDominique","cyr":"Доминика",   "aAlt":["Domink"]},
-        {"lat":"åDorthy",   "cyr":"Дорота",     "aAlt":["Dorði"]},
+        {"lat":"Dominique", "cyr":"Доминика",   "aAlt":["Domink"]},
+        {"lat":"Dorthy",    "cyr":"Дорота",     "aAlt":["Dorði"]},
 
     # E
-        {"lat":"åEdith",    "cyr":"Эдыдь",      "aAlt":["Edið"]},
-        {"lat":"åEmillia",  "cyr":"Эмилья",     "aAlt":[]},
+        {"lat":"Edith",     "cyr":"Эдыдь",      "aAlt":["Edið"]},
+        {"lat":"Emillia",   "cyr":"Эмилья",     "aAlt":["Emillïa"]},
         {"lat":"Emma",      "cyr":"Эмма",       "aAlt":[]},
         {"lat":"Erika",     "cyr":"Эрика",      "aAlt":[]},
         {"lat":"Ester",     "cyr":"Эстэр",      "aAlt":[]},
         {"lat":"Eva",       "cyr":"Эва",        "aAlt":[]},
         {"lat":"Elanor",    "cyr":"Элянор",     "aAlt":[]},
-        {"lat":"åEugenia",  "cyr":"Юджиня",     "aAlt":["Údzþiña"]},
+        {"lat":"Eugenia",   "cyr":"Юджиня",     "aAlt":["Údzþiña"]},
 
 
     # F
         {"lat":"Fabïa",     "cyr":"Фабя",       "aAlt":[]},
-        {"lat":"åFelicity", "cyr":"Фэльисити",  "aAlt":[]},
-        {"lat":"Fÿóna",     "cyr":"Фиёна",      "aAlt":["åFiona"]},
-        {"lat":"åFlorence", "cyr":"Флёрэиц",    "aAlt":[]},
-        {"lat":"åFransis",  "cyr":"Франтьишка", "aAlt":[]},
+        {"lat":"Felicity",  "cyr":"Фэльисити",  "aAlt":[]},
+        {"lat":"Fÿóna",     "cyr":"Фиёна",      "aAlt":["Fiona"]},
+        {"lat":"Florence",  "cyr":"Флёрэиц",    "aAlt":[]},
+        {"lat":"Fransis",   "cyr":"Франтьишка", "aAlt":[]},
 
     # G
         {"lat":"Gabriella", "cyr":"Габриелля",  "aAlt":[]},
-        {"lat":"åGeorgina", "cyr":"Ежэнка",     "aAlt":[]},
+        {"lat":"Georgina",  "cyr":"Ежэнка",     "aAlt":[]},
         {"lat":"Gladis",    "cyr":"Глядис",     "aAlt":[]},
-        {"lat":"åGrace",    "cyr":"Гражына",    "aAlt":[]},
-        {"lat":"åGenevieve", "cyr":"Жыъныъвищв", "aAlt":["Zþønøvîv"]},
+        {"lat":"Grace",     "cyr":"Гражына",    "aAlt":[]},
+        {"lat":"Genevieve", "cyr":"Жыъныъвищв", "aAlt":["Zþønøvîv"]},
 
     # H
         {"lat":"Hanna",     "cyr":"Ханна",      "aAlt":[]},
-        {"lat":"åHazel",    "cyr":"Хазэль",     "aAlt":["Házel"]},
-        {"lat":"Hæða",      "cyr":"Хаъдя",      "aAlt":["åHeather"]},
-        {"lat":"Hídi",      "cyr":"Хайди",      "aAlt":["åHeidi"]},
+        {"lat":"Hazel",     "cyr":"Хазэль",     "aAlt":["Házel"]},
+        {"lat":"Hæða",      "cyr":"Хаъдя",      "aAlt":["Heather"]},
+        {"lat":"Hídi",      "cyr":"Хайди",      "aAlt":["Heidi"]},
         {"lat":"Hellen",    "cyr":"Хэлена",     "aAlt":[]},
         {"lat":"Henrietta", "cyr":"Хэнрята",    "aAlt":[]},
 
@@ -909,142 +909,142 @@ def import_female_names():
         {"lat":"Ida",       "cyr":"Ида",        "aAlt":[]},
         {"lat":"Iga",       "cyr":"Ига",        "aAlt":[]},
         {"lat":"Ilana",     "cyr":"Иляна",      "aAlt":[]},
-        {"lat":"åIrene",    "cyr":"Ирэна",      "aAlt":["Írîn"]},
-        {"lat":"åIsabella", "cyr":"Изабэля",    "aAlt":["Izabel"]},
+        {"lat":"Irene",     "cyr":"Ирэна",      "aAlt":["Írîn"]},
+        {"lat":"Isabella",  "cyr":"Изабэля",    "aAlt":["Izabel"]},
         {"lat":"Ivona",     "cyr":"Ивона",      "aAlt":[]},
         {"lat":"Ïadwiga",   "cyr":"Ядвига",     "aAlt":[]},
 
     # J
-        {"lat":"åJacquie",  "cyr":"Жакльина",   "aAlt":[]},
-        {"lat":"åJennifer", "cyr":"Енифэря",    "aAlt":[]},
-        {"lat":"åJessica",  "cyr":"Джэсика",    "aAlt":[]},
-        {"lat":"åJill",     "cyr":"Джиль",      "aAlt":[]},
-        {"lat":"åJoanne",   "cyr":"Аська",      "aAlt":[]},
-        {"lat":"åJosephine", "cyr":"Юзэфина",   "aAlt":[]},
-        {"lat":"åJoice",    "cyr":"Джойс",      "aAlt":[]},
-        {"lat":"åJuliet",   "cyr":"Юльяна",     "aAlt":[]},
-        {"lat":"åJudith",   "cyr":"Юдыта",      "aAlt":[]},
+        {"lat":"Jacquie",   "cyr":"Жакльина",   "aAlt":[]},
+        {"lat":"Jennifer",  "cyr":"Енифэря",    "aAlt":[]},
+        {"lat":"Jessica",   "cyr":"Джэсика",    "aAlt":[]},
+        {"lat":"Jill",      "cyr":"Джиль",      "aAlt":[]},
+        {"lat":"Joanne",    "cyr":"Аська",      "aAlt":[]},
+        {"lat":"Josephine", "cyr":"Юзэфина",   "aAlt":[]},
+        {"lat":"Joice",     "cyr":"Джойс",      "aAlt":[]},
+        {"lat":"Juliet",    "cyr":"Юльяна",     "aAlt":[]},
+        {"lat":"Judith",    "cyr":"Юдыта",      "aAlt":[]},
 
 
     # K
         {"lat":"Karen",     "cyr":"Карэн",      "aAlt":[]},
-        {"lat":"åKathryn",  "cyr":"Катажына",   "aAlt":["Kæðrøn"]},
+        {"lat":"Kathryn",   "cyr":"Катажына",   "aAlt":["Kæðrøn"]},
         {"lat":"Kim",       "cyr":"Ким",        "aAlt":[]},
         {"lat":"Kørsten",   "cyr":"Кырстына",   "aAlt":[]},
-        {"lat":"åKathleen", "cyr":"Каталена",   "aAlt":[]},
-        {"lat":"åKasandra", "cyr":"Касандра",   "aAlt":[]},
+        {"lat":"Kathleen",  "cyr":"Каталена",   "aAlt":[]},
+        {"lat":"Kasandra",  "cyr":"Касандра",   "aAlt":[]},
 
     # L
-        {"lat":"åLauren",   "cyr":"Лёрен",      "aAlt":["Lôren"]},
-        {"lat":"åLee-Ann",  "cyr":"Лищ-Энн",    "aAlt":["Lî-Ænn"]},
+        {"lat":"Lauren",    "cyr":"Лёрен",      "aAlt":["Lôren"]},
+        {"lat":"Lee-Ann",   "cyr":"Лищ-Энн",    "aAlt":["Lî-Ænn"]},
         {"lat":"Linda",     "cyr":"Льинда",     "aAlt":[]},
         {"lat":"Lucinda",   "cyr":"Люцында",    "aAlt":[]},
         {"lat":"Lisa",      "cyr":"Льиса",      "aAlt":[]},
-        {"lat":"åLouse",    "cyr":"Людвига",    "aAlt":["Luwîz"]},
-        {"lat":"åLeona",    "cyr":"Леона",      "aAlt":[]},
-        {"lat":"åLoraine",  "cyr":"Лёрэйн",     "aAlt":["Lorán"]},
+        {"lat":"Louse",     "cyr":"Людвига",    "aAlt":["Luwîz"]},
+        {"lat":"Leona",     "cyr":"Леона",      "aAlt":[]},
+        {"lat":"Loraine",   "cyr":"Лёрэйн",     "aAlt":["Lorán"]},
 
     # M
-        {"lat":"åMadelain", "cyr":"Мэдэльын",   "aAlt":[]},
-        {"lat":"åMallory",  "cyr":"Мэлёри",     "aAlt":[]},
+        {"lat":"Madelain",  "cyr":"Мэдэльын",   "aAlt":[]},
+        {"lat":"Mallory",   "cyr":"Мэлёри",     "aAlt":[]},
         {"lat":"Margret",   "cyr":"Малгожата",  "aAlt":[]},
         {"lat":"Magdalena", "cyr":"Магдалена",  "aAlt":[]},
         {"lat":"Marieke",   "cyr":"Марики",     "aAlt":[]},
         {"lat":"Marlyn",    "cyr":"Марыся",     "aAlt":[]},
         {"lat":"Marina",    "cyr":"Марина",     "aAlt":[]},
-        {"lat":"åMartha",   "cyr":"Марта",      "aAlt":["Marða"]},
+        {"lat":"Martha",    "cyr":"Марта",      "aAlt":["Marða"]},
         {"lat":"Marÿa",     "cyr":"Марыя",      "aAlt":["åMaria"]},
         {"lat":"Matilda",   "cyr":"Матыльда",   "aAlt":[]},
         {"lat":"Megan",     "cyr":"Мэгэн",      "aAlt":[]},
         {"lat":"Melinda",   "cyr":"Мэльинда",   "aAlt":[]},
-        {"lat":"åMichelle", "cyr":"Михальина",  "aAlt":[]},
+        {"lat":"Michelle",  "cyr":"Михальина",  "aAlt":[]},
         {"lat":"Mirrïam",   "cyr":"Мирка",      "aAlt":[]},
         {"lat":"Molly",     "cyr":"Молльи",     "aAlt":[]},
-        {"lat":"åMonique",  "cyr":"Моника",     "aAlt":[]},
+        {"lat":"Monique",   "cyr":"Моника",     "aAlt":[]},
         {"lat":"Martina",   "cyr":"Мартина",    "aAlt":[]},
-        {"lat":"åMaureen",  "cyr":"Мощрищн",    "aAlt":[]},
-        {"lat":"åMelissa",  "cyr":"Мэльисса",   "aAlt":[]},
+        {"lat":"Maureen",   "cyr":"Мощрищн",    "aAlt":[]},
+        {"lat":"Melissa",   "cyr":"Мэльисса",   "aAlt":[]},
 
     # N
-        {"lat":"åNatasha",  "cyr":"Наташа",     "aAlt":["Natasþa"]},
-        {"lat":"åNatalia",  "cyr":"Наталья",    "aAlt":["Natalïa"]},
-        {"lat":"åNadia",    "cyr":"Надъа",      "aAlt":["Nadïa"]},
-        {"lat":"åNicole",   "cyr":"Николя",     "aAlt":["Nikôl"]},
+        {"lat":"Natasha",   "cyr":"Наташа",     "aAlt":["Natasþa"]},
+        {"lat":"Natalia",   "cyr":"Наталья",    "aAlt":["Natalïa"]},
+        {"lat":"Nadia",     "cyr":"Надъя",      "aAlt":["Nadïa"]},
+        {"lat":"Nicole",    "cyr":"Николя",     "aAlt":["Nikôl"]},
         {"lat":"Nina",      "cyr":"Нина",       "aAlt":[]},
 
     # O
         {"lat":"Olga",      "cyr":"Ольга",      "aAlt":[]},
         {"lat":"Olivia",    "cyr":"Ольивя",     "aAlt":[]},
-        {"lat":"åOctavia",  "cyr":"Октавя",     "aAlt":[]},
+        {"lat":"Octavia",   "cyr":"Октавя",     "aAlt":[]},
 
     # P
         {"lat":"Pamela",    "cyr":"Памэля",     "aAlt":[]},
-        {"lat":"åPatricia", "cyr":"Патрыця",    "aAlt":[]},
-        {"lat":"åPhoebie",  "cyr":"Фищбищ",     "aAlt":[]},
-        {"lat":"åPaulina",  "cyr":"Палъльина",  "aAlt":[]},
-        {"lat":"åPriscilla","cyr":"Присиля",    "aAlt":[]},
+        {"lat":"Patricia",  "cyr":"Патрыця",    "aAlt":[]},
+        {"lat":"Phoebie",   "cyr":"Фищбищ",     "aAlt":[]},
+        {"lat":"Paulina",   "cyr":"Палъльина",  "aAlt":[]},
+        {"lat":"Priscilla", "cyr":"Присиля",    "aAlt":[]},
 
     # Q
-        {"lat":"åQueenie",  "cyr":"Крулевня",    "aAlt":[]},
+        {"lat":"Queenie",   "cyr":"Крулевня",    "aAlt":[]},
         {"lat":"Quintina",  "cyr":"Пеьтёна",     "aAlt":[]},
 
     # R
-        {"lat":"åRachel",   "cyr":"Рахэль",     "aAlt":[]},
-        {"lat":"Rebeka",    "cyr":"Рэбэка",     "aAlt":[]},
+        {"lat":"Rachel",    "cyr":"Рахэль",     "aAlt":[]},
+        {"lat":"Rebecca",   "cyr":"Рэбэка",     "aAlt":["Rebeka"]},
         {"lat":"Regina",    "cyr":"Рэгина",     "aAlt":[]},
-        {"lat":"åRose",     "cyr":"Ружа",       "aAlt":[]},
-        {"lat":"åRuth",     "cyr":"Рута",       "aAlt":[]},
-        {"lat":"åRoxanne",  "cyr":"Роксанна",   "aAlt":[]},
-        {"lat":"åRenata",   "cyr":"Рэната",     "aAlt":[]},
+        {"lat":"Rose",      "cyr":"Ружа",       "aAlt":[]},
+        {"lat":"Ruth",      "cyr":"Рута",       "aAlt":[]},
+        {"lat":"Roxanne",   "cyr":"Роксанна",   "aAlt":[]},
+        {"lat":"Renata",    "cyr":"Рэната",     "aAlt":[]},
 
     # S
-        {"lat":"åSally",    "cyr":"Сэлльи",     "aAlt":[]},
+        {"lat":"Sally",     "cyr":"Сэлльи",     "aAlt":[]},
         {"lat":"Sandra",    "cyr":"Сандра",     "aAlt":[]},
-        {"lat":"åSharon",   "cyr":"Шаърэн",     "aAlt":["Sþæren"]},
-        {"lat":"åSheryl",   "cyr":"Шэрыль",     "aAlt":["Sþeryl"]},
-        {"lat":"åSimone",   "cyr":"Симолн",     "aAlt":["Simón"]},
+        {"lat":"Sharon",    "cyr":"Шаърэн",     "aAlt":["Sþæren"]},
+        {"lat":"Sheryl",    "cyr":"Шэрыль",     "aAlt":["Sþeryl"]},
+        {"lat":"Simone",    "cyr":"Симолн",     "aAlt":["Simón"]},
         {"lat":"Steffi",    "cyr":"Стэффи",     "aAlt":[]},
-        {"lat":"åStephanie","cyr":"Стэфэни",    "aAlt":["Stefeni"]},
+        {"lat":"Stephanie", "cyr":"Стэфэни",    "aAlt":["Stefeni"]},
         {"lat":"Suzan",     "cyr":"Сузан",      "aAlt":[]},
         {"lat":"Stanislava","cyr":"Станисава",  "aAlt":[]},
-        {"lat":"åSarah",    "cyr":"Сэращ",      "aAlt":["Særâ"]},
+        {"lat":"Sarah",     "cyr":"Сэращ",      "aAlt":["Særâ"]},
         {"lat":"Sylvia",    "cyr":"Сыльвя",     "aAlt":[]},
-        {"lat":"åSamantha", "cyr":"Сэмэндя",    "aAlt":["Samanða"]},
+        {"lat":"Samantha",  "cyr":"Сэмэндя",    "aAlt":["Samanða"]},
         {"lat":"Sabrina",   "cyr":"Сабрина",    "aAlt":[]},
 
     # T
-        {"lat":"åTabitha",  "cyr":"Табидя",     "aAlt":["Tabiða"]},
-        {"lat":"åTanya",    "cyr":"Таня",       "aAlt":["Taña"]},
-        {"lat":"åTéa",      "cyr":"Тэща",       "aAlt":["Teåa"]},
-        {"lat":"åThelma",   "cyr":"Дельма",     "aAlt":["Ðelma"]},
+        {"lat":"Tabitha",   "cyr":"Табидя",     "aAlt":["Tabiða"]},
+        {"lat":"Tanya",     "cyr":"Таня",       "aAlt":["Taña"]},
+        {"lat":"Téa",       "cyr":"Тэща",       "aAlt":["Teåa"]},
+        {"lat":"Thelma",    "cyr":"Дельма",     "aAlt":["Ðelma"]},
         {"lat":"Teresa",    "cyr":"Тэрэса",     "aAlt":[]},
         {"lat":"Tatïana",   "cyr":"Татъяна",    "aAlt":[]},
 
     # U
-        {"lat":"åUrsula",   "cyr":"Уршуля",     "aAlt":["Øþsþula"]},
+        {"lat":"Ursula",    "cyr":"Уршуля",     "aAlt":["Øþsþula"]},
         {"lat":"Ulritsa",   "cyr":"Ульрица",    "aAlt":[]},
 
     # V
         {"lat":"Vænessa",   "cyr":"Вэнэсса",    "aAlt":["Vanessa"]},
-        {"lat":"åVictoria", "cyr":"Викторя",    "aAlt":["Viktorïa"]},
-        {"lat":"åViolet",   "cyr":"Вёлетта",    "aAlt":["Vílet"]},
+        {"lat":"Victoria",  "cyr":"Викторя",    "aAlt":["Viktorïa"]},
+        {"lat":"Violet",    "cyr":"Вёлетта",    "aAlt":["Vílet"]},
         {"lat":"Veronica",  "cyr":"Вэроника",   "aAlt":[]},
 
     # W
-        {"lat":"åWanda",    "cyr":"Ванда",      "aAlt":["Wonda"]},
+        {"lat":"Wanda",     "cyr":"Ванда",      "aAlt":["Wonda"]},
         {"lat":"Wilma",     "cyr":"Лильма",     "aAlt":[]},
 
     # X
-        {"lat":"åXenobia",  "cyr":"Зэнобя",     "aAlt":[]},
-        {"lat":"åXylophia", "cyr":"Ксылёфя",    "aAlt":[]},
+        {"lat":"Xenobia",   "cyr":"Зэнобя",     "aAlt":[]},
+        {"lat":"Xylophia",  "cyr":"Ксылёфя",    "aAlt":[]},
 
     # Y
-        {"lat":"åYolanda",  "cyr":"Ёлянда",     "aAlt":["Ïolanda"]},
-        {"lat":"åYvonne",   "cyr":"Ивона",      "aAlt":["Ivonn"]},
+        {"lat":"Yolanda",   "cyr":"Ёлянда",     "aAlt":["Ïolanda"]},
+        {"lat":"Yvonne",    "cyr":"Ивона",      "aAlt":["Ivonn"]},
 
     # Z
         {"lat":"Zofia",     "cyr":"Зофя",       "aAlt":[]},
-        {"lat":"åZoë",      "cyr":"Золи",       "aAlt":[]},
+        {"lat":"Zoë",       "cyr":"Золи",       "aAlt":[]},
     ]
 
     import modules.x_database as db
@@ -1069,19 +1069,19 @@ def import_static_surnames():
     """
 
     aStatic_surname = [
-        {"lat":"åAitkin",           "cyr":"Эйткин"},
+        {"lat":"Aitkin",            "cyr":"Эйткин"},
         {"lat":"Àtkin",             "cyr":"Аьткин"},
         {"lat":"Ææz",               "cyr":"Щэщз"},
-        {"lat":"åArcher",           "cyr":"Ащча"},
+        {"lat":"Archer",            "cyr":"Ащча"},
         {"lat":"Ïabkovski",         "cyr":"Ябковски"},
         {"lat":"Augustine",         "cyr":"Алгустин"},
         {"lat":"Báli",              "cyr":"Бйльи"},
 
-        {"lat":"åBaker",            "cyr":"Бэйка"},
+        {"lat":"Baker",             "cyr":"Бэйка"},
         {"lat":"Pïekarski",         "cyr":"Пекарски"},
-        {"lat":"åBauer",            "cyr":"Балэр"},
+        {"lat":"Bauer",             "cyr":"Балэр"},
         {"lat":"Budovlak",          "cyr":"Будовляк"},
-        {"lat":"åBaumgartner",      "cyr":"Балмщгартнэр"},
+        {"lat":"Baumgartner",       "cyr":"Балмщгартнэр"},
         {"lat":"Dzþevoåogrodski",   "cyr":"Джэвощогродзки"},
         {"lat":"Berger",            "cyr":"Бэргер"},
         {"lat":"Gural",             "cyr":"Гураль"},
@@ -1089,92 +1089,92 @@ def import_static_surnames():
         {"lat":"Borg",              "cyr":"Борг"},
         {"lat":"Bosåhoff",          "cyr":"Босхофф"},
         {"lat":"Bowdler",           "cyr":"Болдълер"},
-        {"lat":"åBrewer",           "cyr":"Брущла"},
+        {"lat":"Brewer",            "cyr":"Брущла"},
         {"lat":"Pivñik",            "cyr":"Пивньик"},
-        {"lat":"åBrown",            "cyr":"Бралн"},
+        {"lat":"Brown",             "cyr":"Бралн"},
         {"lat":"Bràz",              "cyr":"Браьз"},
-        {"lat":"åBaxter",           "cyr":"Бэкста"},
+        {"lat":"Baxter",            "cyr":"Бэкста"},
 
         {"lat":"Barstþovïak",       "cyr":"Баршчовяк"},
         {"lat":"Bigosçak",          "cyr":"Бигосляк"},
         {"lat":"Barañski",          "cyr":"Бараньски"},
-        {"lat":"åCartwright",       "cyr":"Кащтрайт"},
+        {"lat":"Cartwright",        "cyr":"Кащтрайт"},
         {"lat":"Kowak",             "cyr":"Колъак"},
-        {"lat":"åChapman",          "cyr":"Чэпмэн"},
-        {"lat":"åCook",             "cyr":"Кущк"},
+        {"lat":"Chapman",           "cyr":"Чэпмэн"},
+        {"lat":"Cook",              "cyr":"Кущк"},
         {"lat":"Kuhþñak",           "cyr":"Кухняк"},
 
-        {"lat":"åCooper",           "cyr":"Кущпа"},
+        {"lat":"Cooper",            "cyr":"Кущпа"},
         {"lat":"Mïedzçak",          "cyr":"Медзяк"},
-        {"lat":"åCox",              "cyr":"Кокс"},
-        {"lat":"åCarpenter",        "cyr":"Кащпэнта"},
+        {"lat":"Cox",               "cyr":"Кокс"},
+        {"lat":"Carpenter",         "cyr":"Кащпэнта"},
         {"lat":"Tçesçlak",          "cyr":"Тесляк"},
-        {"lat":"åCheeseman",        "cyr":"Чищзмэн"},
+        {"lat":"Cheeseman",         "cyr":"Чищзмэн"},
         {"lat":"Serovy",            "cyr":"Сэровы"},
-        {"lat":"åClark",            "cyr":"Клящк"},
+        {"lat":"Clark",             "cyr":"Клящк"},
 
         {"lat":"Búzþak",            "cyr":"Бюжак"},
         {"lat":"Tþehþman",          "cyr":"Чэхман"},
         {"lat":"de Boêr",           "cyr":"дэ Быъщ"},
-        {"lat":"de åJong",          "cyr":"дэ Ёнг"},
+        {"lat":"de Jong",           "cyr":"дэ Ёнг"},
         {"lat":"Dahïevitþ",         "cyr":"Дахевич"},
         {"lat":"Dàbovski",          "cyr":"Даьбовски"},
         {"lat":"Dwugosþevski",      "cyr":"Длугошэвски"},
         {"lat":"Drozþdzþ",          "cyr":"Дрождж"},
 
-        {"lat":"åYeastman",         "cyr":"Йистман"},
+        {"lat":"Yeastman",          "cyr":"Йистман"},
         {"lat":"Dzvoñak",           "cyr":"Дзвоняк"},
         {"lat":"Bellman",           "cyr":"Бэлльман"},
-        {"lat":"åEisenman",         "cyr":"Айзэнман"},
+        {"lat":"Eisenman",          "cyr":"Айзэнман"},
         {"lat":"Elizmus",           "cyr":"Эльизмус"},
-        {"lat":"åElephant",         "cyr":"Элефант"},
+        {"lat":"Elephant",          "cyr":"Элефант"},
         {"lat":"Swoñski",           "cyr":"Слоньски"},
-        {"lat":"åFisher",           "cyr":"Фишэр"},
+        {"lat":"Fisher",            "cyr":"Фишэр"},
 
         {"lat":"Fuller",            "cyr":"Фуллер"},
         {"lat":"Graaff",            "cyr":"Граафф"},
-        {"lat":"åGrüber",           "cyr":"Груъба"},
+        {"lat":"Grüber",            "cyr":"Груъба"},
         {"lat":"Glaß",              "cyr":"Глясс"},
         {"lat":"Sþklazþ",           "cyr":"Шклаж"},
         {"lat":"Grosþak",           "cyr":"Грошак"},
         {"lat":"Gaïosç",            "cyr":"Гащеось"},
         {"lat":"Gàsçor",            "cyr":"Гаьсор"},
 
-        {"lat":"åGooser",           "cyr":"Гущсэр"},
+        {"lat":"Gooser",            "cyr":"Гущсэр"},
         {"lat":"Gliñski",           "cyr":"Гльиньски"},
         {"lat":"Gþrobler",          "cyr":"Гъроблер"},
         {"lat":"Gþrobelâr",         "cyr":"Гъробэлящр"},
-        {"lat":"de åClay",          "cyr":"дэ Клей"},
+        {"lat":"de Clay",           "cyr":"дэ Клей"},
         {"lat":"Gowàb",             "cyr":"Голаьб"},
-        {"lat":"åDove",             "cyr":"Дав"},
+        {"lat":"Dove",              "cyr":"Дав"},
         {"lat":"Grusþka",           "cyr":"Гушна"},
 
         {"lat":"Gzþehotñik",        "cyr":"Гжэхотньик"},
-        {"lat":"åRattler",          "cyr":"Раътълер"},
+        {"lat":"Rattler",           "cyr":"Раътълер"},
         {"lat":"Haas",              "cyr":"Щхаас"},
-        {"lat":"åHall",             "cyr":"Хощль"},
-        {"lat":"åHawkins",          "cyr":"Хощкинс"},
-        {"lat":"åHoffer",           "cyr":"Хоффэр"},
-        {"lat":"åHoffman",          "cyr":"Хоффман"},
+        {"lat":"Hall",              "cyr":"Хощль"},
+        {"lat":"Hawkins",           "cyr":"Хощкинс"},
+        {"lat":"Hoffer",            "cyr":"Хоффэр"},
+        {"lat":"Hoffman",           "cyr":"Хоффман"},
         {"lat":"Hetman",            "cyr":"Хэтман"},
 
         {"lat":"Hawas",             "cyr":"Халас"},
         {"lat":"Hsþàstþ",           "cyr":"Хшаьшч"},
-        {"lat":"åBeetleman",        "cyr":"Бищтъльмэн"},
+        {"lat":"Beetleman",         "cyr":"Бищтъльмэн"},
         {"lat":"Ivanov",            "cyr":"Иванов"},
-        {"lat":"åIrons",            "cyr":"Айэнс"},
+        {"lat":"Irons",             "cyr":"Айэнс"},
         {"lat":"Ignisç",            "cyr":"Игнись"},
-        {"lat":"åJones",            "cyr":"Джонс"},
+        {"lat":"Jones",             "cyr":"Джонс"},
         {"lat":"Ïäger",             "cyr":"Яъгэр"},
 
         {"lat":"Ïagïelïak",         "cyr":"Ягельяк"},
         {"lat":"Ïastþurak",         "cyr":"Яшчурак"},
-        {"lat":"åLizard",           "cyr":"Льизард"},
+        {"lat":"Lizard",            "cyr":"Льизард"},
         {"lat":"Ïèzçor",            "cyr":"Еьзёр"},
         {"lat":"Koler",             "cyr":"Колер"},
         {"lat":"Kozwovski",         "cyr":"Козловски"},
         {"lat":"Kovalski",          "cyr":"Ковальски"},
-        {"lat":"åKramer",           "cyr":"Крэйма"},
+        {"lat":"Kramer",            "cyr":"Крэйма"},
 
         {"lat":"Kravtþyk",          "cyr":"Кравчык"},
         {"lat":"Kruger",            "cyr":"Круга"},
@@ -1182,49 +1182,49 @@ def import_static_surnames():
         {"lat":"Kovaltþyk",         "cyr":"Ковальчык"},
         {"lat":"Katþmar",           "cyr":"Качмар"},
         {"lat":"Kamïeñski",         "cyr":"Каменьски"},
-        {"lat":"åStone",            "cyr":"Столн"},
+        {"lat":"Stone",             "cyr":"Столн"},
         {"lat":"Kitç",              "cyr":"Кить"},
 
-        {"lat":"åWarden",           "cyr":"Лощдэн"},
+        {"lat":"Warden",            "cyr":"Лощдэн"},
         {"lat":"Kostçowski",        "cyr":"Костёлъски"},
-        {"lat":"åChurch",           "cyr":"Чыч"},
-        {"lat":"åLehner",           "cyr":"Лехнэр"},
+        {"lat":"Church",            "cyr":"Чыч"},
+        {"lat":"Lehner",            "cyr":"Лехнэр"},
         {"lat":"Latatþ",            "cyr":"Лятач"},
-        {"lat":"åLynch",            "cyr":"Льынч"},
+        {"lat":"Lynch",             "cyr":"Льынч"},
         {"lat":"Lysçak",            "cyr":"Льысяк"},
         {"lat":"Las",               "cyr":"Ляс"},
 
-        {"lat":"åForester",         "cyr":"Форэста"},
+        {"lat":"Forester",          "cyr":"Форэста"},
         {"lat":"Wabèdzç",           "cyr":"Лабэьдзь"},
         {"lat":"Swan",              "cyr":"Слон"},
         {"lat":"Marsþall",          "cyr":"Маршаль"},
-        {"lat":"åMcCarthy",         "cyr":"Мэкщкадьи"},
-        {"lat":"åMeyer",            "cyr":"Мэя"},
-        {"lat":"åMulder",           "cyr":"Мульдэр"},
-        {"lat":"åMüller",           "cyr":"Муъля"},
+        {"lat":"McCarthy",          "cyr":"Мэкщкадьи"},
+        {"lat":"Meyer",             "cyr":"Мэя"},
+        {"lat":"Mulder",            "cyr":"Мульдэр"},
+        {"lat":"Müller",            "cyr":"Муъля"},
 
-        {"lat":"åMurphy",           "cyr":"Мыщфи"},
+        {"lat":"Murphy",            "cyr":"Мыщфи"},
         {"lat":"Mostñak",           "cyr":"Мостъняк"},
         {"lat":"Mazurak",           "cyr":"Мазурак"},
         {"lat":"Mawy",              "cyr":"Малы"},
-        {"lat":"åSmall",            "cyr":"Смоль"},
+        {"lat":"Small",             "cyr":"Смоль"},
         {"lat":"Mehþ",              "cyr":"Мэх"},
         {"lat":"Moß",               "cyr":"Мосс"},
         {"lat":"Mïelets",           "cyr":"Мелец"},
 
-        {"lat":"åMiller",           "cyr":"Мыля"},
+        {"lat":"Miller",            "cyr":"Мыля"},
         {"lat":"Mwyñazþ",           "cyr":"Млыняж"},
         {"lat":"Motþyågèba",        "cyr":"Мочыщгэьба"},
-        {"lat":"åWetmouth",         "cyr":"Лэтмалъдь"},
+        {"lat":"Wetmouth",          "cyr":"Лэтмалъдь"},
         {"lat":"Mozþyts",           "cyr":"Можыц"},
-        {"lat":"åSeaman",           "cyr":"Сищмэн"},
+        {"lat":"Seaman",            "cyr":"Сищмэн"},
         {"lat":"Mroz",              "cyr":"Мроз"},
         {"lat":"Frost",             "cyr":"Фрост"},
 
         {"lat":"Novak",             "cyr":"Новак"},
-        {"lat":"åNewman",           "cyr":"Нюмэн"},
+        {"lat":"Newman",            "cyr":"Нюмэн"},
         {"lat":"Ñedzçvïedzç",       "cyr":"Недзьведзь"},
-        {"lat":"åBear",             "cyr":"Бэщ"},
+        {"lat":"Bear",              "cyr":"Бэщ"},
         {"lat":"Ñebodaï",           "cyr":"Небодай"},
         {"lat":"Norveg",            "cyr":"Норэг"},
         {"lat":"Østerríher",        "cyr":"Ыъстэррайхэр"},
@@ -1234,14 +1234,14 @@ def import_static_surnames():
         {"lat":"Oláñik",            "cyr":"Олейньик"},
         {"lat":"Ølman",             "cyr":"Ыъльман"},
         {"lat":"Owovïak",           "cyr":"Оловяк"},
-        {"lat":"åLeadboy",          "cyr":"Лещдбой"},
+        {"lat":"Leadboy",           "cyr":"Лещдбой"},
         {"lat":"Ozþewski",          "cyr":"Ожэлъски"},
-        {"lat":"åEagler",           "cyr":"Ищглер"},
+        {"lat":"Eagler",            "cyr":"Ищглер"},
         {"lat":"Pavlak",            "cyr":"Павляк"},
 
         {"lat":"Papiñak",           "cyr":"Папиняк"},
-        {"lat":"åPlowright",        "cyr":"Плялрайт"},
-        {"lat":"åPorter",           "cyr":"Пощта"},
+        {"lat":"Plowright",         "cyr":"Плялрайт"},
+        {"lat":"Porter",            "cyr":"Пощта"},
         {"lat":"Pïerogovski",       "cyr":"Пероговски"},
         {"lat":"Pàtþak",            "cyr":"Паьчак"},
         {"lat":"Paliåhleb",         "cyr":"Пальищхлеб"},
@@ -1249,13 +1249,13 @@ def import_static_surnames():
         {"lat":"Octobrus",          "cyr":"Октобрус"},
 
         {"lat":"Pïaskovski",        "cyr":"Пясковски"},
-        {"lat":"åSandman",          "cyr":"Сэндмэн"},
+        {"lat":"Sandman",           "cyr":"Сэндмэн"},
         {"lat":"Pozçñak",           "cyr":"Позняк"},
         {"lat":"Ptak",              "cyr":"Птак"},
-        {"lat":"åBird",             "cyr":"Быщд"},
+        {"lat":"Bird",              "cyr":"Быщд"},
         {"lat":"Psþenitçazþ",       "cyr":"Пшэнитяж"},
-        {"lat":"åWheatman",         "cyr":"Лищтмэн"},
-        {"lat":"åQuilter",          "cyr":"Клыльта"},
+        {"lat":"Wheatman",          "cyr":"Лищтмэн"},
+        {"lat":"Quilter",           "cyr":"Клыльта"},
 
         {"lat":"Kowdzþak",          "cyr":"Колъджак"},
         {"lat":"Quinman",           "cyr":"Клынман"},
@@ -1263,22 +1263,22 @@ def import_static_surnames():
         {"lat":"Rybak",             "cyr":"Рыбак"},
         {"lat":"Rak",               "cyr":"Рак"},
         {"lat":"Ruzþetski",         "cyr":"Ружэцки"},
-        {"lat":"åRoseman",          "cyr":"Ролзмэн"},
+        {"lat":"Roseman",           "cyr":"Ролзмэн"},
         {"lat":"Rytsezþ",           "cyr":"Рыцэж"},
 
-        {"lat":"åKnight",           "cyr":"Щнайт"},
-        {"lat":"åSchiffner",        "cyr":"Шиффнэр"},
-        {"lat":"åSchmidt",          "cyr":"Шмид"},
+        {"lat":"Knight",            "cyr":"Щнайт"},
+        {"lat":"Schiffner",         "cyr":"Шиффнэр"},
+        {"lat":"Schmidt",           "cyr":"Шмид"},
         {"lat":"Smið",              "cyr":"Смидь"},
-        {"lat":"åShepard",          "cyr":"Шэпыщд"},
-        {"lat":"åSteiner",          "cyr":"Штайнэр"},
-        {"lat":"åStewards",         "cyr":"Стъюыщдс"},
+        {"lat":"Shepard",           "cyr":"Шэпыщд"},
+        {"lat":"Steiner",           "cyr":"Штайнэр"},
+        {"lat":"Stewards",          "cyr":"Стъюыщдс"},
         {"lat":"Stolarski",         "cyr":"Столярски"},
 
         {"lat":"Sþevtþyk",          "cyr":"Шэвчык"},
         {"lat":"Stþetçiñak",        "cyr":"Шчэтьиняк"},
         {"lat":"Sàdzçak",           "cyr":"Саьдзяк"},
-        {"lat":"åJudges",           "cyr":"Джаджэс"},
+        {"lat":"Judges",            "cyr":"Джаджэс"},
         {"lat":"Sçlivïak",          "cyr":"Сльивяк"},
         {"lat":"Plumer",            "cyr":"Плямэр"},
         {"lat":"Sksþyptþak",        "cyr":"Скшыпчак"},
@@ -1286,11 +1286,11 @@ def import_static_surnames():
 
         {"lat":"Stèpïak",           "cyr":"Стэьпяк"},
         {"lat":"Strusçak",          "cyr":"Струсяк"},
-        {"lat":"åOstrich",          "cyr":"Острич"},
+        {"lat":"Ostrich",           "cyr":"Острич"},
         {"lat":"Stèpski",           "cyr":"Стэьпски"},
         {"lat":"Sçviñoåsuhy",       "cyr":"Сьвинёщсухы"},
         {"lat":"Sþahogratþ",        "cyr":"Шахограч"},
-        {"lat":"åChessman",         "cyr":"Чэссман"},
+        {"lat":"Chessman",          "cyr":"Чэссман"},
         {"lat":"Stþehovïak",        "cyr":"Шчэховяк"},
 
         {"lat":"Stþepiñski",        "cyr":"Шчэпиньски"},
@@ -1299,23 +1299,23 @@ def import_static_surnames():
         {"lat":"Stçañak",           "cyr":"Стяняк"},
         {"lat":"Sçledzç",           "cyr":"Следзь"},
         {"lat":"Herring",           "cyr":"Хэрринг"},
-        {"lat":"åTaylor",           "cyr":"Тэйля"},
+        {"lat":"Taylor",            "cyr":"Тэйля"},
         {"lat":"Sþevts",            "cyr":"Шэвц"},
 
-        {"lat":"åThatcher",         "cyr":"Дяъча"},
+        {"lat":"Thatcher",          "cyr":"Дяъча"},
         {"lat":"åThompson",         "cyr":"Томсон"},
-        {"lat":"åTanner",           "cyr":"Таънна"},
+        {"lat":"Tanner",            "cyr":"Таънна"},
         {"lat":"Skuzþak",           "cyr":"Скужак"},
-        {"lat":"åTiler",            "cyr":"Тайлэр"},
-        {"lat":"åTurner",           "cyr":"Тыщна"},
+        {"lat":"Tiler",             "cyr":"Тайлэр"},
+        {"lat":"Turner",            "cyr":"Тыщна"},
         {"lat":"Tègosç",            "cyr":"Тэьгось"},
         {"lat":"Trèbitski",         "cyr":"Трэьбицки"},
 
         {"lat":"Tràbatþ",           "cyr":"Траьбач"},
-        {"lat":"åHorn",             "cyr":"Хощн"},
+        {"lat":"Horn",              "cyr":"Хощн"},
         {"lat":"Tþesçara",          "cyr":"Чэсяра"},
-        {"lat":"åUsher",            "cyr":"Аша"},
-        {"lat":"åUhrmacher",        "cyr":"Уурмахэр"},
+        {"lat":"Usher",             "cyr":"Аша"},
+        {"lat":"Uhrmacher",         "cyr":"Уурмахэр"},
         {"lat":"Zegaromistþ",       "cyr":"Зэрарощмишч"},
         {"lat":"Urbañak",           "cyr":"Урбаняк"},
         {"lat":"Ustçiñski",         "cyr":"Устьиньски"},
@@ -1331,27 +1331,27 @@ def import_static_surnames():
 
         {"lat":"Vwosçak",           "cyr":"Влосяк"},
         {"lat":"Vodñik",            "cyr":"Водъньик"},
-        {"lat":"åWaterman",         "cyr":"Лотамэн"},
-        {"lat":"åWilkins",          "cyr":"Лылькинс"},
-        {"lat":"åWolf",             "cyr":"Лульф"},
+        {"lat":"Waterman",          "cyr":"Лотамэн"},
+        {"lat":"Wilkins",           "cyr":"Лылькинс"},
+        {"lat":"Wolf",              "cyr":"Лульф"},
         {"lat":"Weber",             "cyr":"Лэбба"},
-        {"lat":"åWalker",           "cyr":"Лока"},
-        {"lat":"åWeiver",           "cyr":"Лива"},
+        {"lat":"Walker",            "cyr":"Лока"},
+        {"lat":"Weiver",            "cyr":"Лива"},
 
-        {"lat":"åWilliams",         "cyr":"Лыльемс"},
-        {"lat":"åWilson",           "cyr":"Лыльсэн"},
+        {"lat":"Williams",          "cyr":"Лыльемс"},
+        {"lat":"Wilson",            "cyr":"Лыльсэн"},
         {"lat":"Vozçñak",           "cyr":"Возняк"},
         {"lat":"Voïtçik",           "cyr":"Войтьик"},
         {"lat":"Visçñevski",        "cyr":"Висневски"},
-        {"lat":"åWright",           "cyr":"Щрайт"},
-        {"lat":"åYeland",           "cyr":"Еленд"},
+        {"lat":"Wright",            "cyr":"Щрайт"},
+        {"lat":"Yeland",            "cyr":"Еленд"},
         {"lat":"Ïoman",             "cyr":"Ёман"},
 
-        {"lat":"åZimmerman",        "cyr":"Циммэрман"},
-        {"lat":"åZajàc",            "cyr":"Заяьц"},
+        {"lat":"Zimmerman",         "cyr":"Циммэрман"},
+        {"lat":"Zajàc",             "cyr":"Заяьц"},
         {"lat":"åHare",             "cyr":"Хэщ"},
         {"lat":"Zþezçñik",          "cyr":"Жэзньик"},
-        {"lat":"åButcher",          "cyr":"Буча"},
+        {"lat":"Butcher",           "cyr":"Буча"},
         {"lat":"Zþàdzçak",          "cyr":"Жаьдзяк"},
         {"lat":"Zþymïan",           "cyr":"Жымян"},
         {"lat":"Roman",             "cyr":"Роман"},
@@ -1567,12 +1567,15 @@ def import_demographic_const():
 def import_city_services():
     """ Sets up constants for services like the police, fire, schooling """
 
-    aThe_data = {
+    aThe_data = [
 # POLICE SERVICES
-        "5YP":{"name":"Police",
+        {
+            "code":"5YP",
+            "name":"Police",
             "serves":"iTOT-PAX",
             "ratio":200,                       # 1 policeman / ... people
             "capacity":8000,                   # ... people per station
+            "aFootprint":{"qty":0.36 , "uom":"ha"}, # 60m x 60m
             "aMain":{   # POLICEMAN
                 "xType1":'LM', "iRate1":50,     # Both rates must add up to 100
                 "xType2":'LF', "iRate2":50,
@@ -1589,14 +1592,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":50,
                 "xType2":'PF', "iRate2":50,
                 "fEmpl_per_veh":0, "fMain_per_empl": 10},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "dynamic",         # "YP" Number plates
         },
 # FIRE-FIGHTING SERVICES
-        "5YF":{"name":"Fire Dept",
+        {
+            "code":"5YF",
+            "name":"Fire Dept",
             "serves":"iTOT-PAX",
             "ratio":500,                       # 1 fireman / ... people
             "capacity":10000,                  # ... people per station
+            "aFootprint":{"qty":0.18 , "uom":"ha"}, # 30m x 60m
             "aMain":{   # FIREMEN
                 "xType1":'LM', "iRate1":95,     # Both rates must add up to 100
                 "xType2":'LF', "iRate2":5,
@@ -1613,14 +1619,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":50,
                 "xType2":'PF', "iRate2":50,
                 "fEmpl_per_veh":0, "fMain_per_empl": 10},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "dynamic",         # "YF" Number plates
         },
 # COMMUNITY CLINIC
-        "5YH":{"name":"Community Clinic",
+        {
+            "code":"5YH",
+            "name":"Community Clinic",
             "serves":"iTOT-PAX",
             "ratio":500,                       # 1 doctor / ... people
             "capacity":10000,                  # ... people per ... station
+            "aFootprint":{"qty":0.18 , "uom":"ha"}, # 30m x 60m
             "aMain":{   # DOCTORS
                 "xType1":'HM', "iRate1":75,     # Both rates must add up to 100
                 "xType2":'HF', "iRate2":25,
@@ -1637,14 +1646,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":6, "fMain_per_empl": 4},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "dynamic",         # "YH" Number plates
         },
 # COMMUNITY GOVERNANCE
-        "5YG":{"name":"Community Governance",
+        {
+            "code":"5YG",
+            "name":"Community Governance",
             "serves":"iTOT-PAX",
             "ratio":750,                       # 1 politician / ... people
             "capacity":5000,                   # ... people per ... station
+            "aFootprint":{"qty":0.36 , "uom":"ha"}, # 60m x 60m
             "aMain":{   # COUNCELLOR
                 "xType1":'LM', "iRate1":95,     # Both rates must add up to 100
                 "xType2":'LF', "iRate2":5,
@@ -1661,14 +1673,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":80,
                 "xType2":'PF', "iRate2":20,
                 "fEmpl_per_veh":5, "fMain_per_empl": 4},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "dynamic",         # "YG" Number plates
         },
 # COMMUNITY PRE-SCHOOL
-        "ED0":{"name":"Pre-school",
+        {
+            "code":"ED0",
+            "name":"Pre-school",
             "serves":"ED0-PAX",
             "ratio":5,                         # 1 teacher / ... people
             "capacity":30,                   # ... people per ... station
+            "aFootprint":{"qty":0.18 , "uom":"ha"}, # 30m x 60m
             "aMain":{   # TEACHER
                 "xType1":'LM', "iRate1":5,     # Both rates must add up to 100
                 "xType2":'LF', "iRate2":95,
@@ -1685,14 +1700,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":0, "fMain_per_empl": 3},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "dynamic",         # "YE" Number plates
         },
 # COMMUNITY PRIMARY SCHOOL
-        "ED1":{"name":"Primary School",
+        {
+            "code":"ED1",
+            "name":"Primary School",
             "serves":"ED1-PAX",
             "ratio":20,                         # 1 teacher / ... people
             "capacity":500,                     # ... people per ... station
+            "aFootprint":{"qty":3.5 , "uom":"ha"}, # 175m x 200m
             "aMain":{   # TEACHER
                 "xType1":'LM', "iRate1":15,     # Both rates must add up to 100
                 "xType2":'LF', "iRate2":85,
@@ -1709,14 +1727,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":0, "fMain_per_empl": 6},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "dynamic",         # "YE" Number plates
         },
 # COMMUNITY MIDDLE SCHOOL
-        "ED2":{"name":"Middle School",
+        {
+            "code":"ED2",
+            "name":"Middle School",
             "serves":"ED2-PAX",
             "ratio":28,                         # 1 teacher / ... people
             "capacity":840,                     # ... people per ... station
+            "aFootprint":{"qty":8.75 , "uom":"ha"}, # 250m x 350m
             "aMain":{   # TEACHER
                 "xType1":'LM', "iRate1":50,     # Both rates must add up to 100
                 "xType2":'LF', "iRate2":50,
@@ -1733,14 +1754,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":0, "fMain_per_empl": 6},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "dynamic",         # "YE" Number plates
         },
 # COMMUNITY HIGH-SCHOOL
-        "ED3":{"name":"High School",
+        {
+            "code":"ED3",
+            "name":"High School",
             "serves":"ED3-PAX",
             "ratio":32,                         # 1 teacher / ... people
             "capacity":960,                     # ... people per ... station
+            "aFootprint":{"qty":12.0 , "uom":"ha"}, # 300m x 400m
             "aMain":{   # TEACHER
                 "xType1":'MM', "iRate1":50,     # Both rates must add up to 100
                 "xType2":'MF', "iRate2":50,
@@ -1757,14 +1781,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":0, "fMain_per_empl": 5},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "dynamic",         # "YE" Number plates
         },
 # OLD AGE HOME
-        "OAH":{"name":"Old Age Home",
+        {
+            "code":"OAH",
+            "name":"Old Age Home",
             "serves":"OAH-PAX",
             "ratio":5,                          # 1 caregivers / ... people
             "capacity":30,                     # ... people per ... station
+            "aFootprint":{"qty":0.36 , "uom":"ha"}, # 60m x 60m
             "aMain":{   # CAREGIVER
                 "xType1":'LM', "iRate1":10,     # Both rates must add up to 100
                 "xType2":'LF', "iRate2":90,
@@ -1781,14 +1808,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":0, "fMain_per_empl": 3},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "dynamic",         # "YH" Number plates
         },
 # THE CORNER SHOP
-        "5SŠ":{"name":"Small Shop",
+        {
+            "code":"5SŠ",
+            "name":"Small Shop",
             "serves":"iTOT-PAX",
             "ratio":250,                          # 1 shopkeeper / ... people
             "capacity":4000,                      # ... people per ... station
+            "aFootprint":{"qty":0.18 , "uom":"ha"}, # 30m x 60m
             "aMain":{   # SALES CLARK
                 "xType1":'PM', "iRate1":90,     # Both rates must add up to 100
                 "xType2":'PF', "iRate2":10,
@@ -1805,14 +1835,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":2, "fMain_per_empl": 8},
-            "iStatic_veh":3,
+            "iStatic_veh":0,
             "sOwn_number_plates": "none",         # County Number plates
         },
 # Library system
-        "5LX":{"name":"Community Library",
+        {
+            "code":"5LX",
+            "name":"Community Library",
             "serves":"iTOT-PAX",
             "ratio":1000,                          # 1 librarian / ... people
             "capacity":5000,                      # ... people per ... station
+            "aFootprint":{"qty":0.18 , "uom":"ha"}, # 30m x 60m
             "aMain":{   # LIBRARIAN CLARK
                 "xType1":'LM', "iRate1":10,     # Both rates must add up to 100
                 "xType2":'LF', "iRate2":90,
@@ -1829,15 +1862,18 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":0, "fMain_per_empl": 2.5},
-            "iStatic_veh":1,
+            "iStatic_veh":0,
             "sOwn_number_plates": "both",         # "YI" Number plates
         },
 
 # Theatre system
-        "5TH":{"name":"Community Theatre",
+        {
+            "code":"5TH",
+            "name":"Community Theatre",
             "serves":"iTOT-PAX",
             "ratio":100,                           # 1 actor / ... people
             "capacity":800,                        # ... people per ... station
+            "aFootprint":{"qty":0.36 , "uom":"ha"}, # 60m x 60m
             "aMain":{   # ACTOR
                 "xType1":'PM', "iRate1":50,     # Both rates must add up to 100
                 "xType2":'PF', "iRate2":50,
@@ -1854,14 +1890,17 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":0, "fMain_per_empl": 2},
-            "iStatic_veh":2,
+            "iStatic_veh":0,
             "sOwn_number_plates": "none",         # County Number plates
         },
 # Postal system
-        "5PO":{"name":"Community Post Office",
+        {
+            "code":"5PO",
+            "name":"Community Post Office",
             "serves":"iTOT-PAX",
             "ratio":1000,                          # 1 clark / ... people
             "capacity":10000,                      # ... people per ... station
+            "aFootprint":{"qty":0.1 , "uom":"ha"},
             "aMain":{   # LIBRARIAN CLARK
                 "xType1":'PM', "iRate1":10,     # Both rates must add up to 100
                 "xType2":'PF', "iRate2":90,
@@ -1878,10 +1917,10 @@ def import_city_services():
                 "xType1":'PM', "iRate1":20,
                 "xType2":'PF', "iRate2":80,
                 "fEmpl_per_veh":0, "fMain_per_empl": 2.5},
-            "iStatic_veh":1,
+            "iStatic_veh":0,
             "sOwn_number_plates": "both",         # "YI" Number plates
         },
-    }
+    ]
 
     import modules.x_database as db
     ccTemb = db.connect()                                    # Project data base
@@ -1891,25 +1930,28 @@ def import_city_services():
     print("\n{0} items deleted".format(dQuery.deleted_count))
 
     for x in aThe_data:
-        dCity_services_const = {x:aThe_data[x]}
-        cCity_services_const.insert_one(dCity_services_const)
+        cCity_services_const.insert_one(x)
     print("City services ADDED / REPLACED")
 
 #-------------------------------------------------------------------------------
 def import_workplaces():
     """ Sets up the farms, factories, offices. Effectively sets up the demand
-    for a workforce."""
+    for a workforce.
+    """
 
     lThe_data = [
-
-    # AGRICULTURAL: WHEAT FARM: Grows food
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # AGRICULTURAL:
+        # Wheat farm
         {
+            "code":"AWH",
             "name":"Wheat Farm",                   # Name that comes up in menus
             "type":"Agricultural",
             "default":"wheat farm",
             # Number of cars / motorbikes that this workplace has, regardless
             # of its size.
             "iStatic_veh":4,
+            "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
             # This group of workers is linked directly to the other statistics.
             # For example, if a farm has 100ha, and we have 1.2 empl/ha, then
@@ -1983,12 +2025,14 @@ def import_workplaces():
             ],
         },
 
-    # AGRICULTURAL: MAIZE FARM: Grows food
+        # Maize farm
         {
+            "code":"AMZ",
             "name":"Maize Farm",
             "type":"Agricultural",
             "default":"maize farm",
             "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
                 # Linked to other statistics
                 "aMain":{
@@ -2037,12 +2081,14 @@ def import_workplaces():
             ],
         },
 
-    # AGRICULTURAL: RICE FARM: Grows food near major rivers
+        # Rice farm
         {
+            "code":"ARI",
             "name":"Rice Farm",
             "type":"Agricultural",
             "default":"rice farm",
             "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
                 # Linked to other statistics
                 "aMain":{
@@ -2086,15 +2132,169 @@ def import_workplaces():
             ],
         },
 
-    # COCOA PLANTATION: Chocolate beans
-    # COFFEE PLANTATION: Food industry
-    # FRUIT/VEGETABLE PLANTATION: Need to specify: cherries, apples, carrots...
-    # CATTLE RANCH: Raises cows for beef
+        # Cocoa plantation
         {
+            "code":"ACH",
+            "name":"Cocoa Plantation",
+            "type":"Agricultural",
+            "default":"cocoa plantation",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1.1, "units":"empl/ha",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 5.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"cocoa beans",
+                "fRate":5.0, "units":"t/ha",
+                "fMin_yield":0.6, "fMax_yield":1.66,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Coffee plantation
+        {
+            "code":"ACF",
+            "name":"Coffee Plantation",
+            "type":"Agricultural",
+            "default":"coffee plantation",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1.1, "units":"empl/ha",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 5.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"coffee beans",
+                "fRate":5.0, "units":"t/ha",
+                "fMin_yield":0.6, "fMax_yield":1.66,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Fruit or vegetable farm
+        {
+            "code":"AFW",
+            "name":"Fruit/Veg Plantation",
+            "type":"Agricultural",
+            "default":"fruit/veg farm",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":2.5, "units":"empl/ha",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 5.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 120, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"misc fruit/veg",
+                "fRate":6.0, "units":"t/ha",
+                "fMin_yield":0.6, "fMax_yield":1.66,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # LIVESTOCK:
+        # Cattle ranch
+        {
+            "code":"LBF",
             "name":"Cattle Ranch",
             "type":"Husbandary",
             "default":"cattle ranch",
             "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
                 # Linked to other statistics
                 "aMain":{
@@ -2131,25 +2331,80 @@ def import_workplaces():
             "lResource":[
                 # What are the resources produced
                 {"name":"cattle",
-            #    "fRate":1.25, "units":"head/ha",
-                "fRate":125, "units":"head/sq.km",
+                # 125 head / sq.km @ 800kg each = 100t/sq.km
+                "fRate":100, "units":"t/sq.km",
                 "fMin_yield":0.9, "fMax_yield":1.1,
                 "fStore_capacity":0
                 },
             ],
         },
 
-    # DAIRY FARM: Produces milk
-    # SHEEP FARM: Produces meat and wool
-    # CHICKEN FARM: Produces meat
-    # EGG FARM: Produces chicken eggs.
-    #----
-    # MEDIUM INDUSTRY: Workshops, small factories for county capitals
+        # Chicken farm
         {
-            "name":"Factory",
+            "code":"LCH",
+            "name":"Chicken Ranch",
+            "type":"Husbandary",
+            "default":"chicken farm",
+            "sOwn_number_plates": "none",         # County Number plates
+            "iStatic_veh":2,
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    # 3,000 chickens per empl, 3sq.m per chicken
+                    "fRate":1.11, "units":"empl/ha",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 15, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 50, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 50, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"chicken",
+                # Chicken weighs 2.65kg, 8 weeks from egg to table, so, call it
+                # 4 batches per year. 3000 chickens per main, 2.65kg/chicken
+                # 7,950kg / main * 4 batches / year = 31.8t / main
+                # approx 34.9t / ha
+                "fRate":31.8, "units":"t/main",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # FACTORIES AND PLANTS:
+        # Misc factories at 50sq.m/empl
+        {
+            "code":"FXX",
+            "name":"Factory @ 50sq.m/empl",
             "type":"City Workplaces",
             "default":"misc factories",
             "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
                 # Linked to other statistics
                 "aMain":{
@@ -2194,14 +2449,121 @@ def import_workplaces():
             ],
         },
 
-    # FOOD PROCESSING PLANT: Flour mills, biscuit factories
-    #----
-    # STONE QUARRY: Obtains natural resources
+        # Misc factories with manual input
         {
-            "name":"Quarry",
-            "type":"Mineral Extraction",
-            "default":"quarry",
+            "code":"FME",
+            "name":"Factory (man empl cnt)",
+            "type":"City Workplaces",
+            "default":"m.e.c factories",
             "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1, "units":"empl",
+                    "xType1": "PM", "iRate1": 66,
+                    "xType2": "PF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 66,
+                    "xType2": "LF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 5.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # Miscellaneous factories make goods. It would be impossible to
+                # think up every commodity made.
+                {"name":"Misc Industrial",
+                "fRate":5, "units":"t/main",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Heavy industry: (like refinery in GY0, or steel plant in TJ0)
+        {
+            "code":"FHI",
+            "name":"Heavy industry (man empl cnt)",
+            "type":"City Workplaces",
+            "default":"",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1, "units":"empl",
+                    "xType1": "PM", "iRate1": 99,
+                    "xType2": "PF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 99,
+                    "xType2": "LF", "iRate2": 1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 5.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 95,
+                    "xType2": "RF", "iRate2":  5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # Miscellaneous factories make goods. It would be impossible to
+                # think up every commodity made.
+                {"name":"Misc Industrial",
+                "fRate":5, "units":"t/main",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # MINERAL EXTRACTION:
+        # Stone quarry.
+        {
+            "code":"MST",
+            "name":"Stone Quarry",
+            "type":"Mineral Extraction",
+            "default":"stone quarry",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
                 # Linked to other statistics
                 "aMain":{
@@ -2245,14 +2607,169 @@ def import_workplaces():
             ],
         },
 
-    # CLAY PIT: Digs out clay for bricks
-    #----
-    # MEDIUM OFFICES: Attorneys, architects, for county capitals
+        # Granite quarry.
         {
+            "code":"MGR",
+            "name":"Granite Quarry",
+            "type":"Mineral Extraction",
+            "default":"granite quarry",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1, "units":"empl",
+                    "xType1": "PM", "iRate1": 95,
+                    "xType2": "PF", "iRate2": 5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 95,
+                    "xType2": "LF", "iRate2": 5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"granite",
+                "fRate":0.22, "units":"kt/main",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Diamond Granite quarry.
+        {
+            "code":"MDG",
+            "name":"Diamond Granite Quarry",
+            "type":"Mineral Extraction",
+            "default":"diamond granite quarry",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1, "units":"empl",
+                    "xType1": "PM", "iRate1": 95,
+                    "xType2": "PF", "iRate2": 5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 95,
+                    "xType2": "LF", "iRate2": 5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"granite",
+                "fRate":0.11, "units":"kt/main",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Clay pit.
+        {
+            "code":"MST",
+            "name":"Clay Pit",
+            "type":"Mineral Extraction",
+            "default":"clay pit",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1, "units":"empl",
+                    "xType1": "PM", "iRate1": 95,
+                    "xType2": "PF", "iRate2": 5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 95,
+                    "xType2": "LF", "iRate2": 5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"clay",
+                "fRate":0.130, "units":"kt/main",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # Miscellaneous:
+        # Multi-storey offices buildings
+        {
+            "code":"OMB",
             "name":"Multi-storey office",
             "type":"City Workplaces",
-            "default":"misc offices",
+            "default":"multi-storey offices",
             "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
                 # Linked to other statistics
                 "aMain":{
@@ -2296,10 +2813,1482 @@ def import_workplaces():
             ],
         },
 
-    # HEALTH-CARE: A larger hosplital for county capital
+        # Offices with (Manual employee count)
+        {
+            "code":"OME",
+            "name":"Offices (man empl cnt)",
+            "type":"City Workplaces",
+            "default":"m.e.c. offices",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":12, "units":"empl",
+                    "xType1": "MM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "RM", "iRate1":  2,
+                    "xType2": "HM", "iRate2": 98,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 60, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Park ranger at 0.45 empl/sq.km
+        {
+            "code":"OPR",
+            "name":"Park ranger (0.45 empl/sq.km)",
+            "type":"Governance",
+            "default":"park ranger",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":0.45, "units":"empl/sq.km",
+                    "xType1": "LM", "iRate1": 66,
+                    "xType2": "LF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":2.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 40, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 50,
+                    "xType2": "HM", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 25, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Miscallenous like charites, parking attendants (Manual employee count)
+        {
+            "code":"OXX",
+            "name":"Miscallenous: charites, taxis, (man empl cnt @ 0.1*pop)",
+            "type":"City Workplaces",
+            "default":"misc workers",
+            "iStatic_veh":0,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":12, "units":"empl",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 50, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 50,
+                    "xType2": "HM", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 25, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Airfield / Airport: different from airlines.
+        {
+            "code":"QAF",
+            "name":"Airfield",
+            "type":"City Workplaces",
+            "default":"airfield",
+            "iStatic_veh":0,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":12, "units":"empl",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 50, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 50,
+                    "xType2": "HM", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 25, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # RETAIL
+        # Misc shops at 50 sq.m/empl
+        {
+            "code":"RXS",
+            "name":"Misc / specialist shops (50 sq.m/empl)",
+            "type":"Retail",
+            "default":"misc shops (50sqm/empl)",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":50, "units":"sq.m/floor/empl",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 50, "units": "empl/main",
+                    "xType1": "RM", "iRate1": 20,
+                    "xType2": "HM", "iRate2": 80,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 15, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Misc shops with manual sales clark input
+        {
+            "code":"RXM",
+            "name":"Misc / specialist shops (man empl cnt)",
+            "type":"Retail",
+            "default":"m.e.c misc shops",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1, "units":"empl",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 50, "units": "empl/main",
+                    "xType1": "RM", "iRate1": 20,
+                    "xType2": "HM", "iRate2": 80,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 15, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # HOSPITALITY:
+        # Hotels
+        {
+            "code":"GHT",
+            "name":"Hotel (man 'guest-facing' cnt)",
+            "type":"Hospitality",
+            "default":"hotel",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # Front-line staff
+                    "fRate":1, "units":"empl",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 8, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 15, "units": "empl/main",
+                    "xType1": "RM", "iRate1": 20,
+                    "xType2": "HM", "iRate2": 80,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # Drivers, cleaners
+                    "fRate": 15, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Restaurant
+        {
+            "code":"GRX",
+            "name":"Restaurant (man 'chef' cnt)",
+            "type":"Hospitality",
+            "default":"restaurant",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # Chef
+                    "fRate":1, "units":"empl",
+                    "xType1": "MM", "iRate1": 75,
+                    "xType2": "MF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":5.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 0, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 15, "units": "empl/main",
+                    "xType1": "RM", "iRate1": 20,
+                    "xType2": "HM", "iRate2": 80,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # Waiters
+                    "fRate": 1, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # GOVERNANCE:
+        # County government
+        {
+            "code":"4YG",
+            "name":"County Government (man i/p @ 1:1000)",
+            "type":"Governance",
+            "default":"county government",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # CLARK / AGENT
+                    "fRate":1, "units":"empl",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "LF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                "aSupv":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 75,
+                    "xType2": "MF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ #  CLEANERS, SECURITY
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # District government
+        {
+            "code":"3YG",
+            "name":"District Government (man i/p @ 1:5k)",
+            "type":"Governance",
+            "default":"district government",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # CLARK / AGENT
+                    "fRate":1, "units":"empl",
+                    "xType1": "MM", "iRate1": 75,
+                    "xType2": "MF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                "aSupv":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ #  CLEANERS, SECURITY
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Province government
+        {
+            "code":"2YG",
+            "name":"Provincial Government (man i/p @ 1:13k)",
+            "type":"Governance",
+            "default":"provincial government",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # CLARK / AGENT
+                    "fRate":1, "units":"empl",
+                    "xType1": "MM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                "aSupv":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ #  CLEANERS, SECURITY
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Federal government
+        {
+            "code":"1YG",
+            "name":"Federal Government (man i/p @ 1:100k)",
+            "type":"Governance",
+            "default":"federal government",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # CLARK / AGENT
+                    "fRate":1, "units":"empl",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                "aSupv":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ #  CLEANERS, SECURITY
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 75,
+                    "xType2": "MF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # HEALTH-CARE:
+        # County hospital
+        {
+            "code":"4YH",
+            "name":"County Hospital (man i/p @ 1:2000)",
+            "type":"Health & Safety",
+            "default":"county hospital",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # DOCTORS
+                    "fRate":1, "units":"empl",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # SPECIALIST
+                "aSupv":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # NURSES (MF); CLEANERS
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "MF", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # District hospital
+        {
+            "code":"3YH",
+            "name":"District Hospital (man i/p @ 1:10k)",
+            "type":"Health & Safety",
+            "default":"district hospital",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # DOCTORS
+                    "fRate":1, "units":"empl",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # SPECIALIST
+                "aSupv":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # NURSES (MF); CLEANERS
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "MF", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Provincial hospital
+        {
+            "code":"2YH",
+            "name":"Provincial Hospital (man i/p @ 1:20k)",
+            "type":"Health & Safety",
+            "default":"provincial hospital",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # DOCTORS
+                    "fRate":1, "units":"empl",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # SPECIALIST
+                "aSupv":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # NURSES (MF); CLEANERS
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "MF", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+
+        # Ambulance crews
+        {
+            "code":"HAM",
+            "name":"Ambulance crews (man i/p @ 1:5k)",
+            "type":"Health & Safety",
+            "default":"ambulance crews",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # PARAMEDICS
+                    "fRate":1, "units":"empl",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "LF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":3.0,
+                },
+                # SPECIALIST
+                "aSupv":{       # DOCTOR ON CALL
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # DESPATCH
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Rescue services
+        {
+            "code":"SOS",
+            "name":"Rescue services (road accidents in the jungle)",
+            "type":"Health & Safety",
+            "default":"pvt rescue services",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # PARAMEDICS
+                    "fRate":1, "units":"empl",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "LF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":2.0,
+                },
+                # SPECIALIST
+                "aSupv":{       # DOCTOR ON CALL
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # DESPATCH
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
+    # EDUCATION:
+        # ED4 (private school)
+        {
+            "code":"ED4",
+            "name":"Private school ED4 (man i/p @ 1:15 ~ 1:20)",
+            "type":"Education",
+            "default":"private school",
+            "iStatic_veh":5,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # TEACHERS
+                    "fRate":1, "units":"empl",
+                    "xType1": "MM", "iRate1": 33,
+                    "xType2": "MF", "iRate2": 64,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+
+                "aSupv":{       # HEAD OF DEPARTAMENT
+                    "fRate": 5, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 33,
+                    "xType2": "MF", "iRate2": 64,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # CLEANERS, HANDYMEN
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "MF", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # ED9 (disabled school)
+        {
+            "code":"ED9",
+            "name":"Disabled school ED9 (man i/p @ 1:4 ~ 1:10)",
+            "type":"Education",
+            "default":"disabled school",
+            "iStatic_veh":5,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # TEACHERS
+                    "fRate":1, "units":"empl",
+                    "xType1": "MM", "iRate1": 33,
+                    "xType2": "MF", "iRate2": 64,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+
+                "aSupv":{       # HEAD OF DEPARTAMENT
+                    "fRate": 5, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 33,
+                    "xType2": "MF", "iRate2": 64,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # CLEANERS, HANDYMEN
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "MF", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
     # PRISON:
+        # County prison
+        {
+            "code":"4YX",
+            "name":"County prison (man i/p @ 1:5 of 70%)",
+            "type":"Justice",
+            "default":"county prison",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # GUARDS
+                    "fRate":1, "units":"empl",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "LF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # SPECIALIST
+                "aSupv":{       # SUPERVISORS
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 40, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # MISC
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # District prison
+        {
+            "code":"3YX",
+            "name":"district prison (man i/p @ 1:5 of 20%)",
+            "type":"Justice",
+            "default":"district prison",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # GUARDS
+                    "fRate":1, "units":"empl",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "LF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # SPECIALIST
+                "aSupv":{       # SUPERVISORS
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 40, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # MISC
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Provincial prison
+        {
+            "code":"2YX",
+            "name":"provincial prison (man i/p @ 1:5 of 7%)",
+            "type":"Justice",
+            "default":"provincial prison",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # GUARDS
+                    "fRate":1, "units":"empl",
+                    "xType1": "MM", "iRate1": 75,
+                    "xType2": "MF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # SPECIALIST
+                "aSupv":{       # SUPERVISORS
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 40, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # MISC
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Provincial prison
+        {
+            "code":"1YX",
+            "name":"federal prison (man i/p @ 1:4 of 3%)",
+            "type":"Justice",
+            "default":"federal prison",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # GUARDS
+                    "fRate":1, "units":"empl",
+                    "xType1": "MM", "iRate1": 75,
+                    "xType2": "MF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # SPECIALIST
+                "aSupv":{       # SUPERVISORS
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 40, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # MISC
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+#  --  --  --  --  --  --  --  --  --  --  --  --
     # LOGISTICS:
-    # ... (look at the spread sheet)
+        # Freight station
+        {
+            "code":"QF1",
+            "name":"Freight Train Station",
+            "type":"Logistics (DON'T USE: GO VIA 'STATIONS' MENU)",
+            "default":"freight train station",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{ # PLATFORM HANDS (Loading the train)
+                    "fRate":1, "units":"empl",        # Labour assigned by hand
+                    "xType1": "PM", "iRate1": 99,
+                    "xType2": "PF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 8, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 99,
+                    "xType2": "LF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 35, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 95,
+                    "xType2": "HM", "iRate2":  5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 60, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Passanger station
+        {
+            "code":"QP1",
+            "name":"Passanger Train Station",
+            "type":"Logistics (DON'T USE: GO VIA 'STATIONS' MENU)",
+            "default":"pax train station",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{ # TICKET SELLERS (2 min per pax)
+                    "fRate":1, "units":"empl",        # Labour assigned by hand
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{ # CONDUCTOR
+                    "fRate": 8, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 99,
+                    "xType2": "LF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{ # STATION MASTER AND ASSISTANTS
+                    "fRate": 35, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 95,
+                    "xType2": "HM", "iRate2":  5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ # SECURITY CLEANERS
+                    "fRate": 60, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Truck depot
+        {
+            "code":"QT1",
+            "name":"Truck Depot (20t/trip)",
+            "type":"Logistics (DON'T USE: GO VIA 'STATIONS' MENU)",
+            "default":"truck depot",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{ # TRUCK DRIVER
+                    "fRate":1, "units":"empl",        # Labour assigned by hand
+                    "xType1": "PM", "iRate1": 99,
+                    "xType2": "PF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.5,              # Tractor and trailer
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 99,
+                    "xType2": "LF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0              # Passanger car
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 35, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 95,
+                    "xType2": "HM", "iRate2":  5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 60, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0              # Mechanic
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Bus service
+        {
+            "code":"QB1",
+            "name":"Bus station",
+            "type":"Logistics (DON'T USE: GO VIA 'STATIONS' MENU)",
+            "default":"bus station",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{ # BUS DRIVER
+                    "fRate":1, "units":"empl",        # Labour assigned by hand
+                    "xType1": "PM", "iRate1": 99,
+                    "xType2": "PF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":1,                # Bus
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 99,
+                    "xType2": "LF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0              # Passanger car
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 35, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 95,
+                    "xType2": "HM", "iRate2":  5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 60, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0              # Mechanic
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Freight aircraft
+        {
+            "code":"QG1",
+            "name":"Freight Aircraft (5t/trip), (3-men crew), (enter 'pilots')",
+            "type":"Logistics (DON'T USE: GO VIA 'STATIONS' MENU)",
+            "default":"freight aircraft",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{ # PILOTS
+                    "fRate":1, "units":"empl",        # Labour assigned by hand
+                    "xType1": "MM", "iRate1": 64,
+                    "xType2": "LM", "iRate2": 33,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0,                # Don't use company cars.
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{   # LOGISTICS SUPPORT
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 99,
+                    "xType2": "LF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0              # Passanger car
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 35, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 95,
+                    "xType2": "HM", "iRate2":  5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{  # LOADING HANDS
+                    "fRate": 60, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0              # Loaders
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Pax aircraft
+        {
+            "code":"QA1",
+            "name":"Passanger aircraft (man i/p of 'pilots')",
+            "type":"Logistics (DON'T USE: GO VIA 'STATIONS' MENU)",
+            "default":"passanger aircraft",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{ # PILOTS
+                    "fRate":1, "units":"empl",        # Labour assigned by hand
+                    "xType1": "MM", "iRate1": 64,
+                    "xType2": "LM", "iRate2": 33,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0,                # Don't use company cars.
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{   # LOGISTICS SUPPORT
+                    "fRate": 10, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 99,
+                    "xType2": "LF", "iRate2":  1,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0              # Passanger car
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 35, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 95,
+                    "xType2": "HM", "iRate2":  5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{  # LOADING HANDS
+                    "fRate": 60, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0              # Loaders
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
 
     ]
 

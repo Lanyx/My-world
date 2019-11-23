@@ -1,0 +1,371 @@
+    Godfrey Municipality / Гмина Богумир
+----------
+Pretty print information was generated on 2019-11-23 12:45:38.145510
+----------
+my_id: D00-02P
+geo_code: GY0-0
+----------
+Total population: 24,481
+
+Total vehicles*: 6,071
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced:
+>   Misc Industrial: 9,503.19t/yr by oil refinery/очышчалня олею 0
+>   granite: 57.96kt/yr by quarry south/каменёлом полудънёвы 0
+>   granite: 43.42kt/yr by quarry north/каменёлом пулноцны 0
+>   Misc Industrial: 6,144.13t/yr by m.e.c factories 0
+----------
+Hierarchial Parent: 
+>  Godfrey County / Воевуцтво Богумирскъе
+>   my_id: D00-00L
+>   geo_code: GY0
+----------
+Hierarchial Children: 
+>   count: 0
+----------
+Map and area: 
+>   Region: Dzþevogurski 1:4,000,000 (drawn in 2018)
+>   Position (mm) x: 282.94, y: 143.59
+>   Area on paper (sq.mm) a: 13.78
+>   Area represented: 22,048.0ha
+----------
+Workforce Demand: 
+>   Grand Total: (10,707)
+>       rm: 4; hm: 212; mm: 865; lm: 1,873; pm: 4,052;
+>       rf: 1; hf: 36; mf: 801; lf: 1,882; pf: 981;
+>
+>   [QF1] Godfrey Test Track Freight Station: (6)
+>       rm: 0; hm: 0; mm: 0; lm: 1; pm: 5;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 1
+>
+>   [QP1] Godfrey Train Station: (23)
+>       rm: 0; hm: 0; mm: 1; lm: 2; pm: 10;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 10;
+>       tot road veh: 3
+>
+>   [QB1] Godfrey Bus Station: (11)
+>       rm: 0; hm: 0; mm: 0; lm: 1; pm: 10;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 12
+>
+>   [QF1] Godfrey Freight Station: (145)
+>       rm: 0; hm: 0; mm: 3; lm: 15; pm: 125;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 2;
+>       tot road veh: 11
+>
+>   [QF1] Godfrey Oil Refinery Freight Station: (17)
+>       rm: 0; hm: 0; mm: 0; lm: 2; pm: 15;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 2
+>
+>   [QF1] Godfrey Quarry South Freight Station: (23)
+>       rm: 0; hm: 0; mm: 1; lm: 2; pm: 20;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 3
+>
+>   [QF1] Godfrey Quarry North Freight Station: (17)
+>       rm: 0; hm: 0; mm: 0; lm: 2; pm: 15;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 2
+>
+>   [FHI] oil refinery/очышчалня олею: (1,968)
+>       rm: 0; hm: 17; mm: 42; lm: 89; pm: 1,782;
+>       rf: 1; hf: 0; mf: 0; lf: 1; pf: 36;
+>       tot road veh: 38
+>
+>   [MDG] quarry south/каменёлом полудънёвы: (532)
+>       rm: 0; hm: 0; mm: 4; lm: 24; pm: 475;
+>       rf: 0; hf: 0; mf: 2; lf: 1; pf: 26;
+>       tot road veh: 32
+>
+>   [MDG] quarry north/каменёлом пулноцны: (447)
+>       rm: 0; hm: 0; mm: 4; lm: 20; pm: 399;
+>       rf: 0; hf: 0; mf: 1; lf: 1; pf: 22;
+>       tot road veh: 27
+>
+>   [FME] m.e.c factories: (1,276)
+>       rm: 0; hm: 0; mm: 11; lm: 40; pm: 792;
+>       rf: 0; hf: 0; mf: 4; lf: 20; pf: 409;
+>       tot road veh: 26
+>
+>   [OME] m.e.c. offices: (1,077)
+>       rm: 0; hm: 35; mm: 500; lm: 0; pm: 10;
+>       rf: 0; hf: 0; mf: 525; lf: 0; pf: 7;
+>       tot road veh: 17
+>
+>   [RXM] m.e.c misc shops: (909)
+>       rm: 3; hm: 13; mm: 20; lm: 400; pm: 32;
+>       rf: 0; hf: 0; mf: 20; lf: 400; pf: 21;
+>       tot road veh: 35
+>
+>   [GHT] hotel: (125)
+>       rm: 1; hm: 5; mm: 6; lm: 50; pm: 4;
+>       rf: 0; hf: 0; mf: 6; lf: 50; pf: 3;
+>       tot road veh: 11
+>
+>   [GRX] restaurant: (68)
+>       rm: 0; hm: 2; mm: 25; lm: 0; pm: 20;
+>       rf: 0; hf: 0; mf: 8; lf: 0; pf: 13;
+>       tot road veh: 11
+>
+>   [OXX] misc workers: (2,204)
+>       rm: 0; hm: 38; mm: 95; lm: 950; pm: 38;
+>       rf: 0; hf: 0; mf: 95; lf: 950; pf: 38;
+>       tot road veh: 38
+>
+>   [4YG] county government: (63)
+>       rm: 0; hm: 0; mm: 1; lm: 38; pm: 9;
+>       rf: 0; hf: 0; mf: 0; lf: 12; pf: 3;
+>       tot road veh: 3
+>
+>   [3YG] district government: (84)
+>       rm: 0; hm: 2; mm: 49; lm: 0; pm: 12;
+>       rf: 0; hf: 1; mf: 16; lf: 0; pf: 4;
+>       tot road veh: 4
+>
+>   [2YG] provincial government: (13)
+>       rm: 0; hm: 0; mm: 8; lm: 0; pm: 2;
+>       rf: 0; hf: 2; mf: 0; lf: 0; pf: 1;
+>       tot road veh: 3
+>
+>   [1YG] federal government: (6)
+>       rm: 0; hm: 4; mm: 1; lm: 0; pm: 0;
+>       rf: 0; hf: 1; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 3
+>
+>   [3YH] district hospital: (84)
+>       rm: 0; hm: 51; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 17; mf: 12; lf: 0; pf: 4;
+>       tot road veh: 4
+>
+>   [QAF] airfield: (10)
+>       rm: 0; hm: 0; mm: 0; lm: 5; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 5; pf: 0;
+>       tot road veh: 0
+>
+>   [QA1] Godfrey Airport: (10)
+>       rm: 0; hm: 0; mm: 6; lm: 4; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 1
+>
+>   [5YP] Police: (148)
+>       rm: 0; hm: 2; mm: 6; lm: 60; pm: 6;
+>       rf: 0; hf: 2; mf: 6; lf: 60; pf: 6;
+>       tot road veh: 45
+>
+>   [5YF] Fire Dept: (56)
+>       rm: 0; hm: 2; mm: 2; lm: 46; pm: 2;
+>       rf: 0; hf: 0; mf: 0; lf: 2; pf: 2;
+>       tot road veh: 16
+>
+>   [5YH] Community Clinic: (65)
+>       rm: 0; hm: 40; mm: 0; lm: 0; pm: 2;
+>       rf: 0; hf: 13; mf: 0; lf: 0; pf: 10;
+>       tot road veh: 5
+>
+>   [5YG] Community Governance: (43)
+>       rm: 0; hm: 1; mm: 2; lm: 30; pm: 6;
+>       rf: 0; hf: 0; mf: 0; lf: 2; pf: 2;
+>       tot road veh: 3
+>
+>   [ED0] Pre-school: (319)
+>       rm: 0; hm: 0; mm: 5; lm: 10; pm: 13;
+>       rf: 0; hf: 0; mf: 45; lf: 192; pf: 54;
+>       tot road veh: 50
+>
+>   [ED1] Primary School: (106)
+>       rm: 0; hm: 0; mm: 2; lm: 13; pm: 3;
+>       rf: 0; hf: 0; mf: 6; lf: 71; pf: 11;
+>       tot road veh: 8
+>
+>   [ED2] Middle School: (62)
+>       rm: 0; hm: 0; mm: 2; lm: 25; pm: 2;
+>       rf: 0; hf: 0; mf: 2; lf: 25; pf: 6;
+>       tot road veh: 4
+>
+>   [ED3] High School: (57)
+>       rm: 0; hm: 0; mm: 24; lm: 0; pm: 2;
+>       rf: 0; hf: 0; mf: 24; lf: 0; pf: 7;
+>       tot road veh: 4
+>
+>   [OAH] Old Age Home: (68)
+>       rm: 0; hm: 0; mm: 4; lm: 5; pm: 2;
+>       rf: 0; hf: 0; mf: 4; lf: 43; pf: 10;
+>       tot road veh: 9
+>
+>   [5SŠ] Small Shop: (135)
+>       rm: 0; hm: 0; mm: 13; lm: 9; pm: 89;
+>       rf: 0; hf: 0; mf: 3; lf: 1; pf: 20;
+>       tot road veh: 22
+>
+>   [5LX] Community Library: (40)
+>       rm: 0; hm: 0; mm: 5; lm: 2; pm: 2;
+>       rf: 0; hf: 0; mf: 1; lf: 22; pf: 8;
+>       tot road veh: 6
+>
+>   [5TH] Community Theatre: (448)
+>       rm: 0; hm: 0; mm: 20; lm: 24; pm: 144;
+>       rf: 0; hf: 0; mf: 20; lf: 24; pf: 216;
+>       tot road veh: 40
+>
+>   [5PO] Community Post Office: (42)
+>       rm: 0; hm: 0; mm: 3; lm: 4; pm: 4;
+>       rf: 0; hf: 0; mf: 1; lf: 0; pf: 30;
+>       tot road veh: 4
+>
+----------
+Supply workplaces: 
+>   [QF1] 1x 'freight train station' used by:
+>       0V9,
+>       Capacity used: None
+>   [QP1] 1x 'pax train station' used by:
+>       GY,
+>       Capacity used: None
+>   [QB1] 1x 'bus station' used by:
+>       GY,
+>       Capacity used: None
+>   [QF1] 1x 'freight train station' used by:
+>       GY0-Z, GYG, GYN,
+>       Capacity used: None
+>   [QF1] 1x 'freight train station' used by:
+>       V,
+>       Capacity used: None
+>   [QF1] 1x 'freight train station' used by:
+>       GY0-0,
+>       Capacity used: None
+>   [QF1] 1x 'freight train station' used by:
+>       GY0-0,
+>       Capacity used: None
+>   [QA1] 1x 'passanger aircraft' used by:
+>       GY,
+>       Capacity used: None
+----------
+Demand households: 
+>   Totals: (9,276) |  r: 6; h: 250; m: 1,344; l: 2,836; p: 4,840;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 24,481
+>
+>   Married working people (aHHM-PAX):
+>       r: 8; h: 326; m: 1,788; l: 3,748; p: 6,450;
+>
+>   Married retired people (aHHR-PAX):
+>       r: 2; h: 96; m: 516; l: 1,098; p: 1,866;
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 0; h: 49; m: 234; l: 508; p: 827;
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 1; h: 23; m: 129; l: 274; p: 466;
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 0; m: 0; l: 7; p: 12;
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 0; m: 3; l: 27; p: 46;
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 4; h: 128; m: 189; l: 103; p: 2,210;
+>
+>   Preschoolers, all groups                 (ED0-PAX): 1,042
+>   Primary schoolers, all groups            (ED1-PAX): 1,771
+>   Middle schoolers, all groups             (ED2-PAX): 1,397
+>   High schoolers, all groups               (ED3-PAX): 1,467
+>   Religious or Private schoolers, all grps (ED4-PAX): 94
+>   College students, all groups             (ED5-PAX): 17
+>   Polytechnic students, all groups         (ED6-PAX): 11
+>   University students, all groups          (ED7-PAX): 3
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 57
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 0
+>   Old Age Home, all groups                 (OAH-PAX): 194
+>   Private nurse, all groups                (OAN-PAX): 0
+>   Youth prison, all groups                 (YXJ-PAX): 15
+>   Adult prison, all groups                 (YXA-PAX): 141
+>   Religion:
+>      Renásàsers (3R): 5045
+>      Anglican Christians (AN): 1618
+>      Roman Catholics (RC): 1001
+>      Deltæðømmysts (DD): 9879
+>      Jews (JW): 347
+>      Muslims (IS): 542
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 8,218
+>   Vehicle, motorbike*                      (VEH-MBK): 4,510
+>   Vehicle, car*                            (VEH-CAR): 1,212
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 6,071
+>   Itemised county-registered vehicles:
+>      Godfrey Test Track Freight Station: 1
+>      Godfrey Train Station: 3
+>      Godfrey Bus Station: 12
+>      Godfrey Freight Station: 11
+>      Godfrey Oil Refinery Freight Station: 2
+>      Godfrey Quarry South Freight Station: 3
+>      Godfrey Quarry North Freight Station: 2
+>      residents: 5,722
+>      Police: 0
+>      Fire Dept: 0
+>      Community Clinic: 0
+>      Community Governance: 0
+>      Pre-school: 0
+>      Primary School: 0
+>      Middle School: 0
+>      High School: 0
+>      Old Age Home: 0
+>      Small Shop: 22
+>      Community Library: 0
+>      Community Theatre: 40
+>      Community Post Office: 0
+>      oil refinery/очышчалня олею: 38
+>      quarry south/каменёлом полудънёвы: 32
+>      quarry north/каменёлом пулноцны: 27
+>      m.e.c factories: 26
+>      m.e.c. offices: 17
+>      m.e.c misc shops: 35
+>      hotel: 11
+>      restaurant: 11
+>      misc workers: 38
+>      county government: 3
+>      district government: 4
+>      provincial government: 3
+>      federal government: 3
+>      district hospital: 4
+>      airfield: 0
+>      Godfrey Airport: 1
+----------
+Footprint on the land:
+>   Godfrey Test Track Freight Station: 0.0ha
+>   Godfrey Train Station: 0.0ha
+>   Godfrey Bus Station: 0.0ha
+>   Godfrey Freight Station: 0.0ha
+>   Godfrey Oil Refinery Freight Station: 0.0ha
+>   Godfrey Quarry South Freight Station: 0.0ha
+>   Godfrey Quarry North Freight Station: 0.0ha
+>   oil refinery/очышчалня олею: 400.0ha
+>   quarry south/каменёлом полудънёвы: 1,024.0ha
+>   quarry north/каменёлом пулноцны: 584.0ha
+>   m.e.c factories: 0.0ha
+>   m.e.c. offices: 0.0ha
+>   m.e.c misc shops: 0.0ha
+>   hotel: 0.0ha
+>   restaurant: 0.0ha
+>   misc workers: 0.0ha
+>   county government: 0.0ha
+>   district government: 0.0ha
+>   provincial government: 0.0ha
+>   federal government: 0.0ha
+>   district hospital: 0.0ha
+>   airfield: 0.0ha
+>   Godfrey Airport: 0.0ha
+

@@ -1,0 +1,187 @@
+All the stations at oncePretty print information was generated on 2019-11-23 09:32:54.580933
+
+S00-001 (St Margret Freight Station) [GYN-2]:
+>   (St Margret Freight Station / Стаця Товарова о им. Сьв Гося)
+>   Cnty. Rail-Freight
+>   maize, straw (maize), wheat, hay,
+
+S00-002 (Fuúrquana Freight Station) [GYN-T]:
+>   (Fuúrquana Freight Station / Стаця Товарова о им. Фуюрклана)
+>   Cnty. Rail-Freight
+>   maize, straw (maize), wheat, hay,
+
+S00-003 (New Script Freight Station) [GYN-0]:
+>   (New Script Freight Station / Стаця Товарова о им. Новы Запис)
+>   Dist. Rail-Freight
+>   wheat, hay, chicken, misc fruit/veg, maize, straw (maize),
+
+S00-004 (New Script Train Station) [GYN-0]:
+>   (New Script Train Station / Стаця Колеёва о им. Новы Запис)
+>   Dist. Rail-Pax
+
+S00-005 (Hudna Freight Station) [GYN-N]:
+>   (Hudna Freight Station / Стаця Товарова о им. Худна)
+>   Cnty. Rail-Freight
+>   maize, straw (maize), wheat, hay,
+
+S00-006 (Ïenso Freight Station) [GYN-M]:
+>   (Ïenso Freight Station / Стаця Товарова о им. Енсо)
+>   Cnty. Rail-Freight
+>   maize, straw (maize), wheat, hay,
+
+S00-007 (Neúg Freight Station) [GYN-V]:
+>   (Neúg Freight Station / Стаця Товарова о им. Нэюг)
+>   Cnty. Rail-Freight
+>   maize, straw (maize),
+
+S00-008 (New Script Truck Depot) [GYN-0]:
+>   (New Script Truck Depot / Двожэс Товаровы о им. Новы Запис)
+>   Cnty. Road-Freight
+>   wheat, hay, chicken, misc fruit/veg, maize, straw (maize),
+
+S00-009 (New Script Bus Station) [GYN-0]:
+>   (New Script Bus Station / Двожэс Алтобусовы о им. Новы Запис)
+>   Cnty. Road-Pax
+
+S00-00A (Øpafi Freight Station) [GYG-4]:
+>   (Øpafi Freight Station / Стаця Товарова о им. Ыпафи)
+>   Cnty. Rail-Freight
+>   maize, straw (maize),
+
+S00-00B (Øðisþ Freight Station) [GYG-P]:
+>   (Øðisþ Freight Station / Стаця Товарова о им. Ыдьиш)
+>   Cnty. Rail-Freight
+>   maize, straw (maize),
+
+S00-00C (Gruzçitse Train Station) [GYG-0]:
+>   (Gruzçitse Train Station / Стаця Колеёва о им. Грузьицэ)
+>   Dist. Rail-Pax
+
+S00-00D (Gruzçitse Freight Station) [GYG-0]:
+>   (Gruzçitse Freight Station / Стаця Товарова о им. Грузьицэ)
+>   Cnty. Rail-Freight
+>   maize, straw (maize), misc fruit/veg, chicken, wheat, hay,
+
+S00-00E (Gruzçitse Bus Station) [GYG-0]:
+>   (Gruzçitse Bus Station / Двожэс Алтобусовы о им. Грузьицэ)
+>   Cnty. Road-Pax
+
+S00-00F (Gruzçitse Truck Depot) [GYG-0]:
+>   (Gruzçitse Truck Depot / Двожэс Товаровы о им. Грузьицэ)
+>   Cnty. Road-Freight
+>   maize, straw (maize), misc fruit/veg, chicken, wheat, hay,
+
+S00-00G (Aguïez Freight Station) [GYT-A]:
+>   (Aguïez Freight Station / Стаця Товарова о им. Агуез)
+>   Dist. Rail-Freight
+
+S00-00H (Rotçi Freight Station) [GYT-0]:
+>   (Rotçi Freight Station / Стаця Товарова о им. Ротьи)
+>   Cnty. Rail-Freight
+
+S00-00I (Qþusàki Freight Station) [GYL-Q]:
+>   (Qþusàki Freight Station / Стаця Товарова о им. Ъъусаьки)
+>   Dist. Rail-Freight
+
+S00-00J (Sþlagi Freight Station) [GYL-0]:
+>   (Sþlagi Freight Station / Стаця Товарова о им. Шляги)
+>   Dist. Rail-Freight
+
+S00-00K (Stçazçihsþo Train Station) [GYU-S]:
+>   (Stçazçihsþo Train Station / Стаця Колеёва о им. Стязьихшо)
+>   Dist. Rail-Pax
+
+S00-00L (Stçazçihsþo Freight Station) [GYU-S]:
+>   (Stçazçihsþo Freight Station / Стаця Товарова о им. Стязьихшо)
+>   Nat'l Rail-Freight
+
+S00-00M (Ïakubhøvn Freight Station) [GYU-Y]:
+>   (Ïakubhøvn Freight Station / Стаця Товарова о им. Якубхывэн)
+>   Cnty. Rail-Freight
+
+S00-00N (Tçaïon Freight Station) [GYU-T]:
+>   (Tçaïon Freight Station / Стаця Товарова о им. Тяён)
+>   Dist. Rail-Freight
+
+S00-00O (Rattler Freight Station) [GYU-R]:
+>   (Rattler Freight Station / Стаця Товарова о им. Гжэхотньик)
+>   Cnty. Rail-Freight
+
+S00-00P (Upatþyïef Freight Station) [GYU-0]:
+>   (Upatþyïef Freight Station / Стаця Товарова о им. Упачыеф)
+>   Dist. Rail-Freight
+
+S00-00Q (Upatþyïef Train Station) [GYU-0]:
+>   (Upatþyïef Train Station / Стаця Колеёва о им. Упачыеф)
+>   Dist. Rail-Pax
+
+S00-00R (Upatþyïef Bus Station) [GYU-0]:
+>   (Upatþyïef Bus Station / Двожэс Алтобусовы о им. Упачыеф)
+>   Dist. Road-Pax
+
+S00-00S (Upatþyïef Truck Depot) [GYU-0]:
+>   (Upatþyïef Truck Depot / Двожэс Товаровы о им. Упачыеф)
+>   Dist. Road-Freight
+
+S00-00T (Zçeñu Freight Station) [GYC-Z]:
+>   (Zçeñu Freight Station / Стаця Товарова о им. Зеню)
+>   Cnty. Rail-Freight
+
+S00-00U (Norveg Woods Freight Station) [GYC-N]:
+>   (Norveg Woods Freight Station / Стаця Товарова о им. Ляс Норвэга)
+>   Dist. Rail-Freight
+
+S00-00V (Sçruza Freight Station) [GYC-0]:
+>   (Sçruza Freight Station / Стаця Товарова о им. Срюза)
+>   Dist. Rail-Freight
+
+S00-00W (Lasoðo Freight Station) [GY0-L]:
+>   (Lasoðo Freight Station / Стаця Товарова о им. Лясодьо)
+>   Cnty. Rail-Freight
+
+S00-00X (Zþurkin Freight Station) [GY0-Z]:
+>   (Zþurkin Freight Station / Стаця Товарова о им. Журкин)
+>   Dist. Rail-Freight
+>   crushed stone,
+
+S00-00Y (Zþurkin Train Station) [GY0-Z]:
+>   (Zþurkin Train Station / Стаця Колеёва о им. Журкин)
+>   Cnty. Rail-Pax
+
+S00-00Z (Wysçak Freight Station) [GY0-W]:
+>   (Wysçak Freight Station / Стаця Товарова о им. Лысяк)
+>   Dist. Rail-Freight
+
+S00-010 (Sutu Bridge Freight Station) [GY0-S]:
+>   (Sutu Bridge Freight Station / Стаця Товарова о им. Мост Над Суту)
+>   Dist. Rail-Freight
+
+S00-011 (Godfrey Test Track Freight Station) [GY0-0]:
+>   (Godfrey Test Track Freight Station / Стаця Товарова о им. Богумирски Тор Досвячальны)
+>   Cnty. Rail-Freight
+
+S00-012 (Godfrey Train Station) [GY0-0]:
+>   (Godfrey Train Station / Стаця Колеёва о им. Богумир)
+>   Prov. Rail-Pax
+
+S00-013 (Godfrey Bus Station) [GY0-0]:
+>   (Godfrey Bus Station / Двожэс Алтобусовы о им. Богумир)
+>   Dist. Road-Pax
+
+S00-014 (Godfrey Freight Station) [GY0-0]:
+>   (Godfrey Freight Station / Стаця Товарова о им. Богумир)
+>   Prov. Rail-Freight
+>   crushed stone, maize, straw (maize), misc fruit/veg, chicken, wheat, hay, misc industrial,
+
+S00-015 (Godfrey Oil Refinery Freight Station) [GY0-0]:
+>   (Godfrey Oil Refinery Freight Station / Стаця Товарова о им. Богумирска Очышчалня Олею)
+>   Nat'l Rail-Freight
+
+S00-016 (Godfrey Quarry South Freight Station) [GY0-0]:
+>   (Godfrey Quarry South Freight Station / Стаця Товарова о им. Богумирски Каменёлом Полудънёвы)
+>   Muni. Rail-Freight
+
+S00-017 (Godfrey Quarry North Freight Station) [GY0-0]:
+>   (Godfrey Quarry North Freight Station / Стаця Товарова о им. Богумирски Каменёлом Пулноцны)
+>   Muni. Rail-Freight
+

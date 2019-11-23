@@ -1,4 +1,4 @@
 Navigate to C:\program files\MongoDB\Server\4.0\bin. 
 
-Invoke: mongodump --out c:\projects\python\dbbackup 
+Invoke: mongodump --out c:\projects\python\my_world\dbbackup 
 
