@@ -38,7 +38,7 @@ def get_float(sTitle, fTop_lim = None, bNeg = False):
     try:
         fInput = float(sInput)
     except ValueError:
-        print("\nInput needs to be a floating-point number")
+        print("\n\aInput needs to be a floating-point number")
         return None
 
     # We got our float converted. Now do its compares.
@@ -69,17 +69,17 @@ def get_int(sTitle, iTop_lim = None, bNeg = False):
     try:
         iInput = int(sInput)
     except ValueError:
-        print("\nInput needs to be an integer number")
+        print("\n\aInput needs to be an integer number")
         return None
 
     # We got our float converted. Now do its compares.
     if (iTop_lim != None) and (iInput > iTop_lim):
-        sTxt = "\nTop limit has been exceeded. Input: {0}; Lim: {1}"
+        sTxt = "\n\aTop limit has been exceeded. Input: {0}; Lim: {1}"
         print(sTxt.format(iInput, iTop_lim))
         return None
 
     if (bNeg == False) and (iInput < 0):
-        print("\nInput is negative, which is not allowed")
+        print("\n\aInput is negative, which is not allowed")
         return None
 
     return iInput
@@ -97,7 +97,8 @@ def get_binary(sTitle):
     sInput = input().upper()
 
     if (sInput != "Y") and (sInput != "N"):
-        print("Invalid input for binary choice. Expected 'Y', 'y', 'N', or 'n'")
+        print("\n\aInvalid input for binary choice. "+
+              "Expected 'Y', 'y', 'N', or 'n'")
         return None
 
     return sInput
@@ -124,6 +125,7 @@ def get_demo(sTitle):
 
     # Return validation status
     if bValid == False:
+        print("\n\aInvalid input entered")
         return None
     return "{0}".format(sInput[0:2])
 
@@ -232,3 +234,232 @@ def get_geo_element(sGeo_code, cDest):
         print(sTxt)
         return None
     return dGeo_element
+
+#-------------------------------------------------------------------------------
+def get_map_input(ccTremb, sMap = "item"):
+    """ Method asks the user to select the map and enter the co-ordinates of the
+    object of interest into the database. Common to 'D', 'H', 'S'.
+    """
+    import modules.x_database as db
+
+    # Obtain the reference to the CAD map. The maps available have their own
+    # database entry
+    cMaps = db.maps_db(ccTremb)
+    xParam = {}
+    xRestr = {"_id":0}
+    dMap_query = cMaps.find(xParam, xRestr)
+
+    iNo_of_maps = 0
+    dMap_copy = []
+
+    for dMap in dMap_query:
+        iNo_of_maps += 1
+        dMap_copy.append(dMap)
+
+# Setup a menu of the maps available
+    # Setup an option of entering a region which is not mapped
+    print("\nOn which map is this '{0}'?".format(sMap))
+
+    sMenu = "0: No map\n"
+    iCnt = 0
+
+    # Go through all the available maps.
+    for one_map in dMap_copy:
+        iCnt += 1
+#        xScale = "{:.1e}".format(one_map["fScale"])           # 1.0e6 for 1:1M
+        xScale = "{0:,}".format(int(one_map["fScale"]))    # Commas every 1000's
+        sTxt = "{0}: {1}, {2} 1:{3}\n"
+        sMenu += sTxt.format(iCnt, one_map["sRegion"], one_map["iYear"], xScale)
+    sMenu += "x: Invalid choice will exit this sub menu"
+    print(sMenu)
+
+# Get the response from the user, with reference to the menu being offered.
+    sInput = input()
+    if sInput.isnumeric() == False:
+        # An inbuilt 'abort' system where the user can enter 'x' to exit.
+        print("\n\aInput is not a numeric value. Returning to menu")
+        return None
+
+    # Get the details from the dictionary and write them into the destinations
+    # entry.
+    iInput = int(sInput)
+    dMap = {}
+    if(iInput == 0):
+        dMap["sRegion"] = "No Map"
+        dMap["iYear"] = None
+        dMap["fScale"] = None
+        dMap["x"] = None
+        dMap["y"] = None
+        dMap["a"] = None
+        return True
+    elif(iInput > iCnt):
+        print("\nChoice out of range. Returning to menu")
+        return None
+    else:
+        iIdx = iInput - 1
+        dMap["sRegion"] = dMap_copy[iIdx]["sRegion"]
+        dMap["iYear"] = dMap_copy[iIdx]["iYear"]
+        dMap["fScale"] = dMap_copy[iIdx]["fScale"]
+
+# Map location: Co-ordinates on the speciied CAD map.
+    if(dMap["fScale"] != None):
+        # This only works if the map exists.
+        sQuestion = "\nEnter the x-coordinate from the map:"
+        fX = get_float(sQuestion, None, True)
+        if fX == None: return None
+        dMap["x"] = fX
+
+        sQuestion = "\nEnter the y-coordinate from the map:"
+        fY = get_float(sQuestion, None, True)
+        if fY == None: return None
+        dMap["y"] = fY
+
+        sQuestion = "\nEnter the area in mm2 from the map{0}:".format(sMap)
+        fA = get_float(sQuestion)
+        if fA == None: return None
+        dMap["a"] = fA
+
+    # Calcluate the area.
+        dArea = calc_area(
+                dMap["a"],
+                dMap["fScale"]
+        )
+        if dArea == None: return None
+        # Compensate for inconsistency
+        dArea_2 = {"val": dArea["qty"], "uom": dArea["uom"]}
+    # End of map location entry
+
+    dReturn = {
+        "dMap":dMap,
+        "dArea":dArea_2,
+    }
+    return dReturn
+
+#-------------------------------------------------------------------------------
+def building_name():
+    """ Method generates some personal names which can be used in naming of
+    buildings. Method returns either the aName array, False if no name was
+    chosen or None for error.
+    """
+    sTxt = ("\nIs this building named?")
+    sNamed_yn = get_binary(sTxt)
+    if sNamed_yn == None: return None       # Error
+
+    dFinal = {}                                     # Define the prototype
+    if sNamed_yn == "Y":
+        bExit = False           # Exit the loop after confirming name
+        while bExit == False:
+            sTxt = ("\nDo you want random name for the building?")
+            sRand_name_yn = get_binary(sTxt)
+            # Do a soft-exit (break out of the loop on a bad choice)
+            if sRand_name_yn == None:
+                bExit = True
+                continue
+
+            # Manual name entry
+            if sRand_name_yn == "N":
+                print ("\nPlease enter the name of the building in Latin " +
+                       "(Use international Keyboard)")
+                dFinal["lat"] = input()
+
+                # User entered name in Cyrillic
+                print ("\nНапиш име будынку в Цырполюю. "
+                      +"(пшэлаьч клавятурэ рэьчне)")
+                dFinal["cyr"] = input()
+
+            # Randomly generated name
+            else:
+                # Operated by an external routine
+                import modules.x_random_names as rnd_name
+
+                # We are storing the random names from the various systems here.
+                # Hence, we will build up one set of arrays for the user to
+                #choose
+                aLat = []
+                aCyr = []
+
+            # Male-static:
+                iNo_of_combos = 3
+                aName = rnd_name.rnd_male_name(iNo_of_combos)
+                aSurname = rnd_name.qRnd_static_surname(iNo_of_combos)
+
+                for iIdx in range(iNo_of_combos):
+                    sName = aName[iIdx]["lat"]
+                    sSurname = aSurname[iIdx]["lat"]
+                    aLat.append("{0} {1}".format(sName, sSurname))
+
+                    sName = aName[iIdx]["cyr"]
+                    sSurname = aSurname[iIdx]["cyr"]
+                    aCyr.append("{0} {1}".format(sName, sSurname))
+
+            # Male-dynamic:
+                iNo_of_combos = 3
+                aName = rnd_name.rnd_male_name(iNo_of_combos)
+                aSurname = rnd_name.qRnd_dynamic_surname(iNo_of_combos)
+
+                for iIdx in range(iNo_of_combos):
+                    sName = aName[iIdx]["lat"]
+                    sSurname = aSurname[iIdx]["lat"]
+                    aLat.append("{0} {1}".format(sName, sSurname))
+
+                    sName = aName[iIdx]["cyr"]
+                    sSurname = aSurname[iIdx]["cyr"]
+                    aCyr.append("{0} {1}".format(sName, sSurname))
+
+            # Female-static:
+                iNo_of_combos = 3
+                aName = rnd_name.rnd_female_name(iNo_of_combos)
+                aSurname = rnd_name.qRnd_static_surname(iNo_of_combos)
+
+                for iIdx in range(iNo_of_combos):
+                    sName = aName[iIdx]["lat"]
+                    sSurname = aSurname[iIdx]["lat"]
+                    aLat.append("{0} {1}".format(sName, sSurname))
+
+                    sName = aName[iIdx]["cyr"]
+                    sSurname = aSurname[iIdx]["cyr"]
+                    aCyr.append("{0} {1}".format(sName, sSurname))
+
+            # Female-dynamic:
+                iNo_of_combos = 3
+                aName = rnd_name.rnd_female_name(iNo_of_combos)
+                aSurname = rnd_name.qRnd_dynamic_surname(iNo_of_combos)
+
+                for iIdx in range(iNo_of_combos):
+                    sName = aName[iIdx]["lat"]
+                    sSurname = aSurname[iIdx]["lat"]
+                    aLat.append("{0} {1}".format(sName, sSurname))
+
+                    sName = aName[iIdx]["cyr"]
+                    sSurname = aSurname[iIdx]["cyr"]
+                    aCyr.append("{0} {1}".format(sName, sSurname))
+
+            # Display the names
+                iNo_of_names = len(aLat)
+                sChoices = "0: Choose again\n"         # Don't like the options
+                iCnt = 1
+                for idx in range(0, iNo_of_names):
+                    sTxt = "{0}: {1} / {2}\n"
+                    sChoices += sTxt.format(iCnt, aLat[idx], aCyr[idx])
+                    iCnt += 1
+
+                iChoice = get_int(sChoices, iNo_of_names)
+                if iChoice == None: return None                # Invalid choice
+                if iChoice == 0: continue                      # Choose again.
+                iChoice -= 1
+
+            # Export the final names
+                dFinal["lat"] = aLat[iChoice]
+                dFinal["cyr"] = aCyr[iChoice]
+            # End of randomly generated names
+
+            # Confirm the name choice
+            sNew_lat = dFinal["lat"]
+            sNew_cyr = dFinal["cyr"]
+            sMenu = "Are the names:\n'{0}'\n'{1}' OK?"
+            sMenu = sMenu.format(sNew_lat, sNew_cyr)
+            sNames_ok_yn = get_binary(sMenu)
+            if sNames_ok_yn == "Y": bExit = True
+        # of while loop
+        return dFinal
+    return False        # No name was given

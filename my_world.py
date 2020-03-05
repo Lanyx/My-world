@@ -202,7 +202,12 @@ def mm_star():
 
     # Global change to the structure
     if False:
-        dNew_data = {"status":"RFU"}
+        dNew_data = {
+            "total": {
+                "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
+                "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
+            "aItemised": [],
+        }
 
         xParam = {}
         xNew_data = {"$set": {"aSupply_workforce" : dNew_data}}
@@ -212,11 +217,11 @@ def mm_star():
         dQuery = cDb.update_many(xParam, xNew_data)
 
     # Update a bad simple value
-    if False:
-        dNew_data = "D00-09N"
+    if True:
+        dNew_data = 10
 
-        xParam = {"parent":"VB"}
-        xNew_data = {"$set": {"parent" : dNew_data}}
+        xParam = {"my_id":"D00-0G9"}
+        xNew_data = {"$set": {"aVehicles.aItemised.Blàhim" : dNew_data}}
 
         ccTremb = db.connect()
         cDb = db.destinations(ccTremb)
@@ -278,10 +283,24 @@ def mm_backtick():
     x_rnd.sub_menu()
 
 #-------------------------------------------------------------------------------
+def mm_a():
+    """ Community Services menu which deals with the areas declared on the
+     map"""
+    import modules.a_community_services as a_py
+    a_py.sub_menu()
+
+#-------------------------------------------------------------------------------
 def mm_d():
     """ Destinations menu which deals with the areas declared on the map"""
     import modules.d_destinations as d_py
     d_py.sub_menu()
+
+#-------------------------------------------------------------------------------
+def mm_h():
+    """ Housing menu which deals with the residential areas declared on the map
+    """
+    import modules.h_housing as h_py
+    h_py.sub_menu()
 
 #-------------------------------------------------------------------------------
 def mm_s():
@@ -307,7 +326,9 @@ def main_menu():
 
 `: Generate random names
 
+A: Community Services (clinics, schools, theatres, libraries)
 D: Destinations (geographic areas on the map)
+H: Housing (registers residential plots from the map)
 S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
 
 """
@@ -346,8 +367,16 @@ S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
             mm_backtick()
 
         # Geographic destinations menu
+        elif sInput == "A":
+            mm_a()
+
+        # Geographic destinations menu
         elif sInput == "D":
             mm_d()
+
+        # Housing menu
+        elif sInput == "H":
+            mm_h()
 
         # Stations and ports menu
         elif sInput == "S":

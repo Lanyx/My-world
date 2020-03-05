@@ -1,3 +1,44 @@
+"YANKEE-CODES"
+    These indicate governance systems and services, organized by the state.
+    YA*- Air force
+    YB - RFU
+    YC - RFU
+    YD - RFU
+    YE - Education (NOTE: schools are ?ED). 2YE used for "Prov. Library"
+    YF - Fire-fighting
+    YG*- "GOVERNMENT" (General administration of other departments)
+    YH*- Health (Human)
+    YI - RFU
+    YJ*- Justice (Courts)
+    YK - RFU
+    YL - RFU
+    YM*- Military (Ground forces)
+    YN*- Navy (Naval forces)
+    YO - RFU
+    YP*- Police
+    YQ - RFU
+    YR - Revenue (Taxation)
+    YS - RFU
+    YT*- Transport (Infra. plan)
+    YU - RFU
+    YV - RFU
+    YW - RFU
+    YX*- Prison services
+        YXA: Adult
+        YXJ: Juvenile
+    YZ - RFU
+    Y0 - RFU
+    Y1 - Federal Agency
+    Y2 - RFU
+    Y3 - RFU
+    Y4 - RFU
+    Y5 - RFU
+    Y6 - RFU
+    Y7 - RFU
+    Y8 - RFU
+    Y9 - Miscellaneous
+    * = Own number plates
+
     Workplaces codes:
     A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 #: LEVEL-DEPENDANT
@@ -10,9 +51,13 @@
     5YG - COMMUNITY GOVERNANCE
     5YP - COMMUNITY POLICE
 
-    4YH - COUNTY HOSPITAL
-    3YH - DISTRICT HOSPITAL
-    2YH - PROVINCIAL HOSPITAL
+    9?? - MIXED / UNKNOWN / UNDISCLOSED LEVEL
+    5?? - COMMUNITY  (VAA-0) ГМИНА
+    4?? - COUNTY     (VAA)   ВОЕВУЦТВО*
+    3?? - DISTRICT   (VA)    ПОВЯТ*
+    2?? - PROVINCIAL (V)     ПРОВИНЦЪЯ
+    1?? - FEDERAL    (0V9)   ФЭДЭРАЦЯ
+    * = In Poland divisions are: Województwo, Powiat, Gmina
 
 A: AGRICULTURE
     ACH - AGRI., CHOCOLATE (COCOA PLANTATIONS)
@@ -51,12 +96,14 @@ M: MINERAL EXTRACTION
 
 O: ?
     OAH - OLD AGE HOME
+    OBK - BANK, MANUAL EMPLOYEE COUNT
+    OER - EXECUTIVES, RICH (FOR FACTORIES AND OFFICES)
     OMB - OFFICES, MULTI-STOREY BUILDING
     OME - OFFICES, MANUAL EMPLOYEE COUNT
     OXX - MISCALLANEOUS JOBS (CHARITIES, CHURCHES, ...)
 
 Q: LOGISTICS
-    QAF - LOG., AIRFIELD 
+    QAF - LOG., AIRFIELD
     QA1 - LOG., PASSANGER AIRCRAFT
     QB1 - LOG., BUS STATION
     QF1 - LOG., FREIGHT TRAIN STATION
@@ -68,3 +115,6 @@ Q: LOGISTICS
 R: RETAIL
     RXM - RETAIL, MISC, SPECIALIST SHOP (m. e. c)
     RXS - RETAIL, MISC, SPECIALIST SHOP (50sqm/empl)
+
+S: ?
+    SOS - EMERGENCY / RESCUE CREWS

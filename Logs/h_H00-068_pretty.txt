@@ -1,0 +1,29 @@
+Pretty print Housing request was generated on 2020-03-05 06:41:22.343059
+----------
+my_id: H00-068
+Name: 'Ilana Sçledzç' / 'Иляна Следзь'
+----------
+Host: [VAA-0RM] 'Mudgrass' / 'Блотятрава'
+----------
+Map and area: 
+>   Region: Vænesston 1:50,000 (drawn in 2019)
+>   Position (mm) x: 398.877, y: 376.72
+>   Area on paper (sq.mm) a: 41.873
+----------
+Building(s):
+>   Description: Multi-part park with common trace
+>   Type: Green
+>   Sub-type: None
+>   Demographic code: 'h'
+>   Units per floor:  0
+>   Number of floors: 0
+>   Number of buildings: 0
+>   Total units: 0
+>   Building footprint: N/A
+>   Area of plot: 10.468ha
+----------
+Parking (cars):
+>   Levels: 1
+>   Total vehicle spaces: 0
+>   Area on map: 0sq.mm
+

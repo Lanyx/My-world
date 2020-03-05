@@ -940,7 +940,7 @@ def import_female_names():
         {"lat":"Linda",     "cyr":"Льинда",     "aAlt":[]},
         {"lat":"Lucinda",   "cyr":"Люцында",    "aAlt":[]},
         {"lat":"Lisa",      "cyr":"Льиса",      "aAlt":[]},
-        {"lat":"Louse",     "cyr":"Людвига",    "aAlt":["Luwîz"]},
+        {"lat":"Louise",    "cyr":"Людвига",    "aAlt":["Luwîz"]},
         {"lat":"Leona",     "cyr":"Леона",      "aAlt":[]},
         {"lat":"Loraine",   "cyr":"Лёрэйн",     "aAlt":["Lorán"]},
 
@@ -1028,6 +1028,7 @@ def import_female_names():
         {"lat":"Vænessa",   "cyr":"Вэнэсса",    "aAlt":["Vanessa"]},
         {"lat":"Victoria",  "cyr":"Викторя",    "aAlt":["Viktorïa"]},
         {"lat":"Violet",    "cyr":"Вёлетта",    "aAlt":["Vílet"]},
+        {"lat":"Vivian",    "cyr":"Вивен",      "aAlt":["Vivïen"]},
         {"lat":"Veronica",  "cyr":"Вэроника",   "aAlt":[]},
 
     # W
@@ -1871,8 +1872,8 @@ def import_city_services():
             "code":"5TH",
             "name":"Community Theatre",
             "serves":"iTOT-PAX",
-            "ratio":100,                           # 1 actor / ... people
-            "capacity":800,                        # ... people per ... station
+            "ratio":300,                           # 1 actor / ... people
+            "capacity":5000,                        # ... people per ... station
             "aFootprint":{"qty":0.36 , "uom":"ha"}, # 60m x 60m
             "aMain":{   # ACTOR
                 "xType1":'PM', "iRate1":50,     # Both rates must add up to 100
@@ -1942,7 +1943,7 @@ def import_workplaces():
     lThe_data = [
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # AGRICULTURAL:
-        # Wheat farm
+        # Wheat farm [AWH]
         {
             "code":"AWH",
             "name":"Wheat Farm",                   # Name that comes up in menus
@@ -2025,7 +2026,7 @@ def import_workplaces():
             ],
         },
 
-        # Maize farm
+        # Maize farm [AMZ]
         {
             "code":"AMZ",
             "name":"Maize Farm",
@@ -2081,7 +2082,7 @@ def import_workplaces():
             ],
         },
 
-        # Rice farm
+        # Rice farm [ARI]
         {
             "code":"ARI",
             "name":"Rice Farm",
@@ -2132,7 +2133,7 @@ def import_workplaces():
             ],
         },
 
-        # Cocoa plantation
+        # Cocoa plantation [ACH]
         {
             "code":"ACH",
             "name":"Cocoa Plantation",
@@ -2183,7 +2184,7 @@ def import_workplaces():
             ],
         },
 
-        # Coffee plantation
+        # Coffee plantation [ACF]
         {
             "code":"ACF",
             "name":"Coffee Plantation",
@@ -2234,7 +2235,7 @@ def import_workplaces():
             ],
         },
 
-        # Fruit or vegetable farm
+        # Fruit or vegetable farm [AFW]
         {
             "code":"AFW",
             "name":"Fruit/Veg Plantation",
@@ -2287,7 +2288,7 @@ def import_workplaces():
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # LIVESTOCK:
-        # Cattle ranch
+        # Cattle ranch [LBF]
         {
             "code":"LBF",
             "name":"Cattle Ranch",
@@ -2339,7 +2340,7 @@ def import_workplaces():
             ],
         },
 
-        # Chicken farm
+        # Chicken farm [LCH]
         {
             "code":"LCH",
             "name":"Chicken Ranch",
@@ -2396,7 +2397,7 @@ def import_workplaces():
         },
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
-    # FACTORIES AND PLANTS:
+    # FACTORIES AND PLANTS: [FXX]
         # Misc factories at 50sq.m/empl
         {
             "code":"FXX",
@@ -2449,7 +2450,7 @@ def import_workplaces():
             ],
         },
 
-        # Misc factories with manual input
+        # Misc factories with manual input [FME]
         {
             "code":"FME",
             "name":"Factory (man empl cnt)",
@@ -2501,7 +2502,7 @@ def import_workplaces():
             ],
         },
 
-        # Heavy industry: (like refinery in GY0, or steel plant in TJ0)
+        # Heavy industry: (like refinery in GY0, or steel plant in TJ0) [FHI]
         {
             "code":"FHI",
             "name":"Heavy industry (man empl cnt)",
@@ -2556,7 +2557,7 @@ def import_workplaces():
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # MINERAL EXTRACTION:
-        # Stone quarry.
+        # Stone quarry. [MST]
         {
             "code":"MST",
             "name":"Stone Quarry",
@@ -2607,7 +2608,7 @@ def import_workplaces():
             ],
         },
 
-        # Granite quarry.
+        # Granite quarry. [MGR]
         {
             "code":"MGR",
             "name":"Granite Quarry",
@@ -2658,7 +2659,7 @@ def import_workplaces():
             ],
         },
 
-        # Diamond Granite quarry.
+        # Diamond Granite quarry. [MDG]
         {
             "code":"MDG",
             "name":"Diamond Granite Quarry",
@@ -2709,9 +2710,9 @@ def import_workplaces():
             ],
         },
 
-        # Clay pit.
+        # Clay pit. [MCP]
         {
-            "code":"MST",
+            "code":"MCP",
             "name":"Clay Pit",
             "type":"Mineral Extraction",
             "default":"clay pit",
@@ -2762,18 +2763,18 @@ def import_workplaces():
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # Miscellaneous:
-        # Multi-storey offices buildings
+        # Multi-storey offices buildings [OMB]
         {
             "code":"OMB",
             "name":"Multi-storey office",
             "type":"City Workplaces",
             "default":"multi-storey offices",
-            "iStatic_veh":1,
+            "iStatic_veh":0,
             "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
                 # Linked to other statistics
                 "aMain":{
-                    "fRate":12, "units":"sq.m/floor/empl",
+                    "fRate":15, "units":"sq.m/floor/empl", # Comp. for mgmt
                     "xType1": "MM", "iRate1": 50,
                     "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
                     "fEmpl_per_veh":0.0,
@@ -2790,8 +2791,8 @@ def import_workplaces():
                 # position is not used, enter '0' for 'fRate'
                 "aMgmt":{
                     "fRate": 100, "units": "empl/main",
-                    "xType1": "RM", "iRate1":  2,
-                    "xType2": "HM", "iRate2": 98,     # iRate1 + iRate2 = 100
+                    "xType1": "RM", "iRate1": 10,
+                    "xType2": "HM", "iRate2": 90,     # iRate1 + iRate2 = 100
                     "fEmpl_per_veh": 1.0
                 },
                 # This position is a runs the operation. If the
@@ -2813,7 +2814,7 @@ def import_workplaces():
             ],
         },
 
-        # Offices with (Manual employee count)
+        # Offices with (Manual employee count) [OME]
         {
             "code":"OME",
             "name":"Offices (man empl cnt)",
@@ -2864,7 +2865,110 @@ def import_workplaces():
             ],
         },
 
-        # Park ranger at 0.45 empl/sq.km
+        # Executives (Manual employee count) [OER]
+        {
+            "code":"OER",
+            "name":"Executives/Entrepreneurs ('Rich')",
+            "type":"City Workplaces",
+            "default":"entrepreneurs",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1, "units":"empl",
+                    "xType1": "RM", "iRate1": 80,
+                    "xType2": "RF", "iRate2": 20,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 0, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 50,
+                    "xType2": "MF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. (the 'right hand man')
+                # If the position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 1.2, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a supports the operation. (Secretary)
+                # If the position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 0.75, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 20,
+                    "xType2": "MF", "iRate2": 80,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Bank (Manual employee count) [OBK]
+        {
+            "code":"OBK",
+            "name":"Bank (man empl cnt)",
+            "type":"City Workplaces",
+            "default":"bank",
+            "iStatic_veh":1,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{   # ClARKS
+                    "fRate":1, "units":"empl",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{   # SUPERVISOR / MID-MANAGEMENT
+                    "fRate": 6, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 80,
+                    "xType2": "HM", "iRate2": 20,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{   # THE BANKERS
+                    "fRate": 50, "units": "empl/main",
+                    "xType1": "RM", "iRate1": 34,
+                    "xType2": "HM", "iRate2": 66,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{   # CLEANERS AND SECURITY
+                    "fRate": 1, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 60,
+                    "xType2": "PF", "iRate2": 40,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+
+        # Park ranger at 0.45 empl/sq.km [OPR]
         {
             "code":"OPR",
             "name":"Park ranger (0.45 empl/sq.km)",
@@ -2916,6 +3020,7 @@ def import_workplaces():
         },
 
         # Miscallenous like charites, parking attendants (Manual employee count)
+        # [OXX]
         {
             "code":"OXX",
             "name":"Miscallenous: charites, taxis, (man empl cnt @ 0.1*pop)",
@@ -2966,7 +3071,7 @@ def import_workplaces():
             ],
         },
 
-        # Airfield / Airport: different from airlines.
+        # Airfield / Airport: different from airlines. [QAF]
         {
             "code":"QAF",
             "name":"Airfield",
@@ -3019,7 +3124,7 @@ def import_workplaces():
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # RETAIL
-        # Misc shops at 50 sq.m/empl
+        # Misc shops at 50 sq.m/empl [RXS]
         {
             "code":"RXS",
             "name":"Misc / specialist shops (50 sq.m/empl)",
@@ -3070,7 +3175,7 @@ def import_workplaces():
             ],
         },
 
-        # Misc shops with manual sales clark input
+        # Misc shops with manual sales clark input [RXM]
         {
             "code":"RXM",
             "name":"Misc / specialist shops (man empl cnt)",
@@ -3123,7 +3228,7 @@ def import_workplaces():
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # HOSPITALITY:
-        # Hotels
+        # Hotels [GHT]
         {
             "code":"GHT",
             "name":"Hotel (man 'guest-facing' cnt)",
@@ -3174,7 +3279,7 @@ def import_workplaces():
             ],
         },
 
-        # Restaurant
+        # Restaurant [GRX]
         {
             "code":"GRX",
             "name":"Restaurant (man 'chef' cnt)",
@@ -3228,10 +3333,10 @@ def import_workplaces():
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # GOVERNANCE:
-        # County government
+        # County government [4YG]
         {
             "code":"4YG",
-            "name":"County Government (man i/p @ 1:1000)",
+            "name":"(4Y?) County Government (man i/p @ 1:1000)",
             "type":"Governance",
             "default":"county government",
             "iStatic_veh":3,
@@ -3277,10 +3382,10 @@ def import_workplaces():
             ],
         },
 
-        # District government
+        # District government [3YG]
         {
             "code":"3YG",
-            "name":"District Government (man i/p @ 1:5k)",
+            "name":"(3Y?) District Government (man i/p @ 1:5k)",
             "type":"Governance",
             "default":"district government",
             "iStatic_veh":3,
@@ -3326,10 +3431,10 @@ def import_workplaces():
             ],
         },
 
-        # Province government
+        # Province government [2YG]
         {
             "code":"2YG",
-            "name":"Provincial Government (man i/p @ 1:13k)",
+            "name":"(2Y?) Provincial Government (man i/p @ 1:13k)",
             "type":"Governance",
             "default":"provincial government",
             "iStatic_veh":3,
@@ -3375,10 +3480,10 @@ def import_workplaces():
             ],
         },
 
-        # Federal government
+        # Federal government [1YG]
         {
             "code":"1YG",
-            "name":"Federal Government (man i/p @ 1:100k)",
+            "name":"(1Y?) Federal Government (man i/p @ 1:100k)",
             "type":"Governance",
             "default":"federal government",
             "iStatic_veh":3,
@@ -3424,9 +3529,58 @@ def import_workplaces():
             ],
         },
 
+        # Mixed / unknown / undisclosed level government [9YG]
+        {
+            "code":"9YG",
+            "name":"(9Y?) Mix./unkn./undiscl. Government (man i/p)",
+            "type":"Governance",
+            "default":"undisclosed government",
+            "iStatic_veh":3,
+            "sOwn_number_plates": "dynamic",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{       # CLARK / AGENT
+                    "fRate":1, "units":"empl",
+                    "xType1": "MM", "iRate1": 75,
+                    "xType2": "MF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0.0,
+                },
+                "aSupv":{
+                    "fRate": 30, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 75,
+                    "xType2": "HF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "HM", "iRate1": 66,
+                    "xType2": "HM", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{ #  CLEANERS, SECURITY
+                    "fRate": 4, "units": "empl/main",
+                    "xType1": "PM", "iRate1": 75,
+                    "xType2": "PF", "iRate2": 25,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"None",
+                "fRate":0, "units":"-",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # HEALTH-CARE:
-        # County hospital
+        # County hospital [4YH]
         {
             "code":"4YH",
             "name":"County Hospital (man i/p @ 1:2000)",
@@ -3476,7 +3630,7 @@ def import_workplaces():
             ],
         },
 
-        # District hospital
+        # District hospital [3YH]
         {
             "code":"3YH",
             "name":"District Hospital (man i/p @ 1:10k)",
@@ -3526,7 +3680,7 @@ def import_workplaces():
             ],
         },
 
-        # Provincial hospital
+        # Provincial hospital [2YH]
         {
             "code":"2YH",
             "name":"Provincial Hospital (man i/p @ 1:20k)",
@@ -3577,7 +3731,7 @@ def import_workplaces():
         },
 
 
-        # Ambulance crews
+        # Ambulance crews [HAM]
         {
             "code":"HAM",
             "name":"Ambulance crews (man i/p @ 1:5k)",
@@ -3627,7 +3781,7 @@ def import_workplaces():
             ],
         },
 
-        # Rescue services
+        # Rescue services [SOS]
         {
             "code":"SOS",
             "name":"Rescue services (road accidents in the jungle)",
@@ -3679,7 +3833,7 @@ def import_workplaces():
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # EDUCATION:
-        # ED4 (private school)
+        # ED4 (private school) [ED4]
         {
             "code":"ED4",
             "name":"Private school ED4 (man i/p @ 1:15 ~ 1:20)",
@@ -3729,7 +3883,7 @@ def import_workplaces():
             ],
         },
 
-        # ED9 (disabled school)
+        # ED9 (disabled school) [ED9]
         {
             "code":"ED9",
             "name":"Disabled school ED9 (man i/p @ 1:4 ~ 1:10)",
@@ -3782,7 +3936,7 @@ def import_workplaces():
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # PRISON:
-        # County prison
+        # County prison [4YX]
         {
             "code":"4YX",
             "name":"County prison (man i/p @ 1:5 of 70%)",
@@ -3832,7 +3986,7 @@ def import_workplaces():
             ],
         },
 
-        # District prison
+        # District prison [3YX]
         {
             "code":"3YX",
             "name":"district prison (man i/p @ 1:5 of 20%)",
@@ -3882,7 +4036,7 @@ def import_workplaces():
             ],
         },
 
-        # Provincial prison
+        # Provincial prison [2YX]
         {
             "code":"2YX",
             "name":"provincial prison (man i/p @ 1:5 of 7%)",
@@ -3932,7 +4086,7 @@ def import_workplaces():
             ],
         },
 
-        # Provincial prison
+        # Provincial prison [1YX]
         {
             "code":"1YX",
             "name":"federal prison (man i/p @ 1:4 of 3%)",
@@ -3984,7 +4138,7 @@ def import_workplaces():
 
 #  --  --  --  --  --  --  --  --  --  --  --  --
     # LOGISTICS:
-        # Freight station
+        # Freight station [QF1]
         {
             "code":"QF1",
             "name":"Freight Train Station",
@@ -4035,7 +4189,7 @@ def import_workplaces():
             ],
         },
 
-        # Passanger station
+        # Passanger station [QP1]
         {
             "code":"QP1",
             "name":"Passanger Train Station",
@@ -4086,7 +4240,7 @@ def import_workplaces():
             ],
         },
 
-        # Truck depot
+        # Truck depot [QT1]
         {
             "code":"QT1",
             "name":"Truck Depot (20t/trip)",
@@ -4137,7 +4291,7 @@ def import_workplaces():
             ],
         },
 
-        # Bus service
+        # Bus service [QB1]
         {
             "code":"QB1",
             "name":"Bus station",
@@ -4188,7 +4342,7 @@ def import_workplaces():
             ],
         },
 
-        # Freight aircraft
+        # Freight aircraft [QG1]
         {
             "code":"QG1",
             "name":"Freight Aircraft (5t/trip), (3-men crew), (enter 'pilots')",
@@ -4239,7 +4393,7 @@ def import_workplaces():
             ],
         },
 
-        # Pax aircraft
+        # Pax aircraft [QA1]
         {
             "code":"QA1",
             "name":"Passanger aircraft (man i/p of 'pilots')",

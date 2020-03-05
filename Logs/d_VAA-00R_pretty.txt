@@ -1,0 +1,230 @@
+    Gdykrèïad Suburb / Пшэдщместе Гдыкрэьяд
+----------
+Pretty print information was generated on 2020-02-23 14:21:13.429267
+----------
+my_id: D00-0GC
+geo_code: VAA-00R
+----------
+Total population: 0
+
+Total vehicles*: 16
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced:
+>   Misc Industrial: 2,264.51t/yr by Electric Power Plant/Электровня 0
+>   Misc Industrial: 253.66t/yr by Sewage Works/Очышчалня стекув 0
+>   Misc Industrial: 174.58t/yr by Coal Store/Хуртовня Вэьгля 0
+
+Build housing (Demand - Supply):
+>    r: 0; h: 0; m: 6; l: 20; p: 461;
+----------
+Hierarchial Parent: 
+>  Búrovïets Section / Чэьсть Бюровец
+>   my_id: D00-0FW
+>   geo_code: VAA-00
+----------
+Hierarchial Children: 
+>   count: 0
+----------
+Map and area: 
+>   Region: Vænesston 1:50,000 (drawn in 2019)
+>   Position (mm) x: 364.497, y: 343.749
+>   Area on paper (sq.mm) a: 222.484
+>   Area represented: 55.621ha
+----------
+Workforce Demand: 
+>   Grand Total: (619)
+>       rm: 0; hm: 0; mm: 4; lm: 19; pm: 385;
+>       rf: 0; hf: 0; mf: 2; lf: 10; pf: 199;
+>
+>   [FME] Electric Power Plant/Электровня: (531)
+>       rm: 0; hm: 0; mm: 4; lm: 16; pm: 330;
+>       rf: 0; hf: 0; mf: 2; lf: 8; pf: 171;
+>       tot road veh: 12;
+>
+>   [FME] Sewage Works/Очышчалня стекув: (53)
+>       rm: 0; hm: 0; mm: 0; lm: 2; pm: 33;
+>       rf: 0; hf: 0; mf: 0; lf: 1; pf: 17;
+>       tot road veh: 2;
+>
+>   [FME] Coal Store/Хуртовня Вэьгля: (35)
+>       rm: 0; hm: 0; mm: 0; lm: 1; pm: 22;
+>       rf: 0; hf: 0; mf: 0; lf: 1; pf: 11;
+>       tot road veh: 2;
+>
+>   [5YP] Police: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5YF] Fire Dept: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5YH] Community Clinic: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5YG] Community Governance: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED0] Pre-school: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED1] Primary School: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED2] Middle School: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED3] High School: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [OAH] Old Age Home: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5SŠ] Small Shop: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5LX] Community Library: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5TH] Community Theatre: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5PO] Community Post Office: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Totals: (487) |  r: 0; h: 0; m: 6; l: 20; p: 461;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 0
+>
+>   Married working people (aHHM-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Married retired people (aHHR-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Preschoolers, all groups                 (ED0-PAX): 0
+>   Primary schoolers, all groups            (ED1-PAX): 0
+>   Middle schoolers, all groups             (ED2-PAX): 0
+>   High schoolers, all groups               (ED3-PAX): 0
+>   Religious or Private schoolers, all grps (ED4-PAX): 0
+>   College students, all groups             (ED5-PAX): 0
+>   Polytechnic students, all groups         (ED6-PAX): 0
+>   University students, all groups          (ED7-PAX): 0
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 0
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 0
+>   Old Age Home, all groups                 (OAH-PAX): 0
+>   Private nurse, all groups                (OAN-PAX): 0
+>   Youth prison, all groups                 (YXJ-PAX): 0
+>   Adult prison, all groups                 (YXA-PAX): 0
+>   Religion:
+>      Renásàsers (3R): 0
+>      Anglican Christians (AN): 0
+>      Roman Catholics (RC): 0
+>      Deltæðømmysts (DD): 0
+>      Jews (JW): 0
+>      Muslims (IS): 0
+>   Units required:
+>       |   0.00 for [5YP] Police
+>       |   0.00 for [5YF] Fire Dept
+>       |   0.00 for [5YH] Community Clinic
+>       |   0.00 for [5YG] Community Governance
+>       |   0.00 for [ED0] Pre-school
+>       |   0.00 for [ED1] Primary School
+>       |   0.00 for [ED2] Middle School
+>       |   0.00 for [ED3] High School
+>       |   0.00 for [OAH] Old Age Home
+>       |   0.00 for [5SŠ] Small Shop
+>       |   0.00 for [5LX] Community Library
+>       |   0.00 for [5TH] Community Theatre
+>       |   0.00 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 0
+>   Vehicle, motorbike*                      (VEH-MBK): 0
+>   Vehicle, car*                            (VEH-CAR): 0
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 16
+>   Itemised county-registered vehicles:
+>      Electric Power Plant/Электровня: 12
+>      Sewage Works/Очышчалня стекув: 2
+>      Coal Store/Хуртовня Вэьгля: 2
+>      residents: 0
+>      Police: 0
+>      Fire Dept: 0
+>      Community Clinic: 0
+>      Community Governance: 0
+>      Pre-school: 0
+>      Primary School: 0
+>      Middle School: 0
+>      High School: 0
+>      Old Age Home: 0
+>      Small Shop: 0
+>      Community Library: 0
+>      Community Theatre: 0
+>      Community Post Office: 0
+----------
+Footprint on the land:
+>   Electric Power Plant/Электровня: 6.0ha
+>   Sewage Works/Очышчалня стекув: 2.452ha
+>   Coal Store/Хуртовня Вэьгля: 3.758ha
+

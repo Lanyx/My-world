@@ -21,6 +21,27 @@ def connect():
         return None
 
 #-------------------------------------------------------------------------------
+# A
+def community_services(ccTremb):
+    """ Selects the 'community_services' database which holds information for:
+        xYP: Police station,
+        xYF: Fire station,
+        5YH: Community clinics,
+        5YG: Community governance,
+        ED0: Pre-school,
+        ED1: Primary School,
+        ED2: Middle School,
+        ED3: High School,
+        OAH: Standard Old Age Home,
+        5SŠ: Community shop ("Small Šop"),
+        xLX: Libraries,
+        xTH: Theatres,
+        xPO: Post Offices.
+    """
+    return ccTremb["community_services"]
+
+#-------------------------------------------------------------------------------
+# D
 def destinations(ccTremb):
     """ Selects the 'destinations' database which has the geographic areas
         stored in it. This is the main element of the system. These 'geographic
@@ -29,6 +50,15 @@ def destinations(ccTremb):
 #    return ccTremb["dest_test"]
 
 #-------------------------------------------------------------------------------
+# H
+def housing(ccTremb):
+    """ Selects the 'housing' database which holds information for residential
+    blocks. (A residential block is encased by roads).
+    """
+    return ccTremb["housing"]
+
+#-------------------------------------------------------------------------------
+# S
 def stations(ccTremb):
     """ Selects the 'stations' database which holds information for train
     stations. (Does it have to be trainstations?) I will define a 'station' as

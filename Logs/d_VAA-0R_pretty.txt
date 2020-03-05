@@ -1,0 +1,118 @@
+    Marsh Islands Section / Чэьсть Багнощвыспы
+----------
+Pretty print information was generated on 2020-03-02 14:39:36.525163
+----------
+my_id: D00-0FX
+geo_code: VAA-0R
+----------
+Total population: N/A
+
+Total vehicles*: N/A
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced (Incomplete data):
+>   N/A
+
+Build housing (Demand - Supply):
+>    r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Hierarchial Parent: 
+>  Vænesston Municipality / Гмина Вэнэсовицэ
+>   my_id: D00-0F8
+>   geo_code: VAA-0
+----------
+Hierarchial Children: 
+>   count: 9
+>      Mudgrass Suburb / Пшэдщместе Блотятрава
+>          my_id: D00-0GM
+>          geo_code: VAA-0RM
+>          population: N/A
+>          warehouse: 
+>
+>      Danielowski Estates Suburb / Пшэдщместе Хаты Данельовскъего
+>          my_id: D00-0GN
+>          geo_code: VAA-0R1
+>          population: N/A
+>          warehouse: 
+>
+>      Beaglehill Suburb / Пшэдщместе Гурка Пса Гончего
+>          my_id: D00-0GO
+>          geo_code: VAA-0RB
+>          population: N/A
+>          warehouse: 
+>
+>      Miroswav Park West Suburb / Пшэдщместе Оседлэ Заходне Мирослава
+>          my_id: D00-0GP
+>          geo_code: VAA-0RW
+>          population: N/A
+>          warehouse: 
+>
+>      St. Conrad Suburb / Пшэдщместе Сьв. Конрада
+>          my_id: D00-0GQ
+>          geo_code: VAA-0RC
+>          population: N/A
+>          warehouse: 
+>
+>      Miroswav Park East Suburb / Пшэдщместе Оседлэ Всходне Мирослава
+>          my_id: D00-0GR
+>          geo_code: VAA-0RE
+>          population: N/A
+>          warehouse: 
+>
+>      Filed Tooth Suburb / Пшэдщместе Пилованы Заьб
+>          my_id: D00-0GS
+>          geo_code: VAA-0RF
+>          population: N/A
+>          warehouse: 
+>
+>      Dzþevogurski Park Suburb / Пшэдщместе Оседлэ Джэвогурскъего
+>          my_id: D00-0GT
+>          geo_code: VAA-0RD
+>          population: N/A
+>          warehouse: 
+>
+>      Steward Ramsey Suburb / Пшэдщместе Стъюлыщд Рэмзищ
+>          my_id: D00-0GU
+>          geo_code: VAA-0RS
+>          population: N/A
+>          warehouse: 
+>
+----------
+Map and area: 
+>   Region: Vænesston 1:50,000 (drawn in 2019)
+>   Position (mm) x: 411.321, y: 405.779
+>   Area on paper (sq.mm) a: 6,769.919
+>   Area represented: 1,692.48ha
+----------
+Workforce Demand: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   N/A
+----------
+Vehicles (requiring county-level registration and number plates):
+>   N/A
+----------
+Footprint on the land:
+>   N/A
+

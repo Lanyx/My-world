@@ -12,8 +12,6 @@ def add_station(ccTremb):
     """ Adds details of a station to the database """
 
     # Obtain the highest "my_id" code that is registered in the database.
-    # NOTE: this is not safe. A destination may have been dropped. This would
-    # cause a parent to have a wrong child registered.
 
     # Get a list of all the registered base-36 codes
     xParam = {}

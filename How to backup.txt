@@ -1,4 +1,7 @@
-Navigate to C:\program files\MongoDB\Server\4.0\bin. 
-
-Invoke: mongodump --out c:\projects\python\my_world\dbbackup 
+1.) Delete the previous backup at c:\projects\python\my_world\dbbackup
+2.) Navigate to C:\program files\MongoDB\Server\4.0\bin. 
+3.) Hold "SHIFT" while performing right-click in the window.
+4.) From pop-up menu select "Open Command window here"
+5.) Invoke: mongodump --out c:\projects\python\my_world\dbbackup 
+6.) Verify that the data has been written 
 

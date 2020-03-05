@@ -1,0 +1,284 @@
+    Goverton Suburb / Пшэдщместе Жаьдувка
+----------
+Pretty print information was generated on 2020-03-01 11:38:23.288327
+----------
+my_id: D00-0GL
+geo_code: VAA-00N
+----------
+Total population: 0
+
+Total vehicles*: 54
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced:
+>   N/A
+
+Build housing (Demand - Supply):
+>    r: 0; h: 134; m: 585; l: 105; p: 158;
+----------
+Hierarchial Parent: 
+>  Búrovïets Section / Чэьсть Бюровец
+>   my_id: D00-0FW
+>   geo_code: VAA-00
+----------
+Hierarchial Children: 
+>   count: 0
+----------
+Map and area: 
+>   Region: Vænesston 1:50,000 (drawn in 2019)
+>   Position (mm) x: 384.445, y: 372.503
+>   Area on paper (sq.mm) a: 111.457
+>   Area represented: 27.864ha
+----------
+Workforce Demand: 
+>   Grand Total: (1,060)
+>       rm: 0; hm: 87; mm: 478; lm: 87; pm: 135;
+>       rf: 0; hf: 75; mf: 121; lf: 29; pf: 48;
+>
+>   [3YG] District Court (3YJ-VA): (45)
+>       rm: 0; hm: 1; mm: 26; lm: 0; pm: 7;
+>       rf: 0; hf: 0; mf: 9; lf: 0; pf: 2;
+>       tot road veh: 3; parking bays: 118;
+>
+>   [4YG] County Admin (4YG-VAA): (63)
+>       rm: 0; hm: 0; mm: 1; lm: 38; pm: 9;
+>       rf: 0; hf: 0; mf: 0; lf: 12; pf: 3;
+>       tot road veh: 3; parking bays: 60;
+>
+>   [4YG] County Court (4YJ-VAA): (45)
+>       rm: 0; hm: 0; mm: 1; lm: 26; pm: 7;
+>       rf: 0; hf: 0; mf: 0; lf: 9; pf: 2;
+>       tot road veh: 3; parking bays: 67;
+>
+>   [9YG] Transport Dept.'s (1YT..4YT): (194)
+>       rm: 0; hm: 6; mm: 112; lm: 0; pm: 28;
+>       rf: 0; hf: 1; mf: 38; lf: 0; pf: 9;
+>       tot road veh: 5; parking bays: 92;
+>
+>   [3YG] District admin. (3YG-VA): (324)
+>       rm: 0; hm: 9; mm: 188; lm: 0; pm: 47;
+>       rf: 0; hf: 2; mf: 62; lf: 0; pf: 16;
+>       tot road veh: 5; parking bays: 117;
+>
+>   [2YG] Prov. Legislature (2YG-V): (194)
+>       rm: 0; hm: 6; mm: 112; lm: 0; pm: 28;
+>       rf: 0; hf: 39; mf: 0; lf: 0; pf: 9;
+>       tot road veh: 5; parking bays: 60;
+>
+>   [2YG] Prov. Court (2YJ-V): (39)
+>       rm: 0; hm: 1; mm: 22; lm: 0; pm: 6;
+>       rf: 0; hf: 8; mf: 0; lf: 0; pf: 2;
+>       tot road veh: 3; parking bays: 60;
+>
+>   [4YH] County Hospital (4YH-VAA): (77)
+>       rm: 0; hm: 47; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 15; mf: 11; lf: 0; pf: 4;
+>       tot road veh: 4;
+>
+>   [HAM] ambulance crews: (35)
+>       rm: 0; hm: 2; mm: 1; lm: 23; pm: 0;
+>       rf: 0; hf: 1; mf: 0; lf: 8; pf: 0;
+>       tot road veh: 17;
+>
+>   [1YG] Misc. Fed. Gov't (1Y9-0V9): (25)
+>       rm: 0; hm: 15; mm: 4; lm: 0; pm: 0;
+>       rf: 0; hf: 5; mf: 1; lf: 0; pf: 0;
+>       tot road veh: 3; parking bays: 60;
+>
+>   [2YG] Prov. Library (2LX-V): (19)
+>       rm: 0; hm: 0; mm: 11; lm: 0; pm: 3;
+>       rf: 0; hf: 4; mf: 0; lf: 0; pf: 1;
+>       tot road veh: 3;
+>
+>   [5YP] Police: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5YF] Fire Dept: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5YH] Community Clinic: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5YG] Community Governance: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED0] Pre-school: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED1] Primary School: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED2] Middle School: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED3] High School: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [OAH] Old Age Home: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5SŠ] Small Shop: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5LX] Community Library: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5TH] Community Theatre: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [5PO] Community Post Office: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Totals: (982) |  r: 0; h: 134; m: 585; l: 105; p: 158;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 0
+>
+>   Married working people (aHHM-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Married retired people (aHHR-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>
+>   Preschoolers, all groups                 (ED0-PAX): 0
+>   Primary schoolers, all groups            (ED1-PAX): 0
+>   Middle schoolers, all groups             (ED2-PAX): 0
+>   High schoolers, all groups               (ED3-PAX): 0
+>   Religious or Private schoolers, all grps (ED4-PAX): 0
+>   College students, all groups             (ED5-PAX): 0
+>   Polytechnic students, all groups         (ED6-PAX): 0
+>   University students, all groups          (ED7-PAX): 0
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 0
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 0
+>   Old Age Home, all groups                 (OAH-PAX): 0
+>   Private nurse, all groups                (OAN-PAX): 0
+>   Youth prison, all groups                 (YXJ-PAX): 0
+>   Adult prison, all groups                 (YXA-PAX): 0
+>   Religion:
+>      Renásàsers (3R): 0
+>      Anglican Christians (AN): 0
+>      Roman Catholics (RC): 0
+>      Deltæðømmysts (DD): 0
+>      Jews (JW): 0
+>      Muslims (IS): 0
+>   Units required:
+>       |   0.00 for [5YP] Police
+>       |   0.00 for [5YF] Fire Dept
+>       |   0.00 for [5YH] Community Clinic
+>       |   0.00 for [5YG] Community Governance
+>       |   0.00 for [ED0] Pre-school
+>       |   0.00 for [ED1] Primary School
+>       |   0.00 for [ED2] Middle School
+>       |   0.00 for [ED3] High School
+>       |   0.00 for [OAH] Old Age Home
+>       |   0.00 for [5SŠ] Small Shop
+>       |   0.00 for [5LX] Community Library
+>       |   0.00 for [5TH] Community Theatre
+>       |   0.00 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 0
+>   Vehicle, motorbike*                      (VEH-MBK): 0
+>   Vehicle, car*                            (VEH-CAR): 0
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 54
+>   Itemised county-registered vehicles:
+>      District Court (3YJ-VA): 3
+>      County Admin (4YG-VAA): 3
+>      County Court (4YJ-VAA): 3
+>      Transport Dept.'s (1YT..4YT): 5
+>      District admin. (3YG-VA): 5
+>      Prov. Legislature (2YG-V): 5
+>      Prov. Court (2YJ-V): 3
+>      County Hospital (4YH-VAA): 4
+>      ambulance crews: 17
+>      Misc. Fed. Gov't (1Y9-0V9): 3
+>      Prov. Library (2LX-V): 3
+>      residents: 0
+>      Police: 0
+>      Fire Dept: 0
+>      Community Clinic: 0
+>      Community Governance: 0
+>      Pre-school: 0
+>      Primary School: 0
+>      Middle School: 0
+>      High School: 0
+>      Old Age Home: 0
+>      Small Shop: 0
+>      Community Library: 0
+>      Community Theatre: 0
+>      Community Post Office: 0
+----------
+Footprint on the land:
+>   District Court (3YJ-VA): 2,475.0sq.m
+>   County Admin (4YG-VAA): 1,000.0sq.m
+>   County Court (4YJ-VAA): 1,110.0sq.m
+>   Transport Dept.'s (1YT..4YT): 1,538.0sq.m
+>   District admin. (3YG-VA): 1,945.0sq.m
+>   Prov. Legislature (2YG-V): 1,000.0sq.m
+>   Prov. Court (2YJ-V): 1,000.0sq.m
+>   County Hospital (4YH-VAA): 1,770.0sq.m
+>   ambulance crews: 0.0ha
+>   Misc. Fed. Gov't (1Y9-0V9): 1,000.0sq.m
+>   Prov. Library (2LX-V): 1,770.0sq.m
+

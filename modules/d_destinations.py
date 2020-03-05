@@ -64,6 +64,7 @@ def add_area_to_db(ccTremb):
     sBase36_5 = sBase36.rjust(5, "0")
     # "0002W" -> "D00-02W"
     sNew_id = "D{0}-{1}".format(sBase36_5[:2], sBase36_5[2:])
+    print("\nNext id is {0}".format(sNew_id))
 
 # START GETTING THE USER TO ENTER THE NEW DATA.
     # Open a blank dictionary, so that the elements are arranged in a certain
@@ -90,12 +91,11 @@ def add_area_to_db(ccTremb):
                 "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
                 "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
             "aItemised": []},
-        "aSupply_workforce": {"status":"RFU"},
-# Initially designed, but never used.
-#            "total": {
-#                "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
-#                "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
-#            "aItemised": []},
+        "aSupply_workforce": {
+            "total": {
+                "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
+                "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
+            "aItemised": []},
         "aDemand_hholds": {
             "total": {"r": 0, "h": 0, "m": 0, "l": 0, "p": 0},
             "aItemised": []},
@@ -508,6 +508,7 @@ def view_children(ccTremb):
             sX = query["aMap"]["x"]
             sY = query["aMap"]["y"]
             sA = query["aMap"]["a"]
+            # TODO: Revise formatting
             sScale = "%.0e" % fScale                          # convert to '4e6'
             sFile_data += "[{0}, 1:{1}] ".format(sMap, sScale)
             sFile_data += "(x:{0}; y:{1}; a:{2}) ".format(sX, sY, sA)
@@ -682,6 +683,22 @@ def pretty_print_single(ccTremb):
         sWhs = ">   N/A\n"
     sAll += "\nGoods produced{1}:\n{0}".format(sWhs, sTxt_inc_data)
 
+# How much housing to build
+    aTot_sup = dData["aSupply_hholds"]["total"]
+    if "total" in dData["aDemand_hholds"]:
+        aTot_dmd = dData["aDemand_hholds"]["total"]
+    else:   # Two formats are possible.
+        aTot_dmd = dData["aDemand_hholds"]                     # There is no sub-key
+
+    sAll += "\nBuild housing (Demand - Supply):\n"
+    # Process the groups within the total
+    sTxt = ">   "
+    for sGroup in ["r", "h", "m", "l", "p"]:
+        iDelta = aTot_dmd[sGroup] - aTot_sup[sGroup]
+        sTxt += " {0}: {1:,};".format(sGroup, iDelta)
+    sTxt += "\n"
+    sAll += sTxt
+
 # PARENT
     sAll += "----------\n"
 
@@ -788,7 +805,7 @@ def pretty_print_single(ccTremb):
     # Obtain the total
     iTot_wkf = 0                        # Count them up for conveniance
     for sGroup in dDmd_wkf["total"]:
-        if sGroup == "iVeh_cnt": continue       # Not population.
+        if sGroup in ["iVeh_cnt", "iParking"]: continue       # Not population.
         iTot_wkf += dDmd_wkf["total"][sGroup]
 
     sTxt = ">   Grand Total: ({0:,})\n>      ".format(iTot_wkf)
@@ -810,7 +827,72 @@ def pretty_print_single(ccTremb):
         # Get the total for the itemised item.
         iItem_tot = 0                                 # Add up for conveniance
         for sGroup in dItem:
-            if sGroup in ["sCode", "sName", "iVeh_cnt"]:   # "or" the cheap way
+            if sGroup in ["sCode", "sName", "iVeh_cnt", "iParking"]:
+                continue
+            iItem_tot += dItem[sGroup]
+
+        # Hew setup vs old.
+        if "sCode" in dItem.keys():
+            sTxt = ">   [{2}] {0}: ({1:,})\n>      "
+            sTxt = sTxt.format(dItem['sName'], iItem_tot, dItem['sCode'])
+        else:
+            sTxt = ">   {0}: ({1:,})\n>      "
+            sTxt = sTxt.format(dItem['sName'], iItem_tot)
+
+        # Do the men on the top line
+        for sGroup in ["rm", "hm", "mm", "lm", "pm"]:
+            sTxt += " {0}: {1:,};".format(sGroup, dItem[sGroup])
+        sTxt += "\n>      "
+
+        # Do the women on the bottom line
+        for sGroup in ["rf",  "hf", "mf", "lf", "pf"]:
+            sTxt += " {0}: {1:,};".format(sGroup, dItem[sGroup])
+        sTxt += "\n>      "
+
+        # Sometimes company vehicles (both Y and county registrations) are
+        # recorded
+        if "iVeh_cnt" in dItem.keys():
+            sTxt += " tot road veh: {0:,};".format(dItem["iVeh_cnt"])
+
+        # Sometimes offices have parking in the basement
+        if "iParking" in dItem.keys():
+            sTxt += " parking bays: {0:,};".format(dItem["iParking"])
+        sTxt += "\n>\n"
+        sAll += sTxt
+
+
+# SUPPLY OF WORKFORCE:
+    sAll += "----------\n"
+    sAll += "Workforce Supply: \n"
+    dSup_wkf = dData["aSupply_workforce"]
+
+    # Obtain the total
+    iTot_wkf = 0                        # Count them up for conveniance
+    for sGroup in dSup_wkf["total"]:
+        if sGroup == "iVeh_cnt": continue       # Not population.
+        iTot_wkf += dSup_wkf["total"][sGroup]
+
+    sTxt = ">   Grand Total: ({0:,})\n>      ".format(iTot_wkf)
+
+    # Do the men on the top line
+    for sGroup in ["rm", "hm", "mm", "lm", "pm"]:
+        sTxt += " {0}: {1:,};".format(sGroup, dSup_wkf["total"][sGroup])
+    sTxt += "\n>      "
+
+    # Do the women on the bottom line
+    for sGroup in ["rf",  "hf", "mf", "lf", "pf"]:
+        sTxt += " {0}: {1:,};".format(sGroup, dSup_wkf["total"][sGroup])
+    sTxt += "\n>\n"
+    sAll += sTxt
+
+    # ITEMISED:
+    aItemised = dSup_wkf["aItemised"]
+    for dItem in aItemised:
+        # Get the total for the itemised item.
+        iItem_tot = 0                                 # Add up for conveniance
+        for sGroup in dItem:
+            # Below is a cheap way of doing OR
+            if sGroup in ["sCode", "sName", "iVeh_cnt", "iParking"]:
                 continue
             iItem_tot += dItem[sGroup]
 
@@ -958,27 +1040,43 @@ def pretty_print_single(ccTremb):
     sAll += "Demographics:\n"
     dDfx = dData["aDemographics"]       # Short-cut
     if dDfx != {}:
+    # Access data on how many pre-school units are needed.
+        cCity_services = db.city_services_const(ccTremb)
+        xParam = {}
+        xRestr = {"_id":0}
+        dCity_query = cCity_services.find(xParam, xRestr)
+
+        # Copy out the query
+        aCity_copy = []
+        for dItem in dCity_query:
+            aCity_copy.append(dItem)
+
+    # Start publishing the data
         sTxt = ">   TOTAL PEOPLE: {0:,}\n>\n"
         sAll += sTxt.format(dDfx["iTOT-PAX"])
 
+    # Woring married
         sTxt = ">   Married working people (aHHM-PAX):\n>      "
         for sGroup in ["r", "h", "m", "l", "p"]:
             sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHM-PAX"][sGroup])
         sTxt += "\n>\n"
         sAll += sTxt
 
+    # Retired married
         sTxt = ">   Married retired people (aHHR-PAX):\n>      "
         for sGroup in ["r", "h", "m", "l", "p"]:
             sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHR-PAX"][sGroup])
         sTxt += "\n>\n"
         sAll += sTxt
 
+    # Working unmarried
         sTxt = ">   Unmarried working people ('bachelors') (aHHB-PAX):\n>      "
         for sGroup in ["r", "h", "m", "l", "p"]:
             sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHB-PAX"][sGroup])
         sTxt += "\n>\n"
         sAll += sTxt
 
+    # Retired Unmarried
         sTxt = ">   Unmarried retired people ('golden oldies') (aHHO-PAX):"
         sTxt += "\n>      "                 # We exceeded the 80 column limit
         for sGroup in ["r", "h", "m", "l", "p"]:
@@ -986,12 +1084,14 @@ def pretty_print_single(ccTremb):
         sTxt += "\n>\n"
         sAll += sTxt
 
+    # Disabled
         sTxt = ">   Disabled people, not in a nursing home (aHHD-PAX):\n>      "
         for sGroup in ["r", "h", "m", "l", "p"]:
             sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHD-PAX"][sGroup])
         sTxt += "\n>\n"
         sAll += sTxt
 
+    # Housewifing
         sTxt = ">   Not working: housewife/-husband OR disabled caregiving "
         sTxt += "(aHHX-PAX):\n>      "
         for sGroup in ["r", "h", "m", "l", "p"]:
@@ -999,6 +1099,7 @@ def pretty_print_single(ccTremb):
         sTxt += "\n>\n"
         sAll += sTxt
 
+    # Unemployed
         sTxt = ">   Unemployed: wanting to work but no work available "
         sTxt += "(aUNE-PAX):\n>      "
         for sGroup in ["r", "h", "m", "l", "p"]:
@@ -1006,52 +1107,67 @@ def pretty_print_single(ccTremb):
         sTxt += "\n>\n"
         sAll += sTxt
 
+    # Preschoolers
         sTxt = ">   Preschoolers, all groups                 (ED0-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED0-PAX"])
 
+    # Primary schoolers
         sTxt = ">   Primary schoolers, all groups            (ED1-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED1-PAX"])
 
+    # Middle school
         sTxt = ">   Middle schoolers, all groups             (ED2-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED2-PAX"])
 
+    # High school
         sTxt = ">   High schoolers, all groups               (ED3-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED3-PAX"])
 
+    # Private school
         sTxt = ">   Religious or Private schoolers, all grps (ED4-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED4-PAX"])
 
+    # College
         sTxt = ">   College students, all groups             (ED5-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED5-PAX"])
 
+    # Polytechnic
         sTxt = ">   Polytechnic students, all groups         (ED6-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED6-PAX"])
 
+    # University
         sTxt = ">   University students, all groups          (ED7-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED7-PAX"])
 
+    # RFU
         sTxt = ">   --- (empty slot), all groups             (ED8-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED8-PAX"])
 
+    # Disabled
         sTxt = ">   Disabled students, all groups            (ED9-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["ED9-PAX"])
 
+    # Nursing home, rich
         sTxt = ">   Nursing home for the rich, group 'r'     (OAR-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["OAR-PAX"])
 
+    # Nursing home, standard
         sTxt = ">   Old Age Home, all groups                 (OAH-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["OAH-PAX"])
 
+    # Private nurses
         sTxt = ">   Private nurse, all groups                (OAN-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["OAN-PAX"])
 
+    # Youth Prison
         sTxt = ">   Youth prison, all groups                 (YXJ-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["YXJ-PAX"])
 
+    # Adult prison
         sTxt = ">   Adult prison, all groups                 (YXA-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["YXA-PAX"])
 
-        # RELIGION:
+    # RELIGION:
         cDemogfx_const = db.demogfx_const(ccTremb)
         xParam = {}
         xRestr = {"_id":0}
@@ -1069,7 +1185,22 @@ def pretty_print_single(ccTremb):
         for dRel in adReligion:
             sCode = dRel["code"]
             sTxt = ">      {0} ({1}): {2}\n"
-            sAll += sTxt.format(dRel["adj"], sCode, dDfx["aREL-PAX"][sCode])
+            if sCode in dDfx["aREL-PAX"]:
+                sAll += sTxt.format(dRel["adj"], sCode, dDfx["aREL-PAX"][sCode])
+            else:       # No religion numbers
+                sAll += sTxt.format(dRel["adj"], sCode, "N/A")
+
+    # units required:
+        sAll += ">   Units required:\n"
+        for dItem in aCity_copy:
+            sCode = dItem["code"]               # "5YP"
+            sName = dItem["name"]               # "Police"
+            sServes = dItem["serves"]           # Population group concerned
+            iCapacity = dItem["capacity"]       # Customers per unit
+            fUnits_reqd = dDfx[sServes] / iCapacity # Calculate!
+            sTxt = ">       |{0:7.2f} for [{1}] {2}\n"
+            sAll += sTxt.format(fUnits_reqd, sCode, sName)
+
 
         sTxt = ">   Potential public transport users         (BUS-PAX): {0:,}\n"
         sAll += sTxt.format(dDfx["BUS-PAX"])
@@ -1136,11 +1267,12 @@ def pretty_print_single(ccTremb):
 
 
 #-------------------------------------------------------------------------------
-# B: BALANCE A TOWN
+# B: BALANCE A TOWN: DEMOGRAPHICS BASED ON INDUSTRIAL DEMAND
 #-------------------------------------------------------------------------------
 def balance_town(ccTremb):
-    """ Picks up the geo-code from the prompt. It then assigns the basic
-    services:
+    """ Adds basic services and calculates demographics based on industrial
+    demand of the town. Used on small scale maps. The following basic services
+    are assinged; they are ASSUMED to be built in the town.
         (5YP) police,
         (5YF) fire,
         (5YH) community clinic,
@@ -1154,9 +1286,9 @@ def balance_town(ccTremb):
         (5LX) community library,
         (5TH) community theatre,
         (5PO) community post office,
-    ... using a subroutine. Once they are in, then a 5-iteration loop is entered
-    where the total population is recalculated. As the population increases,
-    the Population-dependant services are adjusted accordingly
+    Once they are in, then a 5-iteration loop is entered where the total
+    population is recalculated. As the population increases, the
+    Population-dependant services are adjusted accordingly
         """
 
     sTxt = ("\nPlease enter the geo-code ('GYN-G' for example) of the area" +
@@ -1180,7 +1312,536 @@ def balance_town(ccTremb):
     print("\nBalancing complete")
     return True
 
+#-------------------------------------------------------------------------------
+# C: BALANCE A CITY: DEMOGRAPHICS BASED ON RESIDENTIAL AREAS
+#-------------------------------------------------------------------------------
+def balance_city(ccTremb):
+    """ Adds basic services and calculates demographics based on actual number
+    of residential properties in the suburb. Used on large-scale maps. The
+    following basic services are assinged; they are DECLARED MANUALLY to be
+    built in the town.
+        (5YP) police,
+        (5YF) fire,
+        (5YH) community clinic,
+        (5YG) community governance,
+        (ED0) community pre-school,
+        (ED1) community primary school,
+        (ED2) community middle school,
+        (ED3) community high school,
+        (OAH) old age home,
+        (5SŠ) small shop (the corner grocer),
+        (5LX) community library,
+        (5TH) community theatre,
+        (5PO) community post office,
+    Once they are in, then a 5-iteration loop is entered where the total
+    population is recalculated. As the population increases, the
+    Population-dependant services are adjusted accordingly
+        """
 
+    sTxt = ("\nPlease enter the geo-code ('VAA-00Y' for example) of the area" +
+    " you wish to\nbalance")
+    print(sTxt)
+    sGeo_code = input().upper()
+
+# Build the first demographic
+    sOut = qHhold_supplies(ccTremb, sGeo_code)
+    if sOut == None:
+        return None
+
+    print("----\n")
+    print("TOT PAX: {0}".format(sOut))
+    print("----\n")
+
+
+
+
+
+#-------------------------------------------------------------------------------
+def qHhold_supplies(ccTremb, sGeo_code):
+    """ This method does the actual work. It takes in the Household supplies
+    numbers and generates the demographics from that. It is used when designing
+    cities on large scale (1:50k), where the placement of schools, police,
+    clinics, ect is significant.
+    """
+
+    import random
+    import math
+
+# VERIFY THE GEO-CODE AND EXTRACT THE ELEMENT.
+    cDest = db.destinations(ccTremb)
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None: return None
+
+# Extract the supply households numbers
+    dTot_hhold = dGeo_element["aSupply_hholds"]["total"]
+
+# ACCESS THE DEMOGRAPHICS DATA BASE
+    cDemo = db.demogfx_const(ccTremb)
+    xParam = {}
+    xRestr = {"_id":0}
+    dDemo_harvest = cDemo.find(xParam, xRestr)
+
+    dDfx_const = {}
+    for dQuery in dDemo_harvest:
+        for xKey, xVal in dQuery.items():
+            dDfx_const[xKey] = xVal    # Copy out the data
+
+# Reset counters
+    dDfx_out = qZero_demogfx()
+    dTot_sup_wkf = {"rm":0, "rf":0, "hm":0, "hf":0,
+        "mm":0, "mf":0, "lm":0, "lf":0, "pm":0, "pf":0}
+    iTot_pax = 0                                              # Total population
+    iRes_veh = 0                              # Number of number-plates required
+
+# Get the religion going.
+    dReligion = {}
+    for denomination in dDfx_const["aaReligion"]:
+        sCode = denomination["code"]                # Extract the religion code
+        dReligion[sCode] = 0                    # Make a zero list of the codes
+
+# Process each demographic individually
+    for sIncome in ["r", "h", "m", "l", "p"]:
+        iGrp_pax = 0
+        if dTot_hhold[sIncome] == 0: continue               # Skip if zero data
+        iHhold_cnt = dTot_hhold[sIncome]                    # Household count
+
+        # Married couples (working and retired)
+        fRatio_MvsB = dDfx_const["aPartners"][sIncome]
+        fMarried = iHhold_cnt * fRatio_MvsB
+        iMarried = int(round(fMarried))
+
+        # Bachlelor households
+        iBachelor = iHhold_cnt - iMarried
+
+        # Calculate the number of jailed adults
+        iCandidates = iMarried + iBachelor
+        for x in range(iCandidates):
+            # Prison
+            fRnd = random.random()
+            if fRnd < dDfx_const["prison_rate"]:
+                dDfx_out["YXA-PAX"] += 1    # Jailed protagonist
+
+            # Nursing home
+            fRnd = random.random()
+            if fRnd < dDfx_const["nursing_home_rate"]:
+                if sIncome == "r":
+                    dDfx_out["OAR-PAX"] += 1    # Rich retirement home
+                else:
+                    dDfx_out["OAH-PAX"] += 1    # Standard retirement home
+        # End of prison and retirement home
+
+        # Split Married couples into working and retired
+        iMin_age = dDfx_const["min_work_age"]  # 19
+        iMax_age = dDfx_const["max_work_age"]  # 65
+        iLife_exp = dDfx_const["life_expect"]  # 80
+
+        # Household "duration": People are in housholds for 80 - 19 = 61 years
+        # So, 61 is our 100% range.
+        iHhold_duration = iLife_exp - iMin_age  # 61
+
+        # Duration of working is: from 19 to 65: That is 46 years of working
+        iWorklife = iMax_age - iMin_age     # 46
+        fRatio_WvsR = iWorklife / iHhold_duration    # 46/61 = 0.754
+
+        # Calculate the ratio of working couples
+        fWork_couples = fRatio_WvsR * iMarried
+        iWork_couples = int(round(fWork_couples, 0))
+
+        # Retired couples
+        iRetired_couples = iMarried - iWork_couples
+
+        # Working bachelors.
+        fWork_bachelors = fRatio_WvsR * iBachelor
+        iWork_bachelors = int(round(fWork_bachelors, 0))
+        iRetired_bachelors = iBachelor - iWork_bachelors
+
+# CONVERT HOUSEHOLDS TO PEOPLE:
+        fRatio_fret = dDfx_const["fraternal_rate"]        # 1.9 singles / hhold
+
+        # Calculate the people from the couples
+        fMarried_pax = iWork_couples * 2.0            # Children will come later
+        fRetired_pax = iRetired_couples * 2.0         # Retired people
+        fBachelor_pax = iWork_bachelors * fRatio_fret # Unmarried workers
+        fGold_old_pax = iRetired_bachelors * fRatio_fret # Unmarried, retired
+
+        # Round off and convert format
+        iHhm_pax = int(round(fMarried_pax, 0))
+        iHhr_pax = int(round(fRetired_pax, 0))
+        iHhb_pax = int(round(fBachelor_pax, 0))
+        iHho_pax = int(round(fGold_old_pax, 0))
+
+        # Sort out the demographics
+        dDfx_out["aHHM-PAX"][sIncome] += iHhm_pax
+        dDfx_out["aHHR-PAX"][sIncome] += iHhr_pax
+        dDfx_out["aHHB-PAX"][sIncome] += iHhb_pax
+        dDfx_out["aHHO-PAX"][sIncome] += iHho_pax
+
+        # Add up the population
+        iGrp_pax += iHhm_pax
+        iGrp_pax += iHhr_pax
+        iGrp_pax += iHhb_pax
+        iGrp_pax += iHho_pax
+
+        # Sort out the workforce demand: The issue is that it is not customised
+        # towards the industry: I don't know if the industry is going to be
+        # dominated by a single gender. hence, the gender is split equally
+        sCode_m = "{0}m".format(sIncome)        # Produces "rm" for rich male
+        sCode_f = "{0}f".format(sIncome)        # Produces "pf" for poor female
+
+        # The working married
+        iTot = iHhm_pax                         # Easier to cut and paste
+        fMale = iTot / 2.0                      # Men from the total population
+        iMale = int(round(fMale, 0))            # Round-off and convert
+        iFemale = iTot - iMale                  # Bias towards men
+        dTot_sup_wkf[sCode_m] += iMale
+        dTot_sup_wkf[sCode_f] += iFemale
+
+        # The working bachelors
+        iTot = iHhb_pax                         # Easier to cut and paste
+        fMale = iTot / 2.0                      # Men from the total population
+        iMale = int(round(fMale, 0))            # Round-off and convert
+        iFemale = iTot - iMale                  # Bias towards men
+        dTot_sup_wkf[sCode_m] += iMale
+        dTot_sup_wkf[sCode_f] += iFemale
+
+# ADD NON-WORKING PEOPLE
+        fDisabled =     dDfx_const["aDisabled_school"][sIncome]
+        fHousewife =    dDfx_const["aHousewife"][sIncome]
+        iChild_cnt =    dDfx_const["aChildren"][sIncome]   # ch. per family
+        fCollege =      dDfx_const["aCollege"][sIncome]
+        fPolytech =     dDfx_const["aPolytech"][sIncome]
+        fUniversity =   dDfx_const["aUniversity"][sIncome]
+        fPvt_school =   dDfx_const["aSpeciality_school"][sIncome]
+        fPreschool =    dDfx_const["preschool_rate"]
+        fPrison =       dDfx_const["prison_rate"]
+        fNursing_home = dDfx_const["nursing_home_rate"]
+
+# CHILDREN
+        for iCouple in range(iMarried):         # Married, non-retired have kids
+            # Randomly choose the number of children and their ages. If a child
+            # is under 18, they stay with their parents. Otherwise, they are
+            # ignored.
+
+            # booleans to make life a bit easier
+            bDisabled_child = False
+            bHousewife = False
+
+            for iChild in range(iChild_cnt):
+                # Hazard a guess of the child's age. The calculation below is
+                # means 65 - 18 = 47. The parents are in the range of 18 to 65.
+                # This means that the child could be between 0 and 47 years old.
+                # The '+2' allows for a scenario where the family did not make
+                # a child yet.
+                iMax_work_age = dDfx_const["max_work_age"]
+                iMin_work_age = dDfx_const["high_max_age"]
+                iOffset = 2                     # For a recently married family
+
+                iAge_range = iMax_work_age - iMin_work_age + iOffset
+                iRnd_age = random.randrange(iAge_range) # Pick age of child
+                iRnd_age -= 2      # compensate for a new family. give them time
+
+            # Disabled child
+                fRnd = random.random()
+                if fRnd < fDisabled:
+                    bDisabled_child = True
+
+            # Child's age:
+                bInfant = False
+                bToddler = False
+                bPrimary = False
+                bMiddle = False
+                bHigh = False
+                bTertiary = False
+
+                if iRnd_age < 0:              # Childless scenario
+                    fPrison *= 0.00           # Adjust chance of prison with age
+                elif iRnd_age <= dDfx_const["infant_max_age"]:
+                    bInfant = True
+                    fPrison *= 0.00           # Adjust chance of prison with age
+                elif iRnd_age <= dDfx_const["toddler_max_age"]:
+                    bToddler = True
+                    fPrison *= 0.00           # Adjust chance of prison with age
+                elif iRnd_age <= dDfx_const["primary_max_age"]:
+                    bPrimary = True
+                    fPrison *= 0.33           # Adjust chance of prison with age
+                elif iRnd_age <= dDfx_const["middle_max_age"]:
+                    bMiddle = True
+                    fPrison *= 0.66           # Adjust chance of prison with age
+                elif iRnd_age <= dDfx_const["high_max_age"]:
+                    bHigh = True
+                    fPrison *= 1.00           # Adjust chance of prison with age
+                elif iRnd_age <= dDfx_const["tertiary_max_age"]:
+                    bTertiary = True
+                    fPrison *= 1.00           # Adjust chance of prison with age
+                else:
+                    pass
+
+                # Tertiary education
+                bCollege = False
+                bPolytech = False
+                bUniversity = False
+
+                if  bTertiary:
+                # Between 18 and 25
+                    # College chances of the child
+                    fRnd = random.random()
+                    if fRnd < fCollege:
+                        bCollege = True
+
+                    # College chances of the child
+                    fRnd = random.random()
+                    if fRnd < fPolytech:
+                        bPolytech = True
+
+                    # College chances of the child
+                    fRnd = random.random()
+                    if fRnd < fUniversity:
+                        bUniversity = True
+
+                # CRIMINAL CHILD
+                fRnd = random.random()
+                if fRnd < fPrison:
+                    # The child is a criminal!
+                    if bInfant or bToddler or bPrimary or bMiddle or bHigh:
+                        # Remove child from school
+                        bInfant = False
+                        bToddler = False
+                        bPrimary = False
+                        bMiddle = False
+                        bHigh = False
+                        dDfx_out["YXJ-PAX"] += 1    #Juvenile prison
+                    else:
+                        # Remove child from additional schooling
+                        bCollege = False
+                        bPolytech = False
+                        bUniversity = False
+                        dDfx_out["YXA-PAX"] += 1    # Adult prison
+                    # end of prison selection
+                # end of going to prison
+
+                # Sort out the disabled child
+                bSchool = bToddler or bPrimary or bMiddle or bHigh
+                if bSchool and bDisabled_child:
+                    # Remove child from normal school
+                    bToddler = False
+                    bPrimary = False
+                    bMiddle = False
+                    bHigh = False
+                    dDfx_out["ED9-PAX"] += 1
+                    iGrp_pax += 1                      # Add to population total
+
+                # School for disabled
+                if (bTertiary or bSchool) and bDisabled_child:
+                    # Child is less than 25 years old and disabled, hence stays
+                    # with parent. However, the tertiary level students can
+                    # study further.
+                    if sIncome == "r":
+                        dDfx_out["OAN-PAX"] += 1
+                        iGrp_pax += 1                  # Add to population total
+
+                    else:
+                        bHousewife = True
+                        dDfx_out["aHHX-PAX"][sIncome] += 1  # Caregiver
+                        iGrp_pax += 1                  # Add to population total
+
+                if bTertiary and bDisabled_child:
+                    dDfx_out["aHHD-PAX"][sIncome] += 1 # Unempl. disabl. child
+                    iGrp_pax += 1                      # Add to population total
+
+            # Students, in order of prestege
+                if bUniversity:
+                    bPolytech = False
+                    bCollege = False
+                    dDfx_out["ED7-PAX"] += 1
+                    iGrp_pax += 1                      # Add to population total
+
+                if bPolytech:
+                    bCollege = False
+                    dDfx_out["ED6-PAX"] += 1
+                    iGrp_pax += 1                      # Add to population total
+
+                if bCollege:
+                    dDfx_out["ED5-PAX"] += 1
+                    iGrp_pax += 1                      # Add to population total
+
+            # Compulsory preschool?
+                fRnd = random.random()
+                if fRnd < fPreschool:
+                    bPreschool = True
+                else:
+                    bPreschool = False
+
+            # Standard or private school?
+                fRnd = random.random()
+                if (fRnd < fPvt_school) and bSchool and not bDisabled_child:
+                    # Private or religious school, for school going,
+                    # non-disabled children
+                    dDfx_out["ED4-PAX"] += 1
+                    iGrp_pax += 1                      # Add to population total
+
+                    bHigh = False
+                    bMiddle = False
+                    bPrimary = False
+                    bPreschool = False
+
+            # High school:
+                if bHigh:
+                    dDfx_out["ED3-PAX"] += 1
+                    iGrp_pax += 1                      # Add to population total
+
+                if bMiddle:
+                    dDfx_out["ED2-PAX"] += 1
+                    iGrp_pax += 1                      # Add to population total
+
+                if bPrimary:
+                    dDfx_out["ED1-PAX"] += 1
+                    iGrp_pax += 1                      # Add to population total
+
+                if bToddler and bPreschool:
+                    dDfx_out["ED0-PAX"] += 1
+                    iGrp_pax += 1                      # Add to population total
+                # End of individual child
+            # End of children
+
+            # SORT OUT NON-WORKING WIFE:
+            fRnd = random.random()
+            if fRnd < fPrison:
+                dDfx_out["YXA-PAX"] += 1
+
+            # Wife in nursing home:
+            fRnd = random.random()
+            if fRnd < fNursing_home:
+                iGrp_pax += 1
+                if sIncome == "r":
+                    dDfx_out["OAR-PAX"] += 1
+                else:
+                    dDfx_out["OAH-PAX"] += 1
+
+            # Housewife by choice
+            fRnd = random.random()
+            if not bHousewife and fRnd < fHousewife:
+                dDfx_out["aUNE-PAX"][sIncome] += 1 # Unemployed cntr
+                iGrp_pax += 1
+            # End of couples
+
+        iTot_pax += iGrp_pax        # Sort out the totals
+
+        # RELIGION GOES HERE
+        for denomination in dDfx_const["aaReligion"]:
+            sCode = denomination["code"]            # "3R", "AN", ...
+            fRatio = denomination[sIncome]          # Demographic group
+            fCongragation = iGrp_pax * fRatio
+            iCongragation = int(round(fCongragation, 0))
+            dReligion[sCode] += iCongragation       # Add up across demographics
+
+    # VEHICLE COUNTS
+        fRet = dDfx_const["aaVehicles"]["retiree_derate"]
+        fBac = dDfx_const["aaVehicles"]["bachlelor_derate"]
+
+        # Loop through each of the categories: bicycle, motorbike, car, airplane
+        for iCnt in range(4):
+        # Select the transport technology
+            # Bicycle
+            if iCnt == 0:
+                fType = dDfx_const["aaVehicles"]["aBicycle"][sIncome]
+                sVeh_type = "VEH-BIC"
+
+            # Motorbike
+            elif iCnt == 1:
+                fType = dDfx_const["aaVehicles"]["aMotorbike"][sIncome]
+                sVeh_type = "VEH-MBK"
+
+            # Car
+            elif iCnt == 2:
+                fType = dDfx_const["aaVehicles"]["aCar"][sIncome]
+                sVeh_type = "VEH-CAR"
+
+            # Aircraft
+            elif iCnt == 3:
+                fType = dDfx_const["aaVehicles"]["aAircraft"][sIncome]
+                sVeh_type = "VEH-AIR"
+
+        # MARRIED WORKING HOUSEHOLD
+            fFactor = fType
+            fNo_of_veh = dDfx_out["aHHM-PAX"][sIncome] * fFactor
+            iNo_of_veh = int(round(fNo_of_veh, 0))
+            dDfx_out[sVeh_type] += iNo_of_veh
+
+        # MARRIED RETIRED HOUSEHOLD
+            fFactor = fType * fRet
+            fNo_of_veh = dDfx_out["aHHR-PAX"][sIncome] * fFactor
+            iNo_of_veh = int(round(fNo_of_veh, 0))
+            dDfx_out[sVeh_type] += iNo_of_veh
+
+        # BACHELOR WORKING HOUSEHOLD
+            fFactor = fType * fBac
+            fNo_of_veh = dDfx_out["aHHB-PAX"][sIncome] * fFactor
+            iNo_of_veh = int(round(fNo_of_veh, 0))
+            dDfx_out[sVeh_type] += iNo_of_veh
+
+        # MARRIED RETIRED HOUSEHOLD
+            fFactor = fType * fRet * fBac
+            fNo_of_veh = dDfx_out["aHHR-PAX"][sIncome] * fFactor
+            iNo_of_veh = int(round(fNo_of_veh, 0))
+            dDfx_out[sVeh_type] += iNo_of_veh
+
+            if sVeh_type in ["VEH-MBK", "VEH-CAR"]:     # Cheap way of OR-ing
+                iRes_veh += dDfx_out[sVeh_type]         # From all groups
+
+    # DEMAND FOR PUBLIC TRANSPORT
+#           "BUS-PAX": 0,       # Number of passangers requiring public transport
+        # End of the for-loop for vehicle types
+
+    # End of income level
+    dDfx_out["aREL-PAX"] = dReligion               # Add everybody's religion in
+    aSup_wkf = {
+        "total": dTot_sup_wkf,                    # Only totals calc'd here
+        "aItemised": []                           # Empty, as this is the 'lead'
+    }
+
+    # Add up the vehicles
+    aVehicles = dGeo_element["aVehicles"]
+    if aVehicles == {}:                           # Empty: not yet defined
+        aVehicles = {
+            "tot_road":iRes_veh,
+            "aItemised":{"residents":iRes_veh}
+            }
+    else:
+        aItemised = aVehicles["aItemised"]
+        if "residents" in aItemised.keys():
+            # We do have an entry alerady:
+            iOld_veh = aItemised["residents"]       # Get the current count
+            aVehicles["tot_road"] -= iOld_veh       # Remove old cnt from total
+            if aVehicles["tot_road"] < 0:
+                print("\n\aError in adjusting vehicle count. EXITING")
+                return None
+            # All is well: we can overwrite the vehicle count
+            aItemised["residents"] = iRes_veh
+            aVehicles["tot_road"] += iRes_veh
+        else:   # We don't have an entry
+            aItemised["residents"] = iRes_veh
+            aVehicles["tot_road"] += iRes_veh
+    # End of adding the vehicles
+
+# SAVE THE DATA
+    dDfx_out["iTOT-PAX"] = iTot_pax               # The overall population
+
+    xParam = {"geo_code": sGeo_code}
+    xNew_data = {"$set": {
+        "aSupply_workforce": aSup_wkf,
+        "aDemographics": dDfx_out,
+        "aVehicles": aVehicles,
+    }}
+
+    cDest.update_one(xParam, xNew_data)
+
+# SORT OUT THE DEMANDS
+    bRet = qServices_demands(ccTremb, sGeo_code)
+
+# ENTER THE FINAL TOTAL COUNT
+
+    print("City balanced in one iteration")
+    return iTot_pax
 #-------------------------------------------------------------------------------
 # E: EDIT AN ENTRY
 #--------------------------------------------------------------------------------
@@ -1772,7 +2433,7 @@ def qZero_demogfx():
     return dService_demands
 
 #-------------------------------------------------------------------------------
-def qHhold_demands(ccTremb, sGeo_code):
+def qHhold_demands(ccTremb, sGeo_code, bHhold_only = False):
     """ This method does the actual work, of building families. It has been
     seperated out as to allow for it to be invoked automatically and without
     operator prompts. Often, the city needs to be rebalanced. Method writes the
@@ -2004,7 +2665,7 @@ def qHhold_demands(ccTremb, sGeo_code):
                 fType = dDfx["aaVehicles"]["aCar"][sIncome]
                 sVeh_type = "VEH-CAR"
 
-            # Vehicle
+            # Aircraft
             elif iCnt == 3:
                 fType = dDfx["aaVehicles"]["aAircraft"][sIncome]
                 sVeh_type = "VEH-AIR"
@@ -2043,8 +2704,13 @@ def qHhold_demands(ccTremb, sGeo_code):
     iNew_vehicles += dService_demands["VEH-CAR"]    # Cars
 
     iLen = len(aVehicles)
+    if iLen == 0:            # Not yet defined. 
+        print("\a\nError: limited data. Exiting")
+        return None
+
     if iLen == 1:            # Only 'tot_road' item is there,
         aVehicles["aItemised"] = {}               # Add a layer
+
 
     # Update the existing elements. Add 'town' to the itemised elements
     aVehicles["aItemised"]["residents"] = iNew_vehicles
@@ -2057,10 +2723,15 @@ def qHhold_demands(ccTremb, sGeo_code):
 
 # UPDATE ALL THE DATA
     xParam = {"geo_code":sGeo_code}
-    xNew_data = {"$set": {
-            "aDemand_hholds": dTot_hhold_dmd,
-            "aDemographics": dService_demands,
-            "aVehicles": aVehicles}}
+    if bHhold_only:         # 1:50k map generates demand
+        xNew_data = {"$set": {
+                "aDemand_hholds": dTot_hhold_dmd,
+                }}
+    else:                   # Full balancing (default)
+        xNew_data = {"$set": {
+                "aDemand_hholds": dTot_hhold_dmd,
+                "aDemographics": dService_demands,
+                "aVehicles": aVehicles}}
     cDest.update_one(xParam, xNew_data)
 
     return iTot_pax
@@ -2077,9 +2748,20 @@ def household_demands(ccTremb):
             " in question")
     print(sTxt)
     sGeo_code = input().upper()
-    xResp = qHhold_demands(ccTremb, sGeo_code)
+    xResp = qHhold_demands(ccTremb, sGeo_code, True)
     if xResp == None:
         return None
+
+#-------------------------------------------------------------------------------
+# H: ADD HOUSING
+#-------------------------------------------------------------------------------
+def add_housing(ccTremb):
+    """ Dummy routine to get the user to use the external function. It is done
+    like that as to allow each housing block to be documented in more detail.
+    This will allow for easier manipulation (like destruction, densification)
+    """
+    print("\n\aPlease use the external function")
+    return None
 
 #-------------------------------------------------------------------------------
 # M: ADD A MAP
@@ -2199,9 +2881,10 @@ def qServices_demands(ccTremb, sGeo_code):
         # action and remove it first.
 
         sTarget_name = sItem_name.lower()                # Make case insensitive
-        sThis_name = aItemised[-1]["sName"].lower()      # Extract the last item
-        if sTarget_name == sThis_name:
-            del aItemised[-1]                        # Remove object of interest
+        if len(aItemised) > 0:
+            sThis_name = aItemised[-1]["sName"].lower()  # Extract the last item
+            if sTarget_name == sThis_name:
+                del aItemised[-1]                    # Remove object of interest
 
         # count the number of duplicates
         iTot_items = len(aItemised)
@@ -2370,6 +3053,111 @@ def add_services_demand(ccTremb):
         return None
 
 #-------------------------------------------------------------------------------
+# T: UPDATE PARENT WITH CHILDREN'S DATA
+#-------------------------------------------------------------------------------
+def type_summary(ccTremb):
+    """ Outputs a summary (and the total) of all the people employed in a
+    specific industry. For example, to obtain the total number of office workers
+    request data for 'OMB' """
+
+# Enter the geo code for the area in question
+    sTxt = ("\nPlease enter the geo-code ('VAA-00A' for example) for the area" +
+            " in question")
+    print(sTxt)
+    sGeo_code = input().upper()
+    cDest = db.destinations(ccTremb)
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None:
+        return None
+
+# Verify that we have data for workforce demand
+    if dGeo_element["aDemand_workforce"] == {}:
+        sTxt = ("\n\a'Demand workforce' is empty. Exiting")
+        return None
+
+# Geo_code verified: request industry code input
+    sTxt = ("\nPlease enter the 'industry' code ('OMB' for example):")
+    print(sTxt)
+    sInd_input = input().upper()
+
+# Search through the elements.
+    aItemised = dGeo_element["aDemand_workforce"]["aItemised"]
+    aElements = []
+    for dThe_item in aItemised:
+        if dThe_item["sCode"] != sInd_input:
+            continue
+        aElements.append(dThe_item)
+
+# Elements extracted, lets process them.
+    if len(aElements) == 0:
+        print("\n\aNothing found")
+        return False
+
+# Open the text_file
+    # Open a text file where a copy of the information will be written to.
+    if sGeo_code == "*":
+        sFile_name = "world"                    # Exception in naming convention
+    else:
+        sFile_name = sGeo_code
+
+    # Work out a name of the file
+    sFile_path = "Logs/d_{0}_{1}.txt".format(sFile_name, sInd_input)
+    eFile_data = open(sFile_path, "w", encoding="utf-8")
+
+    # Write title:
+    eFile_data.write(
+        "Summary of {0} for {1}\n".format(
+            sInd_input, dGeo_element["aName"]["lat"]))
+
+# Process the data
+    # Initial conditions
+    dTot = {"rm":0, "rf":0, "hm":0, "hf":0, "mm":0, "mf":0,
+            "lm":0, "lf":0, "pm":0, "pf":0}
+    iTot = 0
+
+    # Calculate the total
+    aGroups = ["rm", "rf", "hm", "hf", "mm", "mf", "lm", "lf", "pm", "pf"]
+    for dEntry in aElements:
+        for sGroup in aGroups:             # to respect the 80-char column limit
+            dTot[sGroup] += dEntry[sGroup]             # Add up the demographics
+            iTot += dEntry[sGroup]
+    sTxt = ("\nTOTALS ({0:,}):\n".format(iTot))
+
+    # Do the men on the top line
+    for sGroup in ["rm", "hm", "mm", "lm", "pm"]:
+        sTxt += " {0}: {1:,};".format(sGroup, dTot[sGroup])
+    sTxt += "\n"
+
+    # Do the women on the bottom line
+    for sGroup in ["rf",  "hf", "mf", "lf", "pf"]:
+        sTxt += " {0}: {1:,};".format(sGroup, dTot[sGroup])
+    sTxt += "\n\n"
+    eFile_data.write(sTxt)
+
+# ITEMISED
+    eFile_data.write("------------\n")
+    for dEntry in aElements:
+        iTot = 0
+        for sGroup in aGroups:       # Calculate the total
+            iTot += dEntry[sGroup]
+        sTxt = ("\n{0} ({1:,}):\n")
+        sTxt = sTxt.format(dEntry["sName"], iTot)
+
+        # Do the men on the top line
+        for sGroup in ["rm", "hm", "mm", "lm", "pm"]:
+            sTxt += " {0}: {1:,};".format(sGroup, dEntry[sGroup])
+        sTxt += "\n"
+
+        # Do the women on the bottom line
+        for sGroup in ["rf",  "hf", "mf", "lf", "pf"]:
+            sTxt += " {0}: {1:,};".format(sGroup, dEntry[sGroup])
+        sTxt += "\n"
+        eFile_data.write(sTxt)
+    # Close the file
+    eFile_data.close()
+    return True
+
+#-------------------------------------------------------------------------------
 # U: UPDATE PARENT WITH CHILDREN'S DATA
 #-------------------------------------------------------------------------------
 def qqParent_update(ccTremb, dParent):
@@ -2407,10 +3195,12 @@ def qqParent_update(ccTremb, dParent):
     dParent["aDemand_workforce"]["aItemised"] = []
 
     # SUPPLY WORKFORCE
-    # RFU: Reserved for future use. It was initially designed with the same
-    # structure as the demand. However, it has lost its meaning. More
-    # meaningful is the 'supply_hholds', element which balances the household
-    # demands.
+    dParent["aSupply_workforce"]["total"] = {
+        "rm":0, "hm":0, "mm": 0, "lm":0, "pm":0,
+        "rf":0, "hf":0, "mf": 0, "lf":0, "pf":0,
+        "iVeh_cnt": 0
+    }
+    dParent["aSupply_workforce"]["aItemised"] = []
 
     # DEMAND HOUSEHOLDS
     # Which areas demand what type of 'class' of person
@@ -2500,7 +3290,18 @@ def qqParent_update(ccTremb, dParent):
         dParent["aDemand_workforce"]["aItemised"].append(dItem)
 
 # SUPPLY WORKFORCE:
-    # RFU
+        dChd_sup_wkf = dChild["aSupply_workforce"]
+        dItem = {}                              # Build for the itemised logging
+        dItem["sName"] = sChild_geo
+
+        for sGroup in dChd_sup_wkf["total"]:
+            # For the itemised list
+            dItem[sGroup] = dChd_sup_wkf["total"][sGroup]   # Transfer individ
+            # For the grand-total on the parent:
+            dParent["aSupply_workforce"]["total"][sGroup] += dItem[sGroup]
+
+        # Save the itemised list with the parent
+        dParent["aSupply_workforce"]["aItemised"].append(dItem)
 
 # DEMAND HOUSEHOLDS:
         dChd_dmd_hhd = dChild["aDemand_hholds"]
@@ -2683,6 +3484,7 @@ def qqParent_update(ccTremb, dParent):
     xParam = {"geo_code":dParent["geo_code"]}
     xNew_data = {"$set": {
             "aDemand_workforce": dParent["aDemand_workforce"],
+            "aSupply_workforce": dParent["aSupply_workforce"],
             "aDemand_hholds": dParent["aDemand_hholds"],
             "aSupply_hholds": dParent["aSupply_hholds"],
             "aDemographics": dParent["aDemographics"],
@@ -2886,7 +3688,7 @@ def add_workplace(ccTremb):
         sFarm_name_lat = input()
 
         sTxt = ("\nEnter the name in the Other alphabet (UTF-8 encoding) of " +
-            "the workplace")
+            "the workplace.\nPress 'enter' to opt out")
         print(sTxt)
         sFarm_name_cyr = input()
 
@@ -2905,6 +3707,7 @@ def add_workplace(ccTremb):
         return None
 
     # APPROXIMATE FOOTPRINT:
+    iParking = None                                     # For context breaking
     if sExact_footprint == "N":
         # Confirm information
         sTown_lat = dGeo_element["aName"]["lat"]
@@ -2949,6 +3752,65 @@ def add_workplace(ccTremb):
         dFarm_footprint = {
             "val":dFootprint["qty"],
             "uom":dFootprint["uom"]}
+
+        # Add optional parking
+        sTxt = "Do you want to specify 'parking'?"
+        sYn_parking = misc.get_binary(sTxt)
+        if sYn_parking == None: return None
+        if sYn_parking == "Y":
+            # Get the parking input
+            sTxt = ("Enter the area of the parking footprint in sq.mm"+
+                " from map.")
+            fParking_ftp = misc.get_float(sTxt)
+            if fParking_ftp == None: return None
+
+            # Calculate the parking area
+            aParking_area = misc.calc_area(fParking_ftp, fMap_scale)
+            if aParking_area == None: return None
+
+            # We know the real-world scale of the parking.
+            # In the real world, a parking bay is 5.5m x 2.5m (13.75sq.m).
+            # However, each vehicle needs access to that bay. The above
+            # calcuation gives 7.27veh/100sq.m. However, each vehilce needs some
+            # space to get to the bay. Hence, I'm using the figure of
+            # 6 veh / 100sq.m (600veh/ha)
+
+            # Verify the units of measurement
+            if aParking_area["uom"] != "sq.m":
+                print("\nUnexpected calculation result for office parking:\n" +
+                    "Expected 'sq.m', but got {0}\a".format(
+                        aParking_area["uom"]))
+                return None
+            fSqm_P = aParking_area["qty"]
+
+            print("Parking is: {0}{1}".format(
+                aParking_area["qty"], aParking_area["uom"]))
+
+            sTxt = ("On how many levels are cars parked?")
+            iFloors = misc.get_int(sTxt)
+            if iFloors == None: return None
+
+            if iFloors > 1 and fSqm_P < 90:
+                sTxt = ("\n\aInsufficient space for a ramp " +
+                    "(1:10 @ h = 3.6m, w = 2.5m). Exiting")
+                return None
+
+            if iFloors > 1:
+                fSqm_P -= 90    # Take room for the ramp
+
+            fVeh = 6.0 * fSqm_P / 100
+            iVeh = int(round(fVeh, 0))      # Round off to whole vehicles
+
+            fVeh = iVeh * iFloors           # We need to round off per floor.
+            iVeh = int(round(fVeh, 0))      # Round off to whole vehicles
+
+            iNo_of_buildings = 1            # Short circuit it.
+            fVeh = iVeh * iNo_of_buildings  # Parking in each building
+            iParking = int(round(fVeh, 0))      # Round off to whole vehicles
+
+            print("Total of {0} cars can be parked here".format(iVeh))
+        # End of parking additional
+    # End of exact footprint is known
 
 # CALCULATE THE STATISTICS GENERATED BY THE FARM/FACTORY
 #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
@@ -3005,6 +3867,8 @@ def add_workplace(ccTremb):
         # 1-STOREY OFFICE, FACTORY
         if sFarm_uom == "sq.m":
             fTot_main =  fFarm_val / fWkf_val
+        elif sFarm_uom == "ha":
+            fTot_main = (fFarm_val * 10e3) / fWkf_val
         else:
             print(sError.format(sWkf_uom, sFarm_uom))
             return None                             # Gross mismatch
@@ -3175,6 +4039,7 @@ def add_workplace(ccTremb):
         dThe_item[sGroup] = aDemogfx[sGroup]                # Itemised for farm
 
     dThe_item["iVeh_cnt"] = aDemogfx["veh_reg"]       # road-legal farm vehicles
+    if iParking != None: dThe_item["iParking"] = iParking   # CBD offices
     dGeo_element["aDemand_workforce"]["aItemised"].append(dThe_item)
 
     # VEHICLES << << << << << << << << << << << << << << << << << << << <<
@@ -3188,7 +4053,13 @@ def add_workplace(ccTremb):
         aItemised[sFarm_name_combo] = aDemogfx["veh_reg"]
     else:
         aItemised = dGeo_element["aVehicles"]["aItemised"]
-        aItemised[sFarm_name_combo] = aDemogfx["veh_reg"]
+        if sFarm_name_combo in aItemised:   # Already exists, so just add.
+            # This scenairo occurs when a named building shares functions. It
+            # could be an office block with small shops at the base of it.
+            aItemised[sFarm_name_combo] += aDemogfx["veh_reg"]
+        else:
+            aItemised[sFarm_name_combo] = aDemogfx["veh_reg"]
+        aVehicles["tot_road"] += aDemogfx["veh_reg"]
 
     # FARM FOOTPRINT << << << << << << << << << << << << << << << << << << << <<
     dGeo_element["aFootprint"][sFarm_name_combo] = dFarm_footprint
@@ -3464,7 +4335,11 @@ def add_wkp_auto(dBriefcase):
         aItemised[sName_lat] = aDemogfx["veh_reg"]
     else:
         aItemised = dGeo_element["aVehicles"]["aItemised"]
-        aItemised[sName_lat] = aDemogfx["veh_reg"]
+        # Building can exist: It could house both offices and shops.
+        if sName_lat in aItemised:
+            aItemised[sName_lat] += aDemogfx["veh_reg"]
+        else:
+            aItemised[sName_lat] = aDemogfx["veh_reg"]
 
     # FARM FOOTPRINT << << << << << << << << << << << << << << << << << << << <<
     dGeo_element["aFootprint"][sName_lat] = dFarm_footprint
@@ -3530,6 +4405,22 @@ def remove_workplace(ccTremb):
             "remove data.")
         return None
 
+    # Remove from the total
+    dTotal = dGeo_element["aDemand_workforce"]["total"]
+    iVeh_cnt = 0
+    for sElement in aItemised:
+        if sElement == "iVeh_cnt":
+            iVeh_cnt += sElement["iVeh_cnt"] # Multiple units in buinding
+        if sElement in ["sCode", "scode", "sName", "iVeh_cnt", "iParking"]:
+            continue            # skip over these
+        dTotal[sElement] -= aItemised[sElement]     # Subtract from grand total
+        if dTotal[sElement] < 0:
+            print("\n\aError in removing element from"+
+            " 'aDemand_workforce.total'")
+            return None
+        # End of 'if'
+    # End of updating the total
+
     # Delete the item in the list
     iIdx = 0
     iNo_of_items = len(aItemised)
@@ -3543,8 +4434,18 @@ def remove_workplace(ccTremb):
             break
 
     # ----------------
-    # Sort out the vehicles
-    dGeo_element["aVehicles"]["aItemised"].pop(sItem_name)
+# Sort out the vehicles
+    # Remove from total
+    dGeo_element["aVehicles"]["tot_road"] -= iVeh_cnt      # Remove from total
+    if dGeo_element["aVehicles"]["tot_road"] < 0:
+        print("\n\aError in removing vehicles from total count")
+        return None
+
+    # Remove from building
+    aVeh_Item = dGeo_element["aVehicles"]["aItemised"]
+    aVeh_Item[sItem_name] -= iVeh_cnt     # Buildings can contain mulitipe units
+    if aVeh_Item[sItem_name] <= 0:
+        dGeo_element["aVehicles"]["aItemised"].pop(sItem_name)
 
     # Sort out the footprint
     dGeo_element["aFootprint"].pop(sItem_name)
@@ -3569,6 +4470,56 @@ def remove_workplace(ccTremb):
     print("\n DATABASE ENTRY UPDATED")
     return True
 
+#-------------------------------------------------------------------------------
+# !: REMOVES DEMOGRAPHICS.
+#-------------------------------------------------------------------------------
+def reset_demographics(ccTremb):
+    """ Sets the population element (The "aDemographics" structure) to its
+    initial value.
+    """
+
+    # Get the geocode of the town in question
+    sTxt = ("\nPlease enter the geo code ('GYN-G') of the area you want to" +
+            " work on")
+    print(sTxt)
+    sGeo_code = input().upper()
+
+    # Look-up the geocode
+    cDest = db.destinations(ccTremb)
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None: return None
+
+    sTxt = ("\nYou are about to delete population data for {0}." +
+        "\nDo you want to continue?")
+    sTxt = sTxt.format(dGeo_element["aName"]["lat"])
+    sYn_reset_demo = misc.get_binary(sTxt)
+    if sYn_reset_demo == False: return None
+    if sYn_reset_demo == "N": return False
+
+    #This is it: we are reseting
+    aDemographics = qZero_demogfx()
+
+    # Also, take out the 'stray' resident vehicles
+    aVeh = dGeo_element["aVehicles"]
+    if aVeh != {}:
+        iRes = aVeh["aItemised"]["residents"]
+        aVeh["tot_road"] -= iRes                # Remove the residents vehilces
+        del aVeh["aItemised"]["residents"]      # Remove the whole entry
+
+        xNew_data = {"$set": {
+            "aDemographics": aDemographics,
+            "aVehicles": aVeh,
+            }}
+
+    else:
+        xNew_data = {"$set": {"aDemographics": aDemographics}}
+
+    xParam = {"geo_code":sGeo_code}
+
+    cDest.update_one(xParam, xNew_data)
+    print("\n DEMOGRAPHICS RESET")
+    return True
+
 
 #-------------------------------------------------------------------------------
 # SUB-MENU
@@ -3587,13 +4538,19 @@ DESTINATIONS SUB-MENU (D):
 3:  View single element
 4:  Pretty print a single element to a file
 
-B:  Balance town: add demographic for policemen, firefighters, teachers...
+B:  Balance town: Small-scale maps (1:1M) INDUSTRY DRIVEN DEMOGRAPHICS
+C:  Balance city: Large-scale maps (1:50k) HOUSEHOLD DRIVEN DEMOGRAPHICS
+D:  Balance non-residential: Household demand for commercial/industrial zones.
 E:  Edit an entry
 G:  Assign geo-codes to 'children'. (Use once a parent has all its children)
+H:  Add housing: Adds household supply
 M:  Add a map
+T:  Types (workforce demand type summary for example 'OMB')
 U:  Update parent with children's data (demographics, vehilces, resources)
 W:  Add workplace: generates population demand in town.
 X:  Remove workplace: Can be used to fix 'mistakes'
+
+!:  Reset demographics to zero.
 """ # Closes the multi=line txt
 
     bExit = False
@@ -3612,17 +4569,27 @@ X:  Remove workplace: Can be used to fix 'mistakes'
             view_single(ccTremb)
         elif sInput == "4":         # Pretty print single element
             pretty_print_single(ccTremb)
-        elif sInput == "B":         # Population-dependant workforce was added
+        elif sInput == "B":         # Industry driven balancing:
             balance_town(ccTremb)
+        elif sInput == "C":         # City balancing: Driven by available houses
+            balance_city(ccTremb)
+        elif sInput == "D":         # Calculates housing demand for non-res area
+            household_demands(ccTremb)
         elif sInput == "E":         # Edit an entry
             edit_entry(ccTremb)
         elif sInput == "G":         # Assign geocodes to all children
             assign_geocodes(ccTremb)
+        elif sInput == "H":         # Adds supply households
+            add_housing(ccTremb)
         elif sInput == "M":         # Add a map for referencing
             add_map_to_db(ccTremb)
+        elif sInput == "T":         # Outputs total of certain employer types.
+            type_summary(ccTremb)
         elif sInput == "U":         # Update parent with children's data
             update_parent(ccTremb)
         elif sInput == "W":         # Add workplaces (farms, offices)
             add_workplace(ccTremb)
         elif sInput == "X":         # Remove worplace
             remove_workplace(ccTremb)
+        elif sInput == "!":         # Remove demographics
+            reset_demographics(ccTremb)

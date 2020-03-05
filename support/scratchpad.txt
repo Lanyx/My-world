@@ -1,24 +1,47 @@
-Data is: {
-'my_id': 'S00-001',
-'host_geo_code': 'GYN-2',
-'aName': {
-    'lat': 'St Margret Freight Station',
-    'cyr': 'Стаця Товарова о им. Сьв Гося'
-},
-'type': 'Rail',
-'sub_type': 'Freight',
-'level': 'Cnty.',
-'aMap': {
-    'sRegion': 'No Map', 'iYear':None, 'fScale': None,
-    'x': None, 'y': None, 'a': None},
-'aArea': {'qty': None, 'uom': None},
-'aaServices':
-    {'aInclude':
-        ['GYN-2', 'GYN-8'],
-    'aExcept_for': []},
-'lWarehouse': [
-    {'resource': 'maize',         'weekly_output': 304.74, 'units': 't/wk'},
-    {'resource': 'straw (maize)', 'weekly_output': 38.86, 'units': 't/wk'},
-    {'resource': 'wheat',         'weekly_output': 53.74, 'units': 't/wk'},
-    {'resource': 'hay',           'weekly_output': 7.8, 'units': 't/wk'}],
-'iLoading_zones': 0}
+vaa-00y
+----
+dTot_hhold: {'r': 0, 'h': 0, 'm': 214, 'l': 0, 'p': 0}
+----
+aSupply_workforce: {
+    'rm': 0, 'rf': 0,
+    'hm': 0, 'hf': 0,
+    'mm': 159, 'mf': 160,
+    'lm': 0, 'lf': 0,
+    'pm': 0, 'pf': 0}
+----
+dDfx_out: {
+    'iTOT-PAX': 559,
+    'aHHM-PAX': {'r': 0, 'h': 0, 'm': 258, 'l': 0, 'p': 0},
+    'aHHR-PAX': {'r': 0, 'h': 0, 'm': 84, 'l': 0, 'p': 0},
+    'aHHB-PAX': {'r': 0, 'h': 0, 'm': 61, 'l': 0, 'p': 0},
+    'aHHO-PAX': {'r': 0, 'h': 0, 'm': 21, 'l': 0, 'p': 0},
+    'aHHX-PAX': {'r': 0, 'h': 0, 'm': 1, 'l': 0, 'p': 0},
+    'aHHD-PAX': {'r': 0, 'h': 0, 'm': 0, 'l': 0, 'p': 0},
+    'aUNE-PAX': {'r': 0, 'h': 0, 'm': 30, 'l': 0, 'p': 0},
+    'ED0-PAX': 16,
+    'ED1-PAX': 33,
+    'ED2-PAX': 33,
+    'ED3-PAX': 17,
+    'ED4-PAX': 3,
+    'ED5-PAX': 0,
+    'ED6-PAX': 0,
+    'ED7-PAX': 0,
+    'ED8-PAX': 0,
+    'ED9-PAX': 1,
+    'OAR-PAX': 0,
+    'OAH-PAX': 1,
+    'OAN-PAX': 0,
+    'YXJ-PAX': 0,
+    'YXA-PAX': 0,
+
+    'aREL-PAX': {},
+    'VEH-BIC': 0,
+    'VEH-MBK': 0,
+    'VEH-CAR': 0,
+    'VEH-AIR': 0,
+    'BUS-PAX': 0,
+    'misc': ''}
+----
+
+TOT PAX: 559
+----
