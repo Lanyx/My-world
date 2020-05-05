@@ -1,4 +1,4 @@
-All the stations at oncePretty print information was generated on 2019-11-23 09:32:54.580933
+All the stations at oncePretty print information was generated on 2020-03-29 15:32:06.429699
 
 S00-001 (St Margret Freight Station) [GYN-2]:
 >   (St Margret Freight Station / Стаця Товарова о им. Сьв Гося)
@@ -184,4 +184,8 @@ S00-016 (Godfrey Quarry South Freight Station) [GY0-0]:
 S00-017 (Godfrey Quarry North Freight Station) [GY0-0]:
 >   (Godfrey Quarry North Freight Station / Стаця Товарова о им. Богумирски Каменёлом Пулноцны)
 >   Muni. Rail-Freight
+
+S00-018 (Godfrey Airport) [GY0-0]:
+>   (Godfrey Airport / Лётниско о им. Богумир)
+>   Prov. Air-Pax
 

@@ -1,0 +1,29 @@
+Pretty print Housing request was generated on 2020-04-19 12:10:02.342625
+----------
+my_id: H00-01P
+Name: 'Fïàzþe' / 'Фяьжэ'
+----------
+Host: [VAA-00L] 'Wheatcart' / 'Вузэк Збожа'
+----------
+Map and area: 
+>   Region: Vænesston 1:50,000 (drawn in 2019)
+>   Position (mm) x: 386.487, y: 359.66
+>   Area on paper (sq.mm) a: 0.181
+----------
+Building(s):
+>   Description: (4x4)x1M
+>   Type: Res
+>   Sub-type: lin apt
+>   Demographic code: 'm'
+>   Units per floor:  4
+>   Number of floors: 4
+>   Number of buildings: 1
+>   Total units: 16
+>   Building footprint: 452.0sq.m
+>   Area of plot: 452.0sq.m
+----------
+Parking (cars):
+>   Levels: 1
+>   Total vehicle spaces: 27
+>   Area on map: 0.181sq.mm
+

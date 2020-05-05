@@ -1,0 +1,9 @@
+Pretty print information was generated on 2020-04-01 13:18:48.007598
+METADATA:
+>   Host Geo-code: 'VA'
+>   Route number:  'None'
+>   Route name:    'Vænesston-Kændis Beach (VA-FS)'
+>   Type of line:  'None'
+>   Starting point:'VAA-00'
+>   Ending point:  'FS0'
+

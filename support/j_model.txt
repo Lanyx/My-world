@@ -1,0 +1,30 @@
+    dJunction = {
+        "my_id":            J00-001
+        "host_geo_code":    GY0-T,
+        "type":             "rail"
+        "aMap":{
+            "sRegion":      None,
+            "iYear":        None,
+            "fScale":       None,
+            "x":            None,
+            "y":            None,
+        },
+
+        aLinks = [
+            {
+                "id":           K00-001,
+                "part":         0,      # This could be for spur
+                "dist":         3888
+                "tot_lanes":    1,
+                "dir":          "away",
+            },
+
+            {
+                "id":           K00-001,
+                "part":         1,      # This could be for spur
+                "dist":         0,      # Beginning of the loop
+                "tot_lanes":    1,
+                "dir":          "away",
+            },
+
+        ]

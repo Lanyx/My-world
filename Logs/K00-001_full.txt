@@ -1,0 +1,182 @@
+Pretty print information for was generated on 2020-05-04 14:17:30.067744
+Route [None], Named 'Vænesston-Kændis Beach (VA-FS)'
+   0.00km [id:   1] TRACK: start_all  --> 4
+   0.00km [id:  36] SIGN: speed_away  --> {'val': 30, 'dis': None, 'dur': None}
+   0.00km [id: 113] ELEV_FT: spot  --> 2215
+   0.00km [id: 182] SIGN: speed_home  --> {'val': 0, 'dis': None, 'dur': None}
+   0.00km [id: 183] SIGN: comment  --> Dead-end tracks
+   0.20km [id:   2] STATION: geo_code  --> {'geo': 'V', 'lat': 'Dzþevogurski', 'cyr': 'Джэвогурскъего'}
+   0.20km [id:   3] STATION: geo_code  --> {'geo': 'VA', 'lat': 'Vænesston', 'cyr': 'Вэнэсовицэ'}
+   0.20km [id:   4] STATION: geo_code  --> {'geo': 'VAA', 'lat': 'Vænesston', 'cyr': 'Вэнэсовицэ'}
+   0.20km [id:   5] STATION: geo_code  --> {'geo': 'VAA-0', 'lat': 'Vænesston', 'cyr': 'Вэнэсовицэ'}
+   0.40km [id: 132] ELEV_FT: spot  --> 2215
+   0.50km [id:  46] TRACK: merge  --> {'iBef': 4, 'iAft': 1}
+   1.11km [id: 116] ELEV_FT: spot  --> 2250
+   1.43km [id: 111] JUNCTION: split  --> {'line': 'K00-002', 'terminus': 'home_end'}
+   2.13km [id: 112] JUNCTION: join  --> {'line': 'K00-00A', 'terminus': 'far_end'}
+   2.21km [id:  37] SIGN: speed_away  --> {'val': 60, 'dis': None, 'dur': None}
+   2.21km [id:  38] SIGN: speed_home  --> {'val': 30, 'dis': None, 'dur': None}
+   2.21km [id:  48] TRACK: diverge  --> {'iBef': 1, 'iAft': 2}
+   2.51km [id: 117] ELEV_FT: spot  --> 2260
+   3.63km [id:  47] TRACK: diverge  --> {'iBef': 2, 'iAft': 3}
+   4.70km [id:   6] STATION: geo_code  --> {'geo': 'VAA-0HM', 'lat': 'Mordel', 'cyr': 'Мордэль'}
+   6.23km [id:   7] STATION: geo_code  --> {'geo': 'VAA-0HA', 'lat': 'Easel Moss', 'cyr': 'Мэх Шталюги'}
+   6.43km [id:  49] TRACK: merge  --> {'iBef': 3, 'iAft': 2}
+   6.88km [id:  50] TRACK: merge  --> {'iBef': 2, 'iAft': 1}
+   8.68km [id:  40] SIGN: speed_home  --> {'val': 60, 'dis': None, 'dur': None}
+   8.68km [id: 148] SIGN: speed_away  --> {'val': 90, 'dis': None, 'dur': None}
+  12.64km [id:  51] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+  13.04km [id:   8] STATION: geo_code  --> {'geo': 'VAA-L', 'lat': 'Dritso', 'cyr': 'Дрицо'}
+  13.44km [id:  52] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+  17.36km [id: 149] SIGN: speed_away  --> {'val': 60, 'dis': None, 'dur': None}
+  17.36km [id: 150] SIGN: speed_home  --> {'val': 90, 'dis': None, 'dur': None}
+  20.36km [id:  53] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+  21.36km [id:   9] STATION: geo_code  --> {'geo': 'VAW', 'lat': 'Kemptoñak', 'cyr': 'Кэмптоняк'}
+  21.36km [id: 118] ELEV_FT: spot  --> 2240
+  21.56km [id:  54] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+  21.66km [id:  55] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+  22.66km [id:  56] TRACK: diverge  --> {'iBef': 3, 'iAft': 1}
+  26.36km [id: 151] SIGN: speed_away  --> {'val': 100, 'dis': None, 'dur': None}
+  26.36km [id: 152] SIGN: speed_home  --> {'val': 60, 'dis': None, 'dur': None}
+  26.84km [id: 119] ELEV_FT: spot  --> 2250
+  35.58km [id:  57] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+  35.98km [id:  10] STATION: geo_code  --> {'geo': 'VAW-R', 'lat': 'Gràhy', 'cyr': 'Граьхы'}
+  36.38km [id:  58] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+  43.24km [id: 153] SIGN: speed_home  --> {'val': 100, 'dis': None, 'dur': None}
+  43.24km [id: 154] SIGN: speed_away  --> {'val': 50, 'dis': None, 'dur': None}
+  46.24km [id:  61] TRACK: diverge  --> {'iBef': 1, 'iAft': 4}
+  46.74km [id:  11] STATION: geo_code  --> {'geo': 'VAY', 'lat': 'Städlingen', 'cyr': 'Стаъдльингэн'}
+  49.52km [id: 135] ELEV_FT: trapezoid  --> 0
+  50.28km [id: 133] ELEV_FT: trapezoid  --> 25
+  50.33km [id: 134] ELEV_FT: trapezoid  --> 25
+  51.13km [id: 136] ELEV_FT: trapezoid  --> 0
+  51.14km [id:  62] TRACK: merge  --> {'iBef': 4, 'iAft': 1}
+  51.23km [id: 155] SIGN: speed_away  --> {'val': 100, 'dis': None, 'dur': None}
+  51.73km [id: 156] SIGN: speed_home  --> {'val': 50, 'dis': None, 'dur': None}
+  56.24km [id:  63] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+  56.64km [id:  12] STATION: geo_code  --> {'geo': 'VAT-3', 'lat': 'Ølàmeva', 'cyr': 'Ыляьмэва'}
+  57.04km [id:  64] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+  65.52km [id:  65] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+  65.92km [id:  13] STATION: geo_code  --> {'geo': 'VAT-P', 'lat': 'Zgèulèvïa', 'cyr': 'Згэьулеьвя'}
+  66.32km [id:  66] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+  74.30km [id:  67] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+  74.70km [id:  14] STATION: geo_code  --> {'geo': 'VAF-C', 'lat': 'Ubÿesçi', 'cyr': 'Убиесьи'}
+  75.10km [id:  68] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+  81.80km [id:  69] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+  82.20km [id:  15] STATION: geo_code  --> {'geo': 'VAF-L', 'lat': 'Ñamlèki', 'cyr': 'Нямлеьки'}
+  82.60km [id:  70] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+  82.60km [id: 157] SIGN: speed_away  --> {'val': 50, 'dis': None, 'dur': None}
+  83.64km [id: 139] ELEV_FT: trapezoid  --> 0
+  83.64km [id: 158] SIGN: speed_home  --> {'val': 100, 'dis': None, 'dur': None}
+  84.38km [id: 138] ELEV_FT: trapezoid  --> -30
+  84.40km [id: 137] CROSSING: river  --> {'sName': 'Ugly Forest', 'iWidth': 20}
+  84.43km [id: 140] ELEV_FT: trapezoid  --> -30
+  85.15km [id: 141] ELEV_FT: trapezoid  --> 0
+  85.25km [id: 159] SIGN: speed_away  --> {'val': 100, 'dis': None, 'dur': None}
+  88.60km [id:  71] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+  89.00km [id:  16] STATION: geo_code  --> {'geo': 'VAC-E', 'lat': 'Mràpo', 'cyr': 'Мраьпо'}
+  89.40km [id:  72] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+  97.78km [id: 160] SIGN: speed_away  --> {'val': 50, 'dis': None, 'dur': None}
+  97.78km [id: 161] SIGN: speed_home  --> {'val': 100, 'dis': None, 'dur': None}
+  99.98km [id:  73] TRACK: diverge  --> {'iBef': 1, 'iAft': 5}
+ 100.78km [id:  17] STATION: geo_code  --> {'geo': 'VAC', 'lat': 'Old Bohþmúl', 'cyr': 'Стары Бохмюль'}
+ 103.08km [id:  74] TRACK: merge  --> {'iBef': 5, 'iAft': 1}
+ 106.28km [id: 162] SIGN: speed_home  --> {'val': 50, 'dis': None, 'dur': None}
+ 106.28km [id: 163] SIGN: speed_away  --> {'val': 90, 'dis': None, 'dur': None}
+ 108.00km [id:  75] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 108.40km [id:  18] STATION: geo_code  --> {'geo': 'VAC-F', 'lat': 'Zgegú', 'cyr': 'Згэгю'}
+ 108.80km [id:  76] TRACK: diverge  --> {'iBef': 3, 'iAft': 1}
+ 115.22km [id:  77] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 115.62km [id:  19] STATION: geo_code  --> {'geo': 'VAQ-W', 'lat': 'Sebïeïer', 'cyr': 'Сэбеер'}
+ 116.02km [id:  78] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+ 125.46km [id: 164] SIGN: speed_home  --> {'val': 90, 'dis': None, 'dur': None}
+ 125.46km [id: 165] SIGN: speed_away  --> {'val': 60, 'dis': None, 'dur': None}
+ 127.70km [id:  79] TRACK: diverge  --> {'iBef': 1, 'iAft': 5}
+ 128.70km [id:  20] STATION: geo_code  --> {'geo': 'VAQ', 'lat': 'Avi-and-Adi', 'cyr': 'Ави-и-Ади'}
+ 129.70km [id:  80] TRACK: merge  --> {'iBef': 5, 'iAft': 1}
+ 130.70km [id:  81] TRACK: diverge  --> {'iBef': 1, 'iAft': 2}
+ 132.26km [id: 120] ELEV_FT: spot  --> 2500
+ 134.06km [id:  82] TRACK: ixi  --> {'iBef': 2, 'iAft': 2}
+ 134.46km [id:  21] STATION: geo_code  --> {'geo': 'VAK-P', 'lat': 'Zçñygrazçi', 'cyr': 'Зньыгразьи'}
+ 134.86km [id:  83] TRACK: ixi  --> {'iBef': 2, 'iAft': 2}
+ 143.04km [id:  84] TRACK: diverge  --> {'iBef': 2, 'iAft': 4}
+ 143.54km [id:  22] STATION: geo_code  --> {'geo': 'VAK', 'lat': 'Far Morison', 'cyr': 'Далека Морисон'}
+ 143.54km [id: 121] ELEV_FT: spot  --> 2650
+ 144.94km [id: 166] SIGN: speed_away  --> {'val': 90, 'dis': None, 'dur': None}
+ 144.94km [id: 167] SIGN: speed_home  --> {'val': 60, 'dis': None, 'dur': None}
+ 147.14km [id:  85] TRACK: merge  --> {'iBef': 4, 'iAft': 1}
+ 151.84km [id:  86] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 152.24km [id:  23] STATION: geo_code  --> {'geo': 'VAK-L', 'lat': 'Gzþyklÿon', 'cyr': 'Гжыкльиён'}
+ 152.24km [id: 122] ELEV_FT: spot  --> 2640
+ 152.64km [id:  87] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+ 159.20km [id:  88] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 159.60km [id:  24] STATION: geo_code  --> {'geo': 'VAK-T', 'lat': 'Fïetþo', 'cyr': 'Фечо'}
+ 159.60km [id: 123] ELEV_FT: spot  --> 2620
+ 160.00km [id:  89] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+ 169.12km [id:  90] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 169.52km [id:  25] STATION: geo_code  --> {'geo': 'VAI-E', 'lat': 'Ikèzçihmi', 'cyr': 'Икэьзьихми'}
+ 169.52km [id: 124] ELEV_FT: spot  --> 2556
+ 170.12km [id:  91] TRACK: merge  --> {'iBef': 3, 'iAft': 2}
+ 174.62km [id:  92] TRACK: ixi  --> {'iBef': 2, 'iAft': 2}
+ 177.28km [id: 168] SIGN: speed_away  --> {'val': 50, 'dis': None, 'dur': None}
+ 177.28km [id: 169] SIGN: speed_home  --> {'val': 90, 'dis': None, 'dur': None}
+ 180.34km [id:  93] TRACK: diverge  --> {'iBef': 2, 'iAft': 4}
+ 180.84km [id:  26] STATION: geo_code  --> {'geo': 'VAI', 'lat': 'Úåîpiåeston', 'cyr': 'Юищпиэстон'}
+ 180.84km [id: 125] ELEV_FT: spot  --> 2445
+ 181.44km [id:  94] TRACK: merge  --> {'iBef': 4, 'iAft': 1}
+ 184.61km [id: 170] SIGN: speed_away  --> {'val': 30, 'dis': None, 'dur': None}
+ 184.61km [id: 171] SIGN: speed_home  --> {'val': 50, 'dis': None, 'dur': None}
+ 184.91km [id: 145] ELEV_FT: trapezoid  --> 0
+ 185.86km [id: 144] ELEV_FT: trapezoid  --> -40
+ 185.90km [id: 142] CROSSING: river  --> {'sName': 'Kîðåton', 'iWidth': 40}
+ 185.90km [id: 143] CROSSING: comment  --> Rail and road (dirt track) bridge
+ 185.94km [id: 146] ELEV_FT: trapezoid  --> -40
+ 187.19km [id: 147] ELEV_FT: trapezoid  --> 0
+ 187.19km [id: 172] SIGN: speed_away  --> {'val': 90, 'dis': None, 'dur': None}
+ 187.59km [id: 173] SIGN: speed_home  --> {'val': 30, 'dis': None, 'dur': None}
+ 190.36km [id:  95] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 190.76km [id:  27] STATION: geo_code  --> {'geo': 'VAI-9', 'lat': 'Ksçysna', 'cyr': 'Ксьысна'}
+ 190.76km [id: 126] ELEV_FT: spot  --> 2390
+ 191.16km [id:  96] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+ 197.46km [id:  97] TRACK: merge  --> {'iBef': 1, 'iAft': 3}
+ 197.86km [id:  28] STATION: geo_code  --> {'geo': 'VAI-R', 'lat': 'Izçibylu', 'cyr': 'Изьибылю'}
+ 197.86km [id: 127] ELEV_FT: spot  --> 2400
+ 198.26km [id:  98] TRACK: diverge  --> {'iBef': 3, 'iAft': 1}
+ 199.34km [id: 174] SIGN: speed_away  --> {'val': 50, 'dis': None, 'dur': None}
+ 199.34km [id: 175] SIGN: speed_away  --> {'val': 90, 'dis': None, 'dur': None}
+ 202.16km [id:  99] TRACK: diverge  --> {'iBef': 1, 'iAft': 5}
+ 202.66km [id:  29] STATION: geo_code  --> {'geo': 'VAS', 'lat': "åWrócisl'aw", 'cyr': 'Врутьислъав'}
+ 202.66km [id: 128] ELEV_FT: spot  --> 2410
+ 203.66km [id: 100] TRACK: merge  --> {'iBef': 5, 'iAft': 1}
+ 205.86km [id: 177] SIGN: speed_away  --> {'val': 90, 'dis': None, 'dur': None}
+ 205.86km [id: 178] SIGN: speed_home  --> {'val': 50, 'dis': None, 'dur': None}
+ 210.44km [id: 101] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 210.84km [id:  30] STATION: geo_code  --> {'geo': 'VAS-D', 'lat': 'Añutsi', 'cyr': 'Анюци'}
+ 211.24km [id: 102] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+ 216.36km [id: 103] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 216.76km [id:  31] STATION: geo_code  --> {'geo': 'VAS-V', 'lat': 'Gretçizþo', 'cyr': 'Грэтьижо'}
+ 216.76km [id: 131] ELEV_FT: spot  --> 2350
+ 217.16km [id: 104] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+ 221.94km [id: 105] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 222.34km [id:  32] STATION: geo_code  --> {'geo': 'VAS-N', 'lat': 'Gdèïes', 'cyr': 'Гдэьес'}
+ 222.74km [id: 106] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+ 230.82km [id: 107] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 231.22km [id:  33] STATION: geo_code  --> {'geo': 'VAS-U', 'lat': 'Buboïek', 'cyr': 'Бубоек'}
+ 231.22km [id: 130] ELEV_FT: spot  --> 2340
+ 231.52km [id:  41] SIGN: speed_away  --> {'val': 80, 'dis': None, 'dur': None}
+ 231.52km [id: 176] SIGN: speed_home  --> {'val': 90, 'dis': None, 'dur': None}
+ 231.62km [id: 108] TRACK: merge  --> {'iBef': 3, 'iAft': 1}
+ 233.12km [id: 109] TRACK: comment  --> Military Zone (VAS-9) Begins
+ 236.10km [id: 110] TRACK: comment  --> FS-VA border
+ 240.38km [id:  43] SIGN: speed_away  --> {'val': 50, 'dis': None, 'dur': None}
+ 240.38km [id:  44] SIGN: speed_home  --> {'val': 80, 'dis': None, 'dur': None}
+ 240.68km [id:  34] STATION: approx  --> {'code': 'FS0', 'desc': 'Fusþton Yard East Receiving'}
+ 247.20km [id:  59] TRACK: diverge  --> {'iBef': 1, 'iAft': 3}
+ 247.70km [id:  45] SIGN: speed_home  --> {'val': 50, 'dis': None, 'dur': None}
+ 248.00km [id:  35] STATION: geo_code  --> {'geo': 'FS', 'lat': 'Fusþton', 'cyr': 'Фуштон'}
+ 248.00km [id: 129] ELEV_FT: spot  --> 2320
+ 248.40km [id:  60] TRACK: merge  --> {'iBef': 3, 'iAft': 3}
+ 248.40km [id: 179] SIGN: comment  --> Limit for next line
+ 248.40km [id: 180] SIGN: speed_away  --> {'val': 60, 'dis': None, 'dur': None}
+ 248.40km [id: 181] SIGN: speed_home  --> {'val': 40, 'dis': None, 'dur': None}
+

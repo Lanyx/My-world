@@ -1,0 +1,389 @@
+    Dzþevogurski Province / Провинцъя Джэвогурскъего
+----------
+Pretty print information was generated on 2020-05-01 20:41:05.613337
+----------
+my_id: D00-003
+geo_code: V
+----------
+Total population: 2,288,628 (Incomplete data)
+
+Total vehicles*: 303,059 (Incomplete data)
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced (Incomplete data):
+>   misc industrial: 264,516.25t/yr by Warehouse 0
+>   granite: 206.56kt/yr by Warehouse 1
+>   crushed stone: 1,070.61kt/yr by Warehouse 2
+>   maize: 1,268,797.12t/yr by Warehouse 3
+>   straw (maize): 154,445.79t/yr by Warehouse 4
+>   misc fruit/veg: 115,238.56t/yr by Warehouse 5
+>   chicken: 361,885.4t/yr by Warehouse 6
+>   wheat: 749,823.69t/yr by Warehouse 7
+>   hay: 79,568.52t/yr by Warehouse 8
+>   rice: 148,964.06t/yr by Warehouse 9
+>   cocoa beans: 948,972.44t/yr by Warehouse 10
+>   coffee beans: 897,277.46t/yr by Warehouse 11
+>   milk: 199,198.55t/yr by Warehouse 12
+>   clay: 58.81kt/yr by Warehouse 13
+>   trèb rye: 111,700.79t/yr by Warehouse 14
+>   straw (trèb rye): 10,256.76t/yr by Warehouse 15
+
+Build housing (Demand - Supply):
+>    r: -315; h: 4,777; m: 48,330; l: 108,276; p: 688,582;
+----------
+Hierarchial Parent: 
+>  Trèmbovitse Country / Паньстфо Трэьбовицэ
+>   my_id: D00-002
+>   geo_code: 0V9
+----------
+Hierarchial Children: 
+>   count: 12
+>      Godfrey District / Повят Богумирски
+>          my_id: D00-00K
+>          geo_code: GY
+>          population: 311,500
+>          warehouse: misc industrial, granite, crushed stone, maize, straw (maize), misc fruit/veg, chicken, wheat, hay
+>
+>      Åmurrayville District / Повят Марривыль
+>          my_id: D00-03B
+>          geo_code: MV
+>          population: 0 (Incomplete data)
+>          warehouse: 
+>
+>      Kimberley District / Повят Кимбэрльи
+>          my_id: D00-04W
+>          geo_code: KI
+>          population: 0 (Incomplete data)
+>          warehouse: 
+>
+>      Åcosþdyn District / Повят Цошдын
+>          my_id: D00-059
+>          geo_code: CO
+>          population: 0 (Incomplete data)
+>          warehouse: 
+>
+>      Lorainesburg District / Повят Ущлёрэйн
+>          my_id: D00-05I
+>          geo_code: LV
+>          population: 0 (Incomplete data)
+>          warehouse: 
+>
+>      Fusþton District / Повят Фуштон
+>          my_id: D00-05Q
+>          geo_code: FS
+>          population: 0 (Incomplete data)
+>          warehouse: 
+>
+>      Trinidad District / Повят Тринидад
+>          my_id: D00-079
+>          geo_code: TJ
+>          population: 0 (Incomplete data)
+>          warehouse: 
+>
+>      Vænesston District / Повят Вэнэсовицэ
+>          my_id: D00-09K
+>          geo_code: VA
+>          population: 1,699,789
+>          warehouse: misc industrial, rice, cocoa beans, wheat, hay, coffee beans, misc fruit/veg, milk, chicken, maize, straw (maize), clay
+>
+>      St. åPhœnix District / Повят Сьв. Финикс
+>          my_id: D00-09L
+>          geo_code: VX
+>          population: 277,339 (Incomplete data)
+>          warehouse: wheat, hay, trèb rye, straw (trèb rye), maize, straw (maize), rice, cocoa beans, misc fruit/veg, milk, chicken, misc industrial
+>
+>      Lake Ceres District / Повят Езёро Цэрэс
+>          my_id: D00-09M
+>          geo_code: VC
+>          population: 0 (Incomplete data)
+>          warehouse: 
+>
+>      Kratosçum District / Повят Кратосюм
+>          my_id: D00-09N
+>          geo_code: VB
+>          population: 0 (Incomplete data)
+>          warehouse: 
+>
+>      Ïàdzþor District / Повят Яьджор
+>          my_id: D00-0DH
+>          geo_code: ID
+>          population: N/A
+>          warehouse: 
+>
+----------
+Map and area: 
+>   Region: Trèmbovitse 1:20,000,000 (drawn in 2012)
+>   Position (mm) x: 139.56, y: 138.51
+>   Area on paper (sq.mm) a: 1,345.74
+>   Area represented: 538,296.0sq.km
+----------
+Workforce Demand: 
+>   Grand Total: (1,132,511)
+>       rm: 245; hm: 6,966; mm: 34,611; lm: 62,021; pm: 469,633;
+>       rf: 49; hf: 1,722; mf: 32,363; lf: 78,354; pf: 446,547;
+>
+>   GY: (150,903)
+>       rm: 5; hm: 1,191; mm: 4,643; lm: 12,986; pm: 61,705;
+>       rf: 2; hf: 252; mf: 4,061; lf: 13,757; pf: 52,301;
+>       tot road veh: 11,244;
+>
+>   MV: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   KI: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   CO: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   LV: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   FS: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   TJ: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VA: (843,941)
+>       rm: 214; hm: 5,016; mm: 26,628; lm: 41,488; pm: 350,718;
+>       rf: 42; hf: 1,264; mf: 25,187; lf: 54,793; pf: 338,591;
+>       tot road veh: 32,810;
+>
+>   VX: (137,667)
+>       rm: 26; hm: 759; mm: 3,340; lm: 7,547; pm: 57,210;
+>       rf: 5; hf: 206; mf: 3,115; lf: 9,804; pf: 55,655;
+>       tot road veh: 5,430;
+>
+>   VC: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VB: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   ID: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (25,427)
+>       rm: 485; hm: 3,008; mm: 4,828; lm: 3,083; pm: 1,308;
+>       rf: 487; hf: 3,007; mf: 4,831; lf: 3,082; pf: 1,308;
+>
+>   GY: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   MV: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   KI: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   CO: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   LV: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   FS: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   TJ: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VA: (25,427)
+>       rm: 485; hm: 3,008; mm: 4,828; lm: 3,083; pm: 1,308;
+>       rf: 487; hf: 3,007; mf: 4,831; lf: 3,082; pf: 1,308;
+>       tot road veh: 0
+>
+>   VX: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VC: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VB: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   ID: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Grand Total: (868,032)
+>       r: 331; h: 8,818; m: 54,842; l: 112,567; p: 691,474;
+>   GY: (117,863) | r: 10; h: 1,482; m: 7,162; l: 20,974; p: 88,235;
+>   MV: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   KI: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   CO: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   LV: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   FS: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   TJ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VA: (645,089) | r: 287; h: 6,351; m: 42,378; l: 77,554; p: 518,519;
+>   VX: (105,080) | r: 34; h: 985; m: 5,302; l: 14,039; p: 84,720;
+>   VC: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VB: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   ID: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Supply households: 
+>   Grand Total: (18,382)
+>       r: 646; h: 4,041; m: 6,512; l: 4,291; p: 2,892;
+>   GY: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   MV: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   KI: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   CO: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   LV: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   FS: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   TJ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VA: (18,382) | r: 646; h: 4,041; m: 6,512; l: 4,291; p: 2,892;
+>   VX: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VC: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VB: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   ID: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 2,288,628
+>
+>   Married working people (aHHM-PAX):
+>       r: 1,292; h: 14,958; m: 62,732; l: 153,578; p: 915,806;
+>      (total: 1,148,366)
+>
+>   Married retired people (aHHR-PAX):
+>       r: 412; h: 4,606; m: 18,492; l: 44,660; p: 265,330;
+>      (total: 333,500)
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 56; h: 2,473; m: 8,826; l: 19,774; p: 114,510;
+>      (total: 145,639)
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 30; h: 1,062; m: 4,642; l: 11,150; p: 66,326;
+>      (total: 83,210)
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 38; m: 70; l: 269; p: 1,579;
+>      (total: 1,956)
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 119; m: 192; l: 870; p: 5,101;
+>      (total: 6,282)
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 206; h: 5,123; m: 6,811; l: 4,460; p: 35,447;
+>      (total: 52,047)
+>
+>   Preschoolers, all groups                 (ED0-PAX): 102,119
+>   Primary schoolers, all groups            (ED1-PAX): 169,659
+>   Middle schoolers, all groups             (ED2-PAX): 135,777
+>   High schoolers, all groups               (ED3-PAX): 135,227
+>   Religious or Private schoolers, all grps (ED4-PAX): 6,640
+>   College students, all groups             (ED5-PAX): 1,316
+>   Polytechnic students, all groups         (ED6-PAX): 330
+>   University students, all groups          (ED7-PAX): 101
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 4,329
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 16
+>   Old Age Home, all groups                 (OAH-PAX): 17,839
+>   Private nurse, all groups                (OAN-PAX): 3
+>   Youth prison, all groups                 (YXJ-PAX): 1,196
+>   Adult prison, all groups                 (YXA-PAX): 13,259
+>   Religion:
+>      Renásàsers          (3R): 303,771
+>      Anglican Christians (AN): 64,883
+>      Roman Catholics     (RC): 89,519
+>      Deltæðømmysts       (DD): 1,229,910
+>      Jews                (JW): 15,235
+>      Muslims             (IS): 24,071
+>   Units required:
+>       | 286.08 for [5YP] Police
+>       | 228.86 for [5YF] Fire Dept
+>       | 228.86 for [5YH] Community Clinic
+>       | 457.73 for [5YG] Community Governance
+>       |3403.97 for [ED0] Pre-school
+>       | 339.32 for [ED1] Primary School
+>       | 161.64 for [ED2] Middle School
+>       | 140.86 for [ED3] High School
+>       | 594.63 for [OAH] Old Age Home
+>       | 572.16 for [5SŠ] Small Shop
+>       | 457.73 for [5LX] Community Library
+>       | 457.73 for [5TH] Community Theatre
+>       | 228.86 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 1,111,630
+>   Vehicle, motorbike*                      (VEH-MBK): 216,263
+>   Vehicle, car*                            (VEH-CAR): 52,864
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 303,059
+>   Itemised county-registered vehicles:
+>      GY: 49,497
+>      MV: 0
+>      KI: 0
+>      CO: 0
+>      LV: 0
+>      FS: 0
+>      TJ: 0
+>      VA: 218,847
+>      VX: 34,715
+>      VC: 0
+>      VB: 0
+----------
+Footprint on the land:
+>   GY: 75,048.0sq.km
+>   MV: 46,369.0sq.km
+>   KI: 63,069.0sq.km
+>   CO: 57,965.0sq.km
+>   LV: 59,254.0sq.km
+>   FS: 41,689.0sq.km
+>   TJ: 43,745.0sq.km
+>   VA: 9,943.0sq.km
+>   VX: 17,067.0sq.km
+>   VC: 21,310.0sq.km
+>   VB: 29,721.0sq.km
+>   ID: 52,406.0sq.km
+

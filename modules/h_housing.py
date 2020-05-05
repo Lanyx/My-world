@@ -71,15 +71,35 @@ def add_housing(ccTremb):
         },
         "aFpt_bldg":{"qty":None, "uom":None},
         "aArea_plot":{"qty":None, "uom":None},
-
     }
 
-# HOST
-    cDest = db.destinations(ccTremb)                    # To verify the geocode
-    sTxt = ("\nWho is hosting this residential area OR greenspace?\n" +
-            "Please enter host's geo-code.")
-    print(sTxt)
-    sGeo_code = input().upper()
+# Automatically obtain the geo-code of the last entry. Chances are that we'd
+# like to re-use it.
+    xParam = {}
+    xRestr = {"_id":0, "host_geo_code":1}
+    dId_query = cHousing.find(xParam, xRestr).sort("_id", 1)
+    dId_query.sort("_id", -1)
+
+# Pull out the geo-code
+    sGeo_code = dId_query[0]["host_geo_code"]
+    cDest = db.destinations(ccTremb)
+    dGeo_names = misc.verify_geo_code(sGeo_code, cDest)
+    if dGeo_names == None: return None  # An error has occured.
+
+    # Names of the settlement.
+    sP_lat = dGeo_names["lat"]
+    sP_cyr = dGeo_names["cyr"]
+
+    sTxt = "Are you working on {0} ({1} / {2})?"
+    sTxt = sTxt.format(sGeo_code, sP_lat, sP_cyr)
+    yn_last_host = misc.get_binary(sTxt)
+    if yn_last_host == None: return None
+    if yn_last_host == "N":
+    # HOST
+        sTxt = ("\nWho is hosting this residential area OR greenspace?\n" +
+                "Please enter host's geo-code.")
+        print(sTxt)
+        sGeo_code = input().upper()
 
     dGeo_element = misc.get_geo_element(sGeo_code, cDest)
     if dGeo_element == None: return

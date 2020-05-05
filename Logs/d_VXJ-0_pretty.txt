@@ -1,0 +1,277 @@
+    Ïægermeer Municipality / Гмина Яъгэрмия
+----------
+Pretty print information was generated on 2020-05-01 20:08:48.104959
+----------
+my_id: D00-0WY
+geo_code: VXJ-0
+----------
+Total population: 15,562
+
+Total vehicles*: 5,042
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced:
+>   Misc Industrial: 11,741.23t/yr by factories (by employee) 0
+
+Build housing (Demand - Supply):
+>    r: 16; h: 151; m: 1,414; l: 1,986; p: 2,376;
+----------
+Hierarchial Parent: 
+>  Ïægermeer County / Воевуцтво Яъгэрмия
+>   my_id: D00-0AP
+>   geo_code: VXJ
+----------
+Hierarchial Children: 
+>   count: 0
+----------
+Map and area: 
+>   Region: Vænesston 1:2,000,000 (drawn in 2019)
+>   Position (mm) x: 150.72, y: 93.18
+>   Area on paper (sq.mm) a: 8.22
+>   Area represented: 3,288.0ha
+----------
+Workforce Demand: 
+>   Grand Total: (7,648)
+>       rm: 12; hm: 123; mm: 855; lm: 1,311; pm: 1,986;
+>       rf: 2; hf: 12; mf: 866; lf: 1,340; pf: 1,141;
+>
+>   [FME] factories (by employee): (2,766)
+>       rm: 0; hm: 0; mm: 24; lm: 86; pm: 1,716;
+>       rf: 0; hf: 0; mf: 9; lf: 44; pf: 887;
+>       tot road veh: 54;
+>
+>   [OME] offices (by employee): (1,399)
+>       rm: 0; hm: 45; mm: 650; lm: 0; pm: 13;
+>       rf: 0; hf: 0; mf: 682; lf: 0; pf: 9;
+>       tot road veh: 21;
+>
+>   [OER] entrepreneurs: (32)
+>       rm: 8; hm: 6; mm: 0; lm: 3; pm: 0;
+>       rf: 2; hf: 2; mf: 11; lf: 0; pf: 0;
+>       tot road veh: 13;
+>
+>   [OBK] bank: (131)
+>       rm: 0; hm: 3; mm: 8; lm: 30; pm: 36;
+>       rf: 0; hf: 0; mf: 0; lf: 30; pf: 24;
+>       tot road veh: 22;
+>
+>   [OXX] misc workers: (1,392)
+>       rm: 0; hm: 24; mm: 60; lm: 600; pm: 24;
+>       rf: 0; hf: 0; mf: 60; lf: 600; pf: 24;
+>       tot road veh: 24;
+>
+>   [4YG] county government: (187)
+>       rm: 0; hm: 0; mm: 5; lm: 109; pm: 27;
+>       rf: 0; hf: 0; mf: 1; lf: 36; pf: 9;
+>       tot road veh: 4;
+>
+>   [3YG] district government: (25)
+>       rm: 0; hm: 0; mm: 15; lm: 0; pm: 4;
+>       rf: 0; hf: 0; mf: 5; lf: 0; pf: 1;
+>       tot road veh: 3;
+>
+>   [RXM] misc shops (by employee): (626)
+>       rm: 2; hm: 9; mm: 14; lm: 275; pm: 22;
+>       rf: 0; hf: 0; mf: 14; lf: 275; pf: 15;
+>       tot road veh: 24;
+>
+>   [GHT] hotel: (177)
+>       rm: 2; hm: 7; mm: 9; lm: 70; pm: 6;
+>       rf: 0; hf: 0; mf: 9; lf: 70; pf: 4;
+>       tot road veh: 14;
+>
+>   [GRX] restaurant: (62)
+>       rm: 0; hm: 2; mm: 22; lm: 0; pm: 18;
+>       rf: 0; hf: 0; mf: 8; lf: 0; pf: 12;
+>       tot road veh: 10;
+>
+>   [5YP] Police: (96)
+>       rm: 0; hm: 1; mm: 4; lm: 39; pm: 4;
+>       rf: 0; hf: 1; mf: 4; lf: 39; pf: 4;
+>       tot road veh: 30;
+>
+>   [5YF] Fire Dept: (38)
+>       rm: 0; hm: 1; mm: 2; lm: 29; pm: 2;
+>       rf: 0; hf: 0; mf: 0; lf: 2; pf: 2;
+>       tot road veh: 11;
+>
+>   [5YH] Community Clinic: (42)
+>       rm: 0; hm: 25; mm: 0; lm: 0; pm: 2;
+>       rf: 0; hf: 9; mf: 0; lf: 0; pf: 6;
+>       tot road veh: 3;
+>
+>   [5YG] Community Governance: (27)
+>       rm: 0; hm: 0; mm: 1; lm: 20; pm: 4;
+>       rf: 0; hf: 0; mf: 0; lf: 1; pf: 1;
+>       tot road veh: 1;
+>
+>   [ED0] Pre-school: (217)
+>       rm: 0; hm: 0; mm: 3; lm: 7; pm: 9;
+>       rf: 0; hf: 0; mf: 31; lf: 130; pf: 37;
+>       tot road veh: 34;
+>
+>   [ED1] Primary School: (68)
+>       rm: 0; hm: 0; mm: 1; lm: 8; pm: 2;
+>       rf: 0; hf: 0; mf: 4; lf: 46; pf: 7;
+>       tot road veh: 5;
+>
+>   [ED2] Middle School: (41)
+>       rm: 0; hm: 0; mm: 2; lm: 16; pm: 1;
+>       rf: 0; hf: 0; mf: 2; lf: 16; pf: 4;
+>       tot road veh: 3;
+>
+>   [ED3] High School: (36)
+>       rm: 0; hm: 0; mm: 15; lm: 0; pm: 1;
+>       rf: 0; hf: 0; mf: 15; lf: 0; pf: 5;
+>       tot road veh: 2;
+>
+>   [OAH] Old Age Home: (50)
+>       rm: 0; hm: 0; mm: 3; lm: 4; pm: 2;
+>       rf: 0; hf: 0; mf: 3; lf: 31; pf: 7;
+>       tot road veh: 6;
+>
+>   [5SŠ] Small Shop: (86)
+>       rm: 0; hm: 0; mm: 8; lm: 5; pm: 58;
+>       rf: 0; hf: 0; mf: 2; lf: 1; pf: 12;
+>       tot road veh: 14;
+>
+>   [5LX] Community Library: (26)
+>       rm: 0; hm: 0; mm: 3; lm: 2; pm: 1;
+>       rf: 0; hf: 0; mf: 1; lf: 14; pf: 5;
+>       tot road veh: 4;
+>
+>   [5TH] Community Theatre: (96)
+>       rm: 0; hm: 0; mm: 4; lm: 5; pm: 31;
+>       rf: 0; hf: 0; mf: 4; lf: 5; pf: 47;
+>       tot road veh: 9;
+>
+>   [5PO] Community Post Office: (28)
+>       rm: 0; hm: 0; mm: 2; lm: 3; pm: 3;
+>       rf: 0; hf: 0; mf: 1; lf: 0; pf: 19;
+>       tot road veh: 3;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Totals: (5,943) |  r: 16; h: 151; m: 1,414; l: 1,986; p: 2,376;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 15,562
+>
+>   Married working people (aHHM-PAX):
+>       r: 24; h: 204; m: 1,894; l: 2,642; p: 3,158;
+>
+>   Married retired people (aHHR-PAX):
+>       r: 8; h: 58; m: 546; l: 766; p: 920;
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 0; h: 21; m: 229; l: 341; p: 407;
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 0; h: 15; m: 137; l: 192; p: 230;
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 1; m: 1; l: 10; p: 7;
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 5; m: 4; l: 27; p: 14;
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 11; h: 88; m: 202; l: 61; p: 424;
+>
+>   Preschoolers, all groups                 (ED0-PAX): 691
+>   Primary schoolers, all groups            (ED1-PAX): 1,080
+>   Middle schoolers, all groups             (ED2-PAX): 881
+>   High schoolers, all groups               (ED3-PAX): 867
+>   Religious or Private schoolers, all grps (ED4-PAX): 72
+>   College students, all groups             (ED5-PAX): 10
+>   Polytechnic students, all groups         (ED6-PAX): 8
+>   University students, all groups          (ED7-PAX): 0
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 31
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 0
+>   Old Age Home, all groups                 (OAH-PAX): 111
+>   Private nurse, all groups                (OAN-PAX): 0
+>   Youth prison, all groups                 (YXJ-PAX): 9
+>   Adult prison, all groups                 (YXA-PAX): 98
+>   Religion:
+>      Renásàsers (3R): 3691
+>      Anglican Christians (AN): 1364
+>      Roman Catholics (RC): 698
+>      Deltæðømmysts (DD): 5298
+>      Jews (JW): 342
+>      Muslims (IS): 421
+>   Units required:
+>       |   1.95 for [5YP] Police
+>       |   1.56 for [5YF] Fire Dept
+>       |   1.56 for [5YH] Community Clinic
+>       |   3.11 for [5YG] Community Governance
+>       |  23.03 for [ED0] Pre-school
+>       |   2.16 for [ED1] Primary School
+>       |   1.05 for [ED2] Middle School
+>       |   0.90 for [ED3] High School
+>       |   3.70 for [OAH] Old Age Home
+>       |   3.89 for [5SŠ] Small Shop
+>       |   3.11 for [5LX] Community Library
+>       |   3.11 for [5TH] Community Theatre
+>       |   1.56 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 4,149
+>   Vehicle, motorbike*                      (VEH-MBK): 3,777
+>   Vehicle, car*                            (VEH-CAR): 1,053
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 5,042
+>   Itemised county-registered vehicles:
+>      factories (by employee): 54
+>      offices (by employee): 21
+>      entrepreneurs: 13
+>      bank: 22
+>      misc workers: 24
+>      county government: 4
+>      district government: 3
+>      misc shops (by employee): 24
+>      hotel: 14
+>      restaurant: 10
+>      residents: 4,830
+>      Police: 0
+>      Fire Dept: 0
+>      Community Clinic: 0
+>      Community Governance: 0
+>      Pre-school: 0
+>      Primary School: 0
+>      Middle School: 0
+>      High School: 0
+>      Old Age Home: 0
+>      Small Shop: 14
+>      Community Library: 0
+>      Community Theatre: 9
+>      Community Post Office: 0
+----------
+Footprint on the land:
+>   factories (by employee): 0.0ha
+>   offices (by employee): 0.0ha
+>   entrepreneurs: 0.0ha
+>   bank: 0.0ha
+>   misc workers: 0.0ha
+>   county government: 0.0ha
+>   district government: 0.0ha
+>   misc shops (by employee): 0.0ha
+>   hotel: 0.0ha
+>   restaurant: 0.0ha
+

@@ -92,13 +92,16 @@ def get_binary(sTitle):
     'Y' or 'N' is returned."""
 
     # Format the question: new line, question itself, new line, options.
-    sTxt = "\n{0}\nEnter 'y' or 'n' (case insensitive)\n"
+    sTxt = "\n{0}\nEnter 'y'/'1' or 'n'/'0' (case insensitive)\n"
     print(sTxt.format(sTitle))
     sInput = input().upper()
 
+    # Convert the numerics
+    if sInput == "1": sInput = "Y"
+    if sInput == "0": sInput = "N"
     if (sInput != "Y") and (sInput != "N"):
         print("\n\aInvalid input for binary choice. "+
-              "Expected 'Y', 'y', 'N', or 'n'")
+              "Expected 'Y', 'y', '1', 'N', 'n' or '0'")
         return None
 
     return sInput
@@ -334,6 +337,115 @@ def get_map_input(ccTremb, sMap = "item"):
         "dArea":dArea_2,
     }
     return dReturn
+
+#-------------------------------------------------------------------------------
+def get_the_map(ccTremb):
+    import modules.x_database as db
+    """
+    Method asks the user to select a map, and returns all the credentials for
+    that map.
+    """
+    # Access the maps database
+    cMaps = db.maps_db(ccTremb)
+    xParam = {}
+    xRestr = {"_id":0}
+    dMap_query = cMaps.find(xParam, xRestr)
+
+    # analyse the query
+    iNo_of_maps = 0
+    dMap_copy = []
+
+    for dMap in dMap_query:
+        iNo_of_maps += 1
+        dMap_copy.append(dMap)
+
+    print("\nOn which map are you working?")
+    sMenu = "0: No map\n"
+    iCnt = 0
+
+    # Display all the options for the map
+    for one_map in dMap_copy:
+        iCnt += 1
+        xScale = "{0:,}".format(int(one_map["fScale"]))    # ","@1k ommas every 1000's
+        sTxt = "{0}: {1}, {2} 1:{3}\n"
+        sMenu += sTxt.format(iCnt, one_map["sRegion"],
+                             one_map["iYear"], xScale)
+    sMenu += "99:Invalid choice will exit this sub menu"
+    print(sMenu)
+    sInput = input()
+
+    if sInput.isnumeric() == False:
+        # An inbuilt 'abort' system where the user can enter 'x' to exit.
+        print("\n\aInput is not a numeric value. Returning to menu")
+        return None
+
+    # Get the scale
+    iInput = int(sInput)
+    fScale = None
+    if(iInput == 0):
+        print("\n\aA map must be selected. Returning")
+        return None
+    elif(iInput > iCnt):
+        print("\n\aChoice out of range. Returning to menu")
+        return None
+    else:
+        iIdx = iInput - 1
+        return dMap_copy[iIdx]
+
+#-------------------------------------------------------------------------------
+def write_debug_txt(dData):
+    """ Method writes a dictionary to a file for debugging purposes."""
+    sFile_path = "Logs/debug.txt"
+    eScratch = open(sFile_path, "w", encoding="utf-8")
+    sAll = ""
+    for item in dData:
+        sAll += "{0}\n".format(item)
+    eScratch.write(sAll)
+    eScratch.close()
+    return None
+
+#-------------------------------------------------------------------------------
+def get_train(sType, sData, xParam=None):
+    """ method stores HARDCODED constants for train parameters here. It returns
+    the specified one.
+    Possible inputs: ("acc", None), ("dec", None), ("v_max", None),
+    ("cruise", speed_limit_in_kmh)
+    """
+    # NOTE: All the 'manufactures' must guarantee these numbers. These are
+    # minimum or maximum depending on the context. Effectively, the train needs
+    # to reach these under all conditions.
+    if sType == "norm_pax":
+        if sData == "acc":      # Acceleration, also up a 2% incline.
+            return 1.0          # m/s/s
+
+        elif sData == "dec":    # Deceleration (service braking)
+            return 1.0          # m/s/s
+
+        elif sData == "v_max":  # Top speed allowed by this train.
+            return 140.0        # km/h
+
+        elif sData == "cruise": # Converts speed-limit to cruise speed.
+            if xParam == None:
+                print("\n\a'cruise' speed needs to know speed limit")
+                return None
+            # Verify that xParam will convert to an integer.
+            # Case where "its easier to ask for forgiveness than permission"
+            try:
+                iInput = int(xParam)
+            except ValueError:
+                print("\n\a'Speed limit' needs to be an integer number")
+                return None
+
+            if xParam <= 0: # Negative speed limit?
+                print("\n\a'Speed limit' can't be zero or negative")
+
+            if xParam <= 40:    # Allow to travel at the limit
+                return xParam
+
+            if xParam > 40:
+                return xParam - 5   # Cruising speed at 5km/h below limit
+    else:
+        pass
 
 #-------------------------------------------------------------------------------
 def building_name():

@@ -109,12 +109,32 @@ def add_area_to_db(ccTremb):
     }
 
 # HARVEST THE DATA FROM THE USER.
-    # Parent (who is above this area in the hierarchy)
-    sTxt = ("\nEnter the 'geo_code' of the parent. "
-    +" (example 'GYG', or 'i_am_world')")
-    print(sTxt)
+    # Look in the database for the last entry
+    xParam = {}                     # All items
+    xRestr = {"_id":0, "parent":1}
+    cDest = db.destinations(ccTremb)
+    dId_query = cDest.find(xParam, xRestr).sort("_id",-1)
+    sLast_code = dId_query[0]["parent"]
 
-    sInput = input().upper()
+    xParam = {"my_id":sLast_code}
+    xRestr = {"_id":0, "geo_code":1, "aName":1}
+    dGeo_query = cDest.find(xParam, xRestr).sort("_id",-1)
+    sLast_parent = dGeo_query[0]["geo_code"]
+    sP_lat = dGeo_query[0]["aName"]["lat"]
+    sP_cyr = dGeo_query[0]["aName"]["cyr"]
+
+    # Give the user the option of selecting the last entered geo-code
+    sTxt = ("\nThe last entered geo-code of parent was '{0} ({1} / {2})'. " +
+            "\nWould you like to use it again?")
+    yn_resue = misc.get_binary(sTxt.format(sLast_parent, sP_lat, sP_cyr))
+    if yn_resue == "N":
+        # Parent (who is above this area in the hierarchy)
+        sTxt = ("\nEnter the 'geo_code' of the parent. "
+        +" (example 'GYG', or 'i_am_world')")
+        print(sTxt)
+        sInput = input().upper()
+    else:
+        sInput = sLast_parent[:]
 
     # Validate that the parent exists
     parent = sInput[:]          # Blank splice to make a copy
@@ -1057,54 +1077,75 @@ def pretty_print_single(ccTremb):
 
     # Woring married
         sTxt = ">   Married working people (aHHM-PAX):\n>      "
+        iTot = 0
         for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHM-PAX"][sGroup])
-        sTxt += "\n>\n"
+            iItem = dDfx["aHHM-PAX"][sGroup]
+            iTot += iItem
+            sTxt += " {0}: {1:,};".format(sGroup, iItem)
+        sTxt += "\n>      (total: {0:,})\n>\n".format(iTot)
         sAll += sTxt
 
     # Retired married
         sTxt = ">   Married retired people (aHHR-PAX):\n>      "
+        iTot = 0
         for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHR-PAX"][sGroup])
-        sTxt += "\n>\n"
+            iItem = dDfx["aHHR-PAX"][sGroup]
+            iTot += iItem
+            sTxt += " {0}: {1:,};".format(sGroup, iItem)
+        sTxt += "\n>      (total: {0:,})\n>\n".format(iTot)
         sAll += sTxt
 
     # Working unmarried
         sTxt = ">   Unmarried working people ('bachelors') (aHHB-PAX):\n>      "
+        iTot = 0
         for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHB-PAX"][sGroup])
-        sTxt += "\n>\n"
+            iItem = dDfx["aHHB-PAX"][sGroup]
+            iTot += iItem
+            sTxt += " {0}: {1:,};".format(sGroup, iItem)
+        sTxt += "\n>      (total: {0:,})\n>\n".format(iTot)
         sAll += sTxt
 
     # Retired Unmarried
         sTxt = ">   Unmarried retired people ('golden oldies') (aHHO-PAX):"
         sTxt += "\n>      "                 # We exceeded the 80 column limit
+        iTot = 0
         for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHO-PAX"][sGroup])
-        sTxt += "\n>\n"
+            iItem = dDfx["aHHO-PAX"][sGroup]
+            iTot += iItem
+            sTxt += " {0}: {1:,};".format(sGroup, iItem)
+        sTxt += "\n>      (total: {0:,})\n>\n".format(iTot)
         sAll += sTxt
 
     # Disabled
         sTxt = ">   Disabled people, not in a nursing home (aHHD-PAX):\n>      "
+        iTot = 0
         for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHD-PAX"][sGroup])
-        sTxt += "\n>\n"
+            iItem = dDfx["aHHD-PAX"][sGroup]
+            iTot += iItem
+            sTxt += " {0}: {1:,};".format(sGroup, iItem)
+        sTxt += "\n>      (total: {0:,})\n>\n".format(iTot)
         sAll += sTxt
 
     # Housewifing
         sTxt = ">   Not working: housewife/-husband OR disabled caregiving "
         sTxt += "(aHHX-PAX):\n>      "
+        iTot = 0
         for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1:,};".format(sGroup, dDfx["aHHX-PAX"][sGroup])
-        sTxt += "\n>\n"
+            iItem = dDfx["aHHX-PAX"][sGroup]
+            iTot += iItem
+            sTxt += " {0}: {1:,};".format(sGroup, iItem)
+        sTxt += "\n>      (total: {0:,})\n>\n".format(iTot)
         sAll += sTxt
 
     # Unemployed
         sTxt = ">   Unemployed: wanting to work but no work available "
         sTxt += "(aUNE-PAX):\n>      "
+        iTot = 0
         for sGroup in ["r", "h", "m", "l", "p"]:
-            sTxt += " {0}: {1:,};".format(sGroup, dDfx["aUNE-PAX"][sGroup])
-        sTxt += "\n>\n"
+            iItem = dDfx["aUNE-PAX"][sGroup]
+            iTot += iItem
+            sTxt += " {0}: {1:,};".format(sGroup, iItem)
+        sTxt += "\n>      (total: {0:,})\n>\n".format(iTot)
         sAll += sTxt
 
     # Preschoolers
@@ -1184,7 +1225,7 @@ def pretty_print_single(ccTremb):
         sAll += ">   Religion:\n"
         for dRel in adReligion:
             sCode = dRel["code"]
-            sTxt = ">      {0} ({1}): {2}\n"
+            sTxt = ">      {0:<19} ({1}): {2:,}\n"
             if sCode in dDfx["aREL-PAX"]:
                 sAll += sTxt.format(dRel["adj"], sCode, dDfx["aREL-PAX"][sCode])
             else:       # No religion numbers
@@ -2704,7 +2745,7 @@ def qHhold_demands(ccTremb, sGeo_code, bHhold_only = False):
     iNew_vehicles += dService_demands["VEH-CAR"]    # Cars
 
     iLen = len(aVehicles)
-    if iLen == 0:            # Not yet defined. 
+    if iLen == 0:            # Not yet defined.
         print("\a\nError: limited data. Exiting")
         return None
 
@@ -3633,20 +3674,24 @@ def add_workplace(ccTremb):
 
 # RE-QUERY THE DATABASE ONLY PICKING UP ON THE CATEGORY SELECTED
     xParam = {"type":aType[iChoice-1]}
-    xRestr = {"_id":0, "name":1}
+    xRestr = {"_id":0, "name":1, "code":1}
     dGroup = cWorkplace.find(xParam, xRestr)
 
     # Copy out the data from the database.
     aInd_name = []
+    aInd_code = []
     for dQuery in dGroup:
         aInd_name.append(dQuery["name"])
+        aInd_code.append(dQuery["code"])
 
     # Show a menu with the industry names ("Rice Farm" for example)
     iIdx = 0
     sMenu = "\nPlease select the workplace:"
     for choice in aInd_name:
         iIdx += 1
-        sMenu += "\n{0}:   {1}".format(iIdx, aInd_name[iIdx-1])
+        sTxt = "\n{0}:   ({2}) {1}"
+        sTxt = sTxt.format(iIdx, aInd_name[iIdx-1], aInd_code[iIdx-1])
+        sMenu += sTxt
 
     # obtain the user's choice
     iChoice = misc.get_int(sMenu, iIdx)
@@ -4480,7 +4525,7 @@ def reset_demographics(ccTremb):
 
     # Get the geocode of the town in question
     sTxt = ("\nPlease enter the geo code ('GYN-G') of the area you want to" +
-            " work on")
+            " work on.\nYou will zero the 'aDemographics' element")
     print(sTxt)
     sGeo_code = input().upper()
 
@@ -4569,6 +4614,8 @@ X:  Remove workplace: Can be used to fix 'mistakes'
             view_single(ccTremb)
         elif sInput == "4":         # Pretty print single element
             pretty_print_single(ccTremb)
+        # elif sInput == 5:         # Sub-component which has its own entry
+        #   add_sub_comp(ccTremb)
         elif sInput == "B":         # Industry driven balancing:
             balance_town(ccTremb)
         elif sInput == "C":         # City balancing: Driven by available houses

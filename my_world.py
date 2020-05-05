@@ -161,10 +161,10 @@ def mm_star():
     import modules.x_database as db
     # Delete a single entry
     if False:
-        xParam = {"my_id":"D00-0CN"}
+        xParam = {"dVal.id":115}
         xRestr = {}
         ccTremb = db.connect()
-        cDatabase = db.destinations(ccTremb)
+        cDatabase = db.lines(ccTremb)
         dQuery = cDatabase.delete_one(xParam, xRestr)
         print("Specified element deleted")
 
@@ -217,16 +217,17 @@ def mm_star():
         dQuery = cDb.update_many(xParam, xNew_data)
 
     # Update a bad simple value
-    if True:
-        dNew_data = 10
+    if False:
+        dNew_data = "FS0"
 
-        xParam = {"my_id":"D00-0G9"}
-        xNew_data = {"$set": {"aVehicles.aItemised.Blàhim" : dNew_data}}
+        xParam = {"my_id":"K00-001"}
+#        xNew_data = {"$set": {"aVehicles.aItemised.Blàhim" : dNew_data}}
+        xNew_data = {"$set": {"dVal.end" : dNew_data}}
 
         ccTremb = db.connect()
-        cDb = db.destinations(ccTremb)
-    #    dQuery = cDb.update_one(xParam, xNew_data)
-        dQuery = cDb.update_many(xParam, xNew_data)
+        cDb = db.lines(ccTremb)
+        dQuery = cDb.update_one(xParam, xNew_data)
+    #    dQuery = cDb.update_many(xParam, xNew_data)
 
 
     # delete an element
@@ -237,6 +238,44 @@ def mm_star():
         ccTremb = db.connect()
         cDb = db.destinations(ccTremb)
         dQuery = cDb.update_one(xParam, xNew_data)
+
+    # Oblitorate everything except the name, children, area data.
+    # Basically, erase balancing when it was not required.
+    if False:
+        xParam = {"geo_code":"VAS"}                # Vaenesston district
+        xNew_data = {"$set": {
+            "aDemand_workforce" : {
+                "total": {
+                    "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
+                    "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
+            "aItemised": []},
+
+            "aSupply_workforce": {
+                "total": {
+                    "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
+                    "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
+                "aItemised": []},
+
+            "aDemand_hholds": {
+                "total": {"r": 0, "h": 0, "m": 0, "l": 0, "p": 0},
+                "aItemised": []},
+
+            "aSupply_hholds": {
+                "total": {"r": 0, "h": 0, "m": 0, "l": 0, "p": 0},
+                "aItemised": []},
+
+            "aDemographics": {},
+
+            "aVehicles": {},
+
+            "aFootprint": {},
+
+            "aWarehouse": {}
+            }}                        # Prepare the update
+
+        ccTremb = db.connect()
+        cDest = db.destinations(ccTremb)
+        dParent_query = cDest.update_one(xParam, xNew_data)
 
 
 #-------------------------------------------------------------------------------
@@ -261,14 +300,29 @@ def mm_ampersand():
         cDb_of_choice = db.destinations(ccTremb)
         dQuery = cDb_of_choice.find(xParam, xRestr)
 
-    # Read all the factory data
+    # Read data in chronographic order
     if False:
+        # Do the query
+        xParam = {}         # All queries
+        xRestr = {"_id":1,
+                "my_id":1,
+                "host_geo_code":1}
+
+        ccTremb = db.connect()
+        cDb_of_choice = db.housing(ccTremb)
+        dQuery = cDb_of_choice.find(xParam, xRestr)
+        dQuery = dQuery.distinct("host_geo_code")   # Pulls out single element
+        dQuery.sort()       # Sort modifies in place. Returns 'none'
+
+    # Read all the factory data
+    if True:
         # Do the query
         xParam = {}         # All queries
         xRestr = {"_id":0}
         ccTremb = db.connect()
-        cDb_of_choice = db.workplaces_const(ccTremb)
+        cDb_of_choice = db.lines(ccTremb)
         dQuery = cDb_of_choice.find(xParam, xRestr)
+        dQuery = dQuery.sort("aName.cyr")
 
 
     for x in dQuery:
@@ -303,6 +357,19 @@ def mm_h():
     h_py.sub_menu()
 
 #-------------------------------------------------------------------------------
+def mm_k():
+    """ Transport lines (train and maybe others) declared on the map"""
+    import modules.k_lines as k_py
+    k_py.sub_menu()
+
+#-------------------------------------------------------------------------------
+def mm_o():
+    """ Simulation (train and maybe others) Moves a train slot around the map"""
+    import modules.o_simulation as o_py
+    o_py.sub_menu()
+
+
+#-------------------------------------------------------------------------------
 def mm_s():
     """ Stations & Ports menu which deals with intermodal transportation
      systems"""
@@ -310,6 +377,46 @@ def mm_s():
     s_py.sub_menu()
 
 #-------------------------------------------------------------------------------
+""" Importing and modifying the list from Ruby
+A:  Community services like Schools, hospitals, police stations, ...
+B:  RFU for Busses, Airplanes and unit trains
+C:  RFU
+D:  Destinations: Countries, Provinces, Districts, ... , Suburbs
+E:  RFU (Employees)
+F:  RFU (Factories?)
+G:  RFU (Events)
+H:  Housing: Effectively blocks of residences, Multi-story res. buildings.
+I:  Indicators / Signals
+J:  Junctions (same-to-same), See "Stations" for intermodal
+K:  Lines: Rail.
+L:  RFU (Locomotives)
+M:  RFU (Motorcars)
+N:  RFU (Resources like wood, grain, diesel)
+O:  RFU (Timetables for public transport)
+P:  RFU (Human powered transport)
+Q:  RFU (Air routes)
+R:  RFU (Roads)
+S:  Stations, or ports.
+T:  RFU (Tracks)
+U:  RFU (Time table)
+V:  RFU (Trains)
+W:  RFU (Wagon)
+X:  DO NOT USE: SERVICE CODE
+Y:  RFU (Traffic lights)
+Z:  RFU (Logging setup)
+0:  RFU (Overflow of any of the above)
+1:  RFU (Overflow of any of the above)
+2:  RFU (Overflow of any of the above)
+3:  RFU (Overflow of any of the above)
+4:  RFU (Overflow of any of the above)
+5:  RFU (Overflow of any of the above)
+6:  RFU (Overflow of any of the above)
+7:  RFU (Overflow of any of the above)
+8:  RFU (Overflow of any of the above)
+9:  RFU (Overflow of any of the above)
+
+"""
+
 def main_menu():
     """ Reroutes the program according to functionality """
     sMain_menu = """
@@ -329,9 +436,15 @@ def main_menu():
 A: Community Services (clinics, schools, theatres, libraries)
 D: Destinations (geographic areas on the map)
 H: Housing (registers residential plots from the map)
+K: Lines (Train lines, maybe road routes?)
+O: [Oscar] Simulation (Train simulation)
 S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
 
 """
+
+
+
+
     bExit = False
     while bExit == False:
         print(sMain_menu)
@@ -377,6 +490,14 @@ S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
         # Housing menu
         elif sInput == "H":
             mm_h()
+
+        # Lines menu
+        elif sInput == "K":
+            mm_k()
+
+        # Simulation menu:
+        elif sInput == "O":
+            mm_o()
 
         # Stations and ports menu
         elif sInput == "S":

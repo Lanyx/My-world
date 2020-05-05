@@ -222,6 +222,14 @@ def rnd_syllable(aSyl_scheme = [2, 2, 3, 3, 4, 4]):
                         sCyr_syl = "ю" + sCyr_syl[1:]
                         sCyr_word = sCyr_word[:-1]
 
+            # IÏ CONSTRUCT:
+                if (len(sLat_word) > 0 and
+                    sLat_word[-1] == "i" and
+                    sLat_syl[0] == "ï"):
+
+                    sLat_syl = "ÿ" + sLat_syl[1:]   # Replace the "ï"
+                    sLat_word = sLat_word[:-1]      # Drop final "i"
+
             # COMPULSORY VOWEL
                 # The 'å' indicate that a trailing vowel is needed to make the
                 # syllable readable
@@ -257,6 +265,22 @@ def rnd_syllable(aSyl_scheme = [2, 2, 3, 3, 4, 4]):
         #vletter (å)
             if sLat_word[-1] == "å": sLat_word = sLat_word[:-1]
             if sCyr_word[-1] == "ъ": sCyr_word = sCyr_word[:-1]
+
+        # Eliminate the final "à"
+        if sLat_word[-1] == "à":
+            sLat_word = sLat_word[:-1]      # Drop final character
+            sLat_word += "a"                # Replace it with non accented.
+
+            if sCyr_word[-1] == "ь":
+                sCyr_word = sCyr_word[:-1]  # On the Cyrillic side as well
+
+        # Eliminate the final è"
+        if sLat_word[-1] == "è":
+            sLat_word = sLat_word[:-1]      # Drop final character
+            sLat_word += "e"                # Replace it with non accented.
+
+            if sCyr_word[-1] == "ь":
+                sCyr_word = sCyr_word[:-1]  # On the Cyrillic side as well
 
         sLat_word = sLat_word.capitalize()
         sCyr_word = sCyr_word.capitalize()

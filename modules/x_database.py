@@ -58,6 +58,14 @@ def housing(ccTremb):
     return ccTremb["housing"]
 
 #-------------------------------------------------------------------------------
+# K
+def lines(ccTremb):
+    """ Selects the 'lines' database which holds information for communications
+    lines. (A residential block is encased by roads).
+    """
+    return ccTremb["lines"]
+
+#-------------------------------------------------------------------------------
 # S
 def stations(ccTremb):
     """ Selects the 'stations' database which holds information for train
@@ -67,6 +75,7 @@ def stations(ccTremb):
     return ccTremb["stations"]
 
 #-------------------------------------------------------------------------------
+# -
 def rnd_syl(ccTremb):
     """ Selects the 'rnd_syl' (Sylalables for random names) database.
         These are syllables (in the linguistic sense) which are pronouncable to
@@ -75,6 +84,7 @@ def rnd_syl(ccTremb):
     return ccTremb["rnd_syl"]
 
 #-------------------------------------------------------------------------------
+# -
 def rnd_man(ccTremb):
     """ Selects the 'rnd_man' (Male names for random names) database.
         These are masculine names which are pronouncable to an English / Polish
@@ -83,6 +93,7 @@ def rnd_man(ccTremb):
     return ccTremb["rnd_man"]
 
 #-------------------------------------------------------------------------------
+# -
 def rnd_woman(ccTremb):
     """ Selects the 'rnd_woman' (Female names for random names) database.
         These are feminine names which are pronouncable to an English / Polish
@@ -91,6 +102,7 @@ def rnd_woman(ccTremb):
     return ccTremb["rnd_woman"]
 
 #-------------------------------------------------------------------------------
+# -
 def rnd_static_surname(ccTremb):
     """ Selects the 'rnd_static_surname' (Family names for random names)
         database. These are surnames names which are pronouncable to an
@@ -99,6 +111,7 @@ def rnd_static_surname(ccTremb):
     return ccTremb["rnd_static_surname"]
 
 #-------------------------------------------------------------------------------
+# -
 def rnd_dynamic_surname(ccTremb):
     """ Selects the 'rnd_dynamic_surname' (Family names construction for random
         names) database. These are surnames names which are pronouncable to an
@@ -107,6 +120,7 @@ def rnd_dynamic_surname(ccTremb):
     return ccTremb["rnd_dynamic_surname"]
 
 #-------------------------------------------------------------------------------
+# -
 def rnd_suffix_surname(ccTremb):
     """ Selects the 'rnd_suffix_surname' (Family name construction for
         random names) database. These are surnames names which are
@@ -115,25 +129,28 @@ def rnd_suffix_surname(ccTremb):
     return ccTremb["rnd_suffix_surname"]
 
 #-------------------------------------------------------------------------------
+# -
 def demogfx_const(ccTremb):
     """ Selects the 'demogfx_const' (Constants for demographics) database.
         These hold editable values pertaining to the population """
     return ccTremb["demogfx_const"]
 
 #-------------------------------------------------------------------------------
+# -
 def city_services_const(ccTremb):
     """ Selects the 'city_services_const' (Constants for services like schools,
     police, clinics) database. """
     return ccTremb["city_services_const"]
 
 #-------------------------------------------------------------------------------
+# -
 def workplaces_const(ccTremb):
     """ Selects the 'workplaces_const' (Constants for workforce consumers like
     wheat farms, car factories, district hospital, bed and breakfast..."""
     return ccTremb["workplaces_const"]
 
-
 #-------------------------------------------------------------------------------
+# -
 def maps_db(ccTremb):
     """ Selects the 'maps' database. This is a reference to the maps drawn in a
         CAD program. This data is transferred to the actual entry where it is

@@ -1946,7 +1946,7 @@ def import_workplaces():
         # Wheat farm [AWH]
         {
             "code":"AWH",
-            "name":"Wheat Farm",                   # Name that comes up in menus
+            "name":"Wheat Farm",           # Name that comes up in menus
             "type":"Agricultural",
             "default":"wheat farm",
             # Number of cars / motorbikes that this workplace has, regardless
@@ -2076,6 +2076,62 @@ def import_workplaces():
                 },
                 {"name":"straw (maize)",
                 "fRate":0.75, "units":"t/ha",
+                "fMin_yield":0.6, "fMax_yield":1.66,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Trèbovitþen Rye Farm [ATR]
+        {
+            "code":"ATR",
+            "name":"Trèbovitþen Rye Farm",
+            "type":"Agricultural",
+            "default":"trèbovitþen rye farm",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":0.95, "units":"empl/ha",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 15, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 3.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"trèb rye",
+                "fRate":4.5, "units":"t/ha",
+                "fMin_yield":0.6, "fMax_yield":1.66,
+                "fStore_capacity":0
+                },
+                {"name":"straw (trèb rye)",
+                "fRate":0.44, "units":"t/ha",
                 "fMin_yield":0.6, "fMax_yield":1.66,
                 "fStore_capacity":0
                 },
@@ -2340,6 +2396,58 @@ def import_workplaces():
             ],
         },
 
+        # Cattle ranch [LMI]
+        {
+            "code":"LMI",
+            "name":"Dairy farm",
+            "type":"Husbandary",
+            "default":"dairy farm",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":16, "units":"empl/sq.km",
+                    "xType1": "PM", "iRate1": 95,
+                    "xType2": "PF", "iRate2": 5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":3.0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 95,
+                    "xType2": "LF", "iRate2": 5,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the annual resources produced
+                {"name":"milk",
+                # 125 head / sq.km @ 20kg / day = each = 912.5t/sq.km
+                "fRate":900, "units":"t/sq.km",
+                "fMin_yield":0.9, "fMax_yield":1.1,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
         # Chicken farm [LCH]
         {
             "code":"LCH",
@@ -2403,7 +2511,7 @@ def import_workplaces():
             "code":"FXX",
             "name":"Factory @ 50sq.m/empl",
             "type":"City Workplaces",
-            "default":"misc factories",
+            "default":"factories (by area)",
             "iStatic_veh":2,
             "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
@@ -2455,7 +2563,7 @@ def import_workplaces():
             "code":"FME",
             "name":"Factory (man empl cnt)",
             "type":"City Workplaces",
-            "default":"m.e.c factories",
+            "default":"factories (by employee)",
             "iStatic_veh":2,
             "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
@@ -2819,7 +2927,7 @@ def import_workplaces():
             "code":"OME",
             "name":"Offices (man empl cnt)",
             "type":"City Workplaces",
-            "default":"m.e.c. offices",
+            "default":"offices (by employee)",
             "iStatic_veh":1,
             "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce
@@ -3180,7 +3288,7 @@ def import_workplaces():
             "code":"RXM",
             "name":"Misc / specialist shops (man empl cnt)",
             "type":"Retail",
-            "default":"m.e.c misc shops",
+            "default":"misc shops (by employee)",
             "iStatic_veh":1,
             "sOwn_number_plates": "none",         # County Number plates
             "aaLabour":{                        # Descibes 4 levels of workforce

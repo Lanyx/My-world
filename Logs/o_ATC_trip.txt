@@ -1,0 +1,90 @@
+[00:00] VA-FS requests Trk_1
+[00:00] VA-FS cleared to Trk_1
+[00:01] VA-FS requests Trk_2
+[00:01] VA-FS cleared to Trk_2
+[00:02] VA-FS vacated Trk_1
+[00:03] VA-FS requests Trk_3
+[00:03] VA-FS cleared to Trk_3
+[00:04] VA-FS vacated Trk_2
+[00:05] FS-VA requests Trk_15
+[00:05] VA-FS requests Trk_4
+[00:05] FS-VA cleared to Trk_15
+[00:05] VA-FS cleared to Trk_4
+[00:06] VA-FS vacated Trk_3
+[00:07] FS-VA requests Trk_14
+[00:07] FS-VA cleared to Trk_14
+[00:08] VA-FS requests Trk_5
+[00:08] FS-VA vacated Trk_15
+[00:08] VA-FS cleared to Trk_5
+[00:09] VA-FS vacated Trk_4
+[00:09] VA-FS requests Trk_6
+[00:09] VA-FS cleared to Trk_6
+[00:10] VA-FS vacated Trk_5
+[00:15] VA-FS requests Trk_7
+[00:15] VA-FS cleared to Trk_7
+[00:16] VA-FS vacated Trk_6
+[00:16] VA-FS requests Trk_8
+[00:16] VA-FS cleared to Trk_8
+[00:17] VA-FS vacated Trk_7
+[00:23] VA-FS requests Trk_9
+[00:23] VA-FS cleared to Trk_9
+[00:24] VA-FS vacated Trk_8
+[00:25] VA-FS requests Trk_10
+[00:25] VA-FS cleared to Trk_10
+[00:26] VA-FS vacated Trk_9
+[00:26] VA-FS requests Trk_11
+[00:26] VA-FS cleared to Trk_11
+[00:27] VA-FS vacated Trk_10
+[00:27] VA-FS requests Trk_12
+[00:27] VA-FS cleared to Trk_12
+[00:28] VA-FS vacated Trk_11
+[00:40] VA-FS requests Trk_13
+[00:40] VA-FS cleared to Trk_13
+[00:41] VA-FS vacated Trk_12
+[00:41] VA-FS requests Trk_14
+[03:38] FS-VA requests Trk_13
+[03:38] FS-VA cleared to Trk_13
+[03:39] FS-VA vacated Trk_14
+[03:39] FS-VA requests Trk_12
+[03:39] FS-VA cleared to Trk_12
+[03:39] VA-FS cleared to Trk_14
+[03:40] FS-VA vacated Trk_13
+[03:40] VA-FS vacated Trk_13
+[03:52] FS-VA requests Trk_11
+[03:52] FS-VA cleared to Trk_11
+[03:53] FS-VA vacated Trk_12
+[03:53] FS-VA requests Trk_10
+[03:53] FS-VA cleared to Trk_10
+[03:54] FS-VA vacated Trk_11
+[03:54] FS-VA requests Trk_9
+[03:54] FS-VA cleared to Trk_9
+[03:55] FS-VA vacated Trk_10
+[03:56] FS-VA requests Trk_8
+[03:56] FS-VA cleared to Trk_8
+[03:57] FS-VA vacated Trk_9
+[04:03] FS-VA requests Trk_7
+[04:03] FS-VA cleared to Trk_7
+[04:04] FS-VA vacated Trk_8
+[04:04] FS-VA requests Trk_6
+[04:04] FS-VA cleared to Trk_6
+[04:05] FS-VA vacated Trk_7
+[04:10] FS-VA requests Trk_5
+[04:10] FS-VA cleared to Trk_5
+[04:11] FS-VA vacated Trk_6
+[04:11] FS-VA requests Trk_4
+[04:11] FS-VA cleared to Trk_4
+[04:12] FS-VA vacated Trk_5
+[04:14] FS-VA requests Trk_3
+[04:14] FS-VA cleared to Trk_3
+[04:15] FS-VA vacated Trk_4
+[04:16] FS-VA requests Trk_2
+[04:16] FS-VA cleared to Trk_2
+[04:17] FS-VA vacated Trk_3
+[04:18] FS-VA requests Trk_1
+[04:18] FS-VA cleared to Trk_1
+[04:19] FS-VA vacated Trk_2
+[04:19] FS-VA Trip completed
+[07:10] VA-FS requests Trk_15
+[07:10] VA-FS cleared to Trk_15
+[07:11] VA-FS vacated Trk_14
+[07:12] VA-FS Trip completed

@@ -1,0 +1,106 @@
+Pretty print information for was generated on 2020-04-30 12:56:30.271018
+Route [None], Named 'Vænesston-Kændis Beach (VA-FS)'[Terrain] km 0.0 to 0.4 with 2215ft to 2215ft
+>   rise of 0ft over 0.4km
+>   = 0.0% slope or (1:9999.0),   1:9999.0 means level
+
+[Terrain] km 0.4 to 1.11 with 2215ft to 2250ft
+>   rise of 35ft over 0.71km
+>   = 1.51% slope or (1:66.4),   1:9999.0 means level
+
+[Terrain] km 1.11 to 2.51 with 2250ft to 2260ft
+>   rise of 10ft over 1.4km
+>   = 0.21% slope or (1:466.7),   1:9999.0 means level
+
+[Terrain] km 2.51 to 21.36 with 2260ft to 2240ft
+>   rise of -20ft over 18.85km
+>   = -0.03% slope or (1:-3090.2),   1:9999.0 means level
+
+[Terrain] km 21.36 to 26.84 with 2240ft to 2250ft
+>   rise of 10ft over 5.48km
+>   = 0.05% slope or (1:1826.7),   1:9999.0 means level
+
+[Terrain] km 26.84 to 132.26 with 2250ft to 2500ft
+>   rise of 250ft over 105.42km
+>   = 0.07% slope or (1:1383.5),   1:9999.0 means level
+
+[Structure] km 49.52 to 50.28 with 2303.8ft to 2330.6ft
+>   rise of 26.8ft over 0.76km
+>   = 1.08% slope or (1:92.7),   1:9999.0 means level
+
+[Structure] km 50.28 to 50.33 with 2330.6ft to 2330.7ft
+>   rise of 0.1ft over 0.05km
+>   = 0.0% slope or (1:9999.0),   1:9999.0 means level
+
+[Structure] km 50.33 to 51.13 with 2330.7ft to 2307.6ft
+>   rise of -23.1ft over 0.8km
+>   = -0.88% slope or (1:-114.3),   1:9999.0 means level
+
+[Structure] km 83.64 to 84.38 with 2384.7ft to 2356.5ft
+>   rise of -28.2ft over 0.74km
+>   = -1.16% slope or (1:-86.0),   1:9999.0 means level
+
+[Structure] km 84.38 to 84.43 with 2356.5ft to 2356.6ft
+>   rise of 0.1ft over 0.05km
+>   = 0.0% slope or (1:9999.0),   1:9999.0 means level
+
+[Structure] km 84.43 to 85.15 with 2356.6ft to 2388.3ft
+>   rise of 31.7ft over 0.72km
+>   = 1.35% slope or (1:74.2),   1:9999.0 means level
+
+[Terrain] km 132.26 to 143.54 with 2500ft to 2650ft
+>   rise of 150ft over 11.28km
+>   = 0.41% slope or (1:246.8),   1:9999.0 means level
+
+[Terrain] km 143.54 to 152.24 with 2650ft to 2640ft
+>   rise of -10ft over 8.7km
+>   = -0.03% slope or (1:-2900.0),   1:9999.0 means level
+
+[Terrain] km 152.24 to 159.6 with 2640ft to 2620ft
+>   rise of -20ft over 7.36km
+>   = -0.08% slope or (1:-1206.6),   1:9999.0 means level
+
+[Terrain] km 159.6 to 169.52 with 2620ft to 2556ft
+>   rise of -64ft over 9.92km
+>   = -0.2% slope or (1:-508.7),   1:9999.0 means level
+
+[Terrain] km 169.52 to 180.84 with 2556ft to 2445ft
+>   rise of -111ft over 11.32km
+>   = -0.3% slope or (1:-334.9),   1:9999.0 means level
+
+[Terrain] km 180.84 to 190.76 with 2445ft to 2390ft
+>   rise of -55ft over 9.92km
+>   = -0.17% slope or (1:-590.5),   1:9999.0 means level
+
+[Structure] km 184.91 to 185.86 with 2422.4ft to 2377.2ft
+>   rise of -45.2ft over 0.95km
+>   = -1.45% slope or (1:-68.8),   1:9999.0 means level
+
+[Structure] km 185.86 to 185.94 with 2377.2ft to 2376.7ft
+>   rise of -0.5ft over 0.08km
+>   = -0.25% slope or (1:-400.0),   1:9999.0 means level
+
+[Structure] km 185.94 to 187.19 with 2376.7ft to 2409.8ft
+>   rise of 33.1ft over 1.25km
+>   = 0.81% slope or (1:123.8),   1:9999.0 means level
+
+[Terrain] km 190.76 to 197.86 with 2390ft to 2400ft
+>   rise of 10ft over 7.1km
+>   = 0.04% slope or (1:2366.7),   1:9999.0 means level
+
+[Terrain] km 197.86 to 202.66 with 2400ft to 2410ft
+>   rise of 10ft over 4.8km
+>   = 0.06% slope or (1:1600.0),   1:9999.0 means level
+
+[Terrain] km 202.66 to 216.76 with 2410ft to 2350ft
+>   rise of -60ft over 14.1km
+>   = -0.13% slope or (1:-770.5),   1:9999.0 means level
+
+[Terrain] km 216.76 to 231.22 with 2350ft to 2340ft
+>   rise of -10ft over 14.46km
+>   = -0.02% slope or (1:-4820.0),   1:9999.0 means level
+
+[Terrain] km 231.22 to 248.0 with 2340ft to 2320ft
+>   rise of -20ft over 16.78km
+>   = -0.04% slope or (1:-2750.8),   1:9999.0 means level
+
+

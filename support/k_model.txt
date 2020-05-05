@@ -1,0 +1,395 @@
+31 Mar 2020. Trying to work out only the railway line inspired by the drawing
+of the schematic. I have decided to declare K00-001 from VAA-00 station to
+shunting yard in FS.
+
+### It is 17:20, and I had a bit of an idea. I'll make an exception here. The
+rail route will be done up by hand in an JSON format. Ruby will then import it
+into the database.
+Here is the json string.
+{
+    "my_id":"K00-001",
+    "aHost_geo_code":["VA","FS0"],
+    "start":"VAA-00",
+    "end":"FS0",
+    "aSections":[
+        {"km":0.00, "tracks":4, "item": "elev", "type":"abs_ft", "val":2975},
+        {"km":0.00, "tracks":4, "item": "stru", "type":"tunnel", "val":"bgn"},
+        {"km":0.00, "tracks":4, "item": "stat", "type":"plat_bgn", "val":[1,2,3,4]},
+
+        {"km":0.20, "tracks":4, "item": "stat", "type":"aGeo_code", "val":["V", "VA", "VAA", "VAA-0"]},
+        {"km":0.20, "tracks":4, "item": "stat", "type":"aUsage", "val":["inter-provincial", "inter-district", "inter-county", "commuter"]},
+        {"km":0.20, "tracks":4, "item": "stat", "type":"sName", "val":"Vænesston Central"},
+        {"km":0.20, "tracks":4, "item": "stat", "type":"aOperators", "val":["VæTæb","...","...","Vænesston Municipality"]},
+
+        {"km":0.39, "tracks":4, "item": "stat", "type":"plat_end", "val":[1,2,3,4]},
+        {"km":0.39, "tracks":4, "item": "elev", "type":"abs_ft", "val":2975},
+        {"km":0.39, "tracks":4, "item": "spdl", "type":"away"; "val":40},
+
+        {"km":0.49, "tracks":3, "item": "trck", "type":"merge"; "val":[4, 3]},
+        {"km":0.50, "tracks":2, "item": "trck", "type":"merge"; "val":[1, 2]},
+        {"km":0.55, "tracks":2, "item": "trck", "type":"N-jct"; "val":[2, 1]}, # Right-to-left
+        {"km":0.55, "tracks":2, "item": "stru", "type":"tunnel"; "val":"end"},
+        {"km":0.55, "tracks":2, "item": "stru", "type":"cut"; "val":"bgn"},
+        {"km":0.57, "tracks":1, "item": "trck", "type":"end"; "val":[2]},
+
+        {"km":1.07, "tracks":1, "item": "stru", "type":"cut"; "val":"end"},
+        {"km":1.07, "tracks":1, "item": "elev", "type":"abs_ft"; "val":3010},
+
+        {"km":1.18, "tracks":1, "item": "junc", "type":"cat"; "val":"slow_level"},
+        {"km":1.18, "tracks":1, "item": "junc", "type":"aLines"; "val":["T10-001"]},
+        {"km":1.18, "tracks":1, "item": "junc", "type":"config"; "val":"merge"},
+        {"km":1.18, "tracks":1, "item": "junc", "type":"trx_bef"; "val":1},
+        {"km":1.18, "tracks":1, "item": "junc", "type":"trx_aft"; "val":1},
+        {"km":1.18, "tracks":1, "item": "junc", "type":"trx_bra"; "val":1},
+        {"km":1.18, "tracks":1, "item": "junc", "type":"side"; "val":"L"},
+
+        {"km":1.28, "tracks":1, "item": "junc", "type":"cat"; "val":"slow_level"},
+        {"km":1.28, "tracks":1, "item": "junc", "type":"sName"; "val":"VAA-0 Service Yard"},
+        {"km":1.28, "tracks":1, "item": "junc", "type":"config"; "val":"merge"},
+        {"km":1.28, "tracks":1, "item": "junc", "type":"trx_bef"; "val":1},
+        {"km":1.28, "tracks":1, "item": "junc", "type":"trx_aft"; "val":1},
+        {"km":1.28, "tracks":1, "item": "junc", "type":"trx_bra"; "val":1},
+        {"km":1.28, "tracks":1, "item": "junc", "type":"side"; "val":"R"},
+
+        {"km":1.40, "tracks":1, "item": "x_rd", "type":"lanes"; "val":2},
+        {"km":1.40, "tracks":1, "item": "x_rd", "type":"rd_tf_vol"; "val":"med"},
+        {"km":1.40, "tracks":1, "item": "x_rd", "type":"aprx_angle"; "val":80},
+        {"km":1.40, "tracks":1, "item": "x_rd", "type":"guarded"; "val":"STOP"},
+
+        {"km":1.55, "tracks":1, "item": "junc", "type":"cat"; "val":"slow_level"},
+        {"km":1.55, "tracks":1, "item": "junc", "type":"aLines"; "val":"K00-002"},
+        {"km":1.55, "tracks":1, "item": "junc", "type":"config"; "val":"div"},
+        {"km":1.55, "tracks":1, "item": "junc", "type":"trx_bef"; "val":1},
+        {"km":1.55, "tracks":1, "item": "junc", "type":"trx_aft"; "val":1},
+        {"km":1.55, "tracks":1, "item": "junc", "type":"trx_bra"; "val":1},
+        {"km":1.55, "tracks":1, "item": "junc", "type":"side"; "val":"L"},
+
+        {"km":1.98, "tracks":1, "item": "x_rd", "type":"lanes"; "val":2},
+        {"km":1.98, "tracks":1, "item": "x_rd", "type":"rd_tf_vol"; "val":"low"},
+        {"km":1.98, "tracks":1, "item": "x_rd", "type":"aprx_angle"; "val":90},
+        {"km":1.98, "tracks":1, "item": "x_rd", "type":"guarded"; "val":"STOP"},
+        {"km":1.98, "tracks":1, "item": "x_rd", "type":"comment"; "val":"school"},
+
+        {"km":2.32, "tracks":1, "item": "junc", "type":"cat"; "val":"slow_level"},
+        {"km":2.32, "tracks":1, "item": "junc", "type":"aLines"; "val":"K00-002"},
+        {"km":2.32, "tracks":1, "item": "junc", "type":"config"; "val":"merge"},
+        {"km":2.32, "tracks":1, "item": "junc", "type":"trx_bef"; "val":1},
+        {"km":2.32, "tracks":1, "item": "junc", "type":"trx_aft"; "val":1},
+        {"km":2.32, "tracks":1, "item": "junc", "type":"trx_bra"; "val":1},
+        {"km":2.32, "tracks":1, "item": "junc", "type":"side"; "val":"L"},
+
+        {"km":2.34, "tracks":1, "item": "x_rd", "type":"lanes"; "val":2},
+        {"km":2.34, "tracks":1, "item": "x_rd", "type":"rd_tf_vol"; "val":"high"},
+        {"km":2.34, "tracks":1, "item": "x_rd", "type":"aprx_angle"; "val":15},
+        {"km":2.34, "tracks":1, "item": "x_rd", "type":"guarded"; "val":"STOP"},
+        {"km":2.34, "tracks":1, "item": "x_rd", "type":"comment"; "val":"Road T-junct"},
+        {"km":2.34, "tracks":1, "item": "x_rd", "type":"rte_no"; "val":"B96"},
+
+        {"km":2.41, "tracks":1, "item": "junc", "type":"cat"; "val":"slow_level"},
+        {"km":2.41, "tracks":1, "item": "junc", "type":"aLines"; "val":"K00-004"},
+        {"km":2.41, "tracks":1, "item": "junc", "type":"config"; "val":"div"},
+        {"km":2.41, "tracks":1, "item": "junc", "type":"trx_bef"; "val":1},
+        {"km":2.41, "tracks":1, "item": "junc", "type":"trx_aft"; "val":1},
+        {"km":2.41, "tracks":1, "item": "junc", "type":"trx_bra"; "val":1},
+        {"km":2.41, "tracks":1, "item": "junc", "type":"side"; "val":"L"},
+
+        {"km":2.67, "tracks":2, "item": "trck", "type":"div"; "val":1},
+
+        {"km":3.07, "tracks":2, "item": "stru", "type":"culvet", "val":"bgn"},
+
+        {"km":3.09, "tracks":2, "item": "junc", "type":"cat"; "val":"slow_level"},
+        {"km":3.09, "tracks":2, "item": "junc", "type":"aLines"; "val":"K00-003"},
+        {"km":3.09, "tracks":2, "item": "junc", "type":"config"; "val":"div"},
+        {"km":3.09, "tracks":2, "item": "junc", "type":"trx_bef"; "val":2},
+        {"km":3.09, "tracks":2, "item": "junc", "type":"trx_aft"; "val":2},
+        {"km":3.09, "tracks":2, "item": "junc", "type":"trx_bra"; "val":1},
+        {"km":3.09, "tracks":2, "item": "junc", "type":"side"; "val":"R"},
+
+        {"km":3.44, "tracks":2, "item": "x_rd", "type":"lanes"; "val":2},
+        {"km":3.44, "tracks":2, "item": "x_rd", "type":"rd_tf_vol"; "val":"med"},
+        {"km":3.44, "tracks":2, "item": "x_rd", "type":"aprx_angle"; "val":90},
+        {"km":3.44, "tracks":2, "item": "x_rd", "type":"guarded"; "val":"STOP"},
+
+        {"km":3.66, "tracks":2, "item": "trck", "type":"N-jct"; "val":[2, 1]}
+        {"km":3.94, "tracks":3, "item": "trck", "type":"div"; "val":1},
+
+        {"km":3.79, "tracks":3, "item": "x_rd", "type":"lanes"; "val":2},
+        {"km":3.79, "tracks":3, "item": "x_rd", "type":"rd_tf_vol"; "val":"med"},
+        {"km":3.79, "tracks":3, "item": "x_rd", "type":"aprx_angle"; "val":90},
+        {"km":3.79, "tracks":3, "item": "x_rd", "type":"guarded"; "val":"STOP"},
+
+        {"km":4.57, "tracks":3, "item": "stat", "type":"plat_bgn", "val":[1,3]},
+        {"km":4.70, "tracks":3, "item": "stat", "type":"aGeo_code", "val":[]},
+        {"km":4.70, "tracks":3, "item": "stat", "type":"sName", "val":"Mordel"},
+        {"km":4.70, "tracks":3, "item": "stat", "type":"aUsage", "val":["commuter"]},
+        {"km":4.70, "tracks":3, "item": "stat", "type":"aOperators", "val":["Vænesston Municipality"]},
+        {"km":4.82, "tracks":3, "item": "stat", "type":"plat_end", "val":[1,3]},
+
+        {"km":4.86, "tracks":3, "item": "x_rd", "type":"lanes"; "val":2},
+        {"km":4.86, "tracks":3, "item": "x_rd", "type":"rd_tf_vol"; "val":"med"},
+        {"km":4.86, "tracks":3, "item": "x_rd", "type":"aprx_angle"; "val":90},
+        {"km":4.86, "tracks":3, "item": "x_rd", "type":"guarded"; "val":"STOP"},
+
+        {"km":5.71, "tracks":3, "item": "x_rd", "type":"lanes"; "val":2},
+        {"km":5.71, "tracks":3, "item": "x_rd", "type":"rd_tf_vol"; "val":"med"},
+        {"km":5.71, "tracks":3, "item": "x_rd", "type":"aprx_angle"; "val":90},
+        {"km":5.71, "tracks":3, "item": "x_rd", "type":"guarded"; "val":"STOP"},
+
+        {"km":6.11, "tracks":3, "item": "stat", "type":"plat_bgn", "val":[1,3]},
+        {"km":6.23, "tracks":3, "item": "stat", "type":"aGeo_code", "val":[]},
+        {"km":6.23, "tracks":3, "item": "stat", "type":"sName", "val":"Easel Moss"},
+        {"km":6.23, "tracks":3, "item": "stat", "type":"aUsage", "val":["commuter"]},
+        {"km":6.23, "tracks":3, "item": "stat", "type":"aOperators", "val":["Vænesston Municipality"]},
+        {"km":6.36, "tracks":3, "item": "stat", "type":"plat_end", "val":[1,3]},
+
+        {"km":6.46, "tracks":3, "item": "x_rd", "type":"lanes"; "val":2},
+        {"km":6.46, "tracks":3, "item": "x_rd", "type":"rd_tf_vol"; "val":"med"},
+        {"km":6.46, "tracks":3, "item": "x_rd", "type":"aprx_angle"; "val":90},
+        {"km":6.46, "tracks":3, "item": "x_rd", "type":"guarded"; "val":"STOP"},
+
+        {"km":6.52, "tracks":2, "item": "trck", "type":"merge"; "val":[3, 2]},
+        {"km":6.56, "tracks":2, "item": "trck", "type":"N-jct"; "val":[2, 1]},
+        {"km":6.80, "tracks":1, "item": "trck", "type":"end"; "val":[1]},
+        {"km":6.80, "tracks":1, "item": "trck", "type":"comment"; "val":"End of commuter line"},
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dNew_line = {
+    "my_id":            K00-001
+    "aHost_geo_code":   ["VA", "FS0"],
+    "start":            "VAA-00"
+    "end":              "FS0-0"
+    "aSections":        [ # "m": merge, "d":diverge
+        {"offset":0.00, "tracks":4, "aPlatform":[1,2,3,4], "struct":"tunnel","dJunction":{}},
+        {"offset":0.39, "tracks":4, "aPlatform":[1,2,3,4], "struct":"tunnel","dJunction":{}},
+        {"offset":0.59, "tracks":1, "aPlatform":[], "struct":"tunnel","dJunction":{
+            "type":"level",
+            "aLines":[],
+            "sName":None,
+            "dConfig":{"type":"mrg", "main_bef":4, main_aft:"1","branch":0,dir":"C"}}},
+
+        }},
+        {"offset":1.15, "tracks":1, "aPlatform":[], "struct":[], "dJunction":{
+            "type":"level",
+            "aLines":["T10-001"],
+            "sName":None,
+            "dConfig":{"type":"mrg", "main_bef":1, main_aft:"1","branch":1,dir":"L"}}}
+
+        {"offset":1.25, "tracks":1, "aPlatform":[], "struct":[],"dJunction":{
+            "type":"level",
+            "aLines":[],
+            "sName":"VAA Service",
+            "dConfig":{"type":"mrg", "main_bef":1, main_aft:"1","branch":1,dir":"R"}}},
+
+        {"offset":1.40, "tracks":1, "aPlatform":[], "struct":[],"dJunction":{
+            "type":"level",
+            "aLines":["T00-002"],
+            "sName":None,
+            "dConfig":{"type":"div", "main_bef":1, main_aft:"1","branch":1,dir":"L"}}},
+
+        {"offset":2.15, "tracks":1, "aPlatform":[], "struct":[],"dJunction":{
+            "type":"level",
+            "aLines":["T00-002"],
+            "sName":None,
+            "dConfig":{"type":"mrg", "main_bef":1, main_aft:"1","branch":1,dir":"L"}}},
+
+        {"offset":2.25, "tracks":1, "aPlatform":[], "struct":[],"dJunction":{
+            "type":"level",
+            "aLines":["T00-004"],
+            "sName":None,
+            "dConfig":{"type":"div", "main_bef":1, main_aft:"1","branch":1,dir":"L"}}},
+
+        {"offset":2.56, "tracks":1, "aPlatform":[], "struct":[],"dJunction":{
+            "type":"level",
+            "aLines":[],
+            "sName":None,
+            "dConfig":{"type":"div", "main_bef":1, main_aft:"2","branch":0",dir":"C"}}},
+
+        {"offset":2.91, "tracks":1, "aPlatform":[], "struct":[],"dJunction":{
+            "type":"level",
+            "aLines":["T00-003"],
+            "sName":None,
+            "dConfig":{"type":"div", "main_bef":2, main_aft:"2","branch":1,"dir":"R"}}},
+
+        {"offset":3.81, "tracks":1, "aPlatform":[], "struct":[],"dJunction":{
+            "type":"level",
+            "aLines":[],
+            "sName":None,
+            "dConfig":{"type":"div", "main_bef":2, main_aft:"3","branch":0,"dir":"L"}}},
+
+    ]
+
+
+
+
+
+
+
+        {
+            "aFrom":{"type":"d", "val":"VAA-00","aSpd_lim":[{"offset":0, "val":40}]},
+            "aTo":  {"type":"m","val":"K10-001","aSpd_lim":[{"offset":1125, "val":40}, {"offset":, "val":20}]},
+            "len":1125,
+            "aTracks":[{"cnt":4, "len":610}, {"cnt":1, "len":515}],
+            "aStruct":[{"type":"tunnel", "len":585, "offset":0, "sName":"Vænesston Provincial Station"}],
+            "aStations":[{"geo_code":"V", "len": 400, "offset":200, "type":"terminal"}]
+        },
+
+    ],
+}
+
+
+
+
+
+
+
+""" Look at Wrocław, with the tram tracks. So, in need "xStr" as
+# "RLR". This means "road"-"light_rail"-"road".
+# For example, ul Wiejska in Wrocław could be described as: "VR_PQV" Later on,
+# the "AI" would then decode this into their constituent emelemnts.
+
+# List:
+"A": Animal path (bridal path for example)
+"B": Bus lane
+"C": Bus pull-out bay
+"D": Platform, raised
+"E": Emergency lane, Indicate length
+"F": Emergency lane, intermittent (PL-A4 Kąty Wrocławskie towards D)
+"G": ? Helipad
+"H": High-speed road (>80km/h) like highway and/or ramp, not nec. grade-sep.
+"I": Runway (airfield / airport)
+"J": Junction (divergant line changes direction of travel. Inc reversing)
+"K": Taxiway (airfield / airport)
+"L": Track, Light rail
+"M": Private road like a race-track.
+"N": Track, Narrow gauge
+"O": Parking (accessed directly from the road)
+"P": Pedestrian Path
+"Q": Cycling path
+"R": Road < 80km/h
+"S": Shipping lane
+"T": Track, Heavy rail
+"U": Water (could be a river, lake, canal). It can run as part of the road res.
+"V": Regular property access (<5 vehicles)
+"W": 'Wewnęczna' (Internal road): accesses significant number of parking bays
+"X": Track: shunting yard: Light rail
+"Y": Track: shunting yard: Heavy rail
+"Z": Track: shunting yard: Narrow gague
+"0": Support structure (bridge support, cable car support)
+"1": Other structure (Monument)
+"2": Ferry crossing
+"3": RFU
+"4": Very-fine   (Intersection description)
+"5": Fine        (Suburbs)
+"6": Medium      (City maps)
+"7": Coarse      (maps ...)
+"8": Very coarse (maps over 1:1M)
+"9": Unspecified
+"(",")": Unspecified share open
+"[","]": Bridge / Embankment / Viaduct / its approach
+"{","}": Tunnel / dip / subway / its approach
+"<",">": Track count
+"|": Barrier (vertical element seperating the flows)
+"_": Separation "green space" (May be traversed easily)
+"*": Separation "green space" with foliage. (Can't be traversed)
+"@": Vehicle restrictor, further explanation needed (truck only road/ lane)
+"-": Structure code like "S00-001" or "J00-001"
+"""
+#-------------------------------------------------------------------------------
+# RAIL EXAMPLE
+    dNew_line = {
+        "my_id":            K00-001
+        "aHost_geo_code":   [GY0-T],
+        "start":            GY0-T
+        "end":              GY0-T
+        "aRoute":           [GY0-T] (How deep go I want to go here...)
+        "route_no":         Test
+        "type":             Rail
+        "iLength":          61300
+
+        "dPart": [
+            {"sOrd": "~0",
+            "sName": "Main",
+            "aHost_geo_code":   [GY0-T],
+            "start":            GY0-T
+            "end":              GY0-T
+            "iLength":          61300
+
+            "aSegments": [
+                {"delta":    0, "struct":"T",        "elev_ft": 3010, "aLanes":[]},
+T0003           {"delta": 3888, "struct":"-J00-001", "elev_ft": 3010, "aLanes":[]}, # When is Junction used? Can it be used internally??
+T0001, 2        {"delta":  400, "struct":"D<T2>D"    "elev_ft": 3010, "aLanes":[]},
+                {"delta":   20, "struct":"-J00-002", "elev_ft": 3010, "aLanes":[]},
+T0004           {"delta": 3596, "struct":"T",        "elev_ft": 3010, "aLanes":[]},
+                {"delta":   20, "struct":"-J00-003", "elev_ft": 3010, "aLanes":[]},
+T0005           {"delta":53340, "struct":"T",        "elev_ft": 3010, "aLanes":[]}
+                ],
+            "aElev_ft": [
+                {"delta":    0, "eval_ft": 3010},
+                {"delta": 7924, "eval_ft": 3010},
+                {"delta": 2580, "eval_ft": 2975},
+                {"delta": 4600, "eval_ft": 2975},
+                {"delta": 2200, "eval_ft": 2950},
+                {"delta":  500, "eval_ft": 2950},
+                {"delta": 3520, "eval_ft": 2980},
+                {"delta": 6064, "eval_ft": 2980},
+                {"delta": 3008, "eval_ft": 3000},
+                {"delta": 3872, "eval_ft": 3120},
+                {"delta": 1916, "eval_ft": 3120},
+                {"delta": 3704, "eval_ft": 2975},
+                {"delta": 2540, "eval_ft": 2985},
+                {"delta": 2208, "eval_ft": 3020},
+                {"delta": 3168, "eval_ft": 3020},
+                {"delta":11760, "eval_ft": 3010},
+            ],
+
+
+            },
+
+            {"sOrd": "~1",
+             "sName": "South Link",
+            },
+
+            {"sOrd": "~2",
+             "sName": "North Link",
+            },
+
+            {"sOrd": "~3",
+             "sName": "North Sidings",
+            },
+
+            {"sOrd": "~4",
+             "sName": "South Sidings",
+            },
+
+            {"sOrd": "~5",
+             "sName": "Wye",
+            },
+        ]
+    }
