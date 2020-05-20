@@ -190,7 +190,7 @@ def find_highest_id(dId_query):
     return iHighest, aEvery_id
 
 #-------------------------------------------------------------------------------
-def verify_geo_code(sGeo_code, cDest):
+def verify_geo_code(sGeo_code, cDest, bDont_warn=False):
     """ Method makes sure that the geo-code entered exists in the database.
     Returns the names of the entity"""
 
@@ -209,7 +209,8 @@ def verify_geo_code(sGeo_code, cDest):
 
     if iNo_of_hits != 1:
         sTxt = "\n\aGeocode ({0}) verification failed. Exiting"
-        print(sTxt.format(sGeo_code))
+        if bDont_warn == True:
+            print(sTxt.format(sGeo_code))
         return None
     return aName
 
@@ -436,8 +437,8 @@ def get_train(sType, sData, xParam=None):
                 print("\n\a'Speed limit' needs to be an integer number")
                 return None
 
-            if xParam <= 0: # Negative speed limit?
-                print("\n\a'Speed limit' can't be zero or negative")
+            if xParam < 0: # Negative speed limit?
+                print("\n\a'Speed limit' can't be negative")
 
             if xParam <= 40:    # Allow to travel at the limit
                 return xParam

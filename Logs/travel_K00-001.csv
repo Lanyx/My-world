@@ -1,0 +1,36 @@
+km;type;code;name;s away;s home
+0.2;sta;V;Dzþevogurski;24;13395
+0.2;sta;VA;Vænesston;24;13395
+0.2;sta;VAA;Vænesston;24;13395
+0.2;sta;VAA-0;Vænesston;24;13395
+1.43;jct;K00-002; ;172;13248
+2.13;jct;K00-00A; ;256;13164
+4.7;sta;VAA-0HM;Mordel;428;12991
+6.23;sta;VAA-0HA;Easel Moss;528;12890
+13.04;sta;VAA-L;Dritso;874;12545
+21.36;sta;VAW;Kemptoñak;1319;12100
+35.98;sta;VAW-R;Gràhy;2012;11407
+46.74;sta;VAY;Städlingen;2567;10852
+56.64;sta;VAT-3;Ølàmeva;3131;10267
+65.92;sta;VAT-P;Zgèulèvïa;3483;9916
+74.7;sta;VAF-C;Ubÿesçi;3816;9583
+82.2;sta;VAF-L;Ñamlèki;4100;9299
+89.0;sta;VAC-E;Mràpo;4469;9041
+100.78;sta;VAC;Old Bohþmúl;5042;8468
+108.4;sta;VAC-F;Zgegú;5572;7938
+115.62;sta;VAQ-W;Sebïeïer;5878;7632
+128.7;sta;VAQ;Avi-and-Adi;6507;7003
+134.46;sta;VAK-P;Zçñygrazçi;6885;6625
+143.54;sta;VAK;Far Morison;7479;6031
+152.24;sta;VAK-L;Gzþyklÿon;7881;5630
+159.6;sta;VAK-T;Fïetþo;8193;5318
+169.52;sta;VAI-E;Ikèzçihmi;8613;4897
+180.84;sta;VAI;Úåîpiåeston;9227;4284
+190.76;sta;VAI-9;Ksçysna;9989;3370
+197.86;sta;VAI-R;Izçibylu;10290;2802
+202.66;sta;VAS;åWrócisl'aw;10494;2418
+210.84;sta;VAS-D;Añutsi;10840;1951
+216.76;sta;VAS-V;Gretçizþo;11091;1700
+222.34;sta;VAS-N;Gdèïes;11328;1463
+231.22;sta;VAS-U;Buboïek;11704;1087
+248.0;sta;FS;Fusþton;12752;36

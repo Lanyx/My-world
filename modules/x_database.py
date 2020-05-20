@@ -60,8 +60,18 @@ def housing(ccTremb):
 #-------------------------------------------------------------------------------
 # K
 def lines(ccTremb):
-    """ Selects the 'lines' database which holds information for communications
-    lines. (A residential block is encased by roads).
+    """ Selects the 'lines' database which holds information for railway
+    lines. Junctions are formed from individual lines
+    """
+    return ccTremb["lines"]
+
+#-------------------------------------------------------------------------------
+# K
+def road_routes(ccTremb):
+    """ Selects the 'road routes' database which holds information for road
+    network of Federal, Provincial, District and maybe County numbered routes.
+    Grade seperated junctions are not split up into individual links like with
+    railway lines
     """
     return ccTremb["lines"]
 

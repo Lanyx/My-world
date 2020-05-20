@@ -1,0 +1,222 @@
+    Kvàaña Municipality / Гмина Кваьаня
+----------
+Pretty print information was generated on 2020-05-09 09:25:20.298116
+----------
+my_id: D00-0ZF
+geo_code: VXX-T
+----------
+Total population: 3,705
+
+Total vehicles*: 350
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced:
+>   wheat: 9,641.72t/yr by wheat farm 0
+>   hay: 1,191.45t/yr by wheat farm 1
+
+Build housing (Demand - Supply):
+>    r: 0; h: 9; m: 27; l: 174; p: 1,208;
+----------
+Hierarchial Parent: 
+>  Iridan County / Воевуцтво Иридан
+>   my_id: D00-0AM
+>   geo_code: VXX
+----------
+Hierarchial Children: 
+>   count: 0
+----------
+Map and area: 
+>   Region: Vænesston 1:2,000,000 (drawn in 2019)
+>   Position (mm) x: 172.72, y: 91.47
+>   Area on paper (sq.mm) a: 4.92
+>   Area represented: 1,968.0ha
+----------
+Workforce Demand: 
+>   Grand Total: (1,889)
+>       rm: 0; hm: 8; mm: 21; lm: 79; pm: 844;
+>       rf: 0; hf: 2; mf: 16; lf: 122; pf: 797;
+>
+>   [AWH] wheat farm: (1,677)
+>       rm: 0; hm: 1; mm: 9; lm: 42; pm: 819;
+>       rf: 0; hf: 0; mf: 0; lf: 50; pf: 756;
+>       tot road veh: 23;
+>
+>   [5YP] Police: (24)
+>       rm: 0; hm: 0; mm: 1; lm: 10; pm: 1;
+>       rf: 0; hf: 0; mf: 1; lf: 10; pf: 1;
+>       tot road veh: 7;
+>
+>   [5YF] Fire Dept: (8)
+>       rm: 0; hm: 0; mm: 0; lm: 8; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 2;
+>
+>   [5YH] Community Clinic: (11)
+>       rm: 0; hm: 7; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 2; mf: 0; lf: 0; pf: 2;
+>       tot road veh: 1;
+>
+>   [5YG] Community Governance: (6)
+>       rm: 0; hm: 0; mm: 0; lm: 5; pm: 1;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED0] Pre-school: (53)
+>       rm: 0; hm: 0; mm: 1; lm: 2; pm: 2;
+>       rf: 0; hf: 0; mf: 7; lf: 32; pf: 9;
+>       tot road veh: 8;
+>
+>   [ED1] Primary School: (19)
+>       rm: 0; hm: 0; mm: 0; lm: 2; pm: 0;
+>       rf: 0; hf: 0; mf: 2; lf: 13; pf: 2;
+>       tot road veh: 2;
+>
+>   [ED2] Middle School: (9)
+>       rm: 0; hm: 0; mm: 0; lm: 4; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 4; pf: 1;
+>       tot road veh: 1;
+>
+>   [ED3] High School: (9)
+>       rm: 0; hm: 0; mm: 4; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 4; lf: 0; pf: 1;
+>       tot road veh: 1;
+>
+>   [OAH] Old Age Home: (12)
+>       rm: 0; hm: 0; mm: 1; lm: 1; pm: 0;
+>       rf: 0; hf: 0; mf: 1; lf: 7; pf: 2;
+>       tot road veh: 2;
+>
+>   [5SŠ] Small Shop: (22)
+>       rm: 0; hm: 0; mm: 2; lm: 2; pm: 14;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 4;
+>       tot road veh: 3;
+>
+>   [5LX] Community Library: (7)
+>       rm: 0; hm: 0; mm: 1; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 4; pf: 2;
+>       tot road veh: 1;
+>
+>   [5TH] Community Theatre: (24)
+>       rm: 0; hm: 0; mm: 1; lm: 2; pm: 7;
+>       rf: 0; hf: 0; mf: 1; lf: 2; pf: 11;
+>       tot road veh: 2;
+>
+>   [5PO] Community Post Office: (8)
+>       rm: 0; hm: 0; mm: 1; lm: 1; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 6;
+>       tot road veh: 1;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Totals: (1,418) |  r: 0; h: 9; m: 27; l: 174; p: 1,208;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 3,705
+>
+>   Married working people (aHHM-PAX):
+>       r: 0; h: 10; m: 34; l: 234; p: 1,604;
+>      (total: 1,882)
+>
+>   Married retired people (aHHR-PAX):
+>       r: 0; h: 4; m: 10; l: 68; p: 468;
+>      (total: 550)
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 0; h: 3; m: 4; l: 26; p: 209;
+>      (total: 242)
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 0; h: 0; m: 2; l: 17; p: 117;
+>      (total: 136)
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 4;
+>      (total: 4)
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 1; m: 0; l: 1; p: 13;
+>      (total: 15)
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 0; h: 3; m: 2; l: 6; p: 33;
+>      (total: 44)
+>
+>   Preschoolers, all groups                 (ED0-PAX): 161
+>   Primary schoolers, all groups            (ED1-PAX): 236
+>   Middle schoolers, all groups             (ED2-PAX): 211
+>   High schoolers, all groups               (ED3-PAX): 245
+>   Religious or Private schoolers, all grps (ED4-PAX): 4
+>   College students, all groups             (ED5-PAX): 1
+>   Polytechnic students, all groups         (ED6-PAX): 0
+>   University students, all groups          (ED7-PAX): 0
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 11
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 0
+>   Old Age Home, all groups                 (OAH-PAX): 22
+>   Private nurse, all groups                (OAN-PAX): 0
+>   Youth prison, all groups                 (YXJ-PAX): 0
+>   Adult prison, all groups                 (YXA-PAX): 25
+>   Religion:
+>      Renásàsers          (3R): 439
+>      Anglican Christians (AN): 69
+>      Roman Catholics     (RC): 140
+>      Deltæðømmysts       (DD): 2,134
+>      Jews                (JW): 8
+>      Muslims             (IS): 23
+>   Units required:
+>       |   0.46 for [5YP] Police
+>       |   0.37 for [5YF] Fire Dept
+>       |   0.37 for [5YH] Community Clinic
+>       |   0.74 for [5YG] Community Governance
+>       |   5.37 for [ED0] Pre-school
+>       |   0.47 for [ED1] Primary School
+>       |   0.25 for [ED2] Middle School
+>       |   0.26 for [ED3] High School
+>       |   0.73 for [OAH] Old Age Home
+>       |   0.93 for [5SŠ] Small Shop
+>       |   0.74 for [5LX] Community Library
+>       |   0.74 for [5TH] Community Theatre
+>       |   0.37 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 1,948
+>   Vehicle, motorbike*                      (VEH-MBK): 271
+>   Vehicle, car*                            (VEH-CAR): 51
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 350
+>   Itemised county-registered vehicles:
+>      wheat farm: 23
+>      residents: 322
+>      Police: 0
+>      Fire Dept: 0
+>      Community Clinic: 0
+>      Community Governance: 0
+>      Pre-school: 0
+>      Primary School: 0
+>      Middle School: 0
+>      High School: 0
+>      Old Age Home: 0
+>      Small Shop: 3
+>      Community Library: 0
+>      Community Theatre: 2
+>      Community Post Office: 0
+----------
+Footprint on the land:
+>   wheat farm: 1,574.4ha
+

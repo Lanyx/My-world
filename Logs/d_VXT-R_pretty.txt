@@ -1,0 +1,64 @@
+    Atçèsre Municipality / Гмина Атеьсрэ
+----------
+Pretty print information was generated on 2020-05-08 19:32:05.769490
+----------
+my_id: D00-0Y5
+geo_code: VXT-R
+----------
+Total population: N/A
+
+Total vehicles*: N/A
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced (Incomplete data):
+>   N/A
+
+Build housing (Demand - Supply):
+>    r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Hierarchial Parent: 
+>  Vagoåtratçizþ County / Воевуцтво Вагощтратьиж
+>   my_id: D00-0AN
+>   geo_code: VXT
+----------
+Hierarchial Children: 
+>   count: 0
+----------
+Map and area: 
+>   Region: Vænesston 1:2,000,000 (drawn in 2019)
+>   Position (mm) x: 167.43, y: 85.91
+>   Area on paper (sq.mm) a: 5.25
+>   Area represented: 2,100.0ha
+----------
+Workforce Demand: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   N/A
+----------
+Vehicles (requiring county-level registration and number plates):
+>   N/A
+----------
+Footprint on the land:
+>   N/A
+

@@ -1,0 +1,44 @@
+This is a text list of all the possible passenger trains, with their return
+trips not shown for brevity visiting
+Vænesston Station:
+
+[10] (dir-27 West)
+VAA-VAW-VAY-VAC-VAQ-VAI-VAS-FS0
+VA-FS-LV
+VA(V)-FS-CO-KM(H)-CL-BY-TB
+VA-FS-CO-KI-ID
+VAA-VAW-VAY-VAF
+VAA-VAW-VAY-VAT-VAM
+VAA-VAW-VAY-VAC-VAB
+VAA-VAW-VAY-VAC-VAQ-VAK-VAI-VAP
+(VAA-00)-(VAA-0HM)-(VAA-0HA)
+(VAA-00)-(Thorndale)-(Rude Tiger)
+
+[2] (dir-18 South):
+VAA-0 COMMUTER LINE ("Photo-cannon N.")
+VAA-0 COMMUTER LINE ("Olympia")
+
+[4] (dir-36 North)
+VAA-(VAA-00B)-(VAA-0D5)
+VAA-VAJ
+VA(V)-BM-PS-LC-SF(M)
+[BM operator]: VAA-VAJ-BM?-BM?-BM?-BM0
+
+[3] (dir-23 South-West)
+VA-VX
+[VX operator]: VAA-!VXA!-VXG-VXN-VXT-VXC-VXJ-VXS
+[VX operator]: VAA-!VXA!-VXG-VXN-VXX-VXI
+
+[3] (dir-15 SSE)
+VAA-VX1-VXQ-VXK-GYN-GY0
+VA-GY-MV-ID-MC
+VA-GY-MF
+
+[2] (dir-09 East)
+VAA-VXH-VX4-TJI-TJC-TJB-TJA-TJ0
+VA-TJ-LX-BC-FR
+
+[3] (dir-04 North East)
+VAA-VC7-VCX-!VCA!
+VAA-VC7-VCQ-VCW-VCD-VC5-!VBA!
+VA(V)-(VC||VB)-WH-FZ-BW-JK-JB-BL(Q)

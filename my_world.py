@@ -242,7 +242,7 @@ def mm_star():
     # Oblitorate everything except the name, children, area data.
     # Basically, erase balancing when it was not required.
     if False:
-        xParam = {"geo_code":"VAS"}                # Vaenesston district
+        xParam = {"geo_code":"VXT-R"}                # Vaenesston district
         xNew_data = {"$set": {
             "aDemand_workforce" : {
                 "total": {
@@ -368,6 +368,11 @@ def mm_o():
     import modules.o_simulation as o_py
     o_py.sub_menu()
 
+#-------------------------------------------------------------------------------
+def mm_r():
+    """ Road routes (Fed, Prov, Distr, County level numbers)"""
+    import modules.r_road_routes as r_py
+    r_py.sub_menu()
 
 #-------------------------------------------------------------------------------
 def mm_s():
@@ -392,10 +397,10 @@ K:  Lines: Rail.
 L:  RFU (Locomotives)
 M:  RFU (Motorcars)
 N:  RFU (Resources like wood, grain, diesel)
-O:  RFU (Timetables for public transport)
+O:  File opened (Timetables for public transport)
 P:  RFU (Human powered transport)
 Q:  RFU (Air routes)
-R:  RFU (Roads)
+R:  Road-routes (Fed., Prov., Distr., and County numbered)
 S:  Stations, or ports.
 T:  RFU (Tracks)
 U:  RFU (Time table)
@@ -438,12 +443,10 @@ D: Destinations (geographic areas on the map)
 H: Housing (registers residential plots from the map)
 K: Lines (Train lines, maybe road routes?)
 O: [Oscar] Simulation (Train simulation)
+R: Road-routes (incl Highways) for Federal, Provincial and District numbers.
 S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
 
 """
-
-
-
 
     bExit = False
     while bExit == False:
@@ -498,6 +501,10 @@ S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
         # Simulation menu:
         elif sInput == "O":
             mm_o()
+
+        # Road-routes
+        elif sInput == "R":
+            mm_r()
 
         # Stations and ports menu
         elif sInput == "S":
