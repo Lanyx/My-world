@@ -5,18 +5,58 @@ import modules.x_database as db
 import modules.x_misc as misc                            # For base36 conversion
 
 #-------------------------------------------------------------------------------
-# 1: ADD A NEW AREA
+# COMMON ROUTINES
 #-------------------------------------------------------------------------------
-def add_area_to_db(ccTremb):
-    """ This enters the process of adding a new area record to the database"""
-    # Obtain the highest "my_id" code that is registered in the database.
-    # NOTE: this is not safe. A destination may have been dropped. This would
-    # cause a parent to have a wrong child registered.
+def qGet_new_area():
+    """ Method returns a blank database template for the 'destinations' entry
+    """
+    dNew_area = {
+        "my_id":None,
+        "aName":{"lat":None, "cyr":None},
+        "geo_code":None,
+        "aType":{"lat":None, "cyr":None, "lvl":None},
+        "sub_type":None,
+        "parent":None,
+        "aChildren":[],
+        "aMap":{
+            "sRegion":None,
+            "iYear":None,
+            "fScale":None,
+            "x":None,
+            "y":None,
+            "a":None
+        },
+        "aArea":{"qty":None, "uom":None},
+        "aDemand_workforce": {
+            "total": {
+                "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
+                "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
+            "aItemised": []},
+        "aSupply_workforce": {
+            "total": {
+                "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
+                "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
+            "aItemised": []},
+        "aDemand_hholds": {
+            "total": {"r": 0, "h": 0, "m": 0, "l": 0, "p": 0},
+            "aItemised": []},
+        "aSupply_hholds": {
+            "total": {"r": 0, "h": 0, "m": 0, "l": 0, "p": 0},
+            "aItemised": []},
+        "aDemographics": {},
+        "aVehicles": {},
+        "aFootprint": {},
+        "aWarehouse": {}
+    }
+    return dNew_area
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+def qGen_my_id(cDest):
+    """ Generates the 'my_id' ('D00-001' for example) code for a new database
+    entry. """
 
     # Get a list of all the registered base-36 codes
     xParam = {}
     xRestr = {"_id":0, "my_id":1}
-    cDest = db.destinations(ccTremb)
     dId_query = cDest.find(xParam, xRestr)
     iHighest, aEvery_id = misc.find_highest_id(dId_query)
 
@@ -64,49 +104,224 @@ def add_area_to_db(ccTremb):
     sBase36_5 = sBase36.rjust(5, "0")
     # "0002W" -> "D00-02W"
     sNew_id = "D{0}-{1}".format(sBase36_5[:2], sBase36_5[2:])
+    return sNew_id
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+def qSelect_type():
+    """ Method selects the type of geographical division from a menu """
+
+    sMenu = """
+Enter the geo-political division currently being logged:
+0:  World / Свьят        | *
+1:  Country / Паньстфо   | 0V9                  : Trèmbovice
+2:  Province / Провинцъя | V                    : Dzþevogurski,
+3:  District / Повят     | VA                   : Vænesston D.
+4:  County / Воевуцтво   | VAA                  : Vænesston C.
+5:  Municipality / Гмина | VAA-0                : Vænesston M.
+6:  Section / Чэьсть     | VAA-0M               : Miroslav
+7:  Suburb / Пшэдщместе  | VAA-0MF              : Filed Tooth
+8:  Street / Ульица      | VAA-0MF-A            : Archery Rd
+9:  Property /Дзялка     | VAA-0MF-A01          : House number
+    """
+    print(sMenu)
+    sInput = input()
+
+    if sInput == "0":
+        return {"lat":"World", "cyr":"Свьят", "lvl":"0"}
+    elif sInput == "1":
+        return {"lat":"Country", "cyr":"Паньстфо", "lvl":"1"}
+    elif sInput == "2":
+        return {"lat":"Province", "cyr":"Провинцъя", "lvl":"2"}
+    elif sInput == "3":
+        return {"lat":"District", "cyr":"Повят", "lvl":"3"}
+    elif sInput == "4":
+        return {"lat":"County", "cyr":"Воевуцтво", "lvl":"4"}
+    elif sInput == "5":
+        return {"lat":"Municipality", "cyr":"Гмина", "lvl":"5"}
+    elif sInput == "6":
+        return {"lat":"Section", "cyr":"Чэьсть", "lvl":"6"}
+    elif sInput == "7":
+        return {"lat":"Suburb", "cyr":"Пшэдщместе", "lvl":"7"}
+    elif sInput == "8":
+        return {"lat":"Street", "cyr":"Ульица", "lvl":"8"}
+    elif sInput == "9":
+        return {"lat":"Property", "cyr":"Дзялка", "lvl":"9"}
+    else:
+        print("Invalid selection. Returning to menu")
+        return None
+
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+def qSelect_subtype():
+    """ Method selects the subtype of geographical division from a menu """
+
+    sMenu = """
+What is the purpose of this region:
+0:  General -- No specific use, mixed description or known to have subordinates
+1:  Nature -- Protected natural environment. Some infrastructure is permitted.
+2:  Government -- Land reserved for development for undisclosed purpose.
+3:  Military -- Area dedicated to training of the armed forces.
+4:  Industrial -- Production or extraction of resources/goods/commodities.
+5:  Agricultural -- Growing of food, includes animal pastures.
+6:  Transport -- Logistics (Airports / train stations / water harbours).
+7:  Suburb -- Residential section of a larger town.
+8:  Commercial District -- Area dominated by offices.
+9:  Town -- Area of balanced demand and suppy of workorce.
+10: Settlement -- Small area of balanced workforce, but has limited services.
+    """
+    print(sMenu)
+    sInput = input()
+
+    if sInput == "0":
+        return "General"
+    elif sInput == "1":
+        return "Nature"
+    elif sInput == "2":
+        return "Government"
+    elif sInput == "3":
+        return "Military"
+    elif sInput == "4":
+        return "Industrial"
+    elif sInput == "5":
+        return "Agricultural"
+    elif sInput == "6":
+        return "Transport"
+    elif sInput == "7":
+        return "Suburb"
+    elif sInput == "8":
+        return "Commercial District"
+    elif sInput == "9":
+        return "Town"
+    elif sInput == "10":
+        return "Settlement"
+    else:
+        print("\nInvalid selection. Returning to menu")
+        return None
+
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+def qChoose_name():
+    """ Method allows the user to select a name. It returns both the Latin and
+    cyrillic names as a tuple."""
+
+    sName_lat = ""
+    sName_cyr = ""
+    bExit = False
+    # The loop allows the user to edit the name. The randomly generated name
+    # could be a mere suggestion, and the user may reject it and re-enter it
+    # manually, adjusting the spelling.
+
+    while bExit == False:
+        sMenu = "\nDo you want a random name?"
+        sRand_name_yn = misc.get_binary(sMenu)
+        if sRand_name_yn == None: return None
+
+        # User written name.
+        if sRand_name_yn == "N":
+            print ("\nPlease enter the name of the location in Latin. "
+                    +"(Use international Keyboard)")
+            sName_lat = input()
+
+            # User entered name in Cyrillic
+            print ("\nНапиш име обшару в Цырполю (пшэлаьч клавятурэ рэьчне)")
+            sName_cyr = input()
+
+        # Randomly generated name.
+        elif sRand_name_yn == "Y":
+            # Operated by an external routine
+            import modules.x_random_names as rnd_name
+
+            # We are storing the random names from the various systems here.
+            # Hence, we will build up one set of arrays for the user to choose
+            aLat = []
+            aCyr = []
+
+            # 10 possible names: first three are 2-syllable
+            aSyl_names = rnd_name.rnd_syllable([2, 2, 2, 2, 2, 2, 3, 3, 3, 3])
+
+            # Transfer the names to the common array
+            for syl in aSyl_names:
+                aLat.append(syl["lat"])                               # Latin
+                aCyr.append(syl["cyr"])                               # Cyrillic
+
+        # Male names
+            aName = rnd_name.rnd_male_name(1)
+            for name in aName:
+                aLat.append(name["lat"])
+                aCyr.append(name["cyr"])
+
+        # Female names
+            aName = rnd_name.rnd_female_name(1)
+            for name in aName:
+                aLat.append(name["lat"])
+                aCyr.append(name["cyr"])
+
+        # Static surname names
+            aName = rnd_name.qRnd_static_surname(1)
+            for name in aName:
+                aLat.append(name["lat"])
+                aCyr.append(name["cyr"])
+
+        # Dynamic surname names
+            aName = rnd_name.qRnd_dynamic_surname(1)
+            for name in aName:
+                aLat.append(name["lat"])
+                aCyr.append(name["cyr"])
+
+        # Male-based surnames
+            aName = rnd_name.qRnd_male_surname(1)
+            for name in aName:
+                aLat.append(name["lat"])
+                aCyr.append(name["cyr"])
+
+        # Display the names
+            iNo_of_names = len(aLat)
+            sChoices = "0: Choose again\n"              # Don't like the options
+            iCnt = 1
+            for idx in range(0, iNo_of_names):
+                sTxt = "{0}: {1} / {2}\n"
+                sChoices += sTxt.format(iCnt, aLat[idx], aCyr[idx])
+                iCnt += 1
+
+            iChoice = misc.get_int(sChoices, iNo_of_names)
+            if iChoice == None: return None                     # Invalid choice
+            if iChoice == 0: continue                            # Choose again.
+            iChoice -= 1
+
+            sName_lat = aLat[iChoice]
+            sName_cyr = aCyr[iChoice]
+
+        else:
+            print("Invalid choice. Exiting")
+            return None
+
+    # Confirm the name choice
+        sMenu = "Are the names '{0}' / '{1}' OK?".format(sName_lat, sName_cyr)
+        sNames_ok_yn = misc.get_binary(sMenu)
+        if sNames_ok_yn == "Y": bExit = True
+
+    return sName_lat, sName_cyr
+
+#-------------------------------------------------------------------------------
+# 1: ADD A NEW AREA
+#-------------------------------------------------------------------------------
+def add_area_to_db(ccTremb):
+    """ This enters the process of adding a new area record to the database"""
+    # Obtain the highest "my_id" code that is registered in the database.
+    # NOTE: this is not safe. A destination may have been dropped. This would
+    # cause a parent to have a wrong child registered.
+
+    cDest = db.destinations(ccTremb)
+
+# Generate the unique entry identifier, independently from geo-code. It will
+# also check that all the child-parent links are intact.
+    sNew_id = qGen_my_id(cDest)
+    if sNew_id == None: return None
+
     print("\nNext id is {0}".format(sNew_id))
 
 # START GETTING THE USER TO ENTER THE NEW DATA.
     # Open a blank dictionary, so that the elements are arranged in a certain
     # order.
-    dNew_area = {
-        "my_id":sNew_id,
-        "aName":{"lat":None, "cyr":None},
-        "geo_code":None,
-        "aType":{"lat":None, "cyr":None, "lvl":None},
-        "sub_type":None,
-        "parent":None,
-        "aChildren":[],
-        "aMap":{
-            "sRegion":None,
-            "iYear":None,
-            "fScale":None,
-            "x":None,
-            "y":None,
-            "a":None
-        },
-        "aArea":{"qty":None, "uom":None},
-        "aDemand_workforce": {
-            "total": {
-                "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
-                "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
-            "aItemised": []},
-        "aSupply_workforce": {
-            "total": {
-                "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
-                "mf": 0, "lm": 0, "lf": 0, "pm": 0, "pf": 0},
-            "aItemised": []},
-        "aDemand_hholds": {
-            "total": {"r": 0, "h": 0, "m": 0, "l": 0, "p": 0},
-            "aItemised": []},
-        "aSupply_hholds": {
-            "total": {"r": 0, "h": 0, "m": 0, "l": 0, "p": 0},
-            "aItemised": []},
-        "aDemographics": {},
-        "aVehicles": {},
-        "aFootprint": {},
-        "aWarehouse": {}
-    }
+    dNew_area = qGet_new_area()
+    dNew_area["my_id"] = sNew_id
 
 # HARVEST THE DATA FROM THE USER.
     # Look in the database for the last entry
@@ -239,185 +454,17 @@ def add_area_to_db(ccTremb):
         if dArea == None: return None
         dNew_area["aArea"] = dArea
     # End of map location entry
+    aType = qSelect_type()
+    if aType == None: return None
+    dNew_area["aType"] = aType
 
-# TODO: Perhaps put this in the data base.
-    sMenu = """
-Enter the geo-political division currently being logged:
-0:  World / Свьят        | *
-1:  Country / Паньстфо   | 0V9                  : Trèmbovice
-2:  Province / Провинцъя | V                    : Dzþevogurski,
-3:  District / Повят     | VA                   : Vænesston D.
-4:  County / Воевуцтво   | VAA                  : Vænesston C.
-5:  Municipality / Гмина | VAA-0                : Vænesston M.
-6:  Section / Чэьсть     | VAA-0M               : Miroslav
-7:  Suburb / Пшэдщместе  | VAA-0MF              : Filed Tooth
-8:  Street / Ульица      | VAA-0MF-A            : Archery Rd
-9:  Property /Дзялка     | VAA-0MF-A01          : House number
-    """
-    print(sMenu)
-    sInput = input()
+    sSub_type = qSelect_subtype()
+    if sSub_type == None: return None
+    dNew_area["sub_type"] = sSub_type
 
-    if sInput == "0":
-        dNew_area["aType"] = {"lat":"World", "cyr":"Свьят", "lvl":"0"}
-    elif sInput == "1":
-        dNew_area["aType"] = {"lat":"Country", "cyr":"Паньстфо", "lvl":"1"}
-    elif sInput == "2":
-        dNew_area["aType"] = {"lat":"Province", "cyr":"Провинцъя", "lvl":"2"}
-    elif sInput == "3":
-        dNew_area["aType"] = {"lat":"District", "cyr":"Повят", "lvl":"3"}
-    elif sInput == "4":
-        dNew_area["aType"] = {"lat":"County", "cyr":"Воевуцтво", "lvl":"4"}
-    elif sInput == "5":
-        dNew_area["aType"] = {"lat":"Municipality", "cyr":"Гмина", "lvl":"5"}
-    elif sInput == "6":
-        dNew_area["aType"] = {"lat":"Section", "cyr":"Чэьсть", "lvl":"6"}
-    elif sInput == "7":
-        dNew_area["aType"] = {"lat":"Suburb", "cyr":"Пшэдщместе", "lvl":"7"}
-    elif sInput == "8":
-        dNew_area["aType"] = {"lat":"Street", "cyr":"Ульица", "lvl":"8"}
-    elif sInput == "9":
-        dNew_area["aType"] = {"lat":"Property", "cyr":"Дзялка", "lvl":"9"}
-    else:
-        print("Invalid selection. Returning to menu")
-        return None
-
-    sMenu = """
-What is the purpose of this region:
-0:  General -- No specific use, mixed description or known to have subordinates
-1:  Nature -- Protected natural environment. Some infrastructure is permitted.
-2:  Government -- Land reserved for development for undisclosed purpose.
-3:  Military -- Area dedicated to training of the armed forces.
-4:  Industrial -- Production or extraction of resources/goods/commodities.
-5:  Agricultural -- Growing of food, includes animal pastures.
-6:  Transport -- Logistics (Airports / train stations / water harbours).
-7:  Suburb -- Residential section of a larger town.
-8:  Commercial District -- Area dominated by offices.
-9:  Town -- Area of balanced demand and suppy of workorce.
-10: Settlement -- Small area of balanced workforce, but has limited services.
-    """
-    print(sMenu)
-    sInput = input()
-
-    if sInput == "0":
-        dNew_area["sub_type"] = "General"
-    elif sInput == "1":
-        dNew_area["sub_type"] = "Nature"
-    elif sInput == "2":
-        dNew_area["sub_type"] = "Government"
-    elif sInput == "3":
-        dNew_area["sub_type"] = "Military"
-    elif sInput == "4":
-        dNew_area["sub_type"] = "Industrial"
-    elif sInput == "5":
-        dNew_area["sub_type"] = "Agricultural"
-    elif sInput == "6":
-        dNew_area["sub_type"] = "Transport"
-    elif sInput == "7":
-        dNew_area["sub_type"] = "Suburb"
-    elif sInput == "8":
-        dNew_area["sub_type"] = "Commercial District"
-    elif sInput == "9":
-        dNew_area["sub_type"] = "Town"
-    elif sInput == "10":
-        dNew_area["sub_type"] = "Settlement"
-    else:
-        print("\nInvalid selection. Returning to menu")
-        return None
-
-    bExit = False
-    # The loop allows the user to edit the name. The randomly generated name
-    # could be a mere suggestion, and the user may reject it and re-enter it
-    # manually, adjusting the spelling.
-
-    while bExit == False:
-        sMenu = "\nDo you want a random name?"
-        sRand_name_yn = misc.get_binary(sMenu)
-        if sRand_name_yn == None: return None
-
-        # User written name.
-        if sRand_name_yn == "N":
-            print ("\nPlease enter the name of the location in Latin. "
-                    +"(Use international Keyboard)")
-            dNew_area["aName"]["lat"] = input()
-
-            # User entered name in Cyrillic
-            print ("\nНапиш име обшару в Цырполю (пшэлаьч клавятурэ рэьчне)")
-            dNew_area["aName"]["cyr"] = input()
-
-        # Randomly generated name.
-        elif sRand_name_yn == "Y":
-            # Operated by an external routine
-            import modules.x_random_names as rnd_name
-
-            # We are storing the random names from the various systems here.
-            # Hence, we will build up one set of arrays for the user to choose
-            aLat, aCyr = [], []
-
-            # 10 possible names: first three are 2-syllable
-            aSyl_names = rnd_name.rnd_syllable([2, 2, 2, 2, 2, 2, 3, 3, 3, 3])
-
-            # Transfer the names to the common array
-            for syl in aSyl_names:
-                aLat.append(syl["lat"])                               # Latin
-                aCyr.append(syl["cyr"])                               # Cyrillic
-
-        # Male names
-            aName = rnd_name.rnd_male_name(1)
-            for name in aName:
-                aLat.append(name["lat"])
-                aCyr.append(name["cyr"])
-
-        # Female names
-            aName = rnd_name.rnd_female_name(1)
-            for name in aName:
-                aLat.append(name["lat"])
-                aCyr.append(name["cyr"])
-
-        # Static surname names
-            aName = rnd_name.qRnd_static_surname(1)
-            for name in aName:
-                aLat.append(name["lat"])
-                aCyr.append(name["cyr"])
-
-        # Dynamic surname names
-            aName = rnd_name.qRnd_dynamic_surname(1)
-            for name in aName:
-                aLat.append(name["lat"])
-                aCyr.append(name["cyr"])
-
-        # Male-based surnames
-            aName = rnd_name.qRnd_male_surname(1)
-            for name in aName:
-                aLat.append(name["lat"])
-                aCyr.append(name["cyr"])
-
-        # Display the names
-            iNo_of_names = len(aLat)
-            sChoices = "0: Choose again\n"              # Don't like the options
-            iCnt = 1
-            for idx in range(0, iNo_of_names):
-                sTxt = "{0}: {1} / {2}\n"
-                sChoices += sTxt.format(iCnt, aLat[idx], aCyr[idx])
-                iCnt += 1
-
-            iChoice = misc.get_int(sChoices, iNo_of_names)
-            if iChoice == None: return None                     # Invalid choice
-            if iChoice == 0: continue                            # Choose again.
-            iChoice -= 1
-
-            dNew_area["aName"]["lat"] = aLat[iChoice]
-            dNew_area["aName"]["cyr"] = aCyr[iChoice]
-
-        else:
-            print("Invalid choice. Exiting")
-            return None
-
-    # Confirm the name choice
-        sNew_lat = dNew_area["aName"]["lat"]
-        sNew_cyr = dNew_area["aName"]["cyr"]
-        sMenu = "Are the names '{0}' / '{1}' OK?".format(sNew_lat, sNew_cyr)
-        sNames_ok_yn = misc.get_binary(sMenu)
-        if sNames_ok_yn == "Y": bExit = True
+    lNames = qChoose_name()
+    if lNames == None: return None
+    sNew_lat, sNew_cyr = lNames
 
 # GEO_CODE
 # TODO: Validation
@@ -458,6 +505,808 @@ What is the purpose of this region:
 
         print("\n>>>\nNew area '{0}' added".format(dNew_area["aName"]["lat"]))
         break
+
+#-------------------------------------------------------------------------------
+# 1A: ADD BATCH OF AREAS
+#-------------------------------------------------------------------------------
+def add_semi_auto(ccTremb):
+    """ Adds Municipalites to a County semi-automatically. The usual process
+    takes about 3 hours per County. This process attempts to speed things up:
+    1.) The user enters the count of objects within the County
+    2.) Program opens that many entries in the database
+    3.) User chooses names
+    4.) User helps with assigning of geo-codes
+    5.) User assigns economic output (optional), which is usually the default.
+    6.) The capital gets automated
+    """
+    import pyperclip                    # For cut and paste ops with windows.
+    import random                       # For capital city
+    bDebug = False
+
+# Instruction
+    sTxt = "You are about to add Municipalites to a County in a semi-automatic"
+    sTxt += " way.\nPlease assign the economic output to the Municipalites on"
+    sTxt += " the map prior to\ncontinuing.\n"
+    print(sTxt)
+
+# County code (the 'parent')
+    sTxt = "Please enter the COUNTY geocode (VAA) for example:"
+    print(sTxt)
+    sGeo_code = input().upper()
+
+    # Verify the input
+    cDest = db.destinations(ccTremb)
+    dGeo_parent = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_parent == None: return None
+
+    # Verify with the user
+    sCap_lat = dGeo_parent["aName"]["lat"]
+    sCap_cyr = dGeo_parent["aName"]["cyr"]
+    sTxt = "Are you updating [{0}] '{1}' / '{2}'?"
+    sTxt = sTxt.format(sGeo_code, sCap_lat, sCap_cyr)
+    yn_county = misc.get_binary(sTxt)
+    if yn_county == None: return None
+    if yn_county == "N":
+        sTxt = "Aborted by the user. Returning"
+        return None
+
+# Check if this is a new operation or we are resuming
+    if len(dGeo_parent["aChildren"]) == 0:
+
+    # Number of municipalities
+        sTxt = "Please enter the TOTAL number of MUNICIPALITIES, 'RED AREAS', "
+        sTxt += "'GREEN AREAS'"
+        iNo_of_mun = misc.get_int(sTxt, 36)
+        if iNo_of_mun == None: return None
+        if iNo_of_mun < 2:
+            print("This is for bulk work. For {0} units, please go manual\n\a")
+            return None
+
+    # Generate the start of the 'my_id' sequence
+        # We have not assigned any children to the parent yet.
+        sNew_id = qGen_my_id(cDest)         # Base of the identification
+        sId_seq = misc.clean_my_id(sNew_id) # "D00-0ZZ" -> "000ZZ"
+        iId_seq_10 = int(sId_seq, 36)       # Automatic conversion
+
+        # Start the list of children
+        aChildren = []
+
+    # Open 'blank' destinations with common parent.
+        for iMun in range(iNo_of_mun):
+            dNew_area = qGet_new_area()         # Blank template
+
+        # Compute 'my_id'
+            iThis_id = iId_seq_10 + iMun
+
+            # Convert to base36
+            sBase36 = misc.base_conv(iThis_id)
+            sBase36_5 = sBase36.rjust(5, "0")
+            # "0002W" -> "D00-02W"
+            sNew_id = "D{0}-{1}".format(sBase36_5[:2], sBase36_5[2:])
+
+        # Add this identifier to the child list
+            aChildren.append(sNew_id)
+            dNew_area["my_id"] = sNew_id
+            dNew_area["parent"] = dGeo_parent["my_id"]
+
+        # ADD TO DATABASE
+            cDest.insert_one(dNew_area)
+
+        # Print a message to show progress
+            sTxt = "[{1}/{2}] Generating new entry'{0}'..."
+            sTxt = sTxt.format(sNew_id, iMun+1, iNo_of_mun)
+            print(sTxt)
+
+    # Add the children to the parent
+        xParam = {"my_id":dGeo_parent["my_id"]}
+        xNew_data = {"$set":{"aChildren": aChildren}}
+        cDest.update_one(xParam, xNew_data)
+        print("'Parent' updated")
+    else:
+        pass
+
+# ASSIGN THE TYPE TO ALL CHILDREN
+    aChildren = dGeo_parent["aChildren"]
+
+    # Find the first child
+    sChild_0 = aChildren[0]                   # All or nothing type of operation
+    xParam = {"my_id":sChild_0}
+    xRestr = {"_id":0, "aType":1}
+    dQuery = cDest.find(xParam, xRestr)
+
+    # See if that child has a type assigned to it already
+    bType_done = False
+    for query in dQuery:
+        if query["aType"] != None:
+            bType_done = True
+
+    # We need to assign a type to the child
+        if bType_done == False:
+            aType = qSelect_type()
+            if aType == None: return None
+
+            for sChild in aChildren:
+                xParam = {"my_id":sChild}
+                xRestr = {"_id":0}
+                xNew_data = {"$set": {"aType": aType}}
+                cDest.update_one(xParam, xNew_data)
+
+# ASSIGN SUB-TYPES
+    iNo_of_children = len(aChildren)
+    iIdx_child = 0
+
+# Assign the capital (The [0]-child)
+    sCapital = aChildren[iIdx_child]
+
+    # See if an assignment already exists
+    xParam = {"my_id":sCapital}
+    xRestr = {"_id":0, "sub_type":1}
+    dQuery = cDest.find(xParam, xRestr)
+    bExists = True
+    for query in dQuery:
+        if query["sub_type"] == None:
+            bExists = None
+
+    # Needs to be programmed in.
+    if not bExists:
+        sTxt = "\nPlease select for the CAPITAL (usually option '0')"
+        print(sTxt)
+
+        sSub_type = qSelect_subtype()
+        if sSub_type == None: return None
+
+        xParam = {"my_id":sCapital}
+        xNew_data = {"$set": {"sub_type": sSub_type}}
+        cDest.update_one(xParam, xNew_data)
+
+    iIdx_child += 1            # Point to the next child
+
+# OTHER AREAS
+    while iIdx_child < iNo_of_children:
+        xParam = {"my_id":aChildren[iIdx_child]}
+        xRestr = {"_id":0, "sub_type":1}
+        dQuery = cDest.find(xParam, xRestr)
+        bExists = True
+        for query in dQuery:
+            if query["sub_type"] == None:
+                bExists = None
+
+        # Child has a type assigned to it.
+        if bExists:                 # This child has a type defined
+            iIdx_child += 1         # Advance to the next one
+            continue
+
+        # Prepare to assign to the child(ren)
+        iAreas_left = iNo_of_children - iIdx_child
+        sTxt = "There are {0} areas left. ".format(iAreas_left)
+        sTxt += "Please choose another category.\n"
+        sTxt += "(Choose the unusual ones first, like 'nature' or 'military')"
+        print(sTxt)
+
+        sSub_type = qSelect_subtype()
+        if sSub_type == None: return None
+
+        # How many areas like that are there?
+        sTxt = "How many '{0}' areas are there?".format(sSub_type)
+        iArea_cnt = misc.get_int(sTxt, iAreas_left)
+        if iArea_cnt == None: return None
+
+        # Update them all
+        for iSample in range(iArea_cnt):
+            xParam = {"my_id":aChildren[iIdx_child]}
+            xNew_data = {"$set": {"sub_type": sSub_type}}
+            cDest.update_one(xParam, xNew_data)
+            iIdx_child += 1
+
+# ASSIGN NAMES:
+    # Capital is first.
+    iIdx_child = 0                  # Reset back to the capital
+
+    # See if an assignment already exists
+    xParam = {"my_id":aChildren[iIdx_child]}
+    xRestr = {"_id":0, "aName":1}
+    dQuery = cDest.find(xParam, xRestr)
+    bExists = True
+    for query in dQuery:
+        if query["aName"]["lat"] == None:
+            bExists = None
+
+    # Needs to be programmed in.
+    if not bExists:
+        sTxt = "Do you want to use the name {0} / {1} for the capital?"
+        sTxt = sTxt.format(sCap_lat, sCap_cyr)
+        yn_reuse = misc.get_binary(sTxt)
+        if yn_reuse == None: return
+        if yn_reuse == "N":
+            lName = qChoose_name()
+            if lName == None: return None
+            sLat, sCyr = lName
+        else:
+            sLat = sCap_lat
+            sCyr = sCap_cyr
+
+        # 'aName': {'lat': 'Ñoñatça', 'cyr': 'Нёнятя'}
+        aName = {"lat":sLat, "cyr":sCyr}
+        xParam = {"my_id":aChildren[iIdx_child]}
+        xNew_data = {"$set":{"aName":aName}}
+        cDest.update_one(xParam, xNew_data)
+    iIdx_child += 1
+
+# OTHER AREAS
+    while iIdx_child < iNo_of_children:
+        xParam = {"my_id":aChildren[iIdx_child]}
+        xRestr = {"_id":0, "aName":1, "sub_type":1}
+        dQuery = cDest.find(xParam, xRestr)
+        bExists = True
+        sSub_type = None
+
+    # Check if name exists
+        for query in dQuery:
+            if query["aName"]["lat"] == None:
+                bExists = None
+            sSub_type = query["sub_type"]
+
+        if sSub_type == None:
+            sTxt = "\n\aAn error has occured: "
+            sTxt += "'sub_type' should be already defined. EXITING"
+            print(sTxt)
+            return
+
+        # Child has a type assigned to it.
+        if bExists:                 # This child has a type defined
+            iIdx_child += 1         # Advance to the next one
+            continue
+
+        # Prepare to assign to the child(ren)
+        iAreas_left = iNo_of_children - iIdx_child
+        sTxt = "---------\n"
+        sTxt += "There are {0} areas left. ".format(iAreas_left)
+        sTxt += "Please name a '{0}' area.".format(sSub_type)
+        print(sTxt)
+
+        lNames = qChoose_name()
+        if lNames == None: return None
+        sLat, sCyr = lNames
+
+        aName = {"lat":sLat, "cyr":sCyr}
+        xParam = {"my_id":aChildren[iIdx_child]}
+        xNew_data = {"$set": {"aName": aName}}
+        cDest.update_one(xParam, xNew_data)
+        iIdx_child += 1
+
+# ASSIGN GEO-CODES
+    print("--------\nGEO-CODE ASSIGNMENT:\n")
+    assign_geocodes(ccTremb, sGeo_code)
+
+# GET THE MAP.
+    # Check if the children have the map assigned to them already
+    xParam = {"my_id":aChildren[0]}             # Check against the capital
+    xRestr = {"_id":0, "aMap":1}
+    dQuery = cDest.find(xParam, xRestr)
+
+    bMap_done = False
+    for query in dQuery:
+        if query["aMap"]["sRegion"] != None:
+            bMap_done = True
+
+    # Map needs to be assigned
+    if bMap_done == False:
+        dMap = misc.get_the_map(ccTremb)
+        if dMap == None: return None
+
+        for child in aChildren:
+            xParam = {"my_id":child}
+            xNew_data = {"$set": {
+                "aMap.sRegion": dMap["sRegion"],
+                "aMap.iYear": dMap["iYear"],
+                "aMap.fScale": dMap["fScale"],
+                }}
+            cDest.update_one(xParam, xNew_data)
+        print("Map added to all the children\n")
+
+# GET THE LAND USAGE.
+    # Setup a loop without the capital
+    print("--------\nLAND USE ASSIGNMENT:\n")
+    for child in aChildren[1:]:     # Start for loop from second element
+        # Get the childs sub type
+        xParam = {"my_id": child}
+        xRestr = {"_id":0}
+        dQuery = cDest.find(xParam, xRestr)
+
+        # Run the query on that child
+        dChild = []
+        for query in dQuery:
+            dChild = query
+
+        # Make sure the map exists
+        if dChild["aMap"]["fScale"] == None:
+            print("\n\aError has occured. Expecting map to be entered. Exiting")
+            return None
+
+        # Child already processed
+        map_a = dChild["aMap"]["a"]
+        if map_a != None:
+            continue
+
+        # Select the object to work on.
+        iIdx_child = aChildren.index(child) + 1
+        sSub_type = dChild["sub_type"]
+        sTxt = "\n[{0}/{1}] Currently working on '{2}' area:"
+        sTxt = sTxt.format(iIdx_child, iNo_of_children, sSub_type)
+        print(sTxt)
+
+        # x-coord
+        sTxt = "Please enter the x-coordinate from the map:"
+        fX = misc.get_float(sTxt, None, True)
+        if fX == None: return None
+
+        # y-coord
+        sTxt = "Please enter the y-coordinate from the map:"
+        fY = misc.get_float(sTxt, None, True)
+        if fY == None: return None
+
+        # Area
+        sTxt = "Please enter the area in sq.mm from the map:"
+        fA = misc.get_float(sTxt)
+        if fA == None: return None
+
+        # Convert the area.
+        dDb_area = misc.calc_area(fA, dChild["aMap"]["fScale"])
+        if dDb_area == None: return None
+
+        # Save this data.
+        xParam = {"my_id": child}
+        xNew_data = {"$set": {
+            "aMap.x": fX,
+            "aMap.y": fY,
+            "aMap.a": fA,
+            "aArea": dDb_area
+            }}
+        cDest.update_one(xParam, xNew_data)
+
+        # How many work-places are there?
+        sTxt = "Please enter number of workplaces in the '{0}' area:"
+        sTxt = sTxt.format(sSub_type)
+        iNo_of_hits = misc.get_int(sTxt)
+        if iNo_of_hits == None: return None
+
+        sGeo_code = dChild["geo_code"]
+
+        # Enter the hits.
+        for iHit_cnt in range(iNo_of_hits):
+            sTxt = ("Please enter [{0}/{1}] work places (like a wheat farm) " +
+                "for the '{2}' area")
+            sTxt = sTxt.format(iHit_cnt+1, iNo_of_hits, sSub_type)
+            print(sTxt)
+
+            # Add the place to the town in a semi-automatic way. Effectively,
+            # the name of the place will be defaulted.
+            bResp = add_wkp_county(ccTremb, sGeo_code)
+            if bResp == None: return None
+
+        # Present data to the user
+        sLat = dChild["aName"]["lat"]
+        sCyr = dChild["aName"]["cyr"]
+        sAll = "{0} {1} / {2}".format(sGeo_code, sLat, sCyr)
+
+    # return geo-code and names on clip-board.
+        sTxt = "------\n"
+        sTxt += "Geo-code, Names are available on the clip-board. Use 'CTRL-V'"
+        sTxt += "\n-------"
+        print(sTxt)
+        pyperclip.copy(sAll)
+
+        xDummy = input("Press 'Enter' to continue...")
+
+# BALANCE EACH CHILD
+    print("--------\nCHILD BALANCING:\n")
+    if not bDebug:
+        for child in aChildren[1:]:     # Start for loop from second element
+            # Get the childs sub type
+            xParam = {"my_id": child}
+            xRestr = {"_id":0, "geo_code":1, "aName":1}
+            dQuery = cDest.find(xParam, xRestr)
+
+            # Run the query on that child
+            dChild = []
+            for query in dQuery:
+                dChild = query
+
+            # Setup the progress text
+            sGeo_code = dChild["geo_code"]
+            sLat = dChild["aName"]["lat"]
+            sCyr = dChild["aName"]["cyr"]
+            sTxt = "Balancing [{0}] {1} / {2}...".format(sGeo_code, sLat, sCyr)
+            print(sTxt)
+
+            # Do the balancing itself
+            bResp = balance_town(ccTremb, sGeo_code)
+            if bResp == None: return None
+
+    # UPDATE THE PARENT:
+        sParent_geo = dGeo_parent["geo_code"]
+        bResp = update_parent(ccTremb, sParent_geo)
+        if bResp == None: return None
+    else:
+        print("BYPASSED FOR DEVELOPMENT AND DEBUGGING")
+
+# WORK ON THE CAPITAL:
+    print("--------\nCOUNTY CAPITAL ASSIGNMENT:\n")
+    child = aChildren[0]     # Capital is the first element
+
+    # Get the childs sub type
+    xParam = {"my_id": child}
+    xRestr = {"_id":0}
+    dQuery = cDest.find(xParam, xRestr)
+
+    # Run the query on that child
+    dCapital = []
+    for query in dQuery:
+        dCapital = query
+
+    # Confirmation message:
+    sLat = dCapital["aName"]["lat"].upper()
+    sCyr = dCapital["aName"]["cyr"].upper()
+
+    sTxt = "You are working on the county capital {0} / {1}"
+    sTxt = sTxt.format(sLat, sCyr)
+    print(sTxt)
+
+    # Make sure the map exists
+    if dCapital["aMap"]["fScale"] == None:
+        print("\n\aError has occured. Expecting map to be entered. Exiting")
+        return None
+
+    if dCapital["aMap"]["a"] == None:
+        # x-coord
+        sTxt = "Please enter the x-coordinate from the map:"
+        fX = misc.get_float(sTxt, None, True)
+        if fX == None: return None
+
+        # y-coord
+        sTxt = "Please enter the y-coordinate from the map:"
+        fY = misc.get_float(sTxt, None, True)
+        if fY == None: return None
+
+        # Area
+        sTxt = "Please enter the area in sq.mm from the map:"
+        fA = misc.get_float(sTxt)
+        if fA == None: return None
+
+        # Convert the area.
+        dDb_area = misc.calc_area(fA, dCapital["aMap"]["fScale"])
+        if dDb_area == None: return None
+
+        # Save this data.
+        xParam = {"my_id": child}
+        xNew_data = {"$set": {
+            "aMap.x": fX,
+            "aMap.y": fY,
+            "aMap.a": fA,
+            "aArea": dDb_area
+            }}
+        cDest.update_one(xParam, xNew_data)
+
+# TOURISM LEVEL
+    sTxt = "On a scale of 0 to 10, how much TOURIST draw value does the "
+    sTxt += "capital posess?\nThis has an effect on hotels, restaurants and "
+    sTxt += "miscellaneous shops."
+    iTourist_score = misc.get_int(sTxt, 10)
+
+# GET DATA FROM THE COUNTY
+    sParent_id = dCapital["parent"]               # The link
+    xParam = {"my_id": sParent_id}
+    xRestr = {"_id":0}
+    dQuery = cDest.find(xParam, xRestr)
+    dAll = []
+    for query in dQuery:
+        dAll = query
+
+# Obtain the base demographic
+    aDemogfx = dAll["aDemographics"]
+    iTot_pax = aDemogfx["iTOT-PAX"]         # Total population
+    if iTot_pax == None:
+        print("Error: unable to obtain total population. Exiting\n\a")
+        return None
+    iTot_pax = int(iTot_pax * 1.1)          # Rough estimate for the capial
+
+    print("County is estimated at: {0:,}".format(iTot_pax))
+
+    # The 'prototype' briefcase for working in the capital.
+    dBriefcase = {
+        "ccTremb": ccTremb,
+        "sGeo_code": dCapital["geo_code"],
+        "sWkp_code": None,      # Workplace code like 'AWH' for wheat farm
+        "iStatic": None,        # Pre-calculated number of static employees
+    }
+
+    # Check if the capital has been done already
+    aDemand_workforce = dCapital["aDemand_workforce"]
+    aItemised = aDemand_workforce["aItemised"]
+
+    if ((len(aItemised) == 0) or
+        (aItemised[0]["sCode"] != "OME" and
+        aItemised[0]["sCode"] != "FME")):
+
+        if bDebug: bResp = False
+        # OFFICE WORKERS: (1:60 iTot)
+        fStatic = iTot_pax / 55.555
+        fRnd = random.uniform(0.8, 1.25)        # Range of employees
+        fStatic = fStatic * fRnd
+        iOme = int(fStatic)
+        print("'OME': {0} (Base office workers)".format(iOme))
+        dBriefcase["sWkp_code"] = "OME"
+        dBriefcase["iStatic"] = iOme
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # INDUSTRY WORKERS: (1:2 of office workers)
+        fStatic = iOme / 2.0
+        fRnd = random.uniform(0.9, 1.33)        # Range of employees
+        fStatic = fStatic * fRnd
+        iFme = int(fStatic)
+        print("'FME': {0} (Base factory/industry workers)".format(iFme))
+        dBriefcase["sWkp_code"] = "FME"
+        dBriefcase["iStatic"] = iFme
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # THE INDUSTRIALIST / ENTREPRENEUR: (1:12.5k iTot)
+        fStatic = iTot_pax / 12500
+        fRnd = random.uniform(0.75, 1.25)        # Range of employees
+        fStatic = fStatic * fRnd
+        iOer = int(fStatic)
+        print("'OER': {0} (The industrialist / entrepreneur)".format(iOer))
+        dBriefcase["sWkp_code"] = "OER"
+        dBriefcase["iStatic"] = iOer
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # THE BANK: (1:2.0k iTot)
+        fStatic = iTot_pax / 2000
+        fRnd = random.uniform(0.90, 1.11)        # Range of employees
+        fStatic = fStatic * fRnd
+        iObk = int(fStatic)
+        print("'OBK': {0} (The Bank)".format(iObk))
+        dBriefcase["sWkp_code"] = "OBK"
+        dBriefcase["iStatic"] = iObk
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # MISCELLANEOUS: (1:1000 iTot)
+        fStatic = iTot_pax / 1000
+        fRnd = random.uniform(0.80, 1.33)        # Range of employees
+        fStatic = fStatic * fRnd
+        iOxx = int(fStatic)
+        print("'OXX': {0} (Misc incl. charities, taxis)".format(iOxx))
+        dBriefcase["sWkp_code"] = "OXX"
+        dBriefcase["iStatic"] = iOxx
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # COUNTY GOVERNMENT: (1:1000 iTot)
+        fStatic = iTot_pax / 1000
+        fRnd = random.uniform(0.95, 1.05)        # Range of employees
+        fStatic = fStatic * fRnd
+        i4yg = int(fStatic)
+        print("'4YG': {0} (County government)".format(i4yg))
+        dBriefcase["sWkp_code"] = "4YG"
+        dBriefcase["iStatic"] = i4yg
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # DISTRICT GOVERNMENT: (1:10k iTot)
+        fStatic = iTot_pax / 10000
+        fRnd = random.uniform(0.95, 1.05)        # Range of employees
+        fStatic = fStatic * fRnd
+        i3yg = int(fStatic)
+        print("'3YG': {0} (District government)".format(i3yg))
+        dBriefcase["sWkp_code"] = "3YG"
+        dBriefcase["iStatic"] = i3yg
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # MISC SHOPS: (1:240 iTot)
+        fStatic = iTot_pax / 240
+        fTourist = (iTourist_score / 10)         # 0.0 TO 1.0
+        fTourist = fTourist + 1                  # 1.0 to 2.0
+        fTourist = fTourist ** 2                 # 1.0 to 4.0
+        fStatic = fStatic * fTourist             # Multiply by the factor
+        fRnd = random.uniform(0.95, 1.05)        # Range of employees
+        fStatic = fStatic * fRnd
+        iRxm = int(fStatic)
+        print("'RXM': {0} (Misc shops which also cater to tourists)".format(iRxm))
+        dBriefcase["sWkp_code"] = "RXM"
+        dBriefcase["iStatic"] = iRxm
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # HOTELS: (1:5k iTot)
+        fStatic = iTot_pax / 5000                # Standard count
+        fTourist = (iTourist_score / 10)         # 0.0 TO 1.0
+        fTourist = fTourist + 1                  # 1.0 to 2.0
+        fTourist = fTourist ** 2                 # 1.0 to 4.0
+        fStatic = fStatic * fTourist             # Multiply by the factor
+        fRnd = random.uniform(0.95, 1.05)        # Range of employees
+        fStatic = fStatic * fRnd
+        iGht = int(fStatic)
+        print("'GHT': {0} (Hotel for both business & tourist travel)".format(iGht))
+        dBriefcase["sWkp_code"] = "GHT"
+        dBriefcase["iStatic"] = iGht
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # RESTAURANT: (3:4 Hotel)
+        fStatic = iGht * 3 / 4                   # Standard count
+        fRnd = random.uniform(0.95, 1.05)        # Range of employees
+        fStatic = fStatic * fRnd
+        iGrx = int(fStatic)
+        print("'GRX': {0} (Restaurants incl. hotel)".format(iGrx))
+        dBriefcase["sWkp_code"] = "GRX"
+        dBriefcase["iStatic"] = iGrx
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # COUNTY HOSPITAL: (1:5k iTot)
+        fStatic = iTot_pax / 2000                # Standard count
+        fTourist = float(iTourist_score)         # 0.0 TO 10.0
+        fTourist = fTourist + 1                  # 1.0 to 11.0
+        fTourist = fTourist ** (1/6)             # 1.0 to 1.49 (Thumb-suck)
+        fStatic = fStatic * fTourist             # Multiply by the factor
+        fRnd = random.uniform(0.95, 1.05)        # Range of employees
+        fStatic = fStatic * fRnd
+        i4yh = int(fStatic)
+        print("'4YH': {0} (County hosplital -- also for tourists)".format(i4yh))
+        dBriefcase["sWkp_code"] = "4YH"
+        dBriefcase["iStatic"] = i4yh
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # AMBULANCE CREWS: (3:4 Doctors)
+        fStatic = i4yh * 3 / 4                   # Standard count
+        fRnd = random.uniform(0.95, 1.05)        # Range of employees
+        fStatic = fStatic * fRnd
+        iHam = int(fStatic)
+        print("'HAM': {0} (Ambulance crews)".format(iHam))
+        dBriefcase["sWkp_code"] = "HAM"
+        dBriefcase["iStatic"] = iHam
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+    # EDUCATION AND PRISONS NEED A MORE ACCURATE NUMBER.
+        # Do the balancing itself
+        if not bDebug:
+            bResp = balance_town(ccTremb, dCapital["geo_code"])
+        if bResp == None: return None
+
+    # UPDATE THE PARENT:
+        sParent_geo = dGeo_parent["geo_code"]
+        if not bDebug:
+            bResp = update_parent(ccTremb, sParent_geo)
+        if bResp == None: return None
+
+    # Refresh the data
+        sParent_id = dCapital["parent"]               # The link
+        xParam = {"my_id": sParent_id}
+        xRestr = {"_id":0}
+        dQuery = cDest.find(xParam, xRestr)
+        dAll = []
+        for query in dQuery:
+            dAll = query
+
+    # Obtain the base demographic
+        aDemogfx = dAll["aDemographics"]
+        if iTot_pax == None:
+            print("Error: unable to obtain total population. Exiting\n\a")
+            return None
+
+        iEd4_pax = aDemogfx["ED4-PAX"]              # Private / Religious school
+        iEd9_pax = aDemogfx["ED9-PAX"]              # Disabled school
+        iYxj_pax = aDemogfx["YXJ-PAX"]              # Juvenile prison
+        iYxa_pax = aDemogfx["YXA-PAX"]              # Adult prison
+
+        # PRIVATE / RELIGIOUS SCHOOL: (1:15 ~ 1:20)
+        fTeachers = random.uniform(15, 20)      #
+        fStatic = iEd4_pax / fTeachers          # Standard count
+        fSpare = random.uniform(1, 3)           # "spare teachers"
+        fStatic = fStatic + fSpare
+        iEd4 = int(fStatic)
+        fTpC = round(iEd4_pax / iEd4, 1)
+
+        sTxt = "'ED4': {0} Private / Religious teachers for {1} children ({2} T/C)"
+        sTxt = sTxt.format(iEd4, iEd4_pax, fTpC)
+        print(sTxt)
+        dBriefcase["sWkp_code"] = "ED4"
+        dBriefcase["iStatic"] = iEd4
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # DISABLED SCHOOL: (1:4 ~ 1:10)
+        fTeachers = random.uniform(4, 10)      #
+        fStatic = iEd9_pax / fTeachers          # Standard count
+        fSpare = random.uniform(1, 3)           # "spare teachers"
+        fStatic = fStatic + fSpare
+        iEd9 = int(fStatic)
+        fTpC = round(iEd9_pax / iEd9, 1)
+
+        sTxt = "'ED9': {0} 'Disabled' teachers for {1} children ({2} T/C)"
+        sTxt = sTxt.format(iEd9, iEd9_pax, fTpC)
+        print(sTxt)
+        dBriefcase["sWkp_code"] = "ED9"
+        dBriefcase["iStatic"] = iEd9
+        if not bDebug:
+            bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # COUNTY PRISON: (1:5k iTot)
+        fStatic = float(iYxj_pax + iYxa_pax)     # Juveniles + Adults
+        fStatic = fStatic / 5                    # Usually, 5 prisoners per guard
+        fTourist = float(iTourist_score)         # 0.0 TO 10.0
+        fTourist = fTourist + 1                  # 1.0 to 11.0
+        fTourist = fTourist ** (1/8)             # 1.0 to 1.35 (Thumb-suck)
+        fStatic = fStatic * fTourist             # Multiply by the factor
+        # 70% of total prisoners are in County jail. Rest are higher up
+        fStatic = fStatic * 0.7
+        fRnd = random.uniform(1.00, 1.10)        # Range of employees
+        fStatic = fStatic * fRnd
+        i4yx = int(fStatic)
+
+        iTot = round(iYxj_pax + iYxa_pax, 0)
+        fGpP = round(iTot / i4yx, 1)            # Guards per prisoner
+        sTxt = ("'4YX': {0} County guards for {1} Juveniles, {2} Adults " +
+                "({3} Tot). {4} G/P")
+        sTxt = sTxt.format(i4yx, iYxj_pax, iYxa_pax, iTot, fGpP)
+        print(sTxt)
+
+        dBriefcase["sWkp_code"] = "4YX"
+        dBriefcase["iStatic"] = i4yx
+    #    bResp = add_wkp_capital(dBriefcase)
+        if bResp == None: return None
+
+        # Do the balancing itself
+        if not bDebug:
+            bResp = balance_town(ccTremb, dChild["geo_code"])
+        if bResp == None: return None
+
+    # UPDATE THE PARENT:
+        sParent_geo = dGeo_parent["geo_code"]
+        if not bDebug:
+            bResp = update_parent(ccTremb, sParent_geo)
+        if bResp == None: return None
+    else:
+        print("Capital already sorted out!")
+
+    # Present data to the user
+    sLat = dChild["aName"]["lat"]
+    sCyr = dChild["aName"]["cyr"]
+    sAll = "{0} {1} / {2}".format(sGeo_code, sLat, sCyr)
+
+    # return geo-code and names on clip-board.
+    sTxt = "------\n"
+    sTxt += "Geo-code, Names are available on the clip-board. Use 'CTRL-V'"
+    sTxt += "\n-------"
+    print(sTxt)
+    pyperclip.copy(sAll)
+
+    xDummy = input("Press 'Enter' to continue...")
+
+# Notes:
+    # pyperclip.copy("Export me to Windows clipboard")
+
+
 
 #-------------------------------------------------------------------------------
 # 2: VIEW THE CHILDREN OF A GEOCODE
@@ -603,14 +1452,15 @@ def view_single(ccTremb):
 #-------------------------------------------------------------------------------
 # 4: PRETTY-PRINT MANUALLY DATABASE ENTRY TO FILE FOR A SINGLE GEOCODE
 #-------------------------------------------------------------------------------
-def pretty_print_single(ccTremb):
+def pretty_print_single(ccTremb, sGeo_code = None):
     """ Writes most of the elements from the database in a human-readable format
     """
     import datetime
 
-    sMenu = "\nEnter the geo-code for the element sought (ex: V, GY, GYN...)"
-    print(sMenu)
-    sGeo_code = input().upper()              # Force to upper case (consistency)
+    if sGeo_code == None:
+        sMenu = "\nEnter the geo-code for the element sought (ex: V, GY, GYN...)"
+        print(sMenu)
+        sGeo_code = input().upper()              # Force to upper case (consistency)
 
 # Access the database.
     cDest = db.destinations(ccTremb)
@@ -1296,7 +2146,10 @@ def pretty_print_single(ccTremb):
             else:
                 fVal = dFp[sItem]["qty"]
             units = dFp[sItem]["uom"]
-            sTxt = ">   {0}: {1:,}{2}\n"
+            if fVal == None:
+                sTxt = ">   {0}: {1}{2}\n"
+            else:
+                sTxt = ">   {0}: {1:,}{2}\n"
             sAll += sTxt.format(sItem, fVal, units)
     else:
         sAll += ">   N/A\n"
@@ -1306,11 +2159,12 @@ def pretty_print_single(ccTremb):
     eSingle_data.write("{0}\n".format(sAll))
     eSingle_data.close()
 
+    return True
 
 #-------------------------------------------------------------------------------
 # B: BALANCE A TOWN: DEMOGRAPHICS BASED ON INDUSTRIAL DEMAND
 #-------------------------------------------------------------------------------
-def balance_town(ccTremb):
+def balance_town(ccTremb, sGeo_code = None):
     """ Adds basic services and calculates demographics based on industrial
     demand of the town. Used on small scale maps. The following basic services
     are assinged; they are ASSUMED to be built in the town.
@@ -1332,10 +2186,11 @@ def balance_town(ccTremb):
     Population-dependant services are adjusted accordingly
         """
 
-    sTxt = ("\nPlease enter the geo-code ('GYN-G' for example) of the area" +
-    " you wish to balance")
-    print(sTxt)
-    sGeo_code = input().upper()
+    if sGeo_code == None:
+        sTxt = ("\nPlease enter the geo-code ('GYN-G' for example) of "+
+            "the area you wish to balance")
+        print(sTxt)
+        sGeo_code = input().upper()
 
 # Build the first demographic
     sOut = qHhold_demands(ccTremb, sGeo_code)
@@ -1979,14 +2834,15 @@ Select expected data type:
 #-------------------------------------------------------------------------------
 # G: ADD GEOCODE TO A NEWLY CREATED AREA
 #-------------------------------------------------------------------------------
-def assign_geocodes(ccTremb):
+def assign_geocodes(ccTremb, sParent=None):
     """ Takes in the parent's geocode. Method then determines which children
     need to be assigned their own geocodes. Both manual and automatic methods
     are available"""
 
-    print("\nEnter the geocode of the parent (TJ for example)"
-          +" of the children witout geocodes")
-    sParent = input().upper()
+    if sParent == None:
+        print("\nEnter the geocode of the parent (TJ for example)"
+              +" of the children witout geocodes")
+        sParent = input().upper()
 
     # Access the database.
     cDest = db.destinations(ccTremb)
@@ -3541,15 +4397,16 @@ def qqParent_update(ccTremb, dParent):
 
     return iNo_of_children
 #-------------------------------------------------------------------------------
-def update_parent(ccTremb):
+def update_parent(ccTremb, sParent=None):
     """ Goes through all its children and gathers demographic, vehicular and
     industrial information. It itemises each child within the parent."""
 
 # GEOCODE OF PARENT:
-    sTxt = ("\nPlease enter the geo-code ('GY' for example) of the parent " +
-        "which requests data\nfrom its children.")
-    print(sTxt)
-    sParent = input().upper()                  # Allow user to type in any case
+    if sParent == None:     # Allows Option '1A' to interface here.
+        sTxt = ("\nPlease enter the geo-code ('GY' for example) of the parent "+
+            "which requests data\nfrom its children.")
+        print(sTxt)
+        sParent = input().upper()               # Allow user to type in any case
 
     # Access the database
     cDest = db.destinations(ccTremb)
@@ -3572,7 +4429,7 @@ def update_parent(ccTremb):
     # ENTER THE RECURSIVE SYSTEM:
     iNo_of_children = qqParent_update(ccTremb, dParent)
     if iNo_of_children == None: return None
-
+    return True
 
 #-------------------------------------------------------------------------------
 # W: ADD WORKPLACES, WITH THEIR LABOUR DEMANDS AND RESOURCE OUTPUTS
@@ -3618,244 +4475,23 @@ def qCalc_non_main_staff(aData):
 
     return aDemogfx
 #-------------------------------------------------------------------------------
-def add_workplace(ccTremb):
-    """ Adds the 'industries' which operate in this area. These could be farms,
-    offices, factories. Effectively, this creates demand for a workforce.
-    """
-# GEOCODE
-    # Enter the geo code for the area in question
-    sTxt = ("\nPlease enter the geo-code ('GYG-H' for example) for the area" +
-            " you are adding\nworkplaces to.")
-    print(sTxt)
-    sGeo_code = input().upper()
+def qGen_work_demand(dBriefcase):
+    """ The method takes in the workplace data selected either manually
+    add_worplace() or semi-automatically add_wkp_semi_auto() if doing a whole
+    county at once. It processes the given data and writes it correctly to the
+    DB.
 
-    # Get the element. Also verify that the geocode is registered in the data
-    # base
-    cDest = db.destinations(ccTremb)
-    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
-    if dGeo_element == None:
-        return None
+    'dBriefcase' contains the following elements: {'dGeo_element', 'dWkp',
+    'dFarm_footprint', 'sFarm_name_combo', 'iParking', 'cDest', 'iStatic'} """
 
-    # Confirmation message
-    sTxt = ("\nYou are adding industry to {0} / {1}")
-    dName = dGeo_element["aName"]
-    print(sTxt.format(dName["lat"], dName["cyr"]))
-
-# THE TYPE LIST.
-    cWorkplace = db.workplaces_const(ccTremb)
-    xParam = {}
-    xRestr = {"_id":0, "type":1}
-    dType_list = cWorkplace.find(xParam, xRestr)
-
-    # Copy out the data from the database.
-    aAll = []
-    for dQuery in dType_list:
-        aAll.append(dQuery["type"])
-
-    # Remove duplicates while preserving the order:
-    aType = []
-    for sItem in aAll:
-        if sItem not in aType:
-            aType.append(sItem)
-
-    # Show a menu with the types of industry
-    iIdx = 0
-    sMenu = "\nPlease select the type of workplace:"
-    for choice in aType:
-        iIdx += 1
-        sMenu += "\n{0}:   {1}".format(iIdx, aType[iIdx-1])
-
-    # obtain the user's choice
-    iChoice = misc.get_int(sMenu, iIdx)
-    if iChoice == None or iChoice == 0:
-        sTxt = ("\n\aInvalid input. Exiting")
-        print(sTxt)
-        return None
-
-# RE-QUERY THE DATABASE ONLY PICKING UP ON THE CATEGORY SELECTED
-    xParam = {"type":aType[iChoice-1]}
-    xRestr = {"_id":0, "name":1, "code":1}
-    dGroup = cWorkplace.find(xParam, xRestr)
-
-    # Copy out the data from the database.
-    aInd_name = []
-    aInd_code = []
-    for dQuery in dGroup:
-        aInd_name.append(dQuery["name"])
-        aInd_code.append(dQuery["code"])
-
-    # Show a menu with the industry names ("Rice Farm" for example)
-    iIdx = 0
-    sMenu = "\nPlease select the workplace:"
-    for choice in aInd_name:
-        iIdx += 1
-        sTxt = "\n{0}:   ({2}) {1}"
-        sTxt = sTxt.format(iIdx, aInd_name[iIdx-1], aInd_code[iIdx-1])
-        sMenu += sTxt
-
-    # obtain the user's choice
-    iChoice = misc.get_int(sMenu, iIdx)
-    if iChoice == None or iChoice == 0:
-        sTxt = ("\n\aInvalid input. Exiting")
-        print(sTxt)
-        return None
-
-# RE-QUERY THE DATABASE ONLY PICKING UP ON THE CATEGORY SELECTED
-    xParam = {"name":aInd_name[iChoice-1]}
-    xRestr = {"_id":0}
-    dWorkplace = cWorkplace.find(xParam, xRestr)
-
-    # Copy out the data from the database.
-    dWkp = {}
-    for dQuery in dWorkplace:
-        dWkp = dQuery    # Allow us the option for additional queries
-
-# START TO PROCESS
-    # NAME THE WORKPLACE
-    sFarm_name_combo = ""
-    if dWkp["default"] != "" or dWkp["default"] != None:
-        # Offer the option to use the default name
-        sTxt = ("\nDo you want to use the default name of '{0}' for the {1}?")
-        sTxt = sTxt.format(dWkp["default"], dWkp["name"])
-        sYn_wkp_name = misc.get_binary(sTxt)
-        if sYn_wkp_name == None:
-            print("\n\aInvalid input. EXITING")
-            return None
-        if sYn_wkp_name == "Y":
-            sFarm_name_combo = dWkp["default"]
-
-    # Name the workplace / farm.
-    if sFarm_name_combo == "":
-        # Not yet named.
-        sTxt = ("\nEnter the name in the Latin alphabet (accents allowed) of " +
-            "the workplace")
-        print(sTxt)
-        sFarm_name_lat = input()
-
-        sTxt = ("\nEnter the name in the Other alphabet (UTF-8 encoding) of " +
-            "the workplace.\nPress 'enter' to opt out")
-        print(sTxt)
-        sFarm_name_cyr = input()
-
-        # Combine int 'sFarm_name_combo'
-        if sFarm_name_cyr == "" or sFarm_name_cyr == None:
-            sFarm_name_combo = "{0}".format(sFarm_name_lat)
-        else:
-            sFarm_name_combo = "{0}/{1}".format(sFarm_name_lat, sFarm_name_cyr)
-
-    # EXACT FOOTPRINT:
-    sTxt = ("Is the exact footprint known? " +
-            "(Taken directly from the map as sq.mm).")
-    sExact_footprint = misc.get_binary(sTxt)
-    if sExact_footprint == None:
-        print("\n\aInvalid input. EXITING")
-        return None
-
-    # APPROXIMATE FOOTPRINT:
-    iParking = None                                     # For context breaking
-    if sExact_footprint == "N":
-        # Confirm information
-        sTown_lat = dGeo_element["aName"]["lat"]
-        fArea_val = dGeo_element["aArea"]["qty"]
-        sArea_units = dGeo_element["aArea"]["uom"]
-        sFarm_descr = dWkp["name"]
-
-        # Request the input of the area for the element
-        sTxt = ("{0} has an area of {1}{2}. What ratio (0.01 to 0.99) is " +
-                "{3} ('{4}')?")
-        sTxt = sTxt.format(sTown_lat, fArea_val, sArea_units, sFarm_descr,
-                sFarm_name_combo)
-        fFarm_percent = misc.get_float(sTxt, 1.00)
-        if fFarm_percent == None:
-            sTxt = ("\n\aInvalid input. EXITING")
-            print(sTxt)
-            return None
-
-        # Calculate the footprint
-        fFarm_footprint = fFarm_percent * fArea_val
-        fFarm_footprint = round(fFarm_footprint, 3)
-        dFarm_footprint = {"val":fFarm_footprint, "uom":sArea_units}
-    # EXACT FOOTPRINT IS KNOWN:
-    else:
-        # Confirm information
-        sTown_lat = dGeo_element["aName"]["lat"]
-        fMap_a = dGeo_element["aMap"]["a"]
-        fMap_scale = dGeo_element["aMap"]["fScale"]
-        sFarm_descr = dWkp["name"]
-
-        # Get the area from the user
-        sTxt = ("{0} has a mapped area of {1}sq.mm. What is the mapped area" +
-            " of {2} in sq.mm?")
-        sTxt = sTxt.format(sTown_lat, fMap_a, sFarm_name_combo)
-        fSq_mm_farm = misc.get_float(sTxt, fMap_a)
-
-        # Check that we passed the valiation
-        if fSq_mm_farm == None: return None
-
-        dFootprint = misc.calc_area(fSq_mm_farm, fMap_scale)
-        if dFootprint == None: return None
-        dFarm_footprint = {
-            "val":dFootprint["qty"],
-            "uom":dFootprint["uom"]}
-
-        # Add optional parking
-        sTxt = "Do you want to specify 'parking'?"
-        sYn_parking = misc.get_binary(sTxt)
-        if sYn_parking == None: return None
-        if sYn_parking == "Y":
-            # Get the parking input
-            sTxt = ("Enter the area of the parking footprint in sq.mm"+
-                " from map.")
-            fParking_ftp = misc.get_float(sTxt)
-            if fParking_ftp == None: return None
-
-            # Calculate the parking area
-            aParking_area = misc.calc_area(fParking_ftp, fMap_scale)
-            if aParking_area == None: return None
-
-            # We know the real-world scale of the parking.
-            # In the real world, a parking bay is 5.5m x 2.5m (13.75sq.m).
-            # However, each vehicle needs access to that bay. The above
-            # calcuation gives 7.27veh/100sq.m. However, each vehilce needs some
-            # space to get to the bay. Hence, I'm using the figure of
-            # 6 veh / 100sq.m (600veh/ha)
-
-            # Verify the units of measurement
-            if aParking_area["uom"] != "sq.m":
-                print("\nUnexpected calculation result for office parking:\n" +
-                    "Expected 'sq.m', but got {0}\a".format(
-                        aParking_area["uom"]))
-                return None
-            fSqm_P = aParking_area["qty"]
-
-            print("Parking is: {0}{1}".format(
-                aParking_area["qty"], aParking_area["uom"]))
-
-            sTxt = ("On how many levels are cars parked?")
-            iFloors = misc.get_int(sTxt)
-            if iFloors == None: return None
-
-            if iFloors > 1 and fSqm_P < 90:
-                sTxt = ("\n\aInsufficient space for a ramp " +
-                    "(1:10 @ h = 3.6m, w = 2.5m). Exiting")
-                return None
-
-            if iFloors > 1:
-                fSqm_P -= 90    # Take room for the ramp
-
-            fVeh = 6.0 * fSqm_P / 100
-            iVeh = int(round(fVeh, 0))      # Round off to whole vehicles
-
-            fVeh = iVeh * iFloors           # We need to round off per floor.
-            iVeh = int(round(fVeh, 0))      # Round off to whole vehicles
-
-            iNo_of_buildings = 1            # Short circuit it.
-            fVeh = iVeh * iNo_of_buildings  # Parking in each building
-            iParking = int(round(fVeh, 0))      # Round off to whole vehicles
-
-            print("Total of {0} cars can be parked here".format(iVeh))
-        # End of parking additional
-    # End of exact footprint is known
+# Unpack transport container
+    dGeo_element = dBriefcase["dGeo_element"]
+    dWkp = dBriefcase["dWkp"]
+    dFarm_footprint = dBriefcase["dFarm_footprint"]
+    sFarm_name_combo = dBriefcase["sFarm_name_combo"]
+    iParking = dBriefcase["iParking"]
+    cDest = dBriefcase["cDest"]
+    iStatic = dBriefcase["iStatic"]
 
 # CALCULATE THE STATISTICS GENERATED BY THE FARM/FACTORY
 #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
@@ -3864,7 +4500,10 @@ def add_workplace(ccTremb):
     fWkf_val = dWkp["aaLabour"]["aMain"]["fRate"]
     sWkf_uom = dWkp["aaLabour"]["aMain"]["units"]   # units of measure
     # Workplace or farm
-    fFarm_val = dFarm_footprint["val"]
+    if "qty" in dFarm_footprint:        # Equivalent to '.has_key()'
+        fFarm_val = dFarm_footprint["qty"]
+    else:
+        fFarm_val = dFarm_footprint["val"]
     sFarm_uom = dFarm_footprint["uom"]
 
     # Let's get the units onto the same page:
@@ -3883,6 +4522,7 @@ def add_workplace(ccTremb):
             fFarm_val = fFarm_val * 100         # convert to ha
         else:
             print("\n\aInvalid unit of measure for 'farm'. EXITING")
+            return None
         fTot_main = fFarm_val * fWkf_val
 
     #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
@@ -3897,14 +4537,18 @@ def add_workplace(ccTremb):
             pass                                # No modification needed
         else:
             print("\n\aInvalid unit of measure for 'farm'. EXITING")
+            return None
         fTot_main = fFarm_val * fWkf_val
 
     #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
     elif sWkf_uom == "empl":
         # QUARRY, MINE, and other "static" establishments
-        sTxt = ("Enter the number of MAIN employees working at {0}")
-        sTxt = sTxt.format(sFarm_name_combo)
-        fTot_main = misc.get_float(sTxt)
+        if iStatic == None:
+            sTxt = ("Enter the number of MAIN employees working at {0}")
+            sTxt = sTxt.format(sFarm_name_combo)
+            fTot_main = misc.get_float(sTxt)
+        else:
+            fTot_main = float(iStatic)      # Input fed in automatically
         if fTot_main == None: return
 
     #-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
@@ -4110,7 +4754,7 @@ def add_workplace(ccTremb):
     dGeo_element["aFootprint"][sFarm_name_combo] = dFarm_footprint
 
 # DATABASE UPDATE.
-    xParam = {"geo_code":sGeo_code}
+    xParam = {"geo_code":dGeo_element["geo_code"]}
     xNew_data = {"$set": {
         "aDemand_workforce": dGeo_element["aDemand_workforce"],
         "aVehicles": dGeo_element["aVehicles"],
@@ -4119,15 +4763,463 @@ def add_workplace(ccTremb):
     }}
 
     cDest.update_one(xParam, xNew_data)
+    return True         # It is called from 'add_semi_auto'
+
+#-------------------------------------------------------------------------------
+def add_workplace(ccTremb):
+    """ MANUALLY Adds the 'industries' which operate in this area.
+    These could be farms, offices, factories. Effectively, this creates demand
+    for a workforce.
+    """
+# GEOCODE
+    # Enter the geo code for the area in question
+    sTxt = ("\nPlease enter the geo-code ('GYG-H' for example) for the " +
+            "area you are adding\nworkplaces to.")
+    print(sTxt)
+    sGeo_code = input().upper()
+
+    # Get the element. Also verify that the geocode is registered in the data
+    # base
+    cDest = db.destinations(ccTremb)
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None:
+        return None
+
+    # Confirmation message
+    sTxt = ("\nYou are adding industry to {0} / {1}")
+    dName = dGeo_element["aName"]
+    print(sTxt.format(dName["lat"], dName["cyr"]))
+
+# THE TYPE LIST.
+    cWorkplace = db.workplaces_const(ccTremb)
+    xParam = {}
+    xRestr = {"_id":0, "type":1}
+    dType_list = cWorkplace.find(xParam, xRestr)
+
+    # Copy out the data from the database.
+    aAll = []
+    for dQuery in dType_list:
+        aAll.append(dQuery["type"])
+
+    # Remove duplicates while preserving the order:
+    aType = []
+    for sItem in aAll:
+        if sItem not in aType:
+            aType.append(sItem)
+
+    # Show a menu with the types of industry
+    iIdx = 0
+    sMenu = "\nPlease select the type of workplace:"
+    for choice in aType:
+        iIdx += 1
+        sMenu += "\n{0}:   {1}".format(iIdx, aType[iIdx-1])
+
+    # obtain the user's choice
+    iChoice = misc.get_int(sMenu, iIdx)
+    if iChoice == None or iChoice == 0:
+        sTxt = ("\n\aInvalid input. Exiting")
+        print(sTxt)
+        return None
+
+# RE-QUERY THE DATABASE ONLY PICKING UP ON THE CATEGORY SELECTED
+    xParam = {"type":aType[iChoice-1]}
+    xRestr = {"_id":0, "name":1, "code":1}
+    dGroup = cWorkplace.find(xParam, xRestr)
+
+    # Copy out the data from the database.
+    aInd_name = []
+    aInd_code = []
+    for dQuery in dGroup:
+        aInd_name.append(dQuery["name"])
+        aInd_code.append(dQuery["code"])
+
+    # Show a menu with the industry names ("Rice Farm" for example)
+    iIdx = 0
+    sMenu = "\nPlease select the workplace:"
+    for choice in aInd_name:
+        iIdx += 1
+        sTxt = "\n{0}:   ({2}) {1}"
+        sTxt = sTxt.format(iIdx, aInd_name[iIdx-1], aInd_code[iIdx-1])
+        sMenu += sTxt
+
+    # obtain the user's choice
+    iChoice = misc.get_int(sMenu, iIdx)
+    if iChoice == None or iChoice == 0:
+        sTxt = ("\n\aInvalid input. Exiting")
+        print(sTxt)
+        return None
+
+# RE-QUERY THE DATABASE ONLY PICKING UP ON THE CATEGORY SELECTED
+    xParam = {"name":aInd_name[iChoice-1]}
+    xRestr = {"_id":0}
+    dWorkplace = cWorkplace.find(xParam, xRestr)
+
+    # Copy out the data from the database.
+    dWkp = {}
+    for dQuery in dWorkplace:
+        dWkp = dQuery    # Allow us the option for additional queries
+
+# START TO PROCESS
+    # NAME THE WORKPLACE
+    sFarm_name_combo = ""
+    if dWkp["default"] != "" or dWkp["default"] != None:
+        # Offer the option to use the default name
+
+        sTxt = ("\nDo you want to use the default name of '{0}' "+
+            "for the {1}?")
+        sTxt = sTxt.format(dWkp["default"], dWkp["name"])
+        sYn_wkp_name = misc.get_binary(sTxt)
+        if sYn_wkp_name == None:
+            print("\n\aInvalid input. EXITING")
+            return None
+        if sYn_wkp_name == "Y":
+            sFarm_name_combo = dWkp["default"]
+
+    # Name the workplace / farm. There is no default name available OR the
+    # user wants a manual name
+    if sFarm_name_combo == "":
+        # Not yet named.
+        sTxt = ("\nEnter the name in the Latin alphabet (accents allowed) of " +
+            "the workplace")
+        print(sTxt)
+        sFarm_name_lat = input()
+
+        sTxt = ("\nEnter the name in the Other alphabet (UTF-8 encoding) of " +
+            "the workplace.\nPress 'enter' to opt out")
+        print(sTxt)
+        sFarm_name_cyr = input()
+
+        # Combine int 'sFarm_name_combo'
+        if sFarm_name_cyr == "" or sFarm_name_cyr == None:
+            sFarm_name_combo = "{0}".format(sFarm_name_lat)
+        else:
+            sFarm_name_combo = "{0}/{1}".format(sFarm_name_lat, sFarm_name_cyr)
+
+    # EXACT FOOTPRINT:
+    sTxt = ("Is the exact footprint known? " +
+            "(Taken directly from the map as sq.mm).")
+    sExact_footprint = misc.get_binary(sTxt)
+    if sExact_footprint == None:
+        print("\n\aInvalid input. EXITING")
+        return None
+
+    # APPROXIMATE FOOTPRINT:
+    iParking = None                                     # For context breaking
+    if sExact_footprint == "N":
+        # Confirm information
+        sTown_lat = dGeo_element["aName"]["lat"]
+        fArea_val = dGeo_element["aArea"]["qty"]
+        sArea_units = dGeo_element["aArea"]["uom"]
+        sFarm_descr = dWkp["name"]
+
+        # Request the input of the area for the element
+        sTxt = ("{0} has an area of {1}{2}. What ratio (0.01 to 0.99) is " +
+                "{3} ('{4}')?")
+        sTxt = sTxt.format(sTown_lat, fArea_val, sArea_units, sFarm_descr,
+                sFarm_name_combo)
+        fFarm_percent = misc.get_float(sTxt, 1.00)
+        if fFarm_percent == None:
+            sTxt = ("\n\aInvalid input. EXITING")
+            print(sTxt)
+            return None
+
+        # Calculate the footprint
+        fFarm_footprint = fFarm_percent * fArea_val
+        fFarm_footprint = round(fFarm_footprint, 3)
+        dFarm_footprint = {"val":fFarm_footprint, "uom":sArea_units}
+    # EXACT FOOTPRINT IS KNOWN:
+    else:
+        # Confirm information
+        sTown_lat = dGeo_element["aName"]["lat"]
+        fMap_a = dGeo_element["aMap"]["a"]
+        fMap_scale = dGeo_element["aMap"]["fScale"]
+        sFarm_descr = dWkp["name"]
+
+        # Get the area from the user
+        sTxt = ("{0} has a mapped area of {1}sq.mm. What is the mapped area" +
+            " of {2} in sq.mm?")
+        sTxt = sTxt.format(sTown_lat, fMap_a, sFarm_name_combo)
+        fSq_mm_farm = misc.get_float(sTxt, fMap_a)
+
+        # Check that we passed the valiation
+        if fSq_mm_farm == None: return None
+
+        dFootprint = misc.calc_area(fSq_mm_farm, fMap_scale)
+        if dFootprint == None: return None
+        dFarm_footprint = {
+            "val":dFootprint["qty"],
+            "uom":dFootprint["uom"]}
+
+        # Add optional parking
+        sTxt = "Do you want to specify 'parking'?"
+        sYn_parking = misc.get_binary(sTxt)
+        if sYn_parking == None: return None
+        if sYn_parking == "Y":
+            # Get the parking input
+            sTxt = ("Enter the area of the parking footprint in sq.mm"+
+                " from map.")
+            fParking_ftp = misc.get_float(sTxt)
+            if fParking_ftp == None: return None
+
+            # Calculate the parking area
+            aParking_area = misc.calc_area(fParking_ftp, fMap_scale)
+            if aParking_area == None: return None
+
+            # We know the real-world scale of the parking.
+            # In the real world, a parking bay is 5.5m x 2.5m (13.75sq.m).
+            # However, each vehicle needs access to that bay. The above
+            # calcuation gives 7.27veh/100sq.m. However, each vehilce needs some
+            # space to get to the bay. Hence, I'm using the figure of
+            # 6 veh / 100sq.m (600veh/ha)
+
+            # Verify the units of measurement
+            if aParking_area["uom"] != "sq.m":
+                print("\nUnexpected calculation result for office parking:\n" +
+                    "Expected 'sq.m', but got {0}\a".format(
+                        aParking_area["uom"]))
+                return None
+            fSqm_P = aParking_area["qty"]
+
+            print("Parking is: {0}{1}".format(
+                aParking_area["qty"], aParking_area["uom"]))
+
+            sTxt = ("On how many levels are cars parked?")
+            iFloors = misc.get_int(sTxt)
+            if iFloors == None: return None
+
+            if iFloors > 1 and fSqm_P < 90:
+                sTxt = ("\n\aInsufficient space for a ramp " +
+                    "(1:10 @ h = 3.6m, w = 2.5m). Exiting")
+                return None
+
+            if iFloors > 1:
+                fSqm_P -= 90    # Take room for the ramp
+
+            fVeh = 6.0 * fSqm_P / 100
+            iVeh = int(round(fVeh, 0))      # Round off to whole vehicles
+
+            fVeh = iVeh * iFloors           # We need to round off per floor.
+            iVeh = int(round(fVeh, 0))      # Round off to whole vehicles
+
+            iNo_of_buildings = 1            # Short circuit it.
+            fVeh = iVeh * iNo_of_buildings  # Parking in each building
+            iParking = int(round(fVeh, 0))      # Round off to whole vehicles
+
+            print("Total of {0} cars can be parked here".format(iVeh))
+        # End of parking additional
+    # End of exact footprint is known
+
+    dBriefcase = {
+        "dGeo_element": dGeo_element,
+        "dWkp": dWkp,
+        "dFarm_footprint": dFarm_footprint,
+        "sFarm_name_combo": sFarm_name_combo,
+        "iParking": iParking,
+        "cDest": cDest,
+        "iStatic":None,         # Used by the capital city.
+    }
+    bRes = qGen_work_demand(dBriefcase)
+    if bRes == None:
+        return None
     print("\n DATABASE ENTRY UPDATED")
+    return True
+
+#-------------------------------------------------------------------------------
+def add_wkp_county(ccTremb, sGeo_code):
+    """ BATCH ADDITION (1A-MENU): Method follows the process of the standard
+    W-menu with a few exceptions. The name of the place is defaulted, and there
+    is no entry of the geo-code as it is already supplied.
+    """
+    # Get the geographic element:
+    cDest = db.destinations(ccTremb)
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None: return None
+
+# THE TYPE LIST.
+    cWorkplace = db.workplaces_const(ccTremb)
+    xParam = {}
+    xRestr = {"_id":0, "type":1}
+    dType_list = cWorkplace.find(xParam, xRestr)
+
+    # Copy out the data from the database.
+    aAll = []
+    for dQuery in dType_list:
+        aAll.append(dQuery["type"])
+
+    # Remove duplicates while preserving the order:
+    aType = []
+    for sItem in aAll:
+        if sItem not in aType:
+            aType.append(sItem)
+
+    # Show a menu with the types of industry
+    iIdx = 0
+    sMenu = "\nPlease select the type of workplace:"
+    for choice in aType:
+        iIdx += 1
+        sMenu += "\n{0}:   {1}".format(iIdx, aType[iIdx-1])
+
+    # obtain the user's choice
+    iChoice = misc.get_int(sMenu, iIdx)
+    if iChoice == None or iChoice == 0:
+        sTxt = ("\n\aInvalid input. Exiting")
+        print(sTxt)
+        return None
+
+# RE-QUERY THE DATABASE ONLY PICKING UP ON THE CATEGORY SELECTED
+    xParam = {"type":aType[iChoice-1]}
+    xRestr = {"_id":0, "name":1, "code":1}
+    dGroup = cWorkplace.find(xParam, xRestr)
+
+    # Copy out the data from the database.
+    aInd_name = []
+    aInd_code = []
+    for dQuery in dGroup:
+        aInd_name.append(dQuery["name"])
+        aInd_code.append(dQuery["code"])
+
+    # Show a menu with the industry names ("Rice Farm" for example)
+    iIdx = 0
+    sMenu = "\nPlease select the workplace:"
+    for choice in aInd_name:
+        iIdx += 1
+        sTxt = "\n{0}:   ({2}) {1}"
+        sTxt = sTxt.format(iIdx, aInd_name[iIdx-1], aInd_code[iIdx-1])
+        sMenu += sTxt
+
+    # obtain the user's choice
+    iChoice = misc.get_int(sMenu, iIdx)
+    if iChoice == None or iChoice == 0:
+        sTxt = ("\n\aInvalid input. Exiting")
+        print(sTxt)
+        return None
+
+# RE-QUERY THE DATABASE ONLY PICKING UP ON THE CATEGORY SELECTED
+    xParam = {"name":aInd_name[iChoice-1]}
+    xRestr = {"_id":0}
+    dWorkplace = cWorkplace.find(xParam, xRestr)
+
+    # Copy out the data from the database.
+    dWkp = {}
+    for dQuery in dWorkplace:
+        dWkp = dQuery    # Allow us the option for additional queries
+
+# NAME THE WORKPLACE
+    sFarm_name_combo = ""
+    if dWkp["default"] != "" or dWkp["default"] != None:
+        sFarm_name_combo = dWkp["default"]
+
+    # There is no default name available
+    if sFarm_name_combo == "":
+        # Not yet named.
+        sTxt = ("\nEnter the name in the Latin alphabet (accents allowed) of " +
+            "the workplace")
+        print(sTxt)
+        sFarm_name_lat = input()
+
+        sTxt = ("\nEnter the name in the Other alphabet (UTF-8 encoding) of " +
+            "the workplace.\nPress 'enter' to opt out")
+        print(sTxt)
+        sFarm_name_cyr = input()
+
+        # Combine int 'sFarm_name_combo'
+        if sFarm_name_cyr == "" or sFarm_name_cyr == None:
+            sFarm_name_combo = "{0}".format(sFarm_name_lat)
+        else:
+            sFarm_name_combo = "{0}/{1}".format(sFarm_name_lat, sFarm_name_cyr)
+
+# THE WORPLACE FOOTPRINT
+    # For farms, this forms the basis of the labour.
+
+    # Confirm information
+    sTown_lat = dGeo_element["aName"]["lat"]
+    fArea_val = dGeo_element["aArea"]["qty"]
+    sArea_units = dGeo_element["aArea"]["uom"]
+    sFarm_descr = dWkp["name"]
+
+    # Request the input of the area for the element
+    sTxt = ("'{0}' has an area of {1}{2}. What ratio (0.01 to 0.99) is " +
+            "{3} ('{4}')?")
+    sTxt = sTxt.format(sTown_lat, fArea_val, sArea_units, sFarm_descr,
+            sFarm_name_combo)
+    fFarm_percent = misc.get_float(sTxt, 1.00)
+    if fFarm_percent == None:
+        sTxt = ("\n\aInvalid input. EXITING")
+        print(sTxt)
+        return None
+
+    # Calculate the footprint
+    fFarm_footprint = fFarm_percent * fArea_val
+    fFarm_footprint = round(fFarm_footprint, 3)
+    dFarm_footprint = {"val":fFarm_footprint, "uom":sArea_units}
+
+    dBriefcase = {
+        "dGeo_element": dGeo_element,
+        "dWkp": dWkp,
+        "dFarm_footprint": dFarm_footprint,
+        "sFarm_name_combo": sFarm_name_combo,
+        "iParking": None,
+        "cDest": cDest,
+        "iStatic":None,         # For the capital only
+    }
+    bRes = qGen_work_demand(dBriefcase)
+    if bRes == None:
+        return None
+    print("\n DATABASE ENTRY UPDATED")
+    return True
+
+#-------------------------------------------------------------------------------
+def add_wkp_capital(dArrival):
+    """ 'I KNOW WHAT I WANT': Effectively, I supply the code of the service and
+    its static personel count."""
+    # Unpack after 'travel'
+    ccTremb = dArrival["ccTremb"]
+    sGeo_code = dArrival["sGeo_code"]
+    sWkp_code = dArrival["sWkp_code"]
+    iStatic = dArrival["iStatic"]
+
+    # Get the geographic element:
+    cDest = db.destinations(ccTremb)
+    dGeo_element = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_element == None: return None
+
+    # Get the workplace database
+    cWorkplace = db.workplaces_const(ccTremb)
+    xParam = {"code":sWkp_code}
+    xRestr = {"_id":0}
+    dWorkplace = cWorkplace.find(xParam, xRestr)
+
+    # Get the workplace result
+    dWkp = []
+    for query in dWorkplace:
+        dWkp = query
+
+    dBriefcase = {
+        "dGeo_element": dGeo_element,
+        "dWkp": dWkp,
+        "dFarm_footprint": dGeo_element["aArea"],
+        "sFarm_name_combo": dWkp["default"],
+        "iParking": None,
+        "cDest": cDest,
+        "iStatic":iStatic,         # For the capital only
+    }
+
+    bRes = qGen_work_demand(dBriefcase)
+    if bRes == None:
+        return None
+
+    sTxt = "\n DATABASE ENTRY UPDATED for {0} with {1}"
+    sTxt = sTxt.format(dWkp["default"], iStatic)
+    print(sTxt)
+    return True
 
 #-------------------------------------------------------------------------------
 def add_wkp_auto(dBriefcase):
-    """ Adds a workplace to the selected city. However, this addition is done
-    semi-automatically. For example, a train station would need some labour.
-    This version adds an 'aSupply_workplace' element to the geographic entry.
-    NOTE that the warehouses are NOT updated: This feature is intended for
-    Train stations, Police stations, Fire Departments, Schools, ...
+    """ STATIONS (S-MENU): Adds a workplace to the selected city. However, this
+    addition is done semi-automatically. For example, a train station would
+    need some labour. This version adds an 'aSupply_workplace' element to the
+    geographic entry. NOTE that the warehouses are NOT updated: This feature is
+    intended for Train stations, Police stations, Fire Departments, Schools, ...
 
     dBriefase elements:
         ccTremb             # Data base reference
@@ -4579,6 +5671,7 @@ def sub_menu():
 DESTINATIONS SUB-MENU (D):
 .:  Exit
 1:  Add an area
+1A: Add MUNICIPALITIES semi-automatically
 2:  View 'children'
 3:  View single element
 4:  Pretty print a single element to a file
@@ -4608,6 +5701,8 @@ X:  Remove workplace: Can be used to fix 'mistakes'
             bExit = True
         elif sInput == "1":         # New
             add_area_to_db(ccTremb)
+        elif sInput == "1A":        # Semi-Automatic batch area
+            add_semi_auto(ccTremb)
         elif sInput == "2":         # View children
             view_children(ccTremb)
         elif sInput == "3":         # Outputs all the data for one geo-code

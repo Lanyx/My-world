@@ -200,6 +200,32 @@ def mm_star():
         cDb = db.destinations(ccTremb)
         dQuery = cDb.update_one(xParam, xNew_data)
 
+
+    # Delete all the geo-codes
+    if False:
+        parent_my_id = "D00-0AL"        # Edit me.
+
+        # Data base connection and selection
+        ccTremb = db.connect()
+        cDb = db.destinations(ccTremb)
+
+        # Get the parent so we can access the children
+        xParam = {"my_id":parent_my_id}
+        xRestr = {"_id":0, "aChildren":1}
+        dQuery = cDb.find(xParam, xRestr)
+
+        # Analyse the query
+        aChildren = []
+        for query in dQuery:
+            aChildren = query["aChildren"]   # copy out
+
+        # Erase each child's geo-code
+        for child in aChildren:
+            xParam = {"my_id":child}
+            xNew_data = {"$set": {"geo_code":None}}
+            dQuery = cDb.update_one(xParam, xNew_data)
+
+
     # Global change to the structure
     if False:
         dNew_data = {
@@ -241,8 +267,8 @@ def mm_star():
 
     # Oblitorate everything except the name, children, area data.
     # Basically, erase balancing when it was not required.
-    if False:
-        xParam = {"geo_code":"VXT-R"}                # Vaenesston district
+    if True:
+        xParam = {"geo_code":"VXL-0"}                # Vaenesston district
         xNew_data = {"$set": {
             "aDemand_workforce" : {
                 "total": {

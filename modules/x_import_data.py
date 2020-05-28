@@ -2610,7 +2610,7 @@ def import_workplaces():
             ],
         },
 
-        # Heavy industry: (like refinery in GY0, or steel plant in TJ0) [FHI]
+        # Heavy industry: [FHI] (like refinery in GY0, or steel plant in TJ0)
         {
             "code":"FHI",
             "name":"Heavy industry (man empl cnt)",
