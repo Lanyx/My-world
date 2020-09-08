@@ -58,6 +58,15 @@ def housing(ccTremb):
     return ccTremb["housing"]
 
 #-------------------------------------------------------------------------------
+# J
+def junctions(ccTremb):
+    """ Selects the 'junctions' database which holds information for
+    road-segment. Junctions change the flow of road traffic by adding and
+    subtracting vehicles.
+    """
+    return ccTremb["junctions"]
+
+#-------------------------------------------------------------------------------
 # K
 def lines(ccTremb):
     """ Selects the 'lines' database which holds information for railway
@@ -66,14 +75,12 @@ def lines(ccTremb):
     return ccTremb["lines"]
 
 #-------------------------------------------------------------------------------
-# K
-def road_routes(ccTremb):
-    """ Selects the 'road routes' database which holds information for road
-    network of Federal, Provincial, District and maybe County numbered routes.
-    Grade seperated junctions are not split up into individual links like with
-    railway lines
+# R
+def roads(ccTremb):
+    """ Selects the 'roads' database which holds information for road segments
+    forming links between junctions.
     """
-    return ccTremb["lines"]
+    return ccTremb["roads"]
 
 #-------------------------------------------------------------------------------
 # S

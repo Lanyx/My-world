@@ -1,7 +1,15 @@
 """ 'Road Routes' describe point-to-point transport system within the fictional
-country. They are both similar and different from rail network ('K') and
-air-routes (RFU for 'Q'). Road routes also takes into account 'exit' number
-which is distance based. Places do not need to be verified geo-codes.
+country. The end points of a combination of the following: 'importaint border',
+'town', 'junction'. They work closely with junctions (probably embedded in this
+file).
+
+DEFINITIONS:
+    "Junction":
+        Element which changes amount of vehicles. This could be a terminus
+        (border), a point where 3 or more roads meet, a town or village.
+    "Road":
+        Element which moves vehicles from junction to junction without change
+        in vehicle count
 """
 
 import modules.x_database as db
@@ -23,6 +31,21 @@ import modules.x_misc as misc
 #   @   @   @@@    @@@     @    @@@@@  @   @  @@@@@  @@@@
 #
 
+#-------------------------------------------------------------------------------
+# 01. Add a road
+#-------------------------------------------------------------------------------
+def add_road(ccTremb):
+    """ Link two junctions, towns or an importaint border """
+    pass
+
+#-------------------------------------------------------------------------------
+# 11. Add a junction
+#-------------------------------------------------------------------------------
+def add_junction(ccTremb):
+    """ Add a point which adds or subtracts traffic """
+    pass
+
+
 #
 #  @@@@   @@@@@  @      @@@@@   @@@@   @@@   @@@@@   @@@   @@@@
 #   @  @  @      @      @      @      @   @    @    @   @  @   @
@@ -39,9 +62,10 @@ def sub_menu():
     ccTremb = db.connect()
     cRoad = db.road_routes(ccTremb)
     sSub_menu = """
-LINES SUB-MENU (K):
+LINES SUB-MENU (R):
 .: Exit
-1: Open New line (Record its meta-data)
+01: New Road (Todo)
+11: New Junction (Todo)
 
     """
 # Go through the menu system.
@@ -53,19 +77,9 @@ LINES SUB-MENU (K):
         # Analise the user choice
         if sInput == ".":       # Exit
             bExit = True
-        elif sInput == "1":     # Open new line
-            add_line(ccTremb)
-'''
-        elif sInput == "3":     # Prints the line ordered by km.
-            pretty_print_all(ccTremb)
-        elif sInput == "4":     # Meta-data view
-            pretty_print_meta(ccTremb)
-        elif sInput == "5":     # New component of a line
-            add_sub_comp(ccTremb)
-        elif sInput == "6":
-            pretty_gradient(ccTremb)
-        elif sInput == "C":
-            design_gradient(ccTremb)
-        elif sInput == "_":
-            remove_sub_comp(ccTremb)
-'''
+
+        elif sInput == "01":     # Open new line
+            add_road(ccTremb)
+
+        elif sInput == "11":     # Open new line
+            add_junction(ccTremb)

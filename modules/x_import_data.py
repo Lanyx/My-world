@@ -284,7 +284,7 @@ def import_syllables():
         {"cyr":"здъ","lat":"zdå"},{"cyr":"зи","lat":"zi"},
         {"cyr":"злъ","lat":"zwå"},{"cyr":"зъль","lat":"zlå"},
         {"cyr":"змъ","lat":"zmå"},{"cyr":"знъ","lat":"znå"},
-        {"cyr":"зо","lat":"zo"},{"cyr":"зръ","lat":"zpå"},
+        {"cyr":"зо","lat":"zo"},{"cyr":"зръ","lat":"zrå"},
         {"cyr":"зу","lat":"zu"},{"cyr":"зы","lat":"zy"},
         {"cyr":"зэ","lat":"ze"},
     # ЗЬ(ź in Polish)
@@ -490,12 +490,12 @@ def import_syllables():
         {"cyr":"штщ","lat":"sþtå"}, {"cyr":"шу","lat":"sþu"},
         {"cyr":"шхщ","lat":"shþå"}, {"cyr":"шы","lat":"sþy"},
         {"cyr":"шэ","lat":"sþe"},
-    # Щ (x in Zulu)
+    # ЩЬЪ (x in Zulu)
             # А, Б, В, Г, Д, Е, Ё, Ж, З, И, Й, К, Л, М, Н, О,
             # П, Р, С, Т, У, Ф, Х, Ц, Ч, Ш, Щ, Ъ, Ы, Ь, Э, Ю, Я
         {"cyr":"щьъа","lat":"xþa"}, {"cyr":"щьъу","lat":"xþu"},
         {"cyr":"щьъэ","lat":"xþe"},
-    # Ъ (q in Zulu)
+    # ЪЪ (q in Zulu)
             # А, Б, В, Г, Д, Е, Ё, Ж, З, И, Й, К, Л, М, Н, О,
             # П, Р, С, Т, У, Ф, Х, Ц, Ч, Ш, Щ, Ъ, Ы, Ь, Э, Ю, Я
         {"cyr":"ъъа","lat":"qþa"}, {"cyr":"ъъу","lat":"qþu"},
@@ -613,7 +613,7 @@ def import_male_names():
         {"lat":"Benjamin",  "cyr":"Бэнъямин",   "aAlt":["Bendþamin"]},
         {"lat":"Bernard",   "cyr":"Бэрнард",    "aAlt":["Boênad"]},
         {"lat":"åBjörn",    "cyr":"Бёщн",       "aAlt":["Bïôn"]},
-        {"lat":"Bogosław",  "cyr":"Богослав",   "aAlt":["Bogoswav"]},
+        {"lat":"åBogosl'aw","cyr":"Богослав",   "aAlt":["Bogoswav"]},
         {"lat":"Bogdan",    "cyr":"Богдан",     "aAlt":[]},
         {"lat":"Boris",     "cyr":"Борис",      "aAlt":[]},
         {"lat":"Brandon",   "cyr":"Брэндэн",    "aAlt":["Brænden"]},
@@ -2336,6 +2336,108 @@ def import_workplaces():
                 # What are the resources produced
                 {"name":"misc fruit/veg",
                 "fRate":6.0, "units":"t/ha",
+                "fMin_yield":0.6, "fMax_yield":1.66,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Groundnut (peanut) plantation [APN]
+        {
+            "code":"APN",
+            "name":"Peanuts",
+            "type":"Agricultural",
+            "default":"groundnut (peanut)",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1.25, "units":"empl/ha",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 5.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"peanuts",
+                "fRate":2.5, "units":"t/ha",
+                "fMin_yield":0.6, "fMax_yield":1.66,
+                "fStore_capacity":0
+                },
+            ],
+        },
+
+        # Canola (For oil) [ACO]
+        {
+            "code":"ACO",
+            "name":"Canola (oil)",
+            "type":"Agricultural",
+            "default":"canola plantation",
+            "iStatic_veh":2,
+            "sOwn_number_plates": "none",         # County Number plates
+            "aaLabour":{                        # Descibes 4 levels of workforce
+                # Linked to other statistics
+                "aMain":{
+                    "fRate":1.2, "units":"empl/ha",
+                    "xType1": "PM", "iRate1": 50,
+                    "xType2": "PF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh":0,
+                },
+                # This position is a supervisor over the main worker. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupv":{
+                    "fRate": 20, "units": "empl/main",
+                    "xType1": "LM", "iRate1": 50,
+                    "xType2": "LF", "iRate2": 50,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 5.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aMgmt":{
+                    "fRate": 100, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 66,
+                    "xType2": "MF", "iRate2": 34,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 1.0
+                },
+                # This position is a runs the operation. If the
+                # position is not used, enter '0' for 'fRate'
+                "aSupt":{
+                    "fRate": 250, "units": "empl/main",
+                    "xType1": "MM", "iRate1": 70,
+                    "xType2": "PF", "iRate2": 30,     # iRate1 + iRate2 = 100
+                    "fEmpl_per_veh": 0.0
+                },
+            },
+            "lResource":[
+                # What are the resources produced
+                {"name":"canola oil",
+                "fRate":1.12, "units":"t/ha",    # 3.5t/ha; 40% oil, 0.8 density
                 "fMin_yield":0.6, "fMax_yield":1.66,
                 "fStore_capacity":0
                 },

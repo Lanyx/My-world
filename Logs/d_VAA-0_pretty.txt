@@ -1,0 +1,392 @@
+    Vænesston Municipality / Гмина Вэнэсовицэ
+----------
+Pretty print information was generated on 2020-08-16 21:04:31.017553
+----------
+my_id: D00-0F8
+geo_code: VAA-0
+----------
+Total population: 128,781 (Incomplete data)
+
+Total vehicles*: 46,842 (Incomplete data)
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced (Incomplete data):
+>   misc industrial: 40,119.76t/yr by Warehouse 0
+
+Build housing (Demand - Supply):
+>    r: -748; h: -6,981; m: 249; l: -12,568; p: -3,939;
+----------
+Hierarchial Parent: 
+>  Vænesston County / Воевуцтво Вэнэсовицэ
+>   my_id: D00-09O
+>   geo_code: VAA
+----------
+Hierarchial Children: 
+>   count: 13
+>      Búrovïets Section / Чэьсть Бюровец
+>          my_id: D00-0FW
+>          geo_code: VAA-00
+>          population: 17,306
+>          warehouse: misc industrial
+>
+>      Marsh Islands Section / Чэьсть Багнощвыспы
+>          my_id: D00-0FX
+>          geo_code: VAA-0R
+>          population: 9,166
+>          warehouse: 
+>
+>      Mirusçåville Section / Чэьсть Ущмируся
+>          my_id: D00-0FY
+>          geo_code: VAA-0D
+>          population: 13,693
+>          warehouse: 
+>
+>      Gabriella's Dam Section / Чэьсть Тама Габриелльи
+>          my_id: D00-0FZ
+>          geo_code: VAA-0H
+>          population: 10,478
+>          warehouse: 
+>
+>      Zluúk Section / Чэьсть Зълююк
+>          my_id: D00-0G0
+>          geo_code: VAA-0E
+>          population: 15,189
+>          warehouse: 
+>
+>      Øðenborg Section / Чэьсть Ыъденборг
+>          my_id: D00-0G1
+>          geo_code: VAA-0Z
+>          population: 14,558
+>          warehouse: 
+>
+>      West-end Canal Section / Чэьсть Канал По-Заходъней
+>          my_id: D00-0G2
+>          geo_code: VAA-0X
+>          population: N/A
+>          warehouse: 
+>
+>      Fabrøkant Section / Чэьсть Фабрыкант
+>          my_id: D00-0G3
+>          geo_code: VAA-0L
+>          population: 23,875 (Incomplete data)
+>          warehouse: 
+>
+>      Koláñits Section / Чэьсть Колейньиц
+>          my_id: D00-0G4
+>          geo_code: VAA-0W
+>          population: 0 (Incomplete data)
+>          warehouse: 
+>
+>      Vænåsouth Section / Чэьсть Ваънщсалъдь
+>          my_id: D00-0G5
+>          geo_code: VAA-0I
+>          population: 6,640
+>          warehouse: 
+>
+>      Gzþègïo Section / Чэьсть Гжэьгё
+>          my_id: D00-0G6
+>          geo_code: VAA-0K
+>          population: 11,976
+>          warehouse: 
+>
+>      Port Vænessa Section / Чэьсть Порт Вэнэсса
+>          my_id: D00-0G7
+>          geo_code: VAA-09
+>          population: N/A
+>          warehouse: 
+>
+>      Bykïo Section / Чэьсть Быкё
+>          my_id: D00-0G8
+>          geo_code: VAA-0T
+>          population: 5,900 (Incomplete data)
+>          warehouse: 
+>
+----------
+Map and area: 
+>   Region: Vænesston 1:2,000,000 (drawn in 2019)
+>   Position (mm) x: 205.95, y: 123.13
+>   Area on paper (sq.mm) a: 31.38
+>   Area represented: 12,552.0ha
+----------
+Workforce Demand: 
+>   Grand Total: (31,869)
+>       rm: 54; hm: 825; mm: 7,992; lm: 1,643; pm: 6,605;
+>       rf: 9; hf: 129; mf: 8,146; lf: 2,560; pf: 3,906;
+>
+>   VAA-00: (26,705)
+>       rm: 54; hm: 640; mm: 7,825; lm: 757; pm: 5,929;
+>       rf: 9; hf: 93; mf: 7,801; lf: 689; pf: 2,908;
+>       tot road veh: 769;
+>
+>   VAA-0R: (313)
+>       rm: 0; hm: 16; mm: 8; lm: 57; pm: 52;
+>       rf: 0; hf: 1; mf: 15; lf: 107; pf: 57;
+>       tot road veh: 41;
+>
+>   VAA-0D: (550)
+>       rm: 0; hm: 23; mm: 17; lm: 97; pm: 84;
+>       rf: 0; hf: 5; mf: 30; lf: 182; pf: 112;
+>       tot road veh: 63;
+>
+>   VAA-0H: (515)
+>       rm: 0; hm: 18; mm: 17; lm: 89; pm: 64;
+>       rf: 0; hf: 4; mf: 34; lf: 185; pf: 104;
+>       tot road veh: 59;
+>
+>   VAA-0E: (785)
+>       rm: 0; hm: 27; mm: 23; lm: 131; pm: 96;
+>       rf: 0; hf: 3; mf: 60; lf: 308; pf: 137;
+>       tot road veh: 92;
+>
+>   VAA-0Z: (773)
+>       rm: 0; hm: 22; mm: 27; lm: 123; pm: 94;
+>       rf: 0; hf: 5; mf: 55; lf: 295; pf: 152;
+>       tot road veh: 90;
+>
+>   VAA-0X: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VAA-0L: (1,136)
+>       rm: 0; hm: 38; mm: 39; lm: 196; pm: 148;
+>       rf: 0; hf: 9; mf: 74; lf: 406; pf: 226;
+>       tot road veh: 139;
+>
+>   VAA-0W: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VAA-0I: (249)
+>       rm: 0; hm: 13; mm: 6; lm: 41; pm: 38;
+>       rf: 0; hf: 0; mf: 14; lf: 89; pf: 48;
+>       tot road veh: 28;
+>
+>   VAA-0K: (555)
+>       rm: 0; hm: 20; mm: 19; lm: 101; pm: 68;
+>       rf: 0; hf: 5; mf: 41; lf: 197; pf: 104;
+>       tot road veh: 72;
+>
+>   VAA-09: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VAA-0T: (288)
+>       rm: 0; hm: 8; mm: 11; lm: 51; pm: 32;
+>       rf: 0; hf: 4; mf: 22; lf: 102; pf: 58;
+>       tot road veh: 39;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (67,877)
+>       rm: 614; hm: 5,783; mm: 9,453; lm: 9,972; pm: 8,112;
+>       rf: 617; hf: 5,782; mf: 9,456; lf: 9,974; pf: 8,114;
+>
+>   VAA-00: (9,329)
+>       rm: 0; hm: 0; mm: 2,447; lm: 2,217; pm: 0;
+>       rf: 0; hf: 0; mf: 2,449; lf: 2,216; pf: 0;
+>       tot road veh: 0
+>
+>   VAA-0R: (4,479)
+>       rm: 357; hm: 1,883; mm: 0; lm: 0; pm: 0;
+>       rf: 358; hf: 1,881; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAA-0D: (7,271)
+>       rm: 128; hm: 1,125; mm: 2,381; lm: 0; pm: 0;
+>       rf: 129; hf: 1,126; mf: 2,382; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAA-0H: (5,542)
+>       rm: 0; hm: 221; mm: 376; lm: 866; pm: 1,308;
+>       rf: 0; hf: 221; mf: 376; lf: 866; pf: 1,308;
+>       tot road veh: 0
+>
+>   VAA-0E: (8,005)
+>       rm: 0; hm: 0; mm: 0; lm: 2,095; pm: 1,906;
+>       rf: 0; hf: 0; mf: 0; lf: 2,096; pf: 1,908;
+>       tot road veh: 0
+>
+>   VAA-0Z: (7,670)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 3,835;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 3,835;
+>       tot road veh: 0
+>
+>   VAA-0X: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VAA-0L: (12,742)
+>       rm: 0; hm: 879; mm: 2,490; lm: 1,938; pm: 1,063;
+>       rf: 0; hf: 879; mf: 2,490; lf: 1,940; pf: 1,063;
+>       tot road veh: 0
+>
+>   VAA-0W: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAA-0I: (3,345)
+>       rm: 0; hm: 1,067; mm: 606; lm: 0; pm: 0;
+>       rf: 0; hf: 1,066; mf: 606; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAA-0K: (6,413)
+>       rm: 129; hm: 271; mm: 1,153; lm: 1,653; pm: 0;
+>       rf: 130; hf: 271; mf: 1,153; lf: 1,653; pf: 0;
+>       tot road veh: 0
+>
+>   VAA-09: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VAA-0T: (3,081)
+>       rm: 0; hm: 337; mm: 0; lm: 1,203; pm: 0;
+>       rf: 0; hf: 338; mf: 0; lf: 1,203; pf: 0;
+>       tot road veh: 0
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Grand Total: (21,473)
+>       r: 70; h: 763; m: 12,916; l: 792; p: 6,932;
+>   VAA-00: (21,473) | r: 70; h: 763; m: 12,916; l: 792; p: 6,932;
+>   VAA-0R: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0D: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0H: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0E: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0Z: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0X: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0L: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0W: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0I: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0K: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-09: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0T: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Supply households: 
+>   Grand Total: (45,460)
+>       r: 818; h: 7,744; m: 12,667; l: 13,360; p: 10,871;
+>   VAA-00: (6,249) | r: 0; h: 0; m: 3,280; l: 2,969; p: 0;
+>   VAA-0R: (2,995) | r: 475; h: 2,520; m: 0; l: 0; p: 0;
+>   VAA-0D: (4,870) | r: 171; h: 1,507; m: 3,192; l: 0; p: 0;
+>   VAA-0H: (3,713) | r: 0; h: 297; m: 504; l: 1,160; p: 1,752;
+>   VAA-0E: (5,362) | r: 0; h: 0; m: 0; l: 2,807; p: 2,555;
+>   VAA-0Z: (5,142) | r: 0; h: 0; m: 0; l: 0; p: 5,142;
+>   VAA-0X: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0L: (8,530) | r: 0; h: 1,176; m: 3,334; l: 2,598; p: 1,422;
+>   VAA-0W: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0I: (2,239) | r: 0; h: 1,429; m: 810; l: 0; p: 0;
+>   VAA-0K: (4,296) | r: 172; h: 363; m: 1,547; l: 2,214; p: 0;
+>   VAA-09: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAA-0T: (2,064) | r: 0; h: 452; m: 0; l: 1,612; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 128,781
+>
+>   Married working people (aHHM-PAX):
+>       r: 1,170; h: 9,346; m: 15,280; l: 16,120; p: 13,114;
+>      (total: 55,030)
+>
+>   Married retired people (aHHR-PAX):
+>       r: 382; h: 3,044; m: 4,986; l: 5,256; p: 4,280;
+>      (total: 17,948)
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 61; h: 2,219; m: 3,629; l: 3,826; p: 3,112;
+>      (total: 12,847)
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 20; h: 724; m: 1,186; l: 1,252; p: 1,021;
+>      (total: 4,203)
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 30; m: 19; l: 44; p: 21;
+>      (total: 114)
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 94; m: 59; l: 132; p: 84;
+>      (total: 369)
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 62; h: 2,408; m: 2,016; l: 523; p: 465;
+>      (total: 5,474)
+>
+>   Preschoolers, all groups                 (ED0-PAX): 5,519
+>   Primary schoolers, all groups            (ED1-PAX): 9,072
+>   Middle schoolers, all groups             (ED2-PAX): 7,291
+>   High schoolers, all groups               (ED3-PAX): 7,094
+>   Religious or Private schoolers, all grps (ED4-PAX): 3,039
+>   College students, all groups             (ED5-PAX): 88
+>   Polytechnic students, all groups         (ED6-PAX): 144
+>   University students, all groups          (ED7-PAX): 39
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 257
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 13
+>   Old Age Home, all groups                 (OAH-PAX): 566
+>   Private nurse, all groups                (OAN-PAX): 2
+>   Youth prison, all groups                 (YXJ-PAX): 0
+>   Adult prison, all groups                 (YXA-PAX): 281
+>   Religion:
+>      Renásàsers          (3R): 45,201
+>      Anglican Christians (AN): 16,957
+>      Roman Catholics     (RC): 8,187
+>      Deltæðømmysts       (DD): 40,148
+>      Jews                (JW): 8,129
+>      Muslims             (IS): 10,164
+>   Units required:
+>       |  16.10 for [5YP] Police
+>       |  12.88 for [5YF] Fire Dept
+>       |  12.88 for [5YH] Community Clinic
+>       |  25.76 for [5YG] Community Governance
+>       | 183.97 for [ED0] Pre-school
+>       |  18.14 for [ED1] Primary School
+>       |   8.68 for [ED2] Middle School
+>       |   7.39 for [ED3] High School
+>       |  18.87 for [OAH] Old Age Home
+>       |  32.20 for [5SŠ] Small Shop
+>       |  25.76 for [5LX] Community Library
+>       |  25.76 for [5TH] Community Theatre
+>       |  12.88 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 19,505
+>   Vehicle, motorbike*                      (VEH-MBK): 30,858
+>   Vehicle, car*                            (VEH-CAR): 15,187
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 46,842
+>   Itemised county-registered vehicles:
+>      VAA-00: 9,292
+>      VAA-0R: 3,694
+>      VAA-0D: 8,066
+>      VAA-0H: 2,406
+>      VAA-0E: 2,527
+>      VAA-0Z: 506
+>      VAA-0L: 9,913
+>      VAA-0W: 0
+>      VAA-0I: 3,169
+>      VAA-0K: 5,443
+>      VAA-0T: 1,826
+----------
+Footprint on the land:
+>   VAA-00: 579.816ha
+>   VAA-0R: 1,692.48ha
+>   VAA-0D: 1,481.075ha
+>   VAA-0H: 708.097ha
+>   VAA-0E: 627.649ha
+>   VAA-0Z: 654.088ha
+>   VAA-0X: 1,376.844ha
+>   VAA-0L: 1,290.321ha
+>   VAA-0W: 506.541ha
+>   VAA-0I: 569.001ha
+>   VAA-0K: 1,064.928ha
+>   VAA-09: 526.311ha
+>   VAA-0T: 1,853.17ha
+

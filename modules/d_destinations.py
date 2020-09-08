@@ -606,6 +606,9 @@ def add_semi_auto(ccTremb):
         pass
 
 # ASSIGN THE TYPE TO ALL CHILDREN
+    # We need to refresh the parent.
+    dGeo_parent = misc.get_geo_element(sGeo_code, cDest)
+    if dGeo_parent == None: return None
     aChildren = dGeo_parent["aChildren"]
 
     # Find the first child
@@ -617,7 +620,7 @@ def add_semi_auto(ccTremb):
     # See if that child has a type assigned to it already
     bType_done = False
     for query in dQuery:
-        if query["aType"] != None:
+        if query["aType"]["lat"] != None:
             bType_done = True
 
     # We need to assign a type to the child
@@ -807,7 +810,7 @@ def add_semi_auto(ccTremb):
 # GET THE LAND USAGE.
     # Setup a loop without the capital
     print("--------\nLAND USE ASSIGNMENT:\n")
-    for child in aChildren[1:]:     # Start for loop from second element
+    for child in aChildren[1:]:     # Jump over the capital. It is done last
         # Get the childs sub type
         xParam = {"my_id": child}
         xRestr = {"_id":0}
@@ -831,8 +834,10 @@ def add_semi_auto(ccTremb):
         # Select the object to work on.
         iIdx_child = aChildren.index(child) + 1
         sSub_type = dChild["sub_type"]
-        sTxt = "\n[{0}/{1}] Currently working on '{2}' area:"
-        sTxt = sTxt.format(iIdx_child, iNo_of_children, sSub_type)
+        sLat = dChild["aName"]["lat"]
+        sCyr = dChild["aName"]["cyr"]
+        sTxt = "\n[{0}/{1}] Currently working on '{2}' area, named '{3}'/'{4}':"
+        sTxt = sTxt.format(iIdx_child, iNo_of_children, sSub_type, sLat, sCyr)
         print(sTxt)
 
         # x-coord
@@ -1286,20 +1291,23 @@ def add_semi_auto(ccTremb):
         if not bDebug:
             bResp = update_parent(ccTremb, sParent_geo)
         if bResp == None: return None
+
+        # Present data to the user
+        sGeo = dCapital["geo_code"]
+        sLat = dCapital["aName"]["lat"]
+        sCyr = dCapital["aName"]["cyr"]
+        sAll = "{0} {1} / {2}".format(sGeo, sLat, sCyr)
+
+        # return geo-code and names on clip-board.
+        sTxt = "------\n"
+        sTxt += "Geo-code, Names are available on the clip-board. Use 'CTRL-V'"
+        sTxt += "\n-------"
+        print(sTxt)
+        pyperclip.copy(sAll)
+
     else:
         print("Capital already sorted out!")
 
-    # Present data to the user
-    sLat = dChild["aName"]["lat"]
-    sCyr = dChild["aName"]["cyr"]
-    sAll = "{0} {1} / {2}".format(sGeo_code, sLat, sCyr)
-
-    # return geo-code and names on clip-board.
-    sTxt = "------\n"
-    sTxt += "Geo-code, Names are available on the clip-board. Use 'CTRL-V'"
-    sTxt += "\n-------"
-    print(sTxt)
-    pyperclip.copy(sAll)
 
     xDummy = input("Press 'Enter' to continue...")
 
@@ -2075,10 +2083,11 @@ def pretty_print_single(ccTremb, sGeo_code = None):
         sAll += ">   Religion:\n"
         for dRel in adReligion:
             sCode = dRel["code"]
-            sTxt = ">      {0:<19} ({1}): {2:,}\n"
             if sCode in dDfx["aREL-PAX"]:
+                sTxt = ">      {0:<19} ({1}): {2:,}\n"
                 sAll += sTxt.format(dRel["adj"], sCode, dDfx["aREL-PAX"][sCode])
             else:       # No religion numbers
+                sTxt = ">      {0:<19} ({1}): {2}\n"
                 sAll += sTxt.format(dRel["adj"], sCode, "N/A")
 
     # units required:

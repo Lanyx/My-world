@@ -244,17 +244,16 @@ def mm_star():
 
     # Update a bad simple value
     if False:
-        dNew_data = "FS0"
+        dNew_data = "Fusþton"
 
-        xParam = {"my_id":"K00-001"}
+        xParam = {'sRegion': 'Loggers Crossing'}
 #        xNew_data = {"$set": {"aVehicles.aItemised.Blàhim" : dNew_data}}
-        xNew_data = {"$set": {"dVal.end" : dNew_data}}
+        xNew_data = {"$set": {'sRegion': dNew_data}}
 
         ccTremb = db.connect()
-        cDb = db.lines(ccTremb)
+        cDb = db.maps_db(ccTremb)
         dQuery = cDb.update_one(xParam, xNew_data)
     #    dQuery = cDb.update_many(xParam, xNew_data)
-
 
     # delete an element
     if False:
@@ -267,9 +266,14 @@ def mm_star():
 
     # Oblitorate everything except the name, children, area data.
     # Basically, erase balancing when it was not required.
-    if True:
-        xParam = {"geo_code":"VXL-0"}                # Vaenesston district
+    if False:
+        xParam = {"geo_code":"VXA-J"}                # Vaenesston district
         xNew_data = {"$set": {
+#            'aMap': {
+#                'sRegion': 'Vænesston',
+#                'iYear': '2019',
+#                'fScale': 2000000.0,
+#                'x': None,'y': None,'a': None},
             "aDemand_workforce" : {
                 "total": {
                     "rm": 0, "rf": 0, "hm": 0, "hf": 0, "mm": 0,
@@ -340,21 +344,63 @@ def mm_ampersand():
         dQuery = dQuery.distinct("host_geo_code")   # Pulls out single element
         dQuery.sort()       # Sort modifies in place. Returns 'none'
 
-    # Read all the factory data
+    # Read all the data
     if True:
         # Do the query
         xParam = {}         # All queries
         xRestr = {"_id":0}
         ccTremb = db.connect()
-        cDb_of_choice = db.lines(ccTremb)
+        cDb_of_choice = db.maps_db(ccTremb)
         dQuery = cDb_of_choice.find(xParam, xRestr)
-        dQuery = dQuery.sort("aName.cyr")
-
 
     for x in dQuery:
         print(x)
         eDb_read.write("{0}\n".format(x))
     eDb_read.close()
+
+#-------------------------------------------------------------------------------
+def mm_fwd_slash():
+    """ Calculates the paper distance for a desired slope """
+    import modules.x_misc as misc
+    import modules.x_database as db
+
+    ccTremb = db.connect()
+
+    dMap = misc.get_the_map(ccTremb)
+    if dMap == None:
+        print("\n\aInvalid map choice. Returning")
+        return None
+    fScale = dMap["fScale"]
+
+    # Ask for the desired gradient
+    sTxt = "Enter the desired gradient as 1:x (rail std is 100, highway: 33)"
+    fHoriz_per_Vert = misc.get_float(sTxt)
+    if fHoriz_per_Vert == None: return None
+
+    # Ask for the elevation change
+    sTxt = "Enter elevation change in feet, don't worry about the sign"
+    fVert_ft = misc.get_float(sTxt)
+    if fVert_ft == None: return None
+
+    # Do the calculation
+    fVert_m = fVert_ft * 0.3048
+    fHoriz_m = fVert_m * fHoriz_per_Vert    # h = v * h/v (v's cancel)
+    fPaper_m = fHoriz_m / fScale            # 2500m @ 1:1M = 0.0025m
+    fPaper_mm = round(fPaper_m * 1000, 2)
+
+    sAll =  "----------------------------\n"
+    sAll +=  "{0}mm on the map are required\n".format(fPaper_mm)
+    sAll += "----------------------------\n"
+    sAll += "{0}ft(v) = {1:.1f}m(v)\n".format(fVert_ft, fVert_m)
+    sTxt = "{0:.1f}m(h) = {1:.1f}m(v) * {2:.1f}m(h)/m(v)\n"
+    sTxt = sTxt.format(fHoriz_m, fVert_m, fHoriz_per_Vert)
+    sAll += sTxt
+    sTxt = "{0}mm(p) = {1:.1f}m(h) / {2:.1f}m/m(scale)\n"
+    sTxt = sTxt.format(fPaper_mm, fHoriz_m, fScale)
+    sAll += sTxt
+    print(sAll)
+
+
 
 #-------------------------------------------------------------------------------
 def mm_backtick():
@@ -461,6 +507,7 @@ def main_menu():
 #: Export data (to .json for backup in the Python system)
 *: Test a concept / Fix mistake (Editable)
 &: Manually read the database (Editable)
+/: Gradient calculation
 
 `: Generate random names
 
@@ -469,7 +516,6 @@ D: Destinations (geographic areas on the map)
 H: Housing (registers residential plots from the map)
 K: Lines (Train lines, maybe road routes?)
 O: [Oscar] Simulation (Train simulation)
-R: Road-routes (incl Highways) for Federal, Provincial and District numbers.
 S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
 
 """
@@ -504,6 +550,9 @@ S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
         elif sInput == "&":
             mm_ampersand()
 
+        elif sInput == "/":
+            mm_fwd_slash()
+
         # Random names
         elif sInput == "`":
             mm_backtick()
@@ -529,8 +578,8 @@ S: Stations & Ports (Goods & passangers loaded & offloaded onto/from vehilces)
             mm_o()
 
         # Road-routes
-        elif sInput == "R":
-            mm_r()
+        # elif sInput == "R":
+        #    mm_r()
 
         # Stations and ports menu
         elif sInput == "S":

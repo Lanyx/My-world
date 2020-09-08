@@ -1,0 +1,310 @@
+    Ksþosþmu Municipality / Гмина Кшошму
+----------
+Pretty print information was generated on 2020-08-31 12:16:11.904787
+----------
+my_id: D00-0FN
+geo_code: VAA-Z
+----------
+Total population: 4,123
+
+Total vehicles*: 407
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced:
+>   rice: 1,636.56t/yr by rice farm 0
+>   wheat: 1,816.89t/yr by wheat farm 0
+>   hay: 260.93t/yr by wheat farm 1
+>   coffee beans: 3,768.13t/yr by coffee plantation 0
+
+Build housing (Demand - Supply):
+>    r: 0; h: 0; m: -2; l: -17; p: -14;
+----------
+Hierarchial Parent: 
+>  Vænesston County / Воевуцтво Вэнэсовицэ
+>   my_id: D00-09O
+>   geo_code: VAA
+----------
+Hierarchial Children: 
+>   count: 0
+----------
+Map and area: 
+>   Region: Vænesston 1:2,000,000 (drawn in 2019)
+>   Position (mm) x: 202.07, y: 120.44
+>   Area on paper (sq.mm) a: 4.63
+>   Area represented: 1,852.0ha
+----------
+Workforce Demand: 
+>   Grand Total: (2,067)
+>       rm: 0; hm: 7; mm: 27; lm: 82; pm: 903;
+>       rf: 0; hf: 2; mf: 22; lf: 126; pf: 898;
+>
+>   [ARI] rice farm: (593)
+>       rm: 0; hm: 0; mm: 6; lm: 14; pm: 278;
+>       rf: 0; hf: 0; mf: 2; lf: 14; pf: 279;
+>       tot road veh: 14;
+>
+>   [AWH] wheat farm: (592)
+>       rm: 0; hm: 0; mm: 3; lm: 15; pm: 289;
+>       rf: 0; hf: 0; mf: 0; lf: 18; pf: 267;
+>       tot road veh: 11;
+>
+>   [ACF] coffee plantation: (651)
+>       rm: 0; hm: 0; mm: 6; lm: 15; pm: 306;
+>       rf: 0; hf: 0; mf: 2; lf: 15; pf: 307;
+>       tot road veh: 14;
+>
+>   [5YP] Police: (24)
+>       rm: 0; hm: 0; mm: 1; lm: 10; pm: 1;
+>       rf: 0; hf: 0; mf: 1; lf: 10; pf: 1;
+>       tot road veh: 8;
+>
+>   [5YF] Fire Dept: (8)
+>       rm: 0; hm: 0; mm: 0; lm: 8; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 2;
+>
+>   [5YH] Community Clinic: (11)
+>       rm: 0; hm: 7; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 2; mf: 0; lf: 0; pf: 2;
+>       tot road veh: 1;
+>
+>   [5YG] Community Governance: (8)
+>       rm: 0; hm: 0; mm: 0; lm: 6; pm: 2;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   [ED0] Pre-school: (58)
+>       rm: 0; hm: 0; mm: 1; lm: 2; pm: 2;
+>       rf: 0; hf: 0; mf: 8; lf: 35; pf: 10;
+>       tot road veh: 9;
+>
+>   [ED1] Primary School: (21)
+>       rm: 0; hm: 0; mm: 0; lm: 2; pm: 1;
+>       rf: 0; hf: 0; mf: 2; lf: 14; pf: 2;
+>       tot road veh: 2;
+>
+>   [ED2] Middle School: (9)
+>       rm: 0; hm: 0; mm: 0; lm: 4; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 4; pf: 1;
+>       tot road veh: 1;
+>
+>   [ED3] High School: (10)
+>       rm: 0; hm: 0; mm: 4; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 4; lf: 0; pf: 2;
+>       tot road veh: 1;
+>
+>   [OAH] Old Age Home: (16)
+>       rm: 0; hm: 0; mm: 1; lm: 1; pm: 1;
+>       rf: 0; hf: 0; mf: 1; lf: 10; pf: 2;
+>       tot road veh: 2;
+>
+>   [5SŠ] Small Shop: (24)
+>       rm: 0; hm: 0; mm: 2; lm: 2; pm: 15;
+>       rf: 0; hf: 0; mf: 1; lf: 0; pf: 4;
+>       tot road veh: 4;
+>
+>   [5LX] Community Library: (7)
+>       rm: 0; hm: 0; mm: 1; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 4; pf: 2;
+>       tot road veh: 1;
+>
+>   [5TH] Community Theatre: (27)
+>       rm: 0; hm: 0; mm: 1; lm: 2; pm: 8;
+>       rf: 0; hf: 0; mf: 1; lf: 2; pf: 13;
+>       tot road veh: 2;
+>
+>   [5PO] Community Post Office: (8)
+>       rm: 0; hm: 0; mm: 1; lm: 1; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 6;
+>       tot road veh: 1;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Totals: (1,562) |  r: 0; h: 9; m: 40; l: 174; p: 1,339;
+----------
+Supply households: 
+>   Grand Total: (1,595)
+>       r: 0; h: 9; m: 42; l: 191; p: 1,353;
+>   H00-0JZ: (9) | r: 0; h: 9; m: 0; l: 0; p: 0;
+>   H00-0K0: (10) | r: 0; h: 0; m: 10; l: 0; p: 0;
+>   H00-0K1: (16) | r: 0; h: 0; m: 16; l: 0; p: 0;
+>   H00-0K2: (16) | r: 0; h: 0; m: 16; l: 0; p: 0;
+>   H00-0K3: (15) | r: 0; h: 0; m: 0; l: 15; p: 0;
+>   H00-0K4: (16) | r: 0; h: 0; m: 0; l: 16; p: 0;
+>   H00-0K5: (14) | r: 0; h: 0; m: 0; l: 14; p: 0;
+>   H00-0K6: (18) | r: 0; h: 0; m: 0; l: 18; p: 0;
+>   H00-0K7: (16) | r: 0; h: 0; m: 0; l: 16; p: 0;
+>   H00-0K8: (18) | r: 0; h: 0; m: 0; l: 18; p: 0;
+>   H00-0K9: (20) | r: 0; h: 0; m: 0; l: 20; p: 0;
+>   H00-0KA: (20) | r: 0; h: 0; m: 0; l: 20; p: 0;
+>   H00-0KB: (18) | r: 0; h: 0; m: 0; l: 18; p: 0;
+>   H00-0KC: (18) | r: 0; h: 0; m: 0; l: 18; p: 0;
+>   H00-0KD: (18) | r: 0; h: 0; m: 0; l: 18; p: 0;
+>   H00-0KE: (22) | r: 0; h: 0; m: 0; l: 0; p: 22;
+>   H00-0KF: (22) | r: 0; h: 0; m: 0; l: 0; p: 22;
+>   H00-0KG: (22) | r: 0; h: 0; m: 0; l: 0; p: 22;
+>   H00-0KH: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KI: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KJ: (17) | r: 0; h: 0; m: 0; l: 0; p: 17;
+>   H00-0KK: (22) | r: 0; h: 0; m: 0; l: 0; p: 22;
+>   H00-0KL: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KM: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KN: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KO: (17) | r: 0; h: 0; m: 0; l: 0; p: 17;
+>   H00-0KP: (9) | r: 0; h: 0; m: 0; l: 0; p: 9;
+>   H00-0KQ: (12) | r: 0; h: 0; m: 0; l: 0; p: 12;
+>   H00-0KR: (12) | r: 0; h: 0; m: 0; l: 0; p: 12;
+>   H00-0KS: (12) | r: 0; h: 0; m: 0; l: 0; p: 12;
+>   H00-0KT: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KU: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KV: (16) | r: 0; h: 0; m: 0; l: 0; p: 16;
+>   H00-0KW: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KX: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KY: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0KZ: (14) | r: 0; h: 0; m: 0; l: 0; p: 14;
+>   H00-0L0: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0L1: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0L2: (16) | r: 0; h: 0; m: 0; l: 0; p: 16;
+>   H00-0L3: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0L4: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0L5: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0L6: (14) | r: 0; h: 0; m: 0; l: 0; p: 14;
+>   H00-0L7: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0L8: (9) | r: 0; h: 0; m: 0; l: 0; p: 9;
+>   H00-0L9: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LA: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LB: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LC: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LD: (12) | r: 0; h: 0; m: 0; l: 0; p: 12;
+>   H00-0LE: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LF: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LG: (12) | r: 0; h: 0; m: 0; l: 0; p: 12;
+>   H00-0LH: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LI: (16) | r: 0; h: 0; m: 0; l: 0; p: 16;
+>   H00-0LJ: (14) | r: 0; h: 0; m: 0; l: 0; p: 14;
+>   H00-0LK: (14) | r: 0; h: 0; m: 0; l: 0; p: 14;
+>   H00-0LL: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LM: (72) | r: 0; h: 0; m: 0; l: 0; p: 72;
+>   H00-0LN: (104) | r: 0; h: 0; m: 0; l: 0; p: 104;
+>   H00-0LO: (54) | r: 0; h: 0; m: 0; l: 0; p: 54;
+>   H00-0LP: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LQ: (13) | r: 0; h: 0; m: 0; l: 0; p: 13;
+>   H00-0LR: (5) | r: 0; h: 0; m: 0; l: 0; p: 5;
+>   H00-0LS: (13) | r: 0; h: 0; m: 0; l: 0; p: 13;
+>   H00-0LT: (104) | r: 0; h: 0; m: 0; l: 0; p: 104;
+>   H00-0LU: (98) | r: 0; h: 0; m: 0; l: 0; p: 98;
+>   H00-0LV: (64) | r: 0; h: 0; m: 0; l: 0; p: 64;
+>   H00-0LW: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+>   H00-0LX: (36) | r: 0; h: 0; m: 0; l: 0; p: 36;
+>   H00-0LY: (18) | r: 0; h: 0; m: 0; l: 0; p: 18;
+----------
+Demographics:
+>   TOTAL PEOPLE: 4,123
+>
+>   Married working people (aHHM-PAX):
+>       r: 0; h: 10; m: 54; l: 226; p: 1,774;
+>      (total: 2,064)
+>
+>   Married retired people (aHHR-PAX):
+>       r: 0; h: 4; m: 16; l: 66; p: 520;
+>      (total: 606)
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 0; h: 2; m: 4; l: 36; p: 233;
+>      (total: 275)
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 0; h: 0; m: 3; l: 16; p: 130;
+>      (total: 149)
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 3;
+>      (total: 3)
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 0; m: 0; l: 0; p: 9;
+>      (total: 9)
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 0; h: 4; m: 6; l: 6; p: 44;
+>      (total: 60)
+>
+>   Preschoolers, all groups                 (ED0-PAX): 171
+>   Primary schoolers, all groups            (ED1-PAX): 297
+>   Middle schoolers, all groups             (ED2-PAX): 277
+>   High schoolers, all groups               (ED3-PAX): 237
+>   Religious or Private schoolers, all grps (ED4-PAX): 7
+>   College students, all groups             (ED5-PAX): 5
+>   Polytechnic students, all groups         (ED6-PAX): 0
+>   University students, all groups          (ED7-PAX): 0
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 6
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 0
+>   Old Age Home, all groups                 (OAH-PAX): 26
+>   Private nurse, all groups                (OAN-PAX): 0
+>   Youth prison, all groups                 (YXJ-PAX): 2
+>   Adult prison, all groups                 (YXA-PAX): 33
+>   Religion:
+>      Renásàsers          (3R): 475
+>      Anglican Christians (AN): 76
+>      Roman Catholics     (RC): 156
+>      Deltæðømmysts       (DD): 2,356
+>      Jews                (JW): 10
+>      Muslims             (IS): 25
+>   Units required:
+>       |   0.52 for [5YP] Police
+>       |   0.41 for [5YF] Fire Dept
+>       |   0.41 for [5YH] Community Clinic
+>       |   0.82 for [5YG] Community Governance
+>       |   5.70 for [ED0] Pre-school
+>       |   0.59 for [ED1] Primary School
+>       |   0.33 for [ED2] Middle School
+>       |   0.25 for [ED3] High School
+>       |   0.87 for [OAH] Old Age Home
+>       |   1.03 for [5SŠ] Small Shop
+>       |   0.82 for [5LX] Community Library
+>       |   0.82 for [5TH] Community Theatre
+>       |   0.41 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 2,154
+>   Vehicle, motorbike*                      (VEH-MBK): 302
+>   Vehicle, car*                            (VEH-CAR): 60
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 407
+>   Itemised county-registered vehicles:
+>      rice farm: 14
+>      wheat farm: 11
+>      coffee plantation: 14
+>      residents: 362
+>      Police: 0
+>      Fire Dept: 0
+>      Community Clinic: 0
+>      Community Governance: 0
+>      Pre-school: 0
+>      Primary School: 0
+>      Middle School: 0
+>      High School: 0
+>      Old Age Home: 0
+>      Small Shop: 4
+>      Community Library: 0
+>      Community Theatre: 2
+>      Community Post Office: 0
+----------
+Footprint on the land:
+>   rice farm: 370.4ha
+>   wheat farm: 555.6ha
+>   coffee plantation: 555.6ha
+

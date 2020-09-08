@@ -1,0 +1,427 @@
+    Vænesston District / Повят Вэнэсовицэ
+----------
+Pretty print information was generated on 2020-08-16 14:21:29.723115
+----------
+my_id: D00-09K
+geo_code: VA
+----------
+Total population: 1,777,274
+
+Total vehicles*: 242,661
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced:
+>   misc industrial: 183,721.48t/yr by Warehouse 0
+>   rice: 109,925.44t/yr by Warehouse 1
+>   cocoa beans: 824,517.88t/yr by Warehouse 2
+>   wheat: 434,283.75t/yr by Warehouse 3
+>   hay: 47,978.79t/yr by Warehouse 4
+>   coffee beans: 897,277.46t/yr by Warehouse 5
+>   misc fruit/veg: 66,020.2t/yr by Warehouse 6
+>   milk: 179,998.12t/yr by Warehouse 7
+>   chicken: 308,670.47t/yr by Warehouse 8
+>   maize: 839,644.21t/yr by Warehouse 9
+>   straw (maize): 102,785.3t/yr by Warehouse 10
+>   clay: 58.81kt/yr by Warehouse 11
+
+Build housing (Demand - Supply):
+>    r: -531; h: -1,407; m: 29,671; l: 65,094; p: 506,508;
+----------
+Hierarchial Parent: 
+>  Dzþevogurski Province / Провинцъя Джэвогурскъего
+>   my_id: D00-003
+>   geo_code: V
+----------
+Hierarchial Children: 
+>   count: 14
+>      Vænesston County / Воевуцтво Вэнэсовицэ
+>          my_id: D00-09O
+>          geo_code: VAA
+>          population: 206,262
+>          warehouse: misc industrial, rice, cocoa beans, wheat, hay, coffee beans, misc fruit/veg, milk, chicken, maize, straw (maize)
+>
+>      Kemptoñak County / Воевуцтво Кэмптоняк
+>          my_id: D00-09P
+>          geo_code: VAW
+>          population: 101,489
+>          warehouse: cocoa beans, rice, coffee beans, milk, chicken, misc fruit/veg, misc industrial, wheat, hay
+>
+>      Gabrÿella County / Воевуцтво Габриелля
+>          my_id: D00-09Q
+>          geo_code: VAJ
+>          population: 137,401
+>          warehouse: misc industrial, cocoa beans, coffee beans, maize, straw (maize), misc fruit/veg, rice, chicken, milk, clay
+>
+>      Städlingen County / Воевуцтво Стаъдльингэн
+>          my_id: D00-09R
+>          geo_code: VAY
+>          population: 90,484
+>          warehouse: misc industrial, milk, cocoa beans, coffee beans, maize, straw (maize), rice, wheat, hay, chicken, misc fruit/veg
+>
+>      Zþømisten County / Воевуцтво Жыъмистэн
+>          my_id: D00-09S
+>          geo_code: VAF
+>          population: 136,636
+>          warehouse: misc industrial, cocoa beans, chicken, misc fruit/veg, maize, straw (maize), wheat, hay, coffee beans, milk
+>
+>      Moêten Forest County / Воевуцтво Ляс Мыщтэн
+>          my_id: D00-09T
+>          geo_code: VAT
+>          population: 123,606
+>          warehouse: misc industrial, wheat, hay, rice, cocoa beans, coffee beans, maize, straw (maize), milk, chicken, misc fruit/veg
+>
+>      Minikâ County / Воевуцтво Миникащ
+>          my_id: D00-09U
+>          geo_code: VAM
+>          population: 120,940
+>          warehouse: misc industrial, rice, chicken, milk, coffee beans, misc fruit/veg, wheat, hay, cocoa beans, maize, straw (maize)
+>
+>      Old Bohþmúl County / Воевуцтво Стары Бохмюль
+>          my_id: D00-09V
+>          geo_code: VAC
+>          population: 132,902
+>          warehouse: misc industrial, coffee beans, cocoa beans, wheat, hay, maize, straw (maize), milk, chicken, misc fruit/veg
+>
+>      Graåhamitþka County / Воевуцтво Грахамичка
+>          my_id: D00-09W
+>          geo_code: VAB
+>          population: 121,849
+>          warehouse: misc industrial, coffee beans, maize, straw (maize), cocoa beans, wheat, hay, misc fruit/veg, chicken, milk
+>
+>      Avi-and-Adi County / Воевуцтво Ави-и-Ади
+>          my_id: D00-09X
+>          geo_code: VAQ
+>          population: 127,973
+>          warehouse: misc industrial, cocoa beans, coffee beans, maize, straw (maize), wheat, hay, milk, misc fruit/veg, chicken
+>
+>      Far Morison County / Воевуцтво Далека Морисон
+>          my_id: D00-09Y
+>          geo_code: VAK
+>          population: 126,406
+>          warehouse: misc industrial, coffee beans, maize, straw (maize), cocoa beans, chicken, misc fruit/veg, milk
+>
+>      Foênandiño County / Воевуцтво Фыщнандинё
+>          my_id: D00-09Z
+>          geo_code: VAP
+>          population: 111,616
+>          warehouse: misc industrial, rice, misc fruit/veg, cocoa beans, wheat, hay, maize, straw (maize), coffee beans, chicken, milk
+>
+>      Úåîpiåeston County / Воевуцтво Юищпиэстон
+>          my_id: D00-0A0
+>          geo_code: VAI
+>          population: 118,742
+>          warehouse: misc industrial, maize, straw (maize), cocoa beans, coffee beans, wheat, hay, chicken, rice, misc fruit/veg, milk
+>
+>      åWrócisl'aw County / Воевуцтво Врутьислъав
+>          my_id: D00-0A1
+>          geo_code: VAS
+>          population: 120,968
+>          warehouse: misc industrial, coffee beans, cocoa beans, milk, maize, straw (maize), rice, wheat, hay, chicken, misc fruit/veg
+>
+----------
+Map and area: 
+>   Region: Vænesston 1:2,000,000 (drawn in 2019)
+>   Position (mm) x: 157.57, y: 122.19
+>   Area on paper (sq.mm) a: 2,485.71
+>   Area represented: 9,943.0sq.km
+----------
+Workforce Demand: 
+>   Grand Total: (847,666)
+>       rm: 214; hm: 5,145; mm: 26,748; lm: 42,119; pm: 351,192;
+>       rf: 42; hf: 1,288; mf: 25,444; lf: 56,170; pf: 339,304;
+>
+>   VAA: (71,409)
+>       rm: 54; hm: 962; mm: 8,526; lm: 3,215; pm: 23,986;
+>       rf: 9; hf: 164; mf: 8,565; lf: 4,888; pf: 21,040;
+>       tot road veh: 2,891;
+>
+>   VAW: (50,373)
+>       rm: 5; hm: 265; mm: 1,321; lm: 2,757; pm: 20,929;
+>       rf: 0; hf: 65; mf: 1,257; lf: 3,583; pf: 20,191;
+>       tot road veh: 1,912;
+>
+>   VAJ: (67,529)
+>       rm: 26; hm: 369; mm: 1,691; lm: 3,685; pm: 28,134;
+>       rf: 5; hf: 99; mf: 1,561; lf: 4,733; pf: 27,226;
+>       tot road veh: 2,742;
+>
+>   VAY: (44,693)
+>       rm: 1; hm: 317; mm: 1,157; lm: 2,091; pm: 18,941;
+>       rf: 0; hf: 89; mf: 1,089; lf: 2,763; pf: 18,245;
+>       tot road veh: 1,782;
+>
+>   VAF: (67,400)
+>       rm: 18; hm: 361; mm: 1,494; lm: 3,428; pm: 28,370;
+>       rf: 4; hf: 101; mf: 1,383; lf: 4,424; pf: 27,817;
+>       tot road veh: 2,768;
+>
+>   VAT: (60,957)
+>       rm: 14; hm: 330; mm: 1,366; lm: 2,973; pm: 25,744;
+>       rf: 3; hf: 84; mf: 1,260; lf: 3,985; pf: 25,198;
+>       tot road veh: 2,369;
+>
+>   VAM: (60,012)
+>       rm: 9; hm: 309; mm: 1,375; lm: 2,870; pm: 25,421;
+>       rf: 2; hf: 80; mf: 1,277; lf: 3,835; pf: 24,834;
+>       tot road veh: 2,274;
+>
+>   VAC: (65,604)
+>       rm: 13; hm: 344; mm: 1,490; lm: 3,065; pm: 27,932;
+>       rf: 3; hf: 93; mf: 1,382; lf: 4,193; pf: 27,089;
+>       tot road veh: 2,515;
+>
+>   VAB: (60,342)
+>       rm: 10; hm: 318; mm: 1,414; lm: 2,991; pm: 25,542;
+>       rf: 2; hf: 83; mf: 1,302; lf: 3,968; pf: 24,712;
+>       tot road veh: 2,314;
+>
+>   VAQ: (63,144)
+>       rm: 25; hm: 340; mm: 1,418; lm: 3,170; pm: 26,733;
+>       rf: 6; hf: 90; mf: 1,322; lf: 4,143; pf: 25,897;
+>       tot road veh: 2,513;
+>
+>   VAK: (62,316)
+>       rm: 14; hm: 322; mm: 1,488; lm: 3,100; pm: 26,153;
+>       rf: 3; hf: 92; mf: 1,387; lf: 4,085; pf: 25,672;
+>       tot road veh: 2,503;
+>
+>   VAP: (55,241)
+>       rm: 10; hm: 284; mm: 1,273; lm: 2,754; pm: 23,313;
+>       rf: 2; hf: 77; mf: 1,159; lf: 3,703; pf: 22,666;
+>       tot road veh: 2,075;
+>
+>   VAI: (58,824)
+>       rm: 1; hm: 301; mm: 1,365; lm: 2,879; pm: 24,852;
+>       rf: 0; hf: 82; mf: 1,243; lf: 3,830; pf: 24,271;
+>       tot road veh: 2,200;
+>
+>   VAS: (59,822)
+>       rm: 14; hm: 323; mm: 1,370; lm: 3,141; pm: 25,142;
+>       rf: 3; hf: 89; mf: 1,257; lf: 4,037; pf: 24,446;
+>       tot road veh: 2,399;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (66,293)
+>       rm: 614; hm: 5,783; mm: 9,453; lm: 9,180; pm: 8,112;
+>       rf: 617; hf: 5,782; mf: 9,456; lf: 9,182; pf: 8,114;
+>
+>   VAA: (66,293)
+>       rm: 614; hm: 5,783; mm: 9,453; lm: 9,180; pm: 8,112;
+>       rf: 617; hf: 5,782; mf: 9,456; lf: 9,182; pf: 8,114;
+>       tot road veh: 0
+>
+>   VAW: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAJ: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAY: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAF: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAT: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAM: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAC: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAB: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAQ: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAK: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAP: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAI: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VAS: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Grand Total: (645,089)
+>       r: 287; h: 6,351; m: 42,378; l: 77,554; p: 518,519;
+>   VAA: (51,775) | r: 70; h: 951; m: 13,689; l: 4,110; p: 32,955;
+>   VAW: (38,357) | r: 7; h: 344; m: 2,144; l: 5,149; p: 30,713;
+>   VAJ: (51,912) | r: 35; h: 479; m: 2,704; l: 6,804; p: 41,890;
+>   VAY: (34,190) | r: 2; h: 404; m: 1,829; l: 3,936; p: 28,019;
+>   VAF: (51,522) | r: 24; h: 462; m: 2,366; l: 6,389; p: 42,281;
+>   VAT: (46,623) | r: 19; h: 440; m: 2,145; l: 5,696; p: 38,323;
+>   VAM: (45,668) | r: 12; h: 399; m: 2,159; l: 5,450; p: 37,648;
+>   VAC: (50,203) | r: 17; h: 440; m: 2,338; l: 5,956; p: 41,452;
+>   VAB: (46,082) | r: 13; h: 408; m: 2,203; l: 5,701; p: 37,757;
+>   VAQ: (48,336) | r: 34; h: 436; m: 2,207; l: 5,961; p: 39,698;
+>   VAK: (47,760) | r: 19; h: 420; m: 2,376; l: 5,826; p: 39,119;
+>   VAP: (42,179) | r: 14; h: 371; m: 1,963; l: 5,294; p: 34,537;
+>   VAI: (44,738) | r: 2; h: 396; m: 2,137; l: 5,461; p: 36,742;
+>   VAS: (45,744) | r: 19; h: 401; m: 2,118; l: 5,821; p: 37,385;
+----------
+Supply households: 
+>   Grand Total: (45,754)
+>       r: 818; h: 7,758; m: 12,707; l: 12,460; p: 12,011;
+>   VAA: (45,754) | r: 818; h: 7,758; m: 12,707; l: 12,460; p: 12,011;
+>   VAW: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAJ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAY: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAF: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAT: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAM: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAC: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAB: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAQ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAK: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAP: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAI: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VAS: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 1,777,274
+>
+>   Married working people (aHHM-PAX):
+>       r: 1,480; h: 16,342; m: 53,810; l: 116,838; p: 695,880;
+>      (total: 884,350)
+>
+>   Married retired people (aHHR-PAX):
+>       r: 476; h: 5,144; m: 16,188; l: 34,370; p: 202,048;
+>      (total: 258,226)
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 66; h: 3,114; m: 8,549; l: 16,325; p: 88,427;
+>      (total: 116,481)
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 30; h: 1,192; m: 4,017; l: 8,550; p: 50,464;
+>      (total: 64,253)
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 42; m: 59; l: 221; p: 1,202;
+>      (total: 1,524)
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 135; m: 167; l: 692; p: 3,889;
+>      (total: 4,883)
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 193; h: 5,091; m: 5,940; l: 3,113; p: 23,312;
+>      (total: 37,649)
+>
+>   Preschoolers, all groups                 (ED0-PAX): 79,686
+>   Primary schoolers, all groups            (ED1-PAX): 131,698
+>   Middle schoolers, all groups             (ED2-PAX): 105,690
+>   High schoolers, all groups               (ED3-PAX): 104,901
+>   Religious or Private schoolers, all grps (ED4-PAX): 6,618
+>   College students, all groups             (ED5-PAX): 1,016
+>   Polytechnic students, all groups         (ED6-PAX): 312
+>   University students, all groups          (ED7-PAX): 98
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 3,363
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 15
+>   Old Age Home, all groups                 (OAH-PAX): 13,571
+>   Private nurse, all groups                (OAN-PAX): 4
+>   Youth prison, all groups                 (YXJ-PAX): 904
+>   Adult prison, all groups                 (YXA-PAX): 10,108
+>   Religion:
+>      Renásàsers          (3R): 248,513
+>      Anglican Christians (AN): 56,214
+>      Roman Catholics     (RC): 71,414
+>      Deltæðømmysts       (DD): 947,730
+>      Jews                (JW): 15,674
+>      Muslims             (IS): 23,189
+>   Units required:
+>       | 222.16 for [5YP] Police
+>       | 177.73 for [5YF] Fire Dept
+>       | 177.73 for [5YH] Community Clinic
+>       | 355.45 for [5YG] Community Governance
+>       |2656.20 for [ED0] Pre-school
+>       | 263.40 for [ED1] Primary School
+>       | 125.82 for [ED2] Middle School
+>       | 109.27 for [ED3] High School
+>       | 452.37 for [OAH] Old Age Home
+>       | 444.32 for [5SŠ] Small Shop
+>       | 355.45 for [5LX] Community Library
+>       | 355.45 for [5TH] Community Theatre
+>       | 177.73 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 846,150
+>   Vehicle, motorbike*                      (VEH-MBK): 173,878
+>   Vehicle, car*                            (VEH-CAR): 46,715
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 242,661
+>   Itemised county-registered vehicles:
+>      VAA: 53,891
+>      VAW: 12,954
+>      VAJ: 17,286
+>      VAY: 11,094
+>      VAF: 16,313
+>      VAT: 14,569
+>      VAM: 14,182
+>      VAC: 15,546
+>      VAB: 14,543
+>      VAQ: 15,169
+>      VAK: 15,287
+>      VAP: 13,242
+>      VAI: 14,026
+>      VAS: 14,559
+----------
+Footprint on the land:
+>   VAA: 76,968.0ha
+>   VAW: 49,344.0ha
+>   VAJ: 64,040.0ha
+>   VAY: 42,656.0ha
+>   VAF: 1,066.0sq.km
+>   VAT: 73,364.0ha
+>   VAM: 96,160.0ha
+>   VAC: 62,576.0ha
+>   VAB: 69,400.0ha
+>   VAQ: 79,756.0ha
+>   VAK: 60,776.0ha
+>   VAP: 51,860.0ha
+>   VAI: 58,580.0ha
+>   VAS: 1,021.0sq.km
+

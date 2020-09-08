@@ -1,0 +1,636 @@
+    St. åPhœnix District / Повят Сьв. Финикс
+----------
+Pretty print information was generated on 2020-08-05 09:51:52.773390
+----------
+my_id: D00-09L
+geo_code: VX
+----------
+Total population: 2,352,943 (Incomplete data)
+
+Total vehicles*: 315,283 (Incomplete data)
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced (Incomplete data):
+>   misc industrial: 143,100.26t/yr by Warehouse 0
+>   wheat: 1,092,217.09t/yr by Warehouse 1
+>   hay: 108,061.88t/yr by Warehouse 2
+>   rice: 125,609.72t/yr by Warehouse 3
+>   trèb rye: 926,965.34t/yr by Warehouse 4
+>   straw (trèb rye): 93,143.3t/yr by Warehouse 5
+>   cocoa beans: 1,083,388.64t/yr by Warehouse 6
+>   maize: 1,243,029.21t/yr by Warehouse 7
+>   straw (maize): 148,898.96t/yr by Warehouse 8
+>   milk: 227,332.69t/yr by Warehouse 9
+>   misc fruit/veg: 195,024.43t/yr by Warehouse 10
+>   chicken: 329,258.01t/yr by Warehouse 11
+>   clay: 220.27kt/yr by Warehouse 12
+
+Build housing (Demand - Supply):
+>    r: 717; h: 9,041; m: 56,682; l: 114,944; p: 709,206;
+----------
+Hierarchial Parent: 
+>  Dzþevogurski Province / Провинцъя Джэвогурскъего
+>   my_id: D00-003
+>   geo_code: V
+----------
+Hierarchial Children: 
+>   count: 25
+>      St. åPhœnix County / Воевуцтво Сьв. Финикс
+>          my_id: D00-0A2
+>          geo_code: VXA
+>          population: 133,280
+>          warehouse: misc industrial, wheat, hay, rice, trèb rye, straw (trèb rye), cocoa beans, maize, straw (maize), milk, misc fruit/veg, chicken
+>
+>      Ïedenvile County / Воевуцтво Едэнвилэ
+>          my_id: D00-0A3
+>          geo_code: VX1
+>          population: 115,482
+>          warehouse: misc industrial, milk, chicken, misc fruit/veg, cocoa beans, wheat, hay, trèb rye, straw (trèb rye), maize, straw (maize)
+>
+>      åBirdfur County / Воевуцтво Птасёщфутро
+>          my_id: D00-0A4
+>          geo_code: VXW
+>          population: 109,010
+>          warehouse: misc industrial, wheat, hay, milk, chicken, cocoa beans, trèb rye, straw (trèb rye), maize, straw (maize), misc fruit/veg
+>
+>      Mlesþoïan County / Воевуцтво Млешоян
+>          my_id: D00-0A5
+>          geo_code: VXH
+>          population: 120,855
+>          warehouse: misc industrial, clay, milk, chicken, cocoa beans, trèb rye, straw (trèb rye), wheat, hay, maize, straw (maize), rice, misc fruit/veg
+>
+>      Fourteen Square County / Воевуцтво Чтэрнасте Квадрат
+>          my_id: D00-0A6
+>          geo_code: VX4
+>          population: N/A
+>          warehouse: 
+>
+>      Zþurlihþ County / Воевуцтво Журльих
+>          my_id: D00-0A7
+>          geo_code: VXB
+>          population: N/A
+>          warehouse: 
+>
+>      Tsekïel County / Воевуцтво Цэкель
+>          my_id: D00-0A8
+>          geo_code: VXE
+>          population: N/A
+>          warehouse: 
+>
+>      åBrownwälder County / Воевуцтво Бралнваъльдэр
+>          my_id: D00-0A9
+>          geo_code: VXV
+>          population: N/A
+>          warehouse: 
+>
+>      Ïøng County / Воевуцтво Йыънг
+>          my_id: D00-0AA
+>          geo_code: VXK
+>          population: N/A
+>          warehouse: 
+>
+>      Busterhound County / Воевуцтво Огар-Бустэр
+>          my_id: D00-0AB
+>          geo_code: VXQ
+>          population: N/A
+>          warehouse: 
+>
+>      Crydog County / Воевуцтво Плачощпес
+>          my_id: D00-0AC
+>          geo_code: VXP
+>          population: 131,911
+>          warehouse: misc industrial, maize, straw (maize), trèb rye, straw (trèb rye), wheat, hay, cocoa beans, chicken, milk, misc fruit/veg
+>
+>      Sændiåkenel County / Воевуцтво Будащсэнди
+>          my_id: D00-0AD
+>          geo_code: VXG
+>          population: 108,512
+>          warehouse: misc industrial, maize, straw (maize), misc fruit/veg, rice, cocoa beans, wheat, hay, trèb rye, straw (trèb rye), chicken, milk
+>
+>      Gutekåmorski County / Воевуцтво Гутэкщморски
+>          my_id: D00-0AE
+>          geo_code: VXN
+>          population: 135,866
+>          warehouse: misc industrial, maize, straw (maize), cocoa beans, wheat, hay, trèb rye, straw (trèb rye), chicken, milk, rice, misc fruit/veg
+>
+>      Dogfeather County / Воевуцтво Псещпюро
+>          my_id: D00-0AF
+>          geo_code: VXI
+>          population: 124,047
+>          warehouse: misc industrial, maize, straw (maize), trèb rye, straw (trèb rye), cocoa beans, wheat, hay, misc fruit/veg, milk, chicken
+>
+>      Ðodyl County / Воевуцтво Дёдыль
+>          my_id: D00-0AG
+>          geo_code: VXZ
+>          population: 92,871
+>          warehouse: misc industrial, maize, straw (maize), cocoa beans, wheat, hay, trèb rye, straw (trèb rye), chicken, milk, misc fruit/veg
+>
+>      Ïèdzþeï County / Воевуцтво Еьджэй
+>          my_id: D00-0AH
+>          geo_code: VXR
+>          population: 111,480
+>          warehouse: misc industrial, rice, cocoa beans, trèb rye, straw (trèb rye), wheat, hay, milk, chicken, maize, straw (maize), misc fruit/veg
+>
+>      Dïaïel County / Воевуцтво Дъяель
+>          my_id: D00-0AI
+>          geo_code: VXU
+>          population: 137,868
+>          warehouse: misc industrial, maize, straw (maize), wheat, hay, trèb rye, straw (trèb rye), cocoa beans, rice, misc fruit/veg, milk, chicken
+>
+>      Svenburg County / Воевуцтво Свэнбург
+>          my_id: D00-0AJ
+>          geo_code: VXM
+>          population: 119,600
+>          warehouse: misc industrial, maize, straw (maize), wheat, hay, cocoa beans, milk, chicken, trèb rye, straw (trèb rye), misc fruit/veg
+>
+>      Kodïe County / Воевуцтво Кодъе
+>          my_id: D00-0AK
+>          geo_code: VXD
+>          population: 121,075
+>          warehouse: misc industrial, misc fruit/veg, cocoa beans, maize, straw (maize), trèb rye, straw (trèb rye), wheat, hay, milk, chicken
+>
+>      Ñoñatça County / Воевуцтво Нёнятя
+>          my_id: D00-0AL
+>          geo_code: VXL
+>          population: 125,936
+>          warehouse: misc industrial, wheat, hay, maize, straw (maize), cocoa beans, trèb rye, straw (trèb rye), chicken, milk, misc fruit/veg
+>
+>      Iridan County / Воевуцтво Иридан
+>          my_id: D00-0AM
+>          geo_code: VXX
+>          population: 131,480
+>          warehouse: misc industrial, milk, chicken, wheat, hay, maize, straw (maize), cocoa beans, trèb rye, straw (trèb rye), misc fruit/veg
+>
+>      Vagoåtratçizþ County / Воевуцтво Вагощтратьиж
+>          my_id: D00-0AN
+>          geo_code: VXT
+>          population: 131,791
+>          warehouse: misc industrial, maize, straw (maize), trèb rye, straw (trèb rye), cocoa beans, wheat, hay, milk, chicken, misc fruit/veg
+>
+>      Square Barrel County / Воевуцтво Квадратова Бэчка
+>          my_id: D00-0AO
+>          geo_code: VXC
+>          population: 124,540
+>          warehouse: misc industrial, wheat, hay, trèb rye, straw (trèb rye), maize, straw (maize), milk, chicken, cocoa beans, misc fruit/veg
+>
+>      Ïægermeer County / Воевуцтво Яъгэрмия
+>          my_id: D00-0AP
+>          geo_code: VXJ
+>          population: 135,676
+>          warehouse: wheat, hay, trèb rye, straw (trèb rye), maize, straw (maize), rice, cocoa beans, misc fruit/veg, milk, chicken, misc industrial
+>
+>      Utþosço County / Воевуцтво Учосё
+>          my_id: D00-0AQ
+>          geo_code: VXS
+>          population: 141,663
+>          warehouse: misc industrial, maize, straw (maize), trèb rye, straw (trèb rye), cocoa beans, wheat, hay, rice, chicken, milk, misc fruit/veg
+>
+----------
+Map and area: 
+>   Region: Vænesston 1:2,000,000 (drawn in 2019)
+>   Position (mm) x: 197.86, y: 87.57
+>   Area on paper (sq.mm) a: 4,266.87
+>   Area represented: 17,067.0sq.km
+----------
+Workforce Demand: 
+>   Grand Total: (1,167,196)
+>       rm: 545; hm: 7,026; mm: 35,659; lm: 60,482; pm: 480,015;
+>       rf: 119; hf: 1,798; mf: 34,523; lf: 80,460; pf: 466,569;
+>
+>   VXA: (66,064)
+>       rm: 14; hm: 429; mm: 2,410; lm: 3,496; pm: 26,733;
+>       rf: 2; hf: 100; mf: 2,335; lf: 4,613; pf: 25,932;
+>       tot road veh: 2,659;
+>
+>   VX1: (57,206)
+>       rm: 9; hm: 352; mm: 2,055; lm: 2,890; pm: 23,258;
+>       rf: 1; hf: 84; mf: 2,007; lf: 3,927; pf: 22,623;
+>       tot road veh: 2,285;
+>
+>   VXW: (54,262)
+>       rm: 7; hm: 320; mm: 1,663; lm: 2,721; pm: 22,333;
+>       rf: 1; hf: 79; mf: 1,587; lf: 3,681; pf: 21,870;
+>       tot road veh: 2,131;
+>
+>   VXH: (59,157)
+>       rm: 12; hm: 359; mm: 1,938; lm: 3,115; pm: 24,861;
+>       rf: 2; hf: 91; mf: 1,863; lf: 4,088; pf: 22,828;
+>       tot road veh: 2,406;
+>
+>   VX4: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VXB: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VXE: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VXV: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VXK: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VXQ: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0;
+>
+>   VXP: (65,692)
+>       rm: 13; hm: 388; mm: 2,071; lm: 3,313; pm: 26,978;
+>       rf: 2; hf: 97; mf: 1,988; lf: 4,496; pf: 26,346;
+>       tot road veh: 2,562;
+>
+>   VXG: (53,818)
+>       rm: 9; hm: 309; mm: 1,616; lm: 2,722; pm: 22,127;
+>       rf: 1; hf: 78; mf: 1,534; lf: 3,674; pf: 21,748;
+>       tot road veh: 2,120;
+>
+>   VXN: (67,307)
+>       rm: 252; hm: 596; mm: 2,314; lm: 3,564; pm: 26,834;
+>       rf: 62; hf: 164; mf: 2,574; lf: 4,637; pf: 26,310;
+>       tot road veh: 3,020;
+>
+>   VXI: (61,513)
+>       rm: 13; hm: 385; mm: 2,104; lm: 3,223; pm: 25,031;
+>       rf: 2; hf: 93; mf: 2,057; lf: 4,295; pf: 24,310;
+>       tot road veh: 2,528;
+>
+>   VXZ: (46,068)
+>       rm: 8; hm: 282; mm: 1,616; lm: 2,347; pm: 18,793;
+>       rf: 2; hf: 66; mf: 1,564; lf: 3,158; pf: 18,232;
+>       tot road veh: 1,829;
+>
+>   VXR: (55,364)
+>       rm: 8; hm: 310; mm: 1,691; lm: 2,740; pm: 22,822;
+>       rf: 1; hf: 80; mf: 1,612; lf: 3,714; pf: 22,386;
+>       tot road veh: 2,130;
+>
+>   VXU: (68,434)
+>       rm: 12; hm: 424; mm: 2,437; lm: 3,519; pm: 27,755;
+>       rf: 2; hf: 103; mf: 2,358; lf: 4,743; pf: 27,081;
+>       tot road veh: 2,675;
+>
+>   VXM: (59,560)
+>       rm: 57; hm: 383; mm: 1,795; lm: 3,123; pm: 24,289;
+>       rf: 13; hf: 98; mf: 1,773; lf: 4,137; pf: 23,892;
+>       tot road veh: 2,411;
+>
+>   VXD: (60,152)
+>       rm: 10; hm: 364; mm: 2,176; lm: 2,939; pm: 24,438;
+>       rf: 2; hf: 85; mf: 2,120; lf: 4,002; pf: 24,016;
+>       tot road veh: 2,355;
+>
+>   VXL: (62,539)
+>       rm: 9; hm: 353; mm: 1,852; lm: 3,196; pm: 25,809;
+>       rf: 1; hf: 91; mf: 1,737; lf: 4,319; pf: 25,172;
+>       tot road veh: 2,538;
+>
+>   VXX: (65,157)
+>       rm: 18; hm: 299; mm: 1,534; lm: 3,318; pm: 27,447;
+>       rf: 4; hf: 80; mf: 1,415; lf: 4,417; pf: 26,625;
+>       tot road veh: 2,547;
+>
+>   VXT: (65,311)
+>       rm: 14; hm: 345; mm: 1,532; lm: 3,461; pm: 27,368;
+>       rf: 3; hf: 98; mf: 1,422; lf: 4,509; pf: 26,559;
+>       tot road veh: 2,680;
+>
+>   VXC: (61,925)
+>       rm: 54; hm: 369; mm: 1,515; lm: 3,248; pm: 25,929;
+>       rf: 13; hf: 105; mf: 1,462; lf: 4,246; pf: 24,984;
+>       tot road veh: 2,532;
+>
+>   VXJ: (67,253)
+>       rm: 12; hm: 380; mm: 1,680; lm: 4,035; pm: 27,585;
+>       rf: 2; hf: 102; mf: 1,561; lf: 5,123; pf: 26,773;
+>       tot road veh: 2,690;
+>
+>   VXS: (70,414)
+>       rm: 14; hm: 379; mm: 1,660; lm: 3,512; pm: 29,625;
+>       rf: 3; hf: 104; mf: 1,554; lf: 4,681; pf: 28,882;
+>       tot road veh: 2,740;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+>   VXA: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VX1: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXW: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXH: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VX4: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXB: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXE: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXV: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXK: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXQ: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXG: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXN: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXI: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXZ: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXR: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXU: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXM: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXD: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXL: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXX: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXT: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXC: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXJ: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+>   VXS: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>       tot road veh: 0
+>
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Grand Total: (890,590)
+>       r: 717; h: 9,041; m: 56,682; l: 114,944; p: 709,206;
+>   VXA: (50,421) | r: 19; h: 548; m: 3,821; l: 6,633; p: 39,400;
+>   VX1: (43,607) | r: 12; h: 449; m: 3,257; l: 5,564; p: 34,325;
+>   VXW: (41,273) | r: 10; h: 408; m: 2,613; l: 5,239; p: 33,003;
+>   VXH: (45,707) | r: 16; h: 467; m: 3,039; l: 5,835; p: 36,350;
+>   VX4: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXB: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXE: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXV: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXK: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXQ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP: (49,944) | r: 17; h: 500; m: 3,228; l: 6,423; p: 39,776;
+>   VXG: (41,057) | r: 12; h: 398; m: 2,543; l: 5,252; p: 32,852;
+>   VXN: (51,556) | r: 326; h: 755; m: 4,002; l: 6,691; p: 39,782;
+>   VXI: (46,919) | r: 17; h: 492; m: 3,336; l: 6,129; p: 36,945;
+>   VXZ: (35,105) | r: 11; h: 367; m: 2,547; l: 4,517; p: 27,663;
+>   VXR: (42,191) | r: 11; h: 400; m: 2,646; l: 5,295; p: 33,839;
+>   VXU: (52,217) | r: 16; h: 542; m: 3,863; l: 6,736; p: 41,060;
+>   VXM: (45,302) | r: 76; h: 493; m: 2,886; l: 5,904; p: 35,943;
+>   VXD: (45,822) | r: 14; h: 466; m: 3,471; l: 5,685; p: 36,186;
+>   VXL: (47,687) | r: 12; h: 456; m: 2,851; l: 6,184; p: 38,184;
+>   VXX: (49,731) | r: 24; h: 393; m: 2,428; l: 6,292; p: 40,594;
+>   VXT: (49,828) | r: 19; h: 451; m: 2,406; l: 6,472; p: 40,480;
+>   VXC: (47,143) | r: 71; h: 471; m: 2,443; l: 6,054; p: 38,104;
+>   VXJ: (51,421) | r: 16; h: 495; m: 2,662; l: 7,374; p: 40,874;
+>   VXS: (53,659) | r: 18; h: 490; m: 2,640; l: 6,665; p: 43,846;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXA: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VX1: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXW: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXH: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VX4: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXB: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXE: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXV: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXK: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXQ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXG: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXN: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXI: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXZ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXR: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXU: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXM: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXD: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXL: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXX: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXT: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXC: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXJ: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXS: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 2,352,943
+>
+>   Married working people (aHHM-PAX):
+>       r: 1,028; h: 11,414; m: 74,730; l: 153,012; p: 946,362;
+>      (total: 1,186,546)
+>
+>   Married retired people (aHHR-PAX):
+>       r: 318; h: 3,368; m: 21,618; l: 44,258; p: 274,194;
+>      (total: 343,756)
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 31; h: 1,450; m: 9,292; l: 18,907; p: 118,310;
+>      (total: 147,990)
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 23; h: 801; m: 5,419; l: 11,049; p: 68,555;
+>      (total: 85,847)
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 9; m: 76; l: 253; p: 1,645;
+>      (total: 1,983)
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 57; m: 220; l: 870; p: 5,329;
+>      (total: 6,476)
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 414; h: 4,404; m: 7,829; l: 3,906; p: 29,158;
+>      (total: 45,711)
+>
+>   Preschoolers, all groups                 (ED0-PAX): 104,231
+>   Primary schoolers, all groups            (ED1-PAX): 174,400
+>   Middle schoolers, all groups             (ED2-PAX): 138,499
+>   High schoolers, all groups               (ED3-PAX): 139,409
+>   Religious or Private schoolers, all grps (ED4-PAX): 5,420
+>   College students, all groups             (ED5-PAX): 1,292
+>   Polytechnic students, all groups         (ED6-PAX): 313
+>   University students, all groups          (ED7-PAX): 70
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 4,495
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 14
+>   Old Age Home, all groups                 (OAH-PAX): 18,678
+>   Private nurse, all groups                (OAN-PAX): 2
+>   Youth prison, all groups                 (YXJ-PAX): 1,202
+>   Adult prison, all groups                 (YXA-PAX): 13,891
+>   Religion:
+>      Renásàsers          (3R): 305,885
+>      Anglican Christians (AN): 65,842
+>      Roman Catholics     (RC): 91,951
+>      Deltæðømmysts       (DD): 1,266,662
+>      Jews                (JW): 14,361
+>      Muslims             (IS): 21,515
+>   Units required:
+>       | 294.12 for [5YP] Police
+>       | 235.29 for [5YF] Fire Dept
+>       | 235.29 for [5YH] Community Clinic
+>       | 470.59 for [5YG] Community Governance
+>       |3474.37 for [ED0] Pre-school
+>       | 348.80 for [ED1] Primary School
+>       | 164.88 for [ED2] Middle School
+>       | 145.22 for [ED3] High School
+>       | 622.60 for [OAH] Old Age Home
+>       | 588.24 for [5SŠ] Small Shop
+>       | 470.59 for [5LX] Community Library
+>       | 470.59 for [5TH] Community Theatre
+>       | 235.29 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 1,147,938
+>   Vehicle, motorbike*                      (VEH-MBK): 229,530
+>   Vehicle, car*                            (VEH-CAR): 53,762
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 315,283
+>   Itemised county-registered vehicles:
+>      VXA: 19,110
+>      VX1: 16,220
+>      VXW: 14,432
+>      VXH: 16,365
+>      VXP: 17,658
+>      VXG: 14,273
+>      VXN: 20,660
+>      VXI: 17,321
+>      VXZ: 12,969
+>      VXR: 14,587
+>      VXU: 19,389
+>      VXM: 16,210
+>      VXD: 16,972
+>      VXL: 16,520
+>      VXX: 15,931
+>      VXT: 16,210
+>      VXC: 15,741
+>      VXJ: 17,524
+>      VXS: 17,191
+----------
+Footprint on the land:
+>   VXA: 77,536.0ha
+>   VX1: 56,348.0ha
+>   VXW: 56,428.0ha
+>   VXH: 67,684.0ha
+>   VX4: 67,856.0ha
+>   VXB: 73,612.0ha
+>   VXE: 57,132.0ha
+>   VXV: 56,948.0ha
+>   VXK: 66,684.0ha
+>   VXQ: 64,220.0ha
+>   VXP: 63,088.0ha
+>   VXG: 51,132.0ha
+>   VXN: 87,524.0ha
+>   VXI: 63,480.0ha
+>   VXZ: 54,208.0ha
+>   VXR: 54,176.0ha
+>   VXU: 69,412.0ha
+>   VXM: 89,324.0ha
+>   VXD: 57,196.0ha
+>   VXL: 64,724.0ha
+>   VXX: 63,324.0ha
+>   VXT: 96,604.0ha
+>   VXC: 88,988.0ha
+>   VXJ: 79,816.0ha
+>   VXS: 70,988.0ha
+

@@ -1,0 +1,792 @@
+    Crydog County / Воевуцтво Плачощпес
+----------
+Pretty print information was generated on 2020-08-05 09:51:56.164328
+----------
+my_id: D00-0AC
+geo_code: VXP
+----------
+Total population: 131,911
+
+Total vehicles*: 17,658
+   *: Vehicles with a county-level (not government) number plate
+
+Goods produced:
+>   misc industrial: 6,971.07t/yr by Warehouse 0
+>   maize: 81,001.13t/yr by Warehouse 1
+>   straw (maize): 10,356.4t/yr by Warehouse 2
+>   trèb rye: 71,038.84t/yr by Warehouse 3
+>   straw (trèb rye): 6,067.74t/yr by Warehouse 4
+>   wheat: 78,574.16t/yr by Warehouse 5
+>   hay: 7,970.44t/yr by Warehouse 6
+>   cocoa beans: 50,621.02t/yr by Warehouse 7
+>   chicken: 16,296.16t/yr by Warehouse 8
+>   milk: 11,317.23t/yr by Warehouse 9
+>   misc fruit/veg: 10,993.87t/yr by Warehouse 10
+
+Build housing (Demand - Supply):
+>    r: 17; h: 500; m: 3,228; l: 6,423; p: 39,776;
+----------
+Hierarchial Parent: 
+>  St. åPhœnix District / Повят Сьв. Финикс
+>   my_id: D00-09L
+>   geo_code: VX
+----------
+Hierarchial Children: 
+>   count: 34
+>      Crydog Municipality / Гмина Плачощпес
+>          my_id: D00-1BH
+>          geo_code: VXP-0
+>          population: 12,522
+>          warehouse: Misc Industrial
+>
+>      Shþyïap Municipality / Гмина Схыяп
+>          my_id: D00-1BI
+>          geo_code: VXP-T
+>          population: 3,815
+>          warehouse: maize, straw (maize)
+>
+>      Slèsþa Municipality / Гмина Сълеьша
+>          my_id: D00-1BJ
+>          geo_code: VXP-V
+>          population: 3,044
+>          warehouse: trèb rye, straw (trèb rye)
+>
+>      Tþotþi Municipality / Гмина Чочи
+>          my_id: D00-1BK
+>          geo_code: VXP-Q
+>          population: 3,583
+>          warehouse: wheat, hay
+>
+>      Ïonaga Municipality / Гмина Ёнага
+>          my_id: D00-1BL
+>          geo_code: VXP-F
+>          population: 3,951
+>          warehouse: cocoa beans
+>
+>      Maqþa Municipality / Гмина Мащъъа
+>          my_id: D00-1BM
+>          geo_code: VXP-7
+>          population: 3,544
+>          warehouse: maize, straw (maize)
+>
+>      Ksçetsa Municipality / Гмина Ксеца
+>          my_id: D00-1BN
+>          geo_code: VXP-8
+>          population: 3,119
+>          warehouse: trèb rye, straw (trèb rye)
+>
+>      Migzþe Municipality / Гмина Мигжэ
+>          my_id: D00-1BO
+>          geo_code: VXP-W
+>          population: 3,636
+>          warehouse: cocoa beans
+>
+>      Hosþøbi Municipality / Гмина Хошыби
+>          my_id: D00-1BP
+>          geo_code: VXP-K
+>          population: 3,654
+>          warehouse: wheat, hay
+>
+>      Ïoðpo Municipality / Гмина Ёдьпо
+>          my_id: D00-1BQ
+>          geo_code: VXP-A
+>          population: 3,290
+>          warehouse: trèb rye, straw (trèb rye)
+>
+>      Hlèkla Municipality / Гмина Хлеькля
+>          my_id: D00-1BR
+>          geo_code: VXP-6
+>          population: 3,668
+>          warehouse: wheat, hay
+>
+>      Tsmaïatsa Municipality / Гмина Цмаяца
+>          my_id: D00-1BS
+>          geo_code: VXP-P
+>          population: 3,779
+>          warehouse: maize, straw (maize)
+>
+>      Etsigwe Municipality / Гмина Эциглэ
+>          my_id: D00-1BT
+>          geo_code: VXP-1
+>          population: 3,566
+>          warehouse: wheat, hay
+>
+>      Zþaña Municipality / Гмина Жаня
+>          my_id: D00-1BU
+>          geo_code: VXP-9
+>          population: 3,438
+>          warehouse: trèb rye, straw (trèb rye)
+>
+>      Úðïatsa Municipality / Гмина Юдьяца
+>          my_id: D00-1BV
+>          geo_code: VXP-X
+>          population: 3,281
+>          warehouse: maize, straw (maize)
+>
+>      Briana Municipality / Гмина Бриана
+>          my_id: D00-1BW
+>          geo_code: VXP-3
+>          population: 3,564
+>          warehouse: cocoa beans
+>
+>      Ïeïby Municipality / Гмина Ейбы
+>          my_id: D00-1BX
+>          geo_code: VXP-5
+>          population: 3,380
+>          warehouse: trèb rye, straw (trèb rye)
+>
+>      Tçoplo Municipality / Гмина Тёплё
+>          my_id: D00-1BY
+>          geo_code: VXP-E
+>          population: 1,600
+>          warehouse: chicken, milk
+>
+>      Atçàïav Municipality / Гмина Атяьяв
+>          my_id: D00-1BZ
+>          geo_code: VXP-G
+>          population: 3,271
+>          warehouse: maize, straw (maize)
+>
+>      Kïèza Municipality / Гмина Кеьза
+>          my_id: D00-1C0
+>          geo_code: VXP-Y
+>          population: 3,500
+>          warehouse: cocoa beans
+>
+>      Zbuúløzça Municipality / Гмина Збуюльызя
+>          my_id: D00-1C1
+>          geo_code: VXP-4
+>          population: 2,986
+>          warehouse: wheat, hay
+>
+>      Økoïag Municipality / Гмина Ыкояг
+>          my_id: D00-1C2
+>          geo_code: VXP-R
+>          population: 3,630
+>          warehouse: trèb rye, straw (trèb rye)
+>
+>      Gnyïozþ Municipality / Гмина Гныёж
+>          my_id: D00-1C3
+>          geo_code: VXP-U
+>          population: 8,607
+>          warehouse: misc fruit/veg
+>
+>      Kïesþma Municipality / Гмина Кешма
+>          my_id: D00-1C4
+>          geo_code: VXP-M
+>          population: 3,048
+>          warehouse: wheat, hay
+>
+>      Zçotlu Municipality / Гмина Зётълю
+>          my_id: D00-1C5
+>          geo_code: VXP-J
+>          population: 3,757
+>          warehouse: maize, straw (maize)
+>
+>      Bytþeúf Municipality / Гмина Бычэюф
+>          my_id: D00-1C6
+>          geo_code: VXP-S
+>          population: 3,600
+>          warehouse: trèb rye, straw (trèb rye)
+>
+>      Sryïozço Municipality / Гмина Срыёзё
+>          my_id: D00-1C7
+>          geo_code: VXP-2
+>          population: 3,799
+>          warehouse: wheat, hay
+>
+>      Zgèbo Municipality / Гмина Згэьбо
+>          my_id: D00-1C8
+>          geo_code: VXP-N
+>          population: 3,524
+>          warehouse: cocoa beans
+>
+>      Fagitþa Municipality / Гмина Фагича
+>          my_id: D00-1C9
+>          geo_code: VXP-B
+>          population: 3,551
+>          warehouse: maize, straw (maize)
+>
+>      Ifèútç Municipality / Гмина Ифэьють
+>          my_id: D00-1CA
+>          geo_code: VXP-D
+>          population: 3,605
+>          warehouse: wheat, hay
+>
+>      Œmegþe Municipality / Гмина Ыъмегъе
+>          my_id: D00-1CB
+>          geo_code: VXP-L
+>          population: 3,317
+>          warehouse: maize, straw (maize)
+>
+>      Smàïetça Municipality / Гмина Смаьетя
+>          my_id: D00-1CC
+>          geo_code: VXP-H
+>          population: 3,976
+>          warehouse: cocoa beans
+>
+>      Zdyïed Municipality / Гмина Здыед
+>          my_id: D00-1CD
+>          geo_code: VXP-I
+>          population: 3,602
+>          warehouse: wheat, hay
+>
+>      Ïàtþèpa Municipality / Гмина Яьчэьпа
+>          my_id: D00-1CE
+>          geo_code: VXP-C
+>          population: 3,704
+>          warehouse: trèb rye, straw (trèb rye)
+>
+----------
+Map and area: 
+>   Region: Vænesston 1:2,000,000 (drawn in 2019)
+>   Position (mm) x: 197.52, y: 96.47
+>   Area on paper (sq.mm) a: 157.72
+>   Area represented: 63,088.0ha
+----------
+Workforce Demand: 
+>   Grand Total: (65,692)
+>       rm: 13; hm: 388; mm: 2,071; lm: 3,313; pm: 26,978;
+>       rf: 2; hf: 97; mf: 1,988; lf: 4,496; pf: 26,346;
+>
+>   VXP-0: (6,257)
+>       rm: 13; hm: 196; mm: 1,290; lm: 765; pm: 1,142;
+>       rf: 2; hf: 30; mf: 1,384; lf: 749; pf: 686;
+>       tot road veh: 295;
+>
+>   VXP-T: (1,896)
+>       rm: 0; hm: 7; mm: 26; lm: 89; pm: 805;
+>       rf: 0; hf: 2; mf: 20; lf: 124; pf: 823;
+>       tot road veh: 83;
+>
+>   VXP-V: (1,510)
+>       rm: 0; hm: 4; mm: 20; lm: 69; pm: 644;
+>       rf: 0; hf: 2; mf: 16; lf: 99; pf: 656;
+>       tot road veh: 65;
+>
+>   VXP-Q: (1,784)
+>       rm: 0; hm: 6; mm: 21; lm: 73; pm: 799;
+>       rf: 0; hf: 2; mf: 15; lf: 112; pf: 756;
+>       tot road veh: 50;
+>
+>   VXP-F: (1,924)
+>       rm: 0; hm: 7; mm: 26; lm: 76; pm: 828;
+>       rf: 0; hf: 2; mf: 23; lf: 117; pf: 845;
+>       tot road veh: 67;
+>
+>   VXP-7: (1,764)
+>       rm: 0; hm: 5; mm: 26; lm: 81; pm: 749;
+>       rf: 0; hf: 2; mf: 20; lf: 114; pf: 767;
+>       tot road veh: 76;
+>
+>   VXP-8: (1,547)
+>       rm: 0; hm: 4; mm: 21; lm: 71; pm: 657;
+>       rf: 0; hf: 2; mf: 17; lf: 103; pf: 672;
+>       tot road veh: 68;
+>
+>   VXP-W: (1,800)
+>       rm: 0; hm: 5; mm: 24; lm: 71; pm: 778;
+>       rf: 0; hf: 2; mf: 19; lf: 105; pf: 796;
+>       tot road veh: 59;
+>
+>   VXP-K: (1,834)
+>       rm: 0; hm: 6; mm: 21; lm: 75; pm: 824;
+>       rf: 0; hf: 2; mf: 15; lf: 114; pf: 777;
+>       tot road veh: 50;
+>
+>   VXP-A: (1,642)
+>       rm: 0; hm: 5; mm: 22; lm: 74; pm: 702;
+>       rf: 0; hf: 2; mf: 17; lf: 104; pf: 716;
+>       tot road veh: 70;
+>
+>   VXP-6: (1,866)
+>       rm: 0; hm: 8; mm: 20; lm: 77; pm: 834;
+>       rf: 0; hf: 2; mf: 15; lf: 121; pf: 789;
+>       tot road veh: 53;
+>
+>   VXP-P: (1,874)
+>       rm: 0; hm: 7; mm: 25; lm: 87; pm: 796;
+>       rf: 0; hf: 2; mf: 21; lf: 123; pf: 813;
+>       tot road veh: 82;
+>
+>   VXP-1: (1,820)
+>       rm: 0; hm: 6; mm: 21; lm: 74; pm: 815;
+>       rf: 0; hf: 2; mf: 15; lf: 116; pf: 771;
+>       tot road veh: 50;
+>
+>   VXP-9: (1,703)
+>       rm: 0; hm: 5; mm: 23; lm: 78; pm: 725;
+>       rf: 0; hf: 2; mf: 19; lf: 111; pf: 740;
+>       tot road veh: 72;
+>
+>   VXP-X: (1,626)
+>       rm: 0; hm: 5; mm: 23; lm: 75; pm: 690;
+>       rf: 0; hf: 2; mf: 19; lf: 107; pf: 705;
+>       tot road veh: 71;
+>
+>   VXP-3: (1,760)
+>       rm: 0; hm: 5; mm: 24; lm: 69; pm: 761;
+>       rf: 0; hf: 2; mf: 18; lf: 102; pf: 779;
+>       tot road veh: 58;
+>
+>   VXP-5: (1,671)
+>       rm: 0; hm: 5; mm: 22; lm: 76; pm: 714;
+>       rf: 0; hf: 2; mf: 17; lf: 107; pf: 728;
+>       tot road veh: 71;
+>
+>   VXP-E: (815)
+>       rm: 0; hm: 2; mm: 17; lm: 39; pm: 426;
+>       rf: 0; hf: 1; mf: 10; lf: 47; pf: 273;
+>       tot road veh: 131;
+>
+>   VXP-G: (1,622)
+>       rm: 0; hm: 5; mm: 23; lm: 74; pm: 693;
+>       rf: 0; hf: 2; mf: 17; lf: 102; pf: 706;
+>       tot road veh: 69;
+>
+>   VXP-Y: (1,716)
+>       rm: 0; hm: 5; mm: 24; lm: 66; pm: 746;
+>       rf: 0; hf: 2; mf: 18; lf: 96; pf: 759;
+>       tot road veh: 55;
+>
+>   VXP-4: (1,518)
+>       rm: 0; hm: 5; mm: 15; lm: 62; pm: 682;
+>       rf: 0; hf: 2; mf: 11; lf: 98; pf: 643;
+>       tot road veh: 44;
+>
+>   VXP-R: (1,812)
+>       rm: 0; hm: 5; mm: 24; lm: 84; pm: 771;
+>       rf: 0; hf: 2; mf: 18; lf: 119; pf: 789;
+>       tot road veh: 77;
+>
+>   VXP-U: (4,283)
+>       rm: 0; hm: 16; mm: 59; lm: 167; pm: 1,857;
+>       rf: 0; hf: 4; mf: 47; lf: 255; pf: 1,878;
+>       tot road veh: 140;
+>
+>   VXP-M: (1,526)
+>       rm: 0; hm: 5; mm: 16; lm: 61; pm: 685;
+>       rf: 0; hf: 2; mf: 12; lf: 99; pf: 646;
+>       tot road veh: 43;
+>
+>   VXP-J: (1,848)
+>       rm: 0; hm: 7; mm: 25; lm: 86; pm: 783;
+>       rf: 0; hf: 2; mf: 21; lf: 122; pf: 802;
+>       tot road veh: 82;
+>
+>   VXP-S: (1,775)
+>       rm: 0; hm: 5; mm: 26; lm: 83; pm: 753;
+>       rf: 0; hf: 2; mf: 20; lf: 115; pf: 771;
+>       tot road veh: 77;
+>
+>   VXP-2: (1,899)
+>       rm: 0; hm: 8; mm: 22; lm: 79; pm: 846;
+>       rf: 0; hf: 2; mf: 17; lf: 126; pf: 799;
+>       tot road veh: 56;
+>
+>   VXP-N: (1,748)
+>       rm: 0; hm: 5; mm: 25; lm: 69; pm: 754;
+>       rf: 0; hf: 2; mf: 19; lf: 103; pf: 771;
+>       tot road veh: 59;
+>
+>   VXP-B: (1,765)
+>       rm: 0; hm: 5; mm: 25; lm: 81; pm: 752;
+>       rf: 0; hf: 2; mf: 19; lf: 112; pf: 769;
+>       tot road veh: 76;
+>
+>   VXP-D: (1,823)
+>       rm: 0; hm: 6; mm: 20; lm: 73; pm: 823;
+>       rf: 0; hf: 2; mf: 13; lf: 111; pf: 775;
+>       tot road veh: 48;
+>
+>   VXP-L: (1,639)
+>       rm: 0; hm: 5; mm: 23; lm: 76; pm: 696;
+>       rf: 0; hf: 2; mf: 19; lf: 108; pf: 710;
+>       tot road veh: 71;
+>
+>   VXP-H: (1,945)
+>       rm: 0; hm: 7; mm: 28; lm: 77; pm: 836;
+>       rf: 0; hf: 2; mf: 24; lf: 117; pf: 854;
+>       tot road veh: 67;
+>
+>   VXP-I: (1,854)
+>       rm: 0; hm: 6; mm: 20; lm: 73; pm: 835;
+>       rf: 0; hf: 2; mf: 14; lf: 118; pf: 786;
+>       tot road veh: 50;
+>
+>   VXP-C: (1,826)
+>       rm: 0; hm: 5; mm: 24; lm: 83; pm: 777;
+>       rf: 0; hf: 2; mf: 19; lf: 120; pf: 796;
+>       tot road veh: 77;
+>
+----------
+Workforce Supply: 
+>   Grand Total: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>
+>   VXP-0: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-T: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-V: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-Q: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-F: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-7: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-8: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-W: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-K: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-A: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-6: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-P: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-1: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-9: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-X: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-3: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-5: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-E: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-G: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-Y: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-4: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-R: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-U: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-M: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-J: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-S: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-2: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-N: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-B: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-D: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-L: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-H: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-I: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+>   VXP-C: (0)
+>       rm: 0; hm: 0; mm: 0; lm: 0; pm: 0;
+>       rf: 0; hf: 0; mf: 0; lf: 0; pf: 0;
+>      >
+----------
+Supply workplaces: 
+>   N/A
+----------
+Demand households: 
+>   Grand Total: (49,944)
+>       r: 17; h: 500; m: 3,228; l: 6,423; p: 39,776;
+>   VXP-0: (4,870) | r: 17; h: 233; m: 2,132; l: 1,132; p: 1,356;
+>   VXP-T: (1,444) | r: 0; h: 9; m: 35; l: 176; p: 1,224;
+>   VXP-V: (1,154) | r: 0; h: 7; m: 30; l: 140; p: 977;
+>   VXP-Q: (1,345) | r: 0; h: 8; m: 27; l: 163; p: 1,147;
+>   VXP-F: (1,487) | r: 0; h: 10; m: 36; l: 166; p: 1,275;
+>   VXP-7: (1,330) | r: 0; h: 7; m: 34; l: 162; p: 1,127;
+>   VXP-8: (1,189) | r: 0; h: 5; m: 30; l: 147; p: 1,007;
+>   VXP-W: (1,370) | r: 0; h: 7; m: 34; l: 157; p: 1,172;
+>   VXP-K: (1,383) | r: 0; h: 8; m: 28; l: 159; p: 1,188;
+>   VXP-A: (1,243) | r: 0; h: 7; m: 28; l: 149; p: 1,059;
+>   VXP-6: (1,388) | r: 0; h: 9; m: 28; l: 166; p: 1,185;
+>   VXP-P: (1,430) | r: 0; h: 10; m: 33; l: 177; p: 1,210;
+>   VXP-1: (1,345) | r: 0; h: 8; m: 30; l: 158; p: 1,149;
+>   VXP-9: (1,302) | r: 0; h: 7; m: 31; l: 153; p: 1,111;
+>   VXP-X: (1,250) | r: 0; h: 8; m: 32; l: 154; p: 1,056;
+>   VXP-3: (1,339) | r: 0; h: 7; m: 34; l: 150; p: 1,148;
+>   VXP-5: (1,289) | r: 0; h: 7; m: 34; l: 153; p: 1,095;
+>   VXP-E: (602) | r: 0; h: 4; m: 20; l: 66; p: 512;
+>   VXP-G: (1,240) | r: 0; h: 7; m: 34; l: 145; p: 1,054;
+>   VXP-Y: (1,319) | r: 0; h: 8; m: 36; l: 140; p: 1,135;
+>   VXP-4: (1,136) | r: 0; h: 7; m: 22; l: 137; p: 970;
+>   VXP-R: (1,366) | r: 0; h: 7; m: 34; l: 165; p: 1,160;
+>   VXP-U: (3,249) | r: 0; h: 20; m: 84; l: 355; p: 2,790;
+>   VXP-M: (1,145) | r: 0; h: 7; m: 23; l: 137; p: 978;
+>   VXP-J: (1,415) | r: 0; h: 9; m: 39; l: 170; p: 1,197;
+>   VXP-S: (1,351) | r: 0; h: 7; m: 39; l: 165; p: 1,140;
+>   VXP-2: (1,415) | r: 0; h: 11; m: 29; l: 175; p: 1,200;
+>   VXP-N: (1,328) | r: 0; h: 8; m: 36; l: 150; p: 1,134;
+>   VXP-B: (1,344) | r: 0; h: 8; m: 38; l: 156; p: 1,142;
+>   VXP-D: (1,367) | r: 0; h: 8; m: 26; l: 158; p: 1,175;
+>   VXP-L: (1,247) | r: 0; h: 7; m: 32; l: 152; p: 1,056;
+>   VXP-H: (1,479) | r: 0; h: 9; m: 40; l: 165; p: 1,265;
+>   VXP-I: (1,385) | r: 0; h: 8; m: 24; l: 160; p: 1,193;
+>   VXP-C: (1,398) | r: 0; h: 8; m: 36; l: 165; p: 1,189;
+----------
+Supply households: 
+>   Grand Total: (0)
+>       r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-0: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-T: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-V: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-Q: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-F: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-7: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-8: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-W: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-K: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-A: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-6: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-P: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-1: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-9: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-X: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-3: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-5: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-E: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-G: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-Y: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-4: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-R: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-U: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-M: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-J: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-S: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-2: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-N: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-B: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-D: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-L: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-H: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-I: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+>   VXP-C: (0) | r: 0; h: 0; m: 0; l: 0; p: 0;
+----------
+Demographics:
+>   TOTAL PEOPLE: 131,911
+>
+>   Married working people (aHHM-PAX):
+>       r: 26; h: 636; m: 4,272; l: 8,562; p: 52,982;
+>      (total: 66,478)
+>
+>   Married retired people (aHHR-PAX):
+>       r: 8; h: 188; m: 1,228; l: 2,468; p: 15,390;
+>      (total: 19,282)
+>
+>   Unmarried working people ('bachelors') (aHHB-PAX):
+>       r: 0; h: 78; m: 511; l: 1,044; p: 6,714;
+>      (total: 8,347)
+>
+>   Unmarried retired people ('golden oldies') (aHHO-PAX):
+>       r: 0; h: 43; m: 310; l: 624; p: 3,848;
+>      (total: 4,825)
+>
+>   Disabled people, not in a nursing home (aHHD-PAX):
+>       r: 0; h: 0; m: 4; l: 10; p: 79;
+>      (total: 93)
+>
+>   Not working: housewife/-husband OR disabled caregiving (aHHX-PAX):
+>       r: 0; h: 1; m: 18; l: 45; p: 269;
+>      (total: 333)
+>
+>   Unemployed: wanting to work but no work available (aUNE-PAX):
+>       r: 12; h: 250; m: 411; l: 211; p: 1,416;
+>      (total: 2,300)
+>
+>   Preschoolers, all groups                 (ED0-PAX): 5,785
+>   Primary schoolers, all groups            (ED1-PAX): 9,764
+>   Middle schoolers, all groups             (ED2-PAX): 7,806
+>   High schoolers, all groups               (ED3-PAX): 7,843
+>   Religious or Private schoolers, all grps (ED4-PAX): 300
+>   College students, all groups             (ED5-PAX): 67
+>   Polytechnic students, all groups         (ED6-PAX): 18
+>   University students, all groups          (ED7-PAX): 6
+>   --- (empty slot), all groups             (ED8-PAX): 0
+>   Disabled students, all groups            (ED9-PAX): 240
+>   Nursing home for the rich, group 'r'     (OAR-PAX): 0
+>   Old Age Home, all groups                 (OAH-PAX): 1,057
+>   Private nurse, all groups                (OAN-PAX): 0
+>   Youth prison, all groups                 (YXJ-PAX): 80
+>   Adult prison, all groups                 (YXA-PAX): 777
+>   Religion:
+>      Renásàsers          (3R): 17,158
+>      Anglican Christians (AN): 3,708
+>      Roman Catholics     (RC): 5,152
+>      Deltæðømmysts       (DD): 71,021
+>      Jews                (JW): 788
+>      Muslims             (IS): 1,193
+>   Units required:
+>       |  16.49 for [5YP] Police
+>       |  13.19 for [5YF] Fire Dept
+>       |  13.19 for [5YH] Community Clinic
+>       |  26.38 for [5YG] Community Governance
+>       | 192.83 for [ED0] Pre-school
+>       |  19.53 for [ED1] Primary School
+>       |   9.29 for [ED2] Middle School
+>       |   8.17 for [ED3] High School
+>       |  35.23 for [OAH] Old Age Home
+>       |  32.98 for [5SŠ] Small Shop
+>       |  26.38 for [5LX] Community Library
+>       |  26.38 for [5TH] Community Theatre
+>       |  13.19 for [5PO] Community Post Office
+>   Potential public transport users         (BUS-PAX): 0
+>   Vehicle, bicycle                         (VEH-BIC): 64,345
+>   Vehicle, motorbike*                      (VEH-MBK): 12,923
+>   Vehicle, car*                            (VEH-CAR): 3,007
+>   Vehicle, aircraft**                      (VEH-AIR): 0
+>    * = Requires county-level 'number plates' (ex: 'GYN-00342')
+>   ** = Requires federal-level 'call sign'    (ex:  'V9-AGB')
+----------
+Vehicles (requiring county-level registration and number plates):
+>   TOTAL ROAD: 17,658
+>   Itemised county-registered vehicles:
+>      VXP-0: 5,726
+>      VXP-T: 400
+>      VXP-V: 322
+>      VXP-Q: 330
+>      VXP-F: 378
+>      VXP-7: 366
+>      VXP-8: 329
+>      VXP-W: 349
+>      VXP-K: 336
+>      VXP-A: 335
+>      VXP-6: 343
+>      VXP-P: 396
+>      VXP-1: 334
+>      VXP-9: 356
+>      VXP-X: 349
+>      VXP-3: 344
+>      VXP-5: 351
+>      VXP-E: 265
+>      VXP-G: 340
+>      VXP-Y: 336
+>      VXP-4: 274
+>      VXP-R: 370
+>      VXP-U: 832
+>      VXP-M: 279
+>      VXP-J: 395
+>      VXP-S: 381
+>      VXP-2: 357
+>      VXP-N: 344
+>      VXP-B: 375
+>      VXP-D: 325
+>      VXP-L: 347
+>      VXP-H: 382
+>      VXP-I: 327
+>      VXP-C: 385
+----------
+Footprint on the land:
+>   VXP-0: 3,508.0ha
+>   VXP-T: 1,948.0ha
+>   VXP-V: 1,640.0ha
+>   VXP-Q: 1,864.0ha
+>   VXP-F: 1,820.0ha
+>   VXP-7: 1,812.0ha
+>   VXP-8: 1,668.0ha
+>   VXP-W: 1,712.0ha
+>   VXP-K: 1,920.0ha
+>   VXP-A: 1,788.0ha
+>   VXP-6: 1,944.0ha
+>   VXP-P: 1,924.0ha
+>   VXP-1: 1,900.0ha
+>   VXP-9: 1,844.0ha
+>   VXP-X: 1,668.0ha
+>   VXP-3: 1,676.0ha
+>   VXP-5: 1,816.0ha
+>   VXP-E: 1,760.0ha
+>   VXP-G: 1,676.0ha
+>   VXP-Y: 1,640.0ha
+>   VXP-4: 1,588.0ha
+>   VXP-R: 1,964.0ha
+>   VXP-U: 1,788.0ha
+>   VXP-M: 1,596.0ha
+>   VXP-J: 1,896.0ha
+>   VXP-S: 1,916.0ha
+>   VXP-2: 1,972.0ha
+>   VXP-N: 1,660.0ha
+>   VXP-B: 1,820.0ha
+>   VXP-D: 1,920.0ha
+>   VXP-L: 1,680.0ha
+>   VXP-H: 1,840.0ha
+>   VXP-I: 1,948.0ha
+>   VXP-C: 1,980.0ha
+
